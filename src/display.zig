@@ -15,7 +15,7 @@ pub extern "C" fn vexDisplayRectFill(x1: i32, y1: i32, x2: i32, y2: i32) c_int; 
 pub extern "C" fn vexDisplayCircleDraw(xc: i32, yc: i32, radius: i32) c_int; // 0x674 
 pub extern "C" fn vexDisplayCircleClear(xc: i32, yc: i32, radius: i32) c_int; // 0x678 
 pub extern "C" fn vexDisplayCircleFill(xc: i32, yc: i32, radius: i32) c_int; // 0x67c 
-pub extern "C" fn vexDisplayVPrintf(xpos: i32, ypos: i32, bOpaque: i32, format: [*c]i8, : types....) c_int; // 0x680 
+pub extern "C" fn vexDisplayVPrintf(xpos: i32, ypos: i32, bOpaque: i32, format: [*c]i8, ...) c_int; // 0x680 
 pub extern "C" fn vexDisplayVString(nLineNumber: i32, format: [*c]i8, ...) c_int; // 0x684 
 pub extern "C" fn vexDisplayVStringAt(xpos: i32, ypos: i32, format: [*c]i8, ...) c_int; // 0x688 
 pub extern "C" fn vexDisplayVBigString(nLineNumber: i32, format: [*c]i8, ...) c_int; // 0x68c 

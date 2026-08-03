@@ -80,7 +80,7 @@ for file in files:
 
 for addr, metadata in data["entries"].items():
     files[metadata["group"]].write(
-        f'pub extern "C" fn {metadata["name"]}({", ".join([f"{x["name"]}: {holyc_to_zig(x["type"])}" if holyc_to_zig(x["type"]) != "..." else "..." for x in metadata["params"]])}) c_int; // {addr} \n'
+        f'pub extern "C" fn {metadata["name"]}({", ".join([f"{x["name"]}: {holyc_to_zig(x["type"])}" if (x["type"]) != "VaList" else "..." for x in metadata["params"]])}) c_int; // {addr} \n'
     )
     linker_script.write(f"{metadata['name']} = {hex(JMPTABLE_ADDR + int(addr, 16))};\n")
 
