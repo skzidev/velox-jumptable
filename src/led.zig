@@ -1,5 +1,5 @@
 const types = @import("./types.zig");
-pub extern "C" fn vexDeviceLedSet(device: types.V5_DeviceT, value: types.V5_DeviceLedColor) i32; // 0x1e0 
-pub extern "C" fn vexDeviceLedRgbSet(device: types.V5_DeviceT, color: u32) i32; // 0x1e4 
-pub extern "C" fn vexDeviceLedGet(device: types.V5_DeviceT) i32; // 0x1e8 
-pub extern "C" fn vexDeviceLedRgbGet(device: types.V5_DeviceT) i32; // 0x1ec 
+pub extern fn vexDeviceLedSet(device: types.V5_DeviceT, value: types.V5_DeviceLedColor) callconv(.C) i32; // 0x1e0 
+pub extern fn vexDeviceLedRgbSet(device: types.V5_DeviceT, color: u32) callconv(.C) i32; // 0x1e4 
+pub extern fn vexDeviceLedGet(device: types.V5_DeviceT) callconv(.C) i32; // 0x1e8 
+pub extern fn vexDeviceLedRgbGet(device: types.V5_DeviceT) callconv(.C) i32; // 0x1ec 
