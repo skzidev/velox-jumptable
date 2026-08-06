@@ -1,7 +1,7 @@
 .{
-    .name = .zeolite_jumptable,
+    .name = .velox_jumptable,
     .version = "0.0.1",
-    .fingerprint = 0x57f2698f639d063e, // Changing this has security and trust implications.
+    .fingerprint = 0xc5cfde236759ff64, // Changing this has security and trust implications.
     .minimum_zig_version = "0.16.0",
     .dependencies = .{},
     .paths = .{

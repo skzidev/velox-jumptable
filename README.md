@@ -1,4 +1,4 @@
-# Zeolite Jumptable
+# Velox Jumptable
 
 > [!NOTE]
 > This repository contains programmatically generated code.
@@ -16,7 +16,7 @@ If and when these bindings need to be updated due to VEX making a breaking updat
 ## Installation
 
 ```bash
-zig fetch --save "git+https://github.com/skzidev/zeolite-jumptable"
+zig fetch --save "git+https://github.com/skzidev/velox-jumptable"
 ```
 
 ## Usage
