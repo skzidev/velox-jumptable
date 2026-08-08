@@ -1,2 +1,4 @@
 .zig-cache/
 zig-out/
+data/offsets.txt
+data/private_api/

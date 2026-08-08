@@ -1,3 +1,5 @@
+//! Type definitions for structs defined in the VEX API
+// This file was programmatically generated. These symbols may resolve to the incorrect location if firmware changes.
 pub const V5_DeviceT = opaque {};
 pub const V5_DeviceOpticalRaw = opaque {};
 pub const V5_DeviceAiVisionColor = opaque {};
