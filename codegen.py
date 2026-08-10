@@ -44,6 +44,9 @@ GROUPS = {
     "SdkVersion": "version",
     "Cpu0Version": "version",
     "VexosVersion": "vexos",
+    "Task": "task",
+    "Tasks": "task",
+    "Background": "task",
 }
 
 DEVICE_GROUPS = {

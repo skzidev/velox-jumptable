@@ -1,3 +1,4 @@
+const task = @import("task.zig");
 const core = @import("core.zig");
 const system = @import("system.zig");
 const devices = @import("devices.zig");
@@ -39,14 +40,14 @@ const types = @import("types.zig");
 ///
 /// **Jumptable Offset:** 0x0f74 (_0x037fcf74_)
 ///
-/// _defined in core.zig. from public_signatures.h:7._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBackgroundProcessing%28&type=code)
+/// _defined in task.zig. from public_signatures.h:7._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBackgroundProcessing%28&type=code)
 ///
 /// **Original signature:**
 ///
 /// ```c
 /// void vexBackgroundProcessing();
 /// ```
-pub const vexBackgroundProcessing: *const fn() callconv(.c) void = core.vexBackgroundProcessing;
+pub const vexBackgroundProcessing: *const fn() callconv(.c) void = task.vexBackgroundProcessing;
 
 /// # vexDebug
 ///
@@ -4952,3 +4953,48 @@ pub const vexVexosVersion: *const fn() callconv(.c) u32 = vexos.vexVexosVersion;
 /// uint32_t vexCpu0Version();
 /// ```
 pub const vexCpu0Version: *const fn() callconv(.c) u32 = version.vexCpu0Version;
+
+/// # vexTaskAdd
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0028 (_0x037fc028_)
+///
+/// _defined in task.zig. from private_signatures.h:82._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAdd%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskAdd(int (*)(void) callback, int interval, const char * label);
+/// ```
+pub const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) types.int,interval: types.int,label: [*:0]const u8) callconv(.c) void = task.vexTaskAdd;
+
+/// # vexTaskSleep
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x006c (_0x037fc06c_)
+///
+/// _defined in task.zig. from private_signatures.h:83._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskSleep%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskSleep(uint32_t time);
+/// ```
+pub const vexTaskSleep: *const fn(time: u32) callconv(.c) void = task.vexTaskSleep;
+
+/// # vexTaskGetCallbackAndId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0084 (_0x037fc084_)
+///
+/// _defined in task.zig. from private_signatures.h:84._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetCallbackAndId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void * vexTaskGetCallbackAndId(uint32_t index, int * callback_id);
+/// ```
+pub const vexTaskGetCallbackAndId: *const fn(index: u32,callback_id: [*c]types.int) callconv(.c) [*c]void = task.vexTaskGetCallbackAndId;

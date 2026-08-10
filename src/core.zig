@@ -1,5 +1,4 @@
 const types = @import("types.zig");
-pub extern const vexBackgroundProcessing: *const fn() callconv(.c) void;
 pub extern const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
 pub extern const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
 pub extern const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) callconv(.c) i32;
