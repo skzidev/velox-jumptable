@@ -1,4 +1,4 @@
-const types = @import("types.zig");
+const types = @import("../types.zig");
 pub extern const vexDeviceGenericSerialEnable: *const fn(device: types.V5_DeviceT,options: i32) callconv(.c) void;
 pub extern const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_DeviceT,baudrate: i32) callconv(.c) void;
 pub extern const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32;

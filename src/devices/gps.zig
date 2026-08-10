@@ -1,4 +1,4 @@
-const types = @import("types.zig");
+const types = @import("../types.zig");
 pub extern const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
 pub extern const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
 pub extern const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;

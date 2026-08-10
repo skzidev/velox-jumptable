@@ -1,4 +1,4 @@
-const types = @import("types.zig");
+const types = @import("../types.zig");
 pub extern const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
 pub extern const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
 pub extern const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;

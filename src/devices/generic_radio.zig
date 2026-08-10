@@ -1,4 +1,4 @@
-const types = @import("types.zig");
+const types = @import("../types.zig");
 pub extern const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]types.char,bMaster: types.int,bAllowRadioOverride: types.int) callconv(.c) void;
 pub extern const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32;
 pub extern const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32;

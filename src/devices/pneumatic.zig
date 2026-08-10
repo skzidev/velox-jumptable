@@ -1,4 +1,4 @@
-const types = @import("types.zig");
+const types = @import("../types.zig");
 pub extern const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_DeviceT,bState: types.int) callconv(.c) void;
 pub extern const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_DeviceT,id: u32,bState: types.int) callconv(.c) void;
 pub extern const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,pCtrl: [*c]types.V5_DevicePneumaticCtrl) callconv(.c) void;

@@ -4,7 +4,7 @@ import textwrap
 import urllib.parse
 from io import TextIOWrapper
 from os import mkdir
-from os.path import basename, join, relpath
+from os.path import basename, dirname, join, relpath
 
 from tools.clangutil import Symbol, read_header
 
@@ -167,7 +167,9 @@ for function in decls:
     fname = join(".", "src", get_source_file(function.name))
     if not fname in files:
         files[fname] = open(fname, "w")  # noqa: SIM115
-        files[fname].write('const types = @import("types.zig");\n')
+        files[fname].write(
+            f'const types = @import("{relpath(join(".", "src", "types.zig"), dirname(fname))}");\n'
+        )
     if function.name in defd_funcs:
         continue
     write_func_def(files[fname], function)

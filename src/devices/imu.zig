@@ -1,4 +1,4 @@
-const types = @import("types.zig");
+const types = @import("../types.zig");
 pub extern const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
 pub extern const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
 pub extern const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
