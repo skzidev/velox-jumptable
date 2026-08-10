@@ -1,4 +1,9 @@
+bin/
 .zig-cache/
-zig-out/
+lib/
+lib64/
+include/
+pyvenv.cfg
+data/private_api
 data/offsets.txt
-data/private_api/
+*__pycache__

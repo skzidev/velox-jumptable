@@ -1,3707 +1,4954 @@
-///! This file re-exports all of the symbols from groups.
-// This file was programmatically generated. These symbols may resolve to the incorrect location if firmware changes.
-const system = @import("./system.zig");
-const device = @import("./device.zig");
-const controller = @import("./controller.zig");
-const motor = @import("./motor.zig");
-const adi = @import("./adi.zig");
-const led = @import("./led.zig");
-const vision = @import("./vision.zig");
-const imu = @import("./imu.zig");
-const gps = @import("./gps.zig");
-const optical = @import("./optical.zig");
-const distance = @import("./distance.zig");
-const rotation = @import("./rotation.zig");
-const range = @import("./range.zig");
-const touch = @import("./touch.zig");
-const battery = @import("./battery.zig");
-const serial = @import("./serial.zig");
-const generic_serial = @import("./generic_serial.zig");
-const generic_radio = @import("./generic_radio.zig");
-const task = @import("./task.zig");
-const display = @import("./display.zig");
-const file = @import("./file.zig");
-const pneumatic = @import("./pneumatic.zig");
-const competition = @import("./competition.zig");
-const magnet = @import("./magnet.zig");
-const arm = @import("./arm.zig");
-const light_tower = @import("./light_tower.zig");
-const ai_vision = @import("./ai_vision.zig");
+const core = @import("./src/core.zig");
+const system = @import("./src/system.zig");
+const devices = @import("./src/devices.zig");
+const controller = @import("./src/controller.zig");
+const led = @import("./src/devices/led.zig");
+const adi = @import("./src/devices/adi.zig");
+const bumper = @import("./src/devices/bumper.zig");
+const gyro = @import("./src/devices/gyro.zig");
+const sonar = @import("./src/devices/sonar.zig");
+const generic = @import("./src/devices/generic.zig");
+const motor = @import("./src/devices/motor.zig");
+const vision = @import("./src/devices/vision.zig");
+const imu = @import("./src/devices/imu.zig");
+const range = @import("./src/devices/range.zig");
+const rotation = @import("./src/devices/rotation.zig");
+const optical = @import("./src/devices/optical.zig");
+const magnet = @import("./src/devices/magnet.zig");
+const light_tower = @import("./src/devices/light_tower.zig");
+const distance = @import("./src/devices/distance.zig");
+const gps = @import("./src/devices/gps.zig");
+const ai_vision = @import("./src/devices/ai_vision.zig");
+const pneumatic = @import("./src/devices/pneumatic.zig");
+const generic_serial = @import("./src/devices/generic_serial.zig");
+const generic_radio = @import("./src/devices/generic_radio.zig");
+const display = @import("./src/display.zig");
+const image = @import("./src/image.zig");
+const memory = @import("./src/memory.zig");
+const file = @import("./src/file.zig");
+const serial = @import("./src/serial.zig");
+const touch = @import("./src/touch.zig");
+const version = @import("./src/version.zig");
+const competition = @import("./src/competition.zig");
+const battery = @import("./src/battery.zig");
+const vexos = @import("./src/vexos.zig");
+const types = @import("types.zig");
+/// # vexBackgroundProcessing
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0f74 (_0x037fcf74_)
+///
+/// _defined in core.zig. from public_signatures.h:7._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBackgroundProcessing%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexBackgroundProcessing();
+/// ```
+const vexBackgroundProcessing: *const fn() callconv(.c) void = core.vexBackgroundProcessing;
 
-// Group 'system'
+/// # vexDebug
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x00f0 (_0x037fc0f0_)
+///
+/// _defined in core.zig. from public_signatures.h:10._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDebug%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDebug(const char * fmt);
+/// ```
+const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vexDebug;
 
-/// # vexScratchMemoryPtr
+/// # vex_printf
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x01c (0x37fc01c)
+/// **Jumptable Offset:** 0x00f0 (_0x037fc0f0_)
 ///
-/// Private: False
+/// _defined in core.zig. from public_signatures.h:11._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_printf%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexScratchMemoryPtr%28&type=code)
+/// **Original signature:**
 ///
-pub const vexScratchMemoryPtr = system.vexScratchMemoryPtr;
-/// # vex_vprintf
+/// ```c
+/// int32_t vex_printf(const char * fmt);
+/// ```
+const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vex_printf;
+
+/// # vex_sprintf
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x0f0 (0x37fc0f0)
+/// **Jumptable Offset:** 0x00f4 (_0x037fc0f4_)
 ///
-/// Private: False
+/// _defined in core.zig. from public_signatures.h:12._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_sprintf%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vex_vprintf%28&type=code)
+/// **Original signature:**
 ///
-pub const vex_vprintf = system.vex_vprintf;
+/// ```c
+/// int32_t vex_sprintf(char * out, const char * format);
+/// ```
+const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) callconv(.c) i32 = core.vex_sprintf;
+
+/// # vex_snprintf
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x00f8 (_0x037fc0f8_)
+///
+/// _defined in core.zig. from public_signatures.h:13._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_snprintf%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vex_snprintf(char * out, uint32_t max_len, const char * format);
+/// ```
+const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8) callconv(.c) i32 = core.vex_snprintf;
+
 /// # vex_vsprintf
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x0f4 (0x37fc0f4)
+/// **Jumptable Offset:** 0x00f4 (_0x037fc0f4_)
 ///
-/// Private: False
+/// _defined in core.zig. from public_signatures.h:14._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_vsprintf%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vex_vsprintf%28&type=code)
+/// **Original signature:**
 ///
-pub const vex_vsprintf = system.vex_vsprintf;
+/// ```c
+/// int32_t vex_vsprintf(char * out, const char * format, int args);
+/// ```
+const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const u8,args: types.int) callconv(.c) i32 = core.vex_vsprintf;
+
 /// # vex_vsnprintf
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x0f8 (0x37fc0f8)
+/// **Jumptable Offset:** 0x00f8 (_0x037fc0f8_)
 ///
-/// Private: False
+/// _defined in core.zig. from public_signatures.h:15._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_vsnprintf%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vex_vsnprintf%28&type=code)
+/// **Original signature:**
 ///
-pub const vex_vsnprintf = system.vex_vsnprintf;
-/// # vexSystemVersion
-///
-/// Group: "system"
-///
-/// Offset: 0x1000 (0x37fd000)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemVersion%28&type=code)
-///
-pub const vexSystemVersion = system.vexSystemVersion;
-/// # vexStdlibVersion
-///
-/// Group: "system"
-///
-/// Offset: 0x1004 (0x37fd004)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexStdlibVersion%28&type=code)
-///
-pub const vexStdlibVersion = system.vexStdlibVersion;
+/// ```c
+/// int32_t vex_vsnprintf(char * out, uint32_t max_len, const char * format, int args);
+/// ```
+const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8,args: types.int) callconv(.c) i32 = core.vex_vsnprintf;
+
 /// # vexSystemTimeGet
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x118 (0x37fc118)
+/// **Jumptable Offset:** 0x0118 (_0x037fc118_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:19._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemTimeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemTimeGet = system.vexSystemTimeGet;
+/// ```c
+/// uint32_t vexSystemTimeGet();
+/// ```
+const vexSystemTimeGet: *const fn() callconv(.c) u32 = system.vexSystemTimeGet;
+
 /// # vexGettime
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x11c (0x37fc11c)
+/// **Jumptable Offset:** 0x011c (_0x037fc11c_)
 ///
-/// Private: False
+/// _defined in core.zig. from public_signatures.h:20._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexGettime%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexGettime%28&type=code)
+/// **Original signature:**
 ///
-pub const vexGettime = system.vexGettime;
+/// ```c
+/// void vexGettime(struct time * pTime);
+/// ```
+const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void = core.vexGettime;
+
 /// # vexGetdate
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x120 (0x37fc120)
+/// **Jumptable Offset:** 0x0120 (_0x037fc120_)
 ///
-/// Private: False
+/// _defined in core.zig. from public_signatures.h:21._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexGetdate%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexGetdate%28&type=code)
+/// **Original signature:**
 ///
-pub const vexGetdate = system.vexGetdate;
+/// ```c
+/// void vexGetdate(struct date * pDate);
+/// ```
+const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void = core.vexGetdate;
+
 /// # vexSystemMemoryDump
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x124 (0x37fc124)
+/// **Jumptable Offset:** 0x0124 (_0x037fc124_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:22._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemMemoryDump%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemMemoryDump%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemMemoryDump = system.vexSystemMemoryDump;
+/// ```c
+/// void vexSystemMemoryDump();
+/// ```
+const vexSystemMemoryDump: *const fn() callconv(.c) void = system.vexSystemMemoryDump;
+
 /// # vexSystemDigitalIO
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x128 (0x37fc128)
+/// **Jumptable Offset:** 0x0128 (_0x037fc128_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:23._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemDigitalIO%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemDigitalIO%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemDigitalIO = system.vexSystemDigitalIO;
+/// ```c
+/// void vexSystemDigitalIO(uint32_t pin, uint32_t value);
+/// ```
+const vexSystemDigitalIO: *const fn(pin: u32,value: u32) callconv(.c) void = system.vexSystemDigitalIO;
+
 /// # vexSystemStartupOptions
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x12c (0x37fc12c)
+/// **Jumptable Offset:** 0x012c (_0x037fc12c_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:24._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemStartupOptions%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemStartupOptions%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemStartupOptions = system.vexSystemStartupOptions;
+/// ```c
+/// uint32_t vexSystemStartupOptions();
+/// ```
+const vexSystemStartupOptions: *const fn() callconv(.c) u32 = system.vexSystemStartupOptions;
+
 /// # vexSystemExitRequest
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x130 (0x37fc130)
+/// **Jumptable Offset:** 0x0130 (_0x037fc130_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:25._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemExitRequest%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemExitRequest%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemExitRequest = system.vexSystemExitRequest;
+/// ```c
+/// void vexSystemExitRequest();
+/// ```
+const vexSystemExitRequest: *const fn() callconv(.c) void = system.vexSystemExitRequest;
+
 /// # vexSystemHighResTimeGet
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x134 (0x37fc134)
+/// **Jumptable Offset:** 0x0134 (_0x037fc134_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:26._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemHighResTimeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemHighResTimeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemHighResTimeGet = system.vexSystemHighResTimeGet;
+/// ```c
+/// uint64_t vexSystemHighResTimeGet();
+/// ```
+const vexSystemHighResTimeGet: *const fn() callconv(.c) u64 = system.vexSystemHighResTimeGet;
+
 /// # vexSystemPowerupTimeGet
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x138 (0x37fc138)
+/// **Jumptable Offset:** 0x0138 (_0x037fc138_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:27._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemPowerupTimeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemPowerupTimeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemPowerupTimeGet = system.vexSystemPowerupTimeGet;
+/// ```c
+/// uint64_t vexSystemPowerupTimeGet();
+/// ```
+const vexSystemPowerupTimeGet: *const fn() callconv(.c) u64 = system.vexSystemPowerupTimeGet;
+
 /// # vexSystemLinkAddrGet
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x13c (0x37fc13c)
+/// **Jumptable Offset:** 0x013c (_0x037fc13c_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:28._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemLinkAddrGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemLinkAddrGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemLinkAddrGet = system.vexSystemLinkAddrGet;
+/// ```c
+/// uint32_t vexSystemLinkAddrGet();
+/// ```
+const vexSystemLinkAddrGet: *const fn() callconv(.c) u32 = system.vexSystemLinkAddrGet;
+
 /// # vexSystemUsbStatus
 ///
-/// Group: "system"
+/// **Public API**
 ///
-/// Offset: 0x174 (0x37fc174)
+/// **Jumptable Offset:** 0x0174 (_0x037fc174_)
 ///
-/// Private: False
+/// _defined in system.zig. from public_signatures.h:29._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemUsbStatus%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemUsbStatus%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSystemUsbStatus = system.vexSystemUsbStatus;
-/// # vexSystemTimerStop
-///
-/// Group: "system"
-///
-/// Offset: 0x8c0 (0x37fc8c0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemTimerStop%28&type=code)
-///
-pub const vexSystemTimerStop = system.vexSystemTimerStop;
-/// # vexSystemTimerClearInterrupt
-///
-/// Group: "system"
-///
-/// Offset: 0x8c4 (0x37fc8c4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemTimerClearInterrupt%28&type=code)
-///
-pub const vexSystemTimerClearInterrupt = system.vexSystemTimerClearInterrupt;
-/// # vexSystemTimerReinitForRtos
-///
-/// Group: "system"
-///
-/// Offset: 0x8c8 (0x37fc8c8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemTimerReinitForRtos%28&type=code)
-///
-pub const vexSystemTimerReinitForRtos = system.vexSystemTimerReinitForRtos;
-/// # vexSystemApplicationIRQHandler
-///
-/// Group: "system"
-///
-/// Offset: 0x8cc (0x37fc8cc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemApplicationIRQHandler%28&type=code)
-///
-pub const vexSystemApplicationIRQHandler = system.vexSystemApplicationIRQHandler;
-/// # vexSystemWatchdogReinitRtos
-///
-/// Group: "system"
-///
-/// Offset: 0x8d0 (0x37fc8d0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemWatchdogReinitRtos%28&type=code)
-///
-pub const vexSystemWatchdogReinitRtos = system.vexSystemWatchdogReinitRtos;
-/// # vexSystemWatchdogGet
-///
-/// Group: "system"
-///
-/// Offset: 0x8d4 (0x37fc8d4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemWatchdogGet%28&type=code)
-///
-pub const vexSystemWatchdogGet = system.vexSystemWatchdogGet;
-/// # vexSystemBoot
-///
-/// Group: "system"
-///
-/// Offset: 0x910 (0x37fc910)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemBoot%28&type=code)
-///
-pub const vexSystemBoot = system.vexSystemBoot;
-/// # vexSystemUndefinedException
-///
-/// Group: "system"
-///
-/// Offset: 0x914 (0x37fc914)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemUndefinedException%28&type=code)
-///
-pub const vexSystemUndefinedException = system.vexSystemUndefinedException;
-/// # vexSystemFIQInterrupt
-///
-/// Group: "system"
-///
-/// Offset: 0x918 (0x37fc918)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemFIQInterrupt%28&type=code)
-///
-pub const vexSystemFIQInterrupt = system.vexSystemFIQInterrupt;
-/// # vexSystemIRQInterrupt
-///
-/// Group: "system"
-///
-/// Offset: 0x91c (0x37fc91c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemIRQInterrupt%28&type=code)
-///
-pub const vexSystemIRQInterrupt = system.vexSystemIRQInterrupt;
-/// # vexSystemSWInterrupt
-///
-/// Group: "system"
-///
-/// Offset: 0x920 (0x37fc920)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemSWInterrupt%28&type=code)
-///
-pub const vexSystemSWInterrupt = system.vexSystemSWInterrupt;
-/// # vexSystemDataAbortInterrupt
-///
-/// Group: "system"
-///
-/// Offset: 0x924 (0x37fc924)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemDataAbortInterrupt%28&type=code)
-///
-pub const vexSystemDataAbortInterrupt = system.vexSystemDataAbortInterrupt;
-/// # vexSystemPrefetchAbortInterrupt
-///
-/// Group: "system"
-///
-/// Offset: 0x928 (0x37fc928)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSystemPrefetchAbortInterrupt%28&type=code)
-///
-pub const vexSystemPrefetchAbortInterrupt = system.vexSystemPrefetchAbortInterrupt;
-/// # vexScratchMemoryLock
-///
-/// Group: "system"
-///
-/// Offset: 0x998 (0x37fc998)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexScratchMemoryLock%28&type=code)
-///
-pub const vexScratchMemoryLock = system.vexScratchMemoryLock;
-/// # vexScratchMemoryUnlock
-///
-/// Group: "system"
-///
-/// Offset: 0x99c (0x37fc99c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexScratchMemoryUnlock%28&type=code)
-///
-pub const vexScratchMemoryUnlock = system.vexScratchMemoryUnlock;
-
-// Group 'device'
+/// ```c
+/// uint32_t vexSystemUsbStatus();
+/// ```
+const vexSystemUsbStatus: *const fn() callconv(.c) u32 = system.vexSystemUsbStatus;
 
 /// # vexDevicesGetNumber
 ///
-/// Group: "device"
+/// **Public API**
 ///
-/// Offset: 0x190 (0x37fc190)
+/// **Jumptable Offset:** 0x0190 (_0x037fc190_)
 ///
-/// Private: True
+/// _defined in devices.zig. from public_signatures.h:32._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGetNumber%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicesGetNumber%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDevicesGetNumber = device.vexDevicesGetNumber;
+/// ```c
+/// uint32_t vexDevicesGetNumber();
+/// ```
+const vexDevicesGetNumber: *const fn() callconv(.c) u32 = devices.vexDevicesGetNumber;
+
 /// # vexDevicesGetNumberByType
 ///
-/// Group: "device"
+/// **Public API**
 ///
-/// Offset: 0x194 (0x37fc194)
+/// **Jumptable Offset:** 0x0194 (_0x037fc194_)
 ///
-/// Private: True
+/// _defined in devices.zig. from public_signatures.h:33._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGetNumberByType%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicesGetNumberByType%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDevicesGetNumberByType = device.vexDevicesGetNumberByType;
+/// ```c
+/// uint32_t vexDevicesGetNumberByType(V5_DeviceType type);
+/// ```
+const vexDevicesGetNumberByType: *const fn(type: types.V5_DeviceType) callconv(.c) u32 = devices.vexDevicesGetNumberByType;
+
 /// # vexDevicesGet
 ///
-/// Group: "device"
+/// **Public API**
 ///
-/// Offset: 0x198 (0x37fc198)
+/// **Jumptable Offset:** 0x0198 (_0x037fc198_)
 ///
-/// Private: True
+/// _defined in devices.zig. from public_signatures.h:34._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicesGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDevicesGet = device.vexDevicesGet;
+/// ```c
+/// V5_DeviceT vexDevicesGet();
+/// ```
+const vexDevicesGet: *const fn() callconv(.c) types.V5_DeviceT = devices.vexDevicesGet;
+
 /// # vexDeviceGetByIndex
 ///
-/// Group: "device"
+/// **Public API**
 ///
-/// Offset: 0x19c (0x37fc19c)
+/// **Jumptable Offset:** 0x019c (_0x037fc19c_)
 ///
-/// Private: True
+/// _defined in devices.zig. from public_signatures.h:35._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetByIndex%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGetByIndex%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceGetByIndex = device.vexDeviceGetByIndex;
+/// ```c
+/// V5_DeviceT vexDeviceGetByIndex(uint32_t index);
+/// ```
+const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) types.V5_DeviceT = devices.vexDeviceGetByIndex;
+
 /// # vexDeviceGetStatus
 ///
-/// Group: "device"
+/// **Public API**
 ///
-/// Offset: 0x1a0 (0x37fc1a0)
+/// **Jumptable Offset:** 0x01a0 (_0x037fc1a0_)
 ///
-/// Private: True
+/// _defined in devices.zig. from public_signatures.h:36._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetStatus%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGetStatus%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceGetStatus = device.vexDeviceGetStatus;
+/// ```c
+/// int32_t vexDeviceGetStatus(V5_DeviceType * buffer);
+/// ```
+const vexDeviceGetStatus: *const fn(buffer: [*c]types.V5_DeviceType) callconv(.c) i32 = devices.vexDeviceGetStatus;
+
 /// # vexDeviceGetTimestamp
 ///
-/// Group: "device"
+/// **Public API**
 ///
-/// Offset: 0x1b0 (0x37fc1b0)
+/// **Jumptable Offset:** 0x01b0 (_0x037fc1b0_)
 ///
-/// Private: True
+/// _defined in devices.zig. from public_signatures.h:37._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetTimestamp%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGetTimestamp%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceGetTimestamp = device.vexDeviceGetTimestamp;
+/// ```c
+/// int32_t vexDeviceGetTimestamp(V5_DeviceT device);
+/// ```
+const vexDeviceGetTimestamp: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = devices.vexDeviceGetTimestamp;
+
+/// # vexDeviceGetTimestampByIndex
+///
+/// **Public API**
+///
+/// 
+///
+/// _defined in devices.zig. from public_signatures.h:38._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetTimestampByIndex%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGetTimestampByIndex(int32_t index);
+/// ```
+const vexDeviceGetTimestampByIndex: *const fn(index: i32) callconv(.c) i32 = devices.vexDeviceGetTimestampByIndex;
+
 /// # vexDeviceButtonStateGet
 ///
-/// Group: "device"
+/// **Public API**
 ///
-/// Offset: 0x1b4 (0x37fc1b4)
+/// **Jumptable Offset:** 0x01b4 (_0x037fc1b4_)
 ///
-/// Private: True
+/// _defined in devices.zig. from public_signatures.h:39._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceButtonStateGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceButtonStateGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceButtonStateGet = device.vexDeviceButtonStateGet;
-/// # vexDeviceGenericValueGet
-///
-/// Group: "device"
-///
-/// Offset: 0x2a8 (0x37fc2a8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericValueGet%28&type=code)
-///
-pub const vexDeviceGenericValueGet = device.vexDeviceGenericValueGet;
-
-// Group 'controller'
+/// ```c
+/// uint32_t vexDeviceButtonStateGet();
+/// ```
+const vexDeviceButtonStateGet: *const fn() callconv(.c) u32 = devices.vexDeviceButtonStateGet;
 
 /// # vexControllerGet
 ///
-/// Group: "controller"
+/// **Public API**
 ///
-/// Offset: 0x1a4 (0x37fc1a4)
+/// **Jumptable Offset:** 0x01a4 (_0x037fc1a4_)
 ///
-/// Private: False
+/// _defined in controller.zig. from public_signatures.h:47._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexControllerGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexControllerGet = controller.vexControllerGet;
+/// ```c
+/// int32_t vexControllerGet(V5_ControllerId id, V5_ControllerIndex index);
+/// ```
+const vexControllerGet: *const fn(id: types.V5_ControllerId,index: types.V5_ControllerIndex) callconv(.c) i32 = controller.vexControllerGet;
+
 /// # vexControllerConnectionStatusGet
 ///
-/// Group: "controller"
+/// **Public API**
 ///
-/// Offset: 0x1a8 (0x37fc1a8)
+/// **Jumptable Offset:** 0x01a8 (_0x037fc1a8_)
 ///
-/// Private: False
+/// _defined in controller.zig. from public_signatures.h:48._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerConnectionStatusGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexControllerConnectionStatusGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexControllerConnectionStatusGet = controller.vexControllerConnectionStatusGet;
+/// ```c
+/// V5_ControllerStatus vexControllerConnectionStatusGet(V5_ControllerId id);
+/// ```
+const vexControllerConnectionStatusGet: *const fn(id: types.V5_ControllerId) callconv(.c) types.V5_ControllerStatus = controller.vexControllerConnectionStatusGet;
+
 /// # vexControllerTextSet
 ///
-/// Group: "controller"
+/// **Public API**
 ///
-/// Offset: 0x1ac (0x37fc1ac)
+/// **Jumptable Offset:** 0x01ac (_0x037fc1ac_)
 ///
-/// Private: False
+/// _defined in controller.zig. from public_signatures.h:49._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerTextSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexControllerTextSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexControllerTextSet = controller.vexControllerTextSet;
-
-// Group 'motor'
-
-/// # vexDeviceMotorVelocitySet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2d0 (0x37fc2d0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVelocitySet%28&type=code)
-///
-pub const vexDeviceMotorVelocitySet = motor.vexDeviceMotorVelocitySet;
-/// # vexDeviceMotorVelocityGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2d4 (0x37fc2d4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVelocityGet%28&type=code)
-///
-pub const vexDeviceMotorVelocityGet = motor.vexDeviceMotorVelocityGet;
-/// # vexDeviceMotorActualVelocityGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2d8 (0x37fc2d8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorActualVelocityGet%28&type=code)
-///
-pub const vexDeviceMotorActualVelocityGet = motor.vexDeviceMotorActualVelocityGet;
-/// # vexDeviceMotorDirectionGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2dc (0x37fc2dc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorDirectionGet%28&type=code)
-///
-pub const vexDeviceMotorDirectionGet = motor.vexDeviceMotorDirectionGet;
-/// # vexDeviceMotorModeSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2e0 (0x37fc2e0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorModeSet%28&type=code)
-///
-pub const vexDeviceMotorModeSet = motor.vexDeviceMotorModeSet;
-/// # vexDeviceMotorModeGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2e4 (0x37fc2e4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorModeGet%28&type=code)
-///
-pub const vexDeviceMotorModeGet = motor.vexDeviceMotorModeGet;
-/// # vexDeviceMotorPwmSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2e8 (0x37fc2e8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPwmSet%28&type=code)
-///
-pub const vexDeviceMotorPwmSet = motor.vexDeviceMotorPwmSet;
-/// # vexDeviceMotorPwmGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2ec (0x37fc2ec)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPwmGet%28&type=code)
-///
-pub const vexDeviceMotorPwmGet = motor.vexDeviceMotorPwmGet;
-/// # vexDeviceMotorCurrentLimitSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2f0 (0x37fc2f0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorCurrentLimitSet%28&type=code)
-///
-pub const vexDeviceMotorCurrentLimitSet = motor.vexDeviceMotorCurrentLimitSet;
-/// # vexDeviceMotorCurrentLimitGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2f4 (0x37fc2f4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorCurrentLimitGet%28&type=code)
-///
-pub const vexDeviceMotorCurrentLimitGet = motor.vexDeviceMotorCurrentLimitGet;
-/// # vexDeviceMotorCurrentGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2f8 (0x37fc2f8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorCurrentGet%28&type=code)
-///
-pub const vexDeviceMotorCurrentGet = motor.vexDeviceMotorCurrentGet;
-/// # vexDeviceMotorPowerGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x2fc (0x37fc2fc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPowerGet%28&type=code)
-///
-pub const vexDeviceMotorPowerGet = motor.vexDeviceMotorPowerGet;
-/// # vexDeviceMotorTorqueGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x300 (0x37fc300)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorTorqueGet%28&type=code)
-///
-pub const vexDeviceMotorTorqueGet = motor.vexDeviceMotorTorqueGet;
-/// # vexDeviceMotorEfficiencyGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x304 (0x37fc304)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorEfficiencyGet%28&type=code)
-///
-pub const vexDeviceMotorEfficiencyGet = motor.vexDeviceMotorEfficiencyGet;
-/// # vexDeviceMotorTemperatureGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x308 (0x37fc308)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorTemperatureGet%28&type=code)
-///
-pub const vexDeviceMotorTemperatureGet = motor.vexDeviceMotorTemperatureGet;
-/// # vexDeviceMotorOverTempFlagGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x30c (0x37fc30c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorOverTempFlagGet%28&type=code)
-///
-pub const vexDeviceMotorOverTempFlagGet = motor.vexDeviceMotorOverTempFlagGet;
-/// # vexDeviceMotorCurrentLimitFlagGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x310 (0x37fc310)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorCurrentLimitFlagGet%28&type=code)
-///
-pub const vexDeviceMotorCurrentLimitFlagGet = motor.vexDeviceMotorCurrentLimitFlagGet;
-/// # vexDeviceMotorZeroVelocityFlagGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x314 (0x37fc314)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorZeroVelocityFlagGet%28&type=code)
-///
-pub const vexDeviceMotorZeroVelocityFlagGet = motor.vexDeviceMotorZeroVelocityFlagGet;
-/// # vexDeviceMotorZeroPositionFlagGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x318 (0x37fc318)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorZeroPositionFlagGet%28&type=code)
-///
-pub const vexDeviceMotorZeroPositionFlagGet = motor.vexDeviceMotorZeroPositionFlagGet;
-/// # vexDeviceMotorReverseFlagSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x31c (0x37fc31c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorReverseFlagSet%28&type=code)
-///
-pub const vexDeviceMotorReverseFlagSet = motor.vexDeviceMotorReverseFlagSet;
-/// # vexDeviceMotorReverseFlagGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x320 (0x37fc320)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorReverseFlagGet%28&type=code)
-///
-pub const vexDeviceMotorReverseFlagGet = motor.vexDeviceMotorReverseFlagGet;
-/// # vexDeviceMotorEncoderUnitsSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x324 (0x37fc324)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorEncoderUnitsSet%28&type=code)
-///
-pub const vexDeviceMotorEncoderUnitsSet = motor.vexDeviceMotorEncoderUnitsSet;
-/// # vexDeviceMotorEncoderUnitsGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x328 (0x37fc328)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorEncoderUnitsGet%28&type=code)
-///
-pub const vexDeviceMotorEncoderUnitsGet = motor.vexDeviceMotorEncoderUnitsGet;
-/// # vexDeviceMotorBrakeModeSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x32c (0x37fc32c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorBrakeModeSet%28&type=code)
-///
-pub const vexDeviceMotorBrakeModeSet = motor.vexDeviceMotorBrakeModeSet;
-/// # vexDeviceMotorBrakeModeGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x330 (0x37fc330)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorBrakeModeGet%28&type=code)
-///
-pub const vexDeviceMotorBrakeModeGet = motor.vexDeviceMotorBrakeModeGet;
-/// # vexDeviceMotorPositionSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x334 (0x37fc334)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPositionSet%28&type=code)
-///
-pub const vexDeviceMotorPositionSet = motor.vexDeviceMotorPositionSet;
-/// # vexDeviceMotorPositionGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x338 (0x37fc338)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPositionGet%28&type=code)
-///
-pub const vexDeviceMotorPositionGet = motor.vexDeviceMotorPositionGet;
-/// # vexDeviceMotorPositionRawGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x33c (0x37fc33c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPositionRawGet%28&type=code)
-///
-pub const vexDeviceMotorPositionRawGet = motor.vexDeviceMotorPositionRawGet;
-/// # vexDeviceMotorPositionReset
-///
-/// Group: "motor"
-///
-/// Offset: 0x340 (0x37fc340)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPositionReset%28&type=code)
-///
-pub const vexDeviceMotorPositionReset = motor.vexDeviceMotorPositionReset;
-/// # vexDeviceMotorTargetGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x344 (0x37fc344)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorTargetGet%28&type=code)
-///
-pub const vexDeviceMotorTargetGet = motor.vexDeviceMotorTargetGet;
-/// # vexDeviceMotorServoTargetSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x348 (0x37fc348)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorServoTargetSet%28&type=code)
-///
-pub const vexDeviceMotorServoTargetSet = motor.vexDeviceMotorServoTargetSet;
-/// # vexDeviceMotorAbsoluteTargetSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x34c (0x37fc34c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorAbsoluteTargetSet%28&type=code)
-///
-pub const vexDeviceMotorAbsoluteTargetSet = motor.vexDeviceMotorAbsoluteTargetSet;
-/// # vexDeviceMotorRelativeTargetSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x350 (0x37fc350)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorRelativeTargetSet%28&type=code)
-///
-pub const vexDeviceMotorRelativeTargetSet = motor.vexDeviceMotorRelativeTargetSet;
-/// # vexDeviceMotorFaultsGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x354 (0x37fc354)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorFaultsGet%28&type=code)
-///
-pub const vexDeviceMotorFaultsGet = motor.vexDeviceMotorFaultsGet;
-/// # vexDeviceMotorFlagsGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x358 (0x37fc358)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorFlagsGet%28&type=code)
-///
-pub const vexDeviceMotorFlagsGet = motor.vexDeviceMotorFlagsGet;
-/// # vexDeviceMotorVoltageSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x35c (0x37fc35c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVoltageSet%28&type=code)
-///
-pub const vexDeviceMotorVoltageSet = motor.vexDeviceMotorVoltageSet;
-/// # vexDeviceMotorVoltageGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x360 (0x37fc360)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVoltageGet%28&type=code)
-///
-pub const vexDeviceMotorVoltageGet = motor.vexDeviceMotorVoltageGet;
-/// # vexDeviceMotorGearingSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x364 (0x37fc364)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorGearingSet%28&type=code)
-///
-pub const vexDeviceMotorGearingSet = motor.vexDeviceMotorGearingSet;
-/// # vexDeviceMotorGearingGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x368 (0x37fc368)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorGearingGet%28&type=code)
-///
-pub const vexDeviceMotorGearingGet = motor.vexDeviceMotorGearingGet;
-/// # vexDeviceMotorVoltageLimitSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x36c (0x37fc36c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVoltageLimitSet%28&type=code)
-///
-pub const vexDeviceMotorVoltageLimitSet = motor.vexDeviceMotorVoltageLimitSet;
-/// # vexDeviceMotorVoltageLimitGet
-///
-/// Group: "motor"
-///
-/// Offset: 0x370 (0x37fc370)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVoltageLimitGet%28&type=code)
-///
-pub const vexDeviceMotorVoltageLimitGet = motor.vexDeviceMotorVoltageLimitGet;
-/// # vexDeviceMotorVelocityUpdate
-///
-/// Group: "motor"
-///
-/// Offset: 0x374 (0x37fc374)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVelocityUpdate%28&type=code)
-///
-pub const vexDeviceMotorVelocityUpdate = motor.vexDeviceMotorVelocityUpdate;
-/// # vexDeviceMotorPositionPidSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x378 (0x37fc378)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorPositionPidSet%28&type=code)
-///
-pub const vexDeviceMotorPositionPidSet = motor.vexDeviceMotorPositionPidSet;
-/// # vexDeviceMotorVelocityPidSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x37c (0x37fc37c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorVelocityPidSet%28&type=code)
-///
-pub const vexDeviceMotorVelocityPidSet = motor.vexDeviceMotorVelocityPidSet;
-/// # vexDeviceMotorExternalProfileSet
-///
-/// Group: "motor"
-///
-/// Offset: 0x380 (0x37fc380)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMotorExternalProfileSet%28&type=code)
-///
-pub const vexDeviceMotorExternalProfileSet = motor.vexDeviceMotorExternalProfileSet;
-
-// Group 'adi'
-
-/// # vexDeviceAdiPortConfigSet
-///
-/// Group: "adi"
-///
-/// Offset: 0x208 (0x37fc208)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAdiPortConfigSet%28&type=code)
-///
-pub const vexDeviceAdiPortConfigSet = adi.vexDeviceAdiPortConfigSet;
-/// # vexDeviceAdiPortConfigGet
-///
-/// Group: "adi"
-///
-/// Offset: 0x20c (0x37fc20c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAdiPortConfigGet%28&type=code)
-///
-pub const vexDeviceAdiPortConfigGet = adi.vexDeviceAdiPortConfigGet;
-/// # vexDeviceAdiValueSet
-///
-/// Group: "adi"
-///
-/// Offset: 0x210 (0x37fc210)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAdiValueSet%28&type=code)
-///
-pub const vexDeviceAdiValueSet = adi.vexDeviceAdiValueSet;
-/// # vexDeviceAdiValueGet
-///
-/// Group: "adi"
-///
-/// Offset: 0x214 (0x37fc214)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAdiValueGet%28&type=code)
-///
-pub const vexDeviceAdiValueGet = adi.vexDeviceAdiValueGet;
-/// # vexDeviceAdiAddrLedSet
-///
-/// Group: "adi"
-///
-/// Offset: 0x21c (0x37fc21c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAdiAddrLedSet%28&type=code)
-///
-pub const vexDeviceAdiAddrLedSet = adi.vexDeviceAdiAddrLedSet;
-/// # vexDeviceBumperGet
-///
-/// Group: "adi"
-///
-/// Offset: 0x230 (0x37fc230)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceBumperGet%28&type=code)
-///
-pub const vexDeviceBumperGet = adi.vexDeviceBumperGet;
-/// # vexDeviceGyroReset
-///
-/// Group: "adi"
-///
-/// Offset: 0x258 (0x37fc258)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGyroReset%28&type=code)
-///
-pub const vexDeviceGyroReset = adi.vexDeviceGyroReset;
-/// # vexDeviceGyroHeadingGet
-///
-/// Group: "adi"
-///
-/// Offset: 0x25c (0x37fc25c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGyroHeadingGet%28&type=code)
-///
-pub const vexDeviceGyroHeadingGet = adi.vexDeviceGyroHeadingGet;
-/// # vexDeviceGyroDegreesGet
-///
-/// Group: "adi"
-///
-/// Offset: 0x260 (0x37fc260)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGyroDegreesGet%28&type=code)
-///
-pub const vexDeviceGyroDegreesGet = adi.vexDeviceGyroDegreesGet;
-/// # vexDeviceSonarValueGet
-///
-/// Group: "adi"
-///
-/// Offset: 0x280 (0x37fc280)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceSonarValueGet%28&type=code)
-///
-pub const vexDeviceSonarValueGet = adi.vexDeviceSonarValueGet;
-
-// Group 'led'
+/// ```c
+/// int vexControllerTextSet(V5_ControllerId id, uint32_t line, uint32_t col, const char * str);
+/// ```
+const vexControllerTextSet: *const fn(id: types.V5_ControllerId,line: u32,col: u32,str: [*:0]const u8) callconv(.c) types.int = controller.vexControllerTextSet;
 
 /// # vexDeviceLedSet
 ///
-/// Group: "led"
+/// **Public API**
 ///
-/// Offset: 0x1e0 (0x37fc1e0)
+/// **Jumptable Offset:** 0x01e0 (_0x037fc1e0_)
 ///
-/// Private: False
+/// _defined in devices/led.zig. from public_signatures.h:53._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLedSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLedSet = led.vexDeviceLedSet;
+/// ```c
+/// void vexDeviceLedSet(V5_DeviceT device, V5_DeviceLedColor value);
+/// ```
+const vexDeviceLedSet: *const fn(device: types.V5_DeviceT,value: types.V5_DeviceLedColor) callconv(.c) void = led.vexDeviceLedSet;
+
 /// # vexDeviceLedRgbSet
 ///
-/// Group: "led"
+/// **Public API**
 ///
-/// Offset: 0x1e4 (0x37fc1e4)
+/// **Jumptable Offset:** 0x01e4 (_0x037fc1e4_)
 ///
-/// Private: False
+/// _defined in devices/led.zig. from public_signatures.h:54._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedRgbSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLedRgbSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLedRgbSet = led.vexDeviceLedRgbSet;
+/// ```c
+/// void vexDeviceLedRgbSet(V5_DeviceT device, uint32_t color);
+/// ```
+const vexDeviceLedRgbSet: *const fn(device: types.V5_DeviceT,color: u32) callconv(.c) void = led.vexDeviceLedRgbSet;
+
 /// # vexDeviceLedGet
 ///
-/// Group: "led"
+/// **Public API**
 ///
-/// Offset: 0x1e8 (0x37fc1e8)
+/// **Jumptable Offset:** 0x01e8 (_0x037fc1e8_)
 ///
-/// Private: False
+/// _defined in devices/led.zig. from public_signatures.h:55._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLedGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLedGet = led.vexDeviceLedGet;
+/// ```c
+/// V5_DeviceLedColor vexDeviceLedGet(V5_DeviceT device);
+/// ```
+const vexDeviceLedGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceLedColor = led.vexDeviceLedGet;
+
 /// # vexDeviceLedRgbGet
 ///
-/// Group: "led"
+/// **Public API**
 ///
-/// Offset: 0x1ec (0x37fc1ec)
+/// **Jumptable Offset:** 0x01ec (_0x037fc1ec_)
 ///
-/// Private: False
+/// _defined in devices/led.zig. from public_signatures.h:56._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedRgbGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLedRgbGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLedRgbGet = led.vexDeviceLedRgbGet;
+/// ```c
+/// uint32_t vexDeviceLedRgbGet(V5_DeviceT device);
+/// ```
+const vexDeviceLedRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = led.vexDeviceLedRgbGet;
 
-// Group 'vision'
+/// # vexDeviceAdiPortConfigSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0208 (_0x037fc208_)
+///
+/// _defined in devices/adi.zig. from public_signatures.h:59._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiPortConfigSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceAdiPortConfigSet(V5_DeviceT device, uint32_t port, V5_AdiPortConfiguration type);
+/// ```
+const vexDeviceAdiPortConfigSet: *const fn(device: types.V5_DeviceT,port: u32,type: types.V5_AdiPortConfiguration) callconv(.c) void = adi.vexDeviceAdiPortConfigSet;
+
+/// # vexDeviceAdiPortConfigGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x020c (_0x037fc20c_)
+///
+/// _defined in devices/adi.zig. from public_signatures.h:61._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiPortConfigGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5_AdiPortConfiguration vexDeviceAdiPortConfigGet(V5_DeviceT device, uint32_t port);
+/// ```
+const vexDeviceAdiPortConfigGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) types.V5_AdiPortConfiguration = adi.vexDeviceAdiPortConfigGet;
+
+/// # vexDeviceAdiValueSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0210 (_0x037fc210_)
+///
+/// _defined in devices/adi.zig. from public_signatures.h:63._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiValueSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceAdiValueSet(V5_DeviceT device, uint32_t port, int32_t value);
+/// ```
+const vexDeviceAdiValueSet: *const fn(device: types.V5_DeviceT,port: u32,value: i32) callconv(.c) void = adi.vexDeviceAdiValueSet;
+
+/// # vexDeviceAdiValueGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0214 (_0x037fc214_)
+///
+/// _defined in devices/adi.zig. from public_signatures.h:64._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiValueGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceAdiValueGet(V5_DeviceT device, uint32_t port);
+/// ```
+const vexDeviceAdiValueGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) i32 = adi.vexDeviceAdiValueGet;
+
+/// # vexDeviceBumperGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0230 (_0x037fc230_)
+///
+/// _defined in devices/bumper.zig. from public_signatures.h:67._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceBumperGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5_DeviceBumperState vexDeviceBumperGet(V5_DeviceT device);
+/// ```
+const vexDeviceBumperGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceBumperState = bumper.vexDeviceBumperGet;
+
+/// # vexDeviceGyroReset
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0258 (_0x037fc258_)
+///
+/// _defined in devices/gyro.zig. from public_signatures.h:70._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroReset%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGyroReset(V5_DeviceT device);
+/// ```
+const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = gyro.vexDeviceGyroReset;
+
+/// # vexDeviceGyroHeadingGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x025c (_0x037fc25c_)
+///
+/// _defined in devices/gyro.zig. from public_signatures.h:71._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroHeadingGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceGyroHeadingGet(V5_DeviceT device);
+/// ```
+const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gyro.vexDeviceGyroHeadingGet;
+
+/// # vexDeviceGyroDegreesGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0260 (_0x037fc260_)
+///
+/// _defined in devices/gyro.zig. from public_signatures.h:72._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroDegreesGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceGyroDegreesGet(V5_DeviceT device);
+/// ```
+const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gyro.vexDeviceGyroDegreesGet;
+
+/// # vexDeviceSonarValueGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0280 (_0x037fc280_)
+///
+/// _defined in devices/sonar.zig. from public_signatures.h:75._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceSonarValueGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceSonarValueGet(V5_DeviceT device);
+/// ```
+const vexDeviceSonarValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = sonar.vexDeviceSonarValueGet;
+
+/// # vexDeviceGenericValueGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02a8 (_0x037fc2a8_)
+///
+/// _defined in devices/generic.zig. from public_signatures.h:78._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericValueGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericValueGet(V5_DeviceT device);
+/// ```
+const vexDeviceGenericValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic.vexDeviceGenericValueGet;
+
+/// # vexDeviceMotorVelocitySet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02d0 (_0x037fc2d0_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:81._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocitySet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorVelocitySet(V5_DeviceT device, int32_t velocity);
+/// ```
+const vexDeviceMotorVelocitySet: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void = motor.vexDeviceMotorVelocitySet;
+
+/// # vexDeviceMotorVelocityUpdate
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0374 (_0x037fc374_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:82._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityUpdate%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorVelocityUpdate(V5_DeviceT device, int32_t velocity);
+/// ```
+const vexDeviceMotorVelocityUpdate: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void = motor.vexDeviceMotorVelocityUpdate;
+
+/// # vexDeviceMotorVoltageSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x035c (_0x037fc35c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:83._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorVoltageSet(V5_DeviceT device, int32_t value);
+/// ```
+const vexDeviceMotorVoltageSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorVoltageSet;
+
+/// # vexDeviceMotorVelocityGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02d4 (_0x037fc2d4_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:84._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorVelocityGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVelocityGet;
+
+/// # vexDeviceMotorActualVelocityGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02d8 (_0x037fc2d8_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:85._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorActualVelocityGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceMotorActualVelocityGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorActualVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorActualVelocityGet;
+
+/// # vexDeviceMotorDirectionGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02dc (_0x037fc2dc_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:86._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorDirectionGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorDirectionGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorDirectionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorDirectionGet;
+
+/// # vexDeviceMotorModeSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02e0 (_0x037fc2e0_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:87._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorModeSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorModeSet(V5_DeviceT device, V5MotorControlMode mode);
+/// ```
+const vexDeviceMotorModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorControlMode) callconv(.c) void = motor.vexDeviceMotorModeSet;
+
+/// # vexDeviceMotorModeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02e4 (_0x037fc2e4_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:88._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorModeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5MotorControlMode vexDeviceMotorModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorControlMode = motor.vexDeviceMotorModeGet;
+
+/// # vexDeviceMotorPwmSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02e8 (_0x037fc2e8_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:89._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPwmSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorPwmSet(V5_DeviceT device, int32_t value);
+/// ```
+const vexDeviceMotorPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorPwmSet;
+
+/// # vexDeviceMotorPwmGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02ec (_0x037fc2ec_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:90._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPwmGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorPwmGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorPwmGet;
+
+/// # vexDeviceMotorCurrentLimitSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02f0 (_0x037fc2f0_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:91._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorCurrentLimitSet(V5_DeviceT device, int32_t value);
+/// ```
+const vexDeviceMotorCurrentLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorCurrentLimitSet;
+
+/// # vexDeviceMotorCurrentLimitGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02f4 (_0x037fc2f4_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:92._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorCurrentLimitGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorCurrentLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorCurrentLimitGet;
+
+/// # vexDeviceMotorVoltageLimitSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x036c (_0x037fc36c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:93._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageLimitSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorVoltageLimitSet(V5_DeviceT device, int32_t value);
+/// ```
+const vexDeviceMotorVoltageLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorVoltageLimitSet;
+
+/// # vexDeviceMotorVoltageLimitGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0370 (_0x037fc370_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:94._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageLimitGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorVoltageLimitGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorVoltageLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVoltageLimitGet;
+
+/// # vexDeviceMotorPositionPidSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0378 (_0x037fc378_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:95._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionPidSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorPositionPidSet(V5_DeviceT device, V5_DeviceMotorPid * pid);
+/// ```
+const vexDeviceMotorPositionPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void = motor.vexDeviceMotorPositionPidSet;
+
+/// # vexDeviceMotorVelocityPidSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x037c (_0x037fc37c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:96._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityPidSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorVelocityPidSet(V5_DeviceT device, V5_DeviceMotorPid * pid);
+/// ```
+const vexDeviceMotorVelocityPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void = motor.vexDeviceMotorVelocityPidSet;
+
+/// # vexDeviceMotorCurrentGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02f8 (_0x037fc2f8_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:97._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorCurrentGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorCurrentGet;
+
+/// # vexDeviceMotorVoltageGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0360 (_0x037fc360_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:98._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorVoltageGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorVoltageGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVoltageGet;
+
+/// # vexDeviceMotorPowerGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x02fc (_0x037fc2fc_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:99._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPowerGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceMotorPowerGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorPowerGet;
+
+/// # vexDeviceMotorTorqueGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0300 (_0x037fc300_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:100._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTorqueGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceMotorTorqueGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorTorqueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTorqueGet;
+
+/// # vexDeviceMotorEfficiencyGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0304 (_0x037fc304_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:101._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEfficiencyGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceMotorEfficiencyGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorEfficiencyGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorEfficiencyGet;
+
+/// # vexDeviceMotorTemperatureGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0308 (_0x037fc308_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:102._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTemperatureGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceMotorTemperatureGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTemperatureGet;
+
+/// # vexDeviceMotorOverTempFlagGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x030c (_0x037fc30c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:103._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorOverTempFlagGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDeviceMotorOverTempFlagGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorOverTempFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorOverTempFlagGet;
+
+/// # vexDeviceMotorCurrentLimitFlagGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0310 (_0x037fc310_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:104._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitFlagGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDeviceMotorCurrentLimitFlagGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorCurrentLimitFlagGet;
+
+/// # vexDeviceMotorFaultsGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0354 (_0x037fc354_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:105._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorFaultsGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceMotorFaultsGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorFaultsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = motor.vexDeviceMotorFaultsGet;
+
+/// # vexDeviceMotorZeroVelocityFlagGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0314 (_0x037fc314_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:106._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorZeroVelocityFlagGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDeviceMotorZeroVelocityFlagGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorZeroVelocityFlagGet;
+
+/// # vexDeviceMotorZeroPositionFlagGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0318 (_0x037fc318_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:107._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorZeroPositionFlagGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDeviceMotorZeroPositionFlagGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorZeroPositionFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorZeroPositionFlagGet;
+
+/// # vexDeviceMotorFlagsGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0358 (_0x037fc358_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:108._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorFlagsGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceMotorFlagsGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorFlagsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = motor.vexDeviceMotorFlagsGet;
+
+/// # vexDeviceMotorReverseFlagSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x031c (_0x037fc31c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:109._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorReverseFlagSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorReverseFlagSet(V5_DeviceT device, int value);
+/// ```
+const vexDeviceMotorReverseFlagSet: *const fn(device: types.V5_DeviceT,value: types.int) callconv(.c) void = motor.vexDeviceMotorReverseFlagSet;
+
+/// # vexDeviceMotorReverseFlagGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0320 (_0x037fc320_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:110._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorReverseFlagGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDeviceMotorReverseFlagGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorReverseFlagGet;
+
+/// # vexDeviceMotorEncoderUnitsSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0324 (_0x037fc324_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:111._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEncoderUnitsSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorEncoderUnitsSet(V5_DeviceT device, V5MotorEncoderUnits units);
+/// ```
+const vexDeviceMotorEncoderUnitsSet: *const fn(device: types.V5_DeviceT,units: types.V5MotorEncoderUnits) callconv(.c) void = motor.vexDeviceMotorEncoderUnitsSet;
+
+/// # vexDeviceMotorEncoderUnitsGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0328 (_0x037fc328_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:113._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEncoderUnitsGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5MotorEncoderUnits vexDeviceMotorEncoderUnitsGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorEncoderUnitsGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorEncoderUnits = motor.vexDeviceMotorEncoderUnitsGet;
+
+/// # vexDeviceMotorBrakeModeSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x032c (_0x037fc32c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:114._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorBrakeModeSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorBrakeModeSet(V5_DeviceT device, V5MotorBrakeMode mode);
+/// ```
+const vexDeviceMotorBrakeModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorBrakeMode) callconv(.c) void = motor.vexDeviceMotorBrakeModeSet;
+
+/// # vexDeviceMotorBrakeModeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0330 (_0x037fc330_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:115._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorBrakeModeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5MotorBrakeMode vexDeviceMotorBrakeModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorBrakeModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorBrakeMode = motor.vexDeviceMotorBrakeModeGet;
+
+/// # vexDeviceMotorPositionSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0334 (_0x037fc334_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:116._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorPositionSet(V5_DeviceT device, double position);
+/// ```
+const vexDeviceMotorPositionSet: *const fn(device: types.V5_DeviceT,position: types.double) callconv(.c) void = motor.vexDeviceMotorPositionSet;
+
+/// # vexDeviceMotorPositionGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0338 (_0x037fc338_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:117._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceMotorPositionGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorPositionGet;
+
+/// # vexDeviceMotorPositionRawGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x033c (_0x037fc33c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:118._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionRawGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorPositionRawGet(V5_DeviceT device, uint32_t * timestamp);
+/// ```
+const vexDeviceMotorPositionRawGet: *const fn(device: types.V5_DeviceT,timestamp: [*c]u32) callconv(.c) i32 = motor.vexDeviceMotorPositionRawGet;
+
+/// # vexDeviceMotorPositionReset
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0340 (_0x037fc340_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:119._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionReset%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorPositionReset(V5_DeviceT device);
+/// ```
+const vexDeviceMotorPositionReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = motor.vexDeviceMotorPositionReset;
+
+/// # vexDeviceMotorTargetGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0344 (_0x037fc344_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:120._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTargetGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceMotorTargetGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorTargetGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTargetGet;
+
+/// # vexDeviceMotorServoTargetSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0348 (_0x037fc348_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:121._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorServoTargetSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorServoTargetSet(V5_DeviceT device, double position);
+/// ```
+const vexDeviceMotorServoTargetSet: *const fn(device: types.V5_DeviceT,position: types.double) callconv(.c) void = motor.vexDeviceMotorServoTargetSet;
+
+/// # vexDeviceMotorAbsoluteTargetSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x034c (_0x037fc34c_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:122._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorAbsoluteTargetSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorAbsoluteTargetSet(V5_DeviceT device, double position, int32_t velocity);
+/// ```
+const vexDeviceMotorAbsoluteTargetSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorAbsoluteTargetSet;
+
+/// # vexDeviceMotorRelativeTargetSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0350 (_0x037fc350_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:124._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorRelativeTargetSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorRelativeTargetSet(V5_DeviceT device, double position, int32_t velocity);
+/// ```
+const vexDeviceMotorRelativeTargetSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorRelativeTargetSet;
+
+/// # vexDeviceMotorGearingSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0364 (_0x037fc364_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:126._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorGearingSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorGearingSet(V5_DeviceT device, V5MotorGearset value);
+/// ```
+const vexDeviceMotorGearingSet: *const fn(device: types.V5_DeviceT,value: types.V5MotorGearset) callconv(.c) void = motor.vexDeviceMotorGearingSet;
+
+/// # vexDeviceMotorGearingGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0368 (_0x037fc368_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:127._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorGearingGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5MotorGearset vexDeviceMotorGearingGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorGearingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorGearset = motor.vexDeviceMotorGearingGet;
+
+/// # vexDeviceMotorExternalProfileSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0380 (_0x037fc380_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:128._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorExternalProfileSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceMotorExternalProfileSet(V5_DeviceT device, double position, int32_t velocity);
+/// ```
+const vexDeviceMotorExternalProfileSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorExternalProfileSet;
+
+/// # vexDeviceMotorTypeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0384 (_0x037fc384_)
+///
+/// _defined in devices/motor.zig. from public_signatures.h:130._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTypeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceMotorTypeGet(V5_DeviceT device);
+/// ```
+const vexDeviceMotorTypeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorTypeGet;
 
 /// # vexDeviceVisionModeSet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x398 (0x37fc398)
+/// **Jumptable Offset:** 0x0398 (_0x037fc398_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:133._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionModeSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionModeSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionModeSet = vision.vexDeviceVisionModeSet;
+/// ```c
+/// void vexDeviceVisionModeSet(V5_DeviceT device, V5VisionMode mode);
+/// ```
+const vexDeviceVisionModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionMode) callconv(.c) void = vision.vexDeviceVisionModeSet;
+
 /// # vexDeviceVisionModeGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x39c (0x37fc39c)
+/// **Jumptable Offset:** 0x039c (_0x037fc39c_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:134._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionModeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionModeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionModeGet = vision.vexDeviceVisionModeGet;
+/// ```c
+/// V5VisionMode vexDeviceVisionModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionMode = vision.vexDeviceVisionModeGet;
+
 /// # vexDeviceVisionObjectCountGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3a0 (0x37fc3a0)
+/// **Jumptable Offset:** 0x03a0 (_0x037fc3a0_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:135._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionObjectCountGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionObjectCountGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionObjectCountGet = vision.vexDeviceVisionObjectCountGet;
+/// ```c
+/// int32_t vexDeviceVisionObjectCountGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = vision.vexDeviceVisionObjectCountGet;
+
 /// # vexDeviceVisionObjectGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3a4 (0x37fc3a4)
+/// **Jumptable Offset:** 0x03a4 (_0x037fc3a4_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:136._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionObjectGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionObjectGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionObjectGet = vision.vexDeviceVisionObjectGet;
+/// ```c
+/// int32_t vexDeviceVisionObjectGet(V5_DeviceT device, uint32_t indexObj, V5_DeviceVisionObject * pObject);
+/// ```
+const vexDeviceVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32,pObject: [*c]types.V5_DeviceVisionObject) callconv(.c) i32 = vision.vexDeviceVisionObjectGet;
+
 /// # vexDeviceVisionSignatureSet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3a8 (0x37fc3a8)
+/// **Jumptable Offset:** 0x03a8 (_0x037fc3a8_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:138._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionSignatureSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionSignatureSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionSignatureSet = vision.vexDeviceVisionSignatureSet;
+/// ```c
+/// void vexDeviceVisionSignatureSet(V5_DeviceT device, V5_DeviceVisionSignature * pSignature);
+/// ```
+const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) void = vision.vexDeviceVisionSignatureSet;
+
 /// # vexDeviceVisionSignatureGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3ac (0x37fc3ac)
+/// **Jumptable Offset:** 0x03ac (_0x037fc3ac_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:140._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionSignatureGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionSignatureGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionSignatureGet = vision.vexDeviceVisionSignatureGet;
+/// ```c
+/// int vexDeviceVisionSignatureGet(V5_DeviceT device, uint32_t id, V5_DeviceVisionSignature * pSignature);
+/// ```
+const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u32,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) types.int = vision.vexDeviceVisionSignatureGet;
+
 /// # vexDeviceVisionBrightnessSet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3c0 (0x37fc3c0)
+/// **Jumptable Offset:** 0x03b0 (_0x037fc3b0_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:142._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionBrightnessSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionBrightnessSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionBrightnessSet = vision.vexDeviceVisionBrightnessSet;
+/// ```c
+/// void vexDeviceVisionBrightnessSet(V5_DeviceT device, uint8_t percent);
+/// ```
+const vexDeviceVisionBrightnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void = vision.vexDeviceVisionBrightnessSet;
+
 /// # vexDeviceVisionBrightnessGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3c4 (0x37fc3c4)
+/// **Jumptable Offset:** 0x03b4 (_0x037fc3b4_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:143._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionBrightnessGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionBrightnessGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionBrightnessGet = vision.vexDeviceVisionBrightnessGet;
+/// ```c
+/// uint8_t vexDeviceVisionBrightnessGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = vision.vexDeviceVisionBrightnessGet;
+
 /// # vexDeviceVisionWhiteBalanceModeSet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3c8 (0x37fc3c8)
+/// **Jumptable Offset:** 0x03b8 (_0x037fc3b8_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:144._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceModeSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionWhiteBalanceModeSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionWhiteBalanceModeSet = vision.vexDeviceVisionWhiteBalanceModeSet;
+/// ```c
+/// void vexDeviceVisionWhiteBalanceModeSet(V5_DeviceT device, V5VisionWBMode mode);
+/// ```
+const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWBMode) callconv(.c) void = vision.vexDeviceVisionWhiteBalanceModeSet;
+
 /// # vexDeviceVisionWhiteBalanceModeGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3cc (0x37fc3cc)
+/// **Jumptable Offset:** 0x03bc (_0x037fc3bc_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:145._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceModeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionWhiteBalanceModeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionWhiteBalanceModeGet = vision.vexDeviceVisionWhiteBalanceModeGet;
+/// ```c
+/// V5VisionWBMode vexDeviceVisionWhiteBalanceModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWBMode = vision.vexDeviceVisionWhiteBalanceModeGet;
+
+/// # vexDeviceVisionWhiteBalanceSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x03c0 (_0x037fc3c0_)
+///
+/// _defined in devices/vision.zig. from public_signatures.h:146._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceVisionWhiteBalanceSet(V5_DeviceT device, V5_DeviceVisionRgb color);
+/// ```
+const vexDeviceVisionWhiteBalanceSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void = vision.vexDeviceVisionWhiteBalanceSet;
+
+/// # vexDeviceVisionWhiteBalanceGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x03c4 (_0x037fc3c4_)
+///
+/// _defined in devices/vision.zig. from public_signatures.h:148._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5_DeviceVisionRgb vexDeviceVisionWhiteBalanceGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionWhiteBalanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb = vision.vexDeviceVisionWhiteBalanceGet;
+
+/// # vexDeviceVisionLedModeSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x03c8 (_0x037fc3c8_)
+///
+/// _defined in devices/vision.zig. from public_signatures.h:149._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedModeSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceVisionLedModeSet(V5_DeviceT device, V5VisionLedMode mode);
+/// ```
+const vexDeviceVisionLedModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionLedMode) callconv(.c) void = vision.vexDeviceVisionLedModeSet;
+
+/// # vexDeviceVisionLedModeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x03cc (_0x037fc3cc_)
+///
+/// _defined in devices/vision.zig. from public_signatures.h:150._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedModeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// V5VisionLedMode vexDeviceVisionLedModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionLedModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionLedMode = vision.vexDeviceVisionLedModeGet;
+
 /// # vexDeviceVisionLedBrigntnessSet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3d0 (0x37fc3d0)
+/// **Jumptable Offset:** 0x03d0 (_0x037fc3d0_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:151._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedBrigntnessSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionLedBrigntnessSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionLedBrigntnessSet = vision.vexDeviceVisionLedBrigntnessSet;
+/// ```c
+/// void vexDeviceVisionLedBrigntnessSet(V5_DeviceT device, uint8_t percent);
+/// ```
+const vexDeviceVisionLedBrigntnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void = vision.vexDeviceVisionLedBrigntnessSet;
+
 /// # vexDeviceVisionLedBrigntnessGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3d4 (0x37fc3d4)
+/// **Jumptable Offset:** 0x03d4 (_0x037fc3d4_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:152._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedBrigntnessGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionLedBrigntnessGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionLedBrigntnessGet = vision.vexDeviceVisionLedBrigntnessGet;
+/// ```c
+/// uint8_t vexDeviceVisionLedBrigntnessGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionLedBrigntnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = vision.vexDeviceVisionLedBrigntnessGet;
+
 /// # vexDeviceVisionLedColorSet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3d8 (0x37fc3d8)
+/// **Jumptable Offset:** 0x03d8 (_0x037fc3d8_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:153._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedColorSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionLedColorSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionLedColorSet = vision.vexDeviceVisionLedColorSet;
+/// ```c
+/// void vexDeviceVisionLedColorSet(V5_DeviceT device, V5_DeviceVisionRgb color);
+/// ```
+const vexDeviceVisionLedColorSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void = vision.vexDeviceVisionLedColorSet;
+
 /// # vexDeviceVisionLedColorGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3dc (0x37fc3dc)
+/// **Jumptable Offset:** 0x03dc (_0x037fc3dc_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:154._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedColorGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionLedColorGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionLedColorGet = vision.vexDeviceVisionLedColorGet;
+/// ```c
+/// V5_DeviceVisionRgb vexDeviceVisionLedColorGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionLedColorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb = vision.vexDeviceVisionLedColorGet;
+
 /// # vexDeviceVisionWifiModeSet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3e0 (0x37fc3e0)
+/// **Jumptable Offset:** 0x03e0 (_0x037fc3e0_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:155._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWifiModeSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionWifiModeSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionWifiModeSet = vision.vexDeviceVisionWifiModeSet;
+/// ```c
+/// void vexDeviceVisionWifiModeSet(V5_DeviceT device, V5VisionWifiMode mode);
+/// ```
+const vexDeviceVisionWifiModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWifiMode) callconv(.c) void = vision.vexDeviceVisionWifiModeSet;
+
 /// # vexDeviceVisionWifiModeGet
 ///
-/// Group: "vision"
+/// **Public API**
 ///
-/// Offset: 0x3e4 (0x37fc3e4)
+/// **Jumptable Offset:** 0x03e4 (_0x037fc3e4_)
 ///
-/// Private: False
+/// _defined in devices/vision.zig. from public_signatures.h:156._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWifiModeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceVisionWifiModeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceVisionWifiModeGet = vision.vexDeviceVisionWifiModeGet;
-
-// Group 'imu'
+/// ```c
+/// V5VisionWifiMode vexDeviceVisionWifiModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceVisionWifiModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWifiMode = vision.vexDeviceVisionWifiModeGet;
 
 /// # vexDeviceImuReset
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x410 (0x37fc410)
+/// **Jumptable Offset:** 0x0410 (_0x037fc410_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:159._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuReset%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuReset%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuReset = imu.vexDeviceImuReset;
+/// ```c
+/// void vexDeviceImuReset(V5_DeviceT device);
+/// ```
+const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = imu.vexDeviceImuReset;
+
 /// # vexDeviceImuHeadingGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x414 (0x37fc414)
+/// **Jumptable Offset:** 0x0414 (_0x037fc414_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:160._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuHeadingGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuHeadingGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuHeadingGet = imu.vexDeviceImuHeadingGet;
+/// ```c
+/// double vexDeviceImuHeadingGet(V5_DeviceT device);
+/// ```
+const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = imu.vexDeviceImuHeadingGet;
+
 /// # vexDeviceImuDegreesGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x418 (0x37fc418)
+/// **Jumptable Offset:** 0x0418 (_0x037fc418_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:161._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuDegreesGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuDegreesGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuDegreesGet = imu.vexDeviceImuDegreesGet;
+/// ```c
+/// double vexDeviceImuDegreesGet(V5_DeviceT device);
+/// ```
+const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = imu.vexDeviceImuDegreesGet;
+
 /// # vexDeviceImuQuaternionGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x41c (0x37fc41c)
+/// **Jumptable Offset:** 0x041c (_0x037fc41c_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:162._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuQuaternionGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuQuaternionGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuQuaternionGet = imu.vexDeviceImuQuaternionGet;
+/// ```c
+/// void vexDeviceImuQuaternionGet(V5_DeviceT device, V5_DeviceImuQuaternion * data);
+/// ```
+const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuQuaternion) callconv(.c) void = imu.vexDeviceImuQuaternionGet;
+
 /// # vexDeviceImuAttitudeGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x420 (0x37fc420)
+/// **Jumptable Offset:** 0x0420 (_0x037fc420_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:163._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuAttitudeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuAttitudeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuAttitudeGet = imu.vexDeviceImuAttitudeGet;
+/// ```c
+/// void vexDeviceImuAttitudeGet(V5_DeviceT device, V5_DeviceImuAttitude * data);
+/// ```
+const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuAttitude) callconv(.c) void = imu.vexDeviceImuAttitudeGet;
+
 /// # vexDeviceImuRawGyroGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x424 (0x37fc424)
+/// **Jumptable Offset:** 0x0424 (_0x037fc424_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:164._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuRawGyroGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuRawGyroGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuRawGyroGet = imu.vexDeviceImuRawGyroGet;
+/// ```c
+/// void vexDeviceImuRawGyroGet(V5_DeviceT device, V5_DeviceImuRaw * data);
+/// ```
+const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void = imu.vexDeviceImuRawGyroGet;
+
 /// # vexDeviceImuRawAccelGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x428 (0x37fc428)
+/// **Jumptable Offset:** 0x0428 (_0x037fc428_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:165._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuRawAccelGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuRawAccelGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuRawAccelGet = imu.vexDeviceImuRawAccelGet;
+/// ```c
+/// void vexDeviceImuRawAccelGet(V5_DeviceT device, V5_DeviceImuRaw * data);
+/// ```
+const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void = imu.vexDeviceImuRawAccelGet;
+
 /// # vexDeviceImuStatusGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x42c (0x37fc42c)
+/// **Jumptable Offset:** 0x042c (_0x037fc42c_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:166._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuStatusGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuStatusGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuStatusGet = imu.vexDeviceImuStatusGet;
+/// ```c
+/// uint32_t vexDeviceImuStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = imu.vexDeviceImuStatusGet;
+
 /// # vexDeviceImuModeSet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x438 (0x37fc438)
+/// **Jumptable Offset:** 0x0438 (_0x037fc438_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:167._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuModeSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuModeSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuModeSet = imu.vexDeviceImuModeSet;
+/// ```c
+/// void vexDeviceImuModeSet(V5_DeviceT device, uint32_t mode);
+/// ```
+const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = imu.vexDeviceImuModeSet;
+
 /// # vexDeviceImuModeGet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x43c (0x37fc43c)
+/// **Jumptable Offset:** 0x043c (_0x037fc43c_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:168._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuModeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuModeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuModeGet = imu.vexDeviceImuModeGet;
+/// ```c
+/// uint32_t vexDeviceImuModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = imu.vexDeviceImuModeGet;
+
 /// # vexDeviceImuDataRateSet
 ///
-/// Group: "imu"
+/// **Public API**
 ///
-/// Offset: 0x444 (0x37fc444)
+/// **Jumptable Offset:** 0x0444 (_0x037fc444_)
 ///
-/// Private: False
+/// _defined in devices/imu.zig. from public_signatures.h:169._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuDataRateSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceImuDataRateSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceImuDataRateSet = imu.vexDeviceImuDataRateSet;
-
-// Group 'gps'
-
-/// # vexDeviceGpsReset
-///
-/// Group: "gps"
-///
-/// Offset: 0x5c8 (0x37fc5c8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsReset%28&type=code)
-///
-pub const vexDeviceGpsReset = gps.vexDeviceGpsReset;
-/// # vexDeviceGpsHeadingGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5cc (0x37fc5cc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsHeadingGet%28&type=code)
-///
-pub const vexDeviceGpsHeadingGet = gps.vexDeviceGpsHeadingGet;
-/// # vexDeviceGpsDegreesGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5d0 (0x37fc5d0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsDegreesGet%28&type=code)
-///
-pub const vexDeviceGpsDegreesGet = gps.vexDeviceGpsDegreesGet;
-/// # vexDeviceGpsQuaternionGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5d4 (0x37fc5d4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsQuaternionGet%28&type=code)
-///
-pub const vexDeviceGpsQuaternionGet = gps.vexDeviceGpsQuaternionGet;
-/// # vexDeviceGpsAttitudeGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5d8 (0x37fc5d8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsAttitudeGet%28&type=code)
-///
-pub const vexDeviceGpsAttitudeGet = gps.vexDeviceGpsAttitudeGet;
-/// # vexDeviceGpsRawGyroGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5dc (0x37fc5dc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsRawGyroGet%28&type=code)
-///
-pub const vexDeviceGpsRawGyroGet = gps.vexDeviceGpsRawGyroGet;
-/// # vexDeviceGpsRawAccelGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5e0 (0x37fc5e0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsRawAccelGet%28&type=code)
-///
-pub const vexDeviceGpsRawAccelGet = gps.vexDeviceGpsRawAccelGet;
-/// # vexDeviceGpsStatusGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5e4 (0x37fc5e4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsStatusGet%28&type=code)
-///
-pub const vexDeviceGpsStatusGet = gps.vexDeviceGpsStatusGet;
-/// # vexDeviceGpsModeSet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5f0 (0x37fc5f0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsModeSet%28&type=code)
-///
-pub const vexDeviceGpsModeSet = gps.vexDeviceGpsModeSet;
-/// # vexDeviceGpsModeGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5f4 (0x37fc5f4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsModeGet%28&type=code)
-///
-pub const vexDeviceGpsModeGet = gps.vexDeviceGpsModeGet;
-/// # vexDeviceGpsDataRateSet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5f8 (0x37fc5f8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsDataRateSet%28&type=code)
-///
-pub const vexDeviceGpsDataRateSet = gps.vexDeviceGpsDataRateSet;
-/// # vexDeviceGpsOriginSet
-///
-/// Group: "gps"
-///
-/// Offset: 0x5fc (0x37fc5fc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsOriginSet%28&type=code)
-///
-pub const vexDeviceGpsOriginSet = gps.vexDeviceGpsOriginSet;
-/// # vexDeviceGpsOriginGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x600 (0x37fc600)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsOriginGet%28&type=code)
-///
-pub const vexDeviceGpsOriginGet = gps.vexDeviceGpsOriginGet;
-/// # vexDeviceGpsRotationSet
-///
-/// Group: "gps"
-///
-/// Offset: 0x604 (0x37fc604)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsRotationSet%28&type=code)
-///
-pub const vexDeviceGpsRotationSet = gps.vexDeviceGpsRotationSet;
-/// # vexDeviceGpsRotationGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x608 (0x37fc608)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsRotationGet%28&type=code)
-///
-pub const vexDeviceGpsRotationGet = gps.vexDeviceGpsRotationGet;
-/// # vexDeviceGpsInitialPositionSet
-///
-/// Group: "gps"
-///
-/// Offset: 0x60c (0x37fc60c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsInitialPositionSet%28&type=code)
-///
-pub const vexDeviceGpsInitialPositionSet = gps.vexDeviceGpsInitialPositionSet;
-/// # vexDeviceGpsErrorGet
-///
-/// Group: "gps"
-///
-/// Offset: 0x614 (0x37fc614)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGpsErrorGet%28&type=code)
-///
-pub const vexDeviceGpsErrorGet = gps.vexDeviceGpsErrorGet;
-
-// Group 'optical'
-
-/// # vexDeviceOpticalHueGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x528 (0x37fc528)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalHueGet%28&type=code)
-///
-pub const vexDeviceOpticalHueGet = optical.vexDeviceOpticalHueGet;
-/// # vexDeviceOpticalSatGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x52c (0x37fc52c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalSatGet%28&type=code)
-///
-pub const vexDeviceOpticalSatGet = optical.vexDeviceOpticalSatGet;
-/// # vexDeviceOpticalBrightnessGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x530 (0x37fc530)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalBrightnessGet%28&type=code)
-///
-pub const vexDeviceOpticalBrightnessGet = optical.vexDeviceOpticalBrightnessGet;
-/// # vexDeviceOpticalProximityGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x534 (0x37fc534)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalProximityGet%28&type=code)
-///
-pub const vexDeviceOpticalProximityGet = optical.vexDeviceOpticalProximityGet;
-/// # vexDeviceOpticalRgbGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x538 (0x37fc538)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalRgbGet%28&type=code)
-///
-pub const vexDeviceOpticalRgbGet = optical.vexDeviceOpticalRgbGet;
-/// # vexDeviceOpticalLedPwmSet
-///
-/// Group: "optical"
-///
-/// Offset: 0x53c (0x37fc53c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalLedPwmSet%28&type=code)
-///
-pub const vexDeviceOpticalLedPwmSet = optical.vexDeviceOpticalLedPwmSet;
-/// # vexDeviceOpticalLedPwmGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x540 (0x37fc540)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalLedPwmGet%28&type=code)
-///
-pub const vexDeviceOpticalLedPwmGet = optical.vexDeviceOpticalLedPwmGet;
-/// # vexDeviceOpticalStatusGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x544 (0x37fc544)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalStatusGet%28&type=code)
-///
-pub const vexDeviceOpticalStatusGet = optical.vexDeviceOpticalStatusGet;
-/// # vexDeviceOpticalRawGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x548 (0x37fc548)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalRawGet%28&type=code)
-///
-pub const vexDeviceOpticalRawGet = optical.vexDeviceOpticalRawGet;
-/// # vexDeviceOpticalModeSet
-///
-/// Group: "optical"
-///
-/// Offset: 0x550 (0x37fc550)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalModeSet%28&type=code)
-///
-pub const vexDeviceOpticalModeSet = optical.vexDeviceOpticalModeSet;
-/// # vexDeviceOpticalModeGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x554 (0x37fc554)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalModeGet%28&type=code)
-///
-pub const vexDeviceOpticalModeGet = optical.vexDeviceOpticalModeGet;
-/// # vexDeviceOpticalGestureGet
-///
-/// Group: "optical"
-///
-/// Offset: 0x558 (0x37fc558)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalGestureGet%28&type=code)
-///
-pub const vexDeviceOpticalGestureGet = optical.vexDeviceOpticalGestureGet;
-/// # vexDeviceOpticalGestureEnable
-///
-/// Group: "optical"
-///
-/// Offset: 0x55c (0x37fc55c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalGestureEnable%28&type=code)
-///
-pub const vexDeviceOpticalGestureEnable = optical.vexDeviceOpticalGestureEnable;
-/// # vexDeviceOpticalGestureDisable
-///
-/// Group: "optical"
-///
-/// Offset: 0x560 (0x37fc560)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalGestureDisable%28&type=code)
-///
-pub const vexDeviceOpticalGestureDisable = optical.vexDeviceOpticalGestureDisable;
-/// # vexDeviceOpticalProximityThreshold
-///
-/// Group: "optical"
-///
-/// Offset: 0x564 (0x37fc564)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalProximityThreshold%28&type=code)
-///
-pub const vexDeviceOpticalProximityThreshold = optical.vexDeviceOpticalProximityThreshold;
-/// # vexDeviceOpticalIntegrationTimeSet
-///
-/// Group: "optical"
-///
-/// Offset: 0xb40 (0x37fcb40)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalIntegrationTimeSet%28&type=code)
-///
-pub const vexDeviceOpticalIntegrationTimeSet = optical.vexDeviceOpticalIntegrationTimeSet;
-/// # vexDeviceOpticalIntegrationTimeGet
-///
-/// Group: "optical"
-///
-/// Offset: 0xb44 (0x37fcb44)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceOpticalIntegrationTimeGet%28&type=code)
-///
-pub const vexDeviceOpticalIntegrationTimeGet = optical.vexDeviceOpticalIntegrationTimeGet;
-
-// Group 'distance'
-
-/// # vexDeviceDistanceDistanceGet
-///
-/// Group: "distance"
-///
-/// Offset: 0x500 (0x37fc500)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceDistanceDistanceGet%28&type=code)
-///
-pub const vexDeviceDistanceDistanceGet = distance.vexDeviceDistanceDistanceGet;
-/// # vexDeviceDistanceConfidenceGet
-///
-/// Group: "distance"
-///
-/// Offset: 0x504 (0x37fc504)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceDistanceConfidenceGet%28&type=code)
-///
-pub const vexDeviceDistanceConfidenceGet = distance.vexDeviceDistanceConfidenceGet;
-/// # vexDeviceDistanceStatusGet
-///
-/// Group: "distance"
-///
-/// Offset: 0x508 (0x37fc508)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceDistanceStatusGet%28&type=code)
-///
-pub const vexDeviceDistanceStatusGet = distance.vexDeviceDistanceStatusGet;
-/// # vexDeviceDistanceObjectSizeGet
-///
-/// Group: "distance"
-///
-/// Offset: 0x518 (0x37fc518)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceDistanceObjectSizeGet%28&type=code)
-///
-pub const vexDeviceDistanceObjectSizeGet = distance.vexDeviceDistanceObjectSizeGet;
-/// # vexDeviceDistanceObjectVelocityGet
-///
-/// Group: "distance"
-///
-/// Offset: 0x51c (0x37fc51c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceDistanceObjectVelocityGet%28&type=code)
-///
-pub const vexDeviceDistanceObjectVelocityGet = distance.vexDeviceDistanceObjectVelocityGet;
-
-// Group 'rotation'
-
-/// # vexDeviceAbsEncReset
-///
-/// Group: "rotation"
-///
-/// Offset: 0x488 (0x37fc488)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncReset%28&type=code)
-///
-pub const vexDeviceAbsEncReset = rotation.vexDeviceAbsEncReset;
-/// # vexDeviceAbsEncPositionSet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x48c (0x37fc48c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncPositionSet%28&type=code)
-///
-pub const vexDeviceAbsEncPositionSet = rotation.vexDeviceAbsEncPositionSet;
-/// # vexDeviceAbsEncPositionGet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x490 (0x37fc490)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncPositionGet%28&type=code)
-///
-pub const vexDeviceAbsEncPositionGet = rotation.vexDeviceAbsEncPositionGet;
-/// # vexDeviceAbsEncVelocityGet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x494 (0x37fc494)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncVelocityGet%28&type=code)
-///
-pub const vexDeviceAbsEncVelocityGet = rotation.vexDeviceAbsEncVelocityGet;
-/// # vexDeviceAbsEncAngleGet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x498 (0x37fc498)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncAngleGet%28&type=code)
-///
-pub const vexDeviceAbsEncAngleGet = rotation.vexDeviceAbsEncAngleGet;
-/// # vexDeviceAbsEncReverseFlagSet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x49c (0x37fc49c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncReverseFlagSet%28&type=code)
-///
-pub const vexDeviceAbsEncReverseFlagSet = rotation.vexDeviceAbsEncReverseFlagSet;
-/// # vexDeviceAbsEncReverseFlagGet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x4a0 (0x37fc4a0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncReverseFlagGet%28&type=code)
-///
-pub const vexDeviceAbsEncReverseFlagGet = rotation.vexDeviceAbsEncReverseFlagGet;
-/// # vexDeviceAbsEncStatusGet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x4a4 (0x37fc4a4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncStatusGet%28&type=code)
-///
-pub const vexDeviceAbsEncStatusGet = rotation.vexDeviceAbsEncStatusGet;
-/// # vexDeviceAbsEncDataRateSet
-///
-/// Group: "rotation"
-///
-/// Offset: 0x4c0 (0x37fc4c0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAbsEncDataRateSet%28&type=code)
-///
-pub const vexDeviceAbsEncDataRateSet = rotation.vexDeviceAbsEncDataRateSet;
-
-// Group 'range'
+/// ```c
+/// void vexDeviceImuDataRateSet(V5_DeviceT device, uint32_t rate);
+/// ```
+const vexDeviceImuDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = imu.vexDeviceImuDataRateSet;
 
 /// # vexDeviceRangeValueGet
 ///
-/// Group: "range"
+/// **Public API**
 ///
-/// Offset: 0x4d8 (0x37fc4d8)
+/// **Jumptable Offset:** 0x04d8 (_0x037fc4d8_)
 ///
-/// Private: False
+/// _defined in devices/range.zig. from public_signatures.h:172._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceRangeValueGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceRangeValueGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceRangeValueGet = range.vexDeviceRangeValueGet;
+/// ```c
+/// int32_t vexDeviceRangeValueGet(V5_DeviceT device);
+/// ```
+const vexDeviceRangeValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = range.vexDeviceRangeValueGet;
 
-// Group 'touch'
+/// # vexDeviceAbsEncReset
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0488 (_0x037fc488_)
+///
+/// _defined in devices/rotation.zig. from public_signatures.h:175._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReset%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceAbsEncReset(V5_DeviceT device);
+/// ```
+const vexDeviceAbsEncReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = rotation.vexDeviceAbsEncReset;
 
-/// # vexTouchUserCallbackSet
+/// # vexDeviceAbsEncPositionSet
 ///
-/// Group: "touch"
+/// **Public API**
 ///
-/// Offset: 0x960 (0x37fc960)
+/// **Jumptable Offset:** 0x048c (_0x037fc48c_)
 ///
-/// Private: False
+/// _defined in devices/rotation.zig. from public_signatures.h:176._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncPositionSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexTouchUserCallbackSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexTouchUserCallbackSet = touch.vexTouchUserCallbackSet;
-/// # vexTouchDataGet
-///
-/// Group: "touch"
-///
-/// Offset: 0x964 (0x37fc964)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexTouchDataGet%28&type=code)
-///
-pub const vexTouchDataGet = touch.vexTouchDataGet;
+/// ```c
+/// void vexDeviceAbsEncPositionSet(V5_DeviceT device, int32_t position);
+/// ```
+const vexDeviceAbsEncPositionSet: *const fn(device: types.V5_DeviceT,position: i32) callconv(.c) void = rotation.vexDeviceAbsEncPositionSet;
 
-// Group 'battery'
+/// # vexDeviceAbsEncPositionGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0490 (_0x037fc490_)
+///
+/// _defined in devices/rotation.zig. from public_signatures.h:177._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncPositionGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceAbsEncPositionGet(V5_DeviceT device);
+/// ```
+const vexDeviceAbsEncPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncPositionGet;
 
-/// # vexBatteryVoltageGet
+/// # vexDeviceAbsEncVelocityGet
 ///
-/// Group: "battery"
+/// **Public API**
 ///
-/// Offset: 0xa00 (0x37fca00)
+/// **Jumptable Offset:** 0x0494 (_0x037fc494_)
 ///
-/// Private: False
+/// _defined in devices/rotation.zig. from public_signatures.h:178._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncVelocityGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexBatteryVoltageGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexBatteryVoltageGet = battery.vexBatteryVoltageGet;
-/// # vexBatteryCurrentGet
-///
-/// Group: "battery"
-///
-/// Offset: 0xa04 (0x37fca04)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexBatteryCurrentGet%28&type=code)
-///
-pub const vexBatteryCurrentGet = battery.vexBatteryCurrentGet;
-/// # vexBatteryTemperatureGet
-///
-/// Group: "battery"
-///
-/// Offset: 0xa08 (0x37fca08)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexBatteryTemperatureGet%28&type=code)
-///
-pub const vexBatteryTemperatureGet = battery.vexBatteryTemperatureGet;
-/// # vexBatteryCapacityGet
-///
-/// Group: "battery"
-///
-/// Offset: 0xa0c (0x37fca0c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexBatteryCapacityGet%28&type=code)
-///
-pub const vexBatteryCapacityGet = battery.vexBatteryCapacityGet;
+/// ```c
+/// int32_t vexDeviceAbsEncVelocityGet(V5_DeviceT device);
+/// ```
+const vexDeviceAbsEncVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncVelocityGet;
 
-// Group 'serial'
+/// # vexDeviceAbsEncAngleGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0498 (_0x037fc498_)
+///
+/// _defined in devices/rotation.zig. from public_signatures.h:179._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncAngleGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceAbsEncAngleGet(V5_DeviceT device);
+/// ```
+const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncAngleGet;
 
-/// # vexSerialWriteChar
+/// # vexDeviceAbsEncReverseFlagSet
 ///
-/// Group: "serial"
+/// **Public API**
 ///
-/// Offset: 0x898 (0x37fc898)
+/// **Jumptable Offset:** 0x049c (_0x037fc49c_)
 ///
-/// Private: False
+/// _defined in devices/rotation.zig. from public_signatures.h:180._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReverseFlagSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSerialWriteChar%28&type=code)
+/// **Original signature:**
 ///
-pub const vexSerialWriteChar = serial.vexSerialWriteChar;
-/// # vexSerialWriteBuffer
-///
-/// Group: "serial"
-///
-/// Offset: 0x89c (0x37fc89c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSerialWriteBuffer%28&type=code)
-///
-pub const vexSerialWriteBuffer = serial.vexSerialWriteBuffer;
-/// # vexSerialReadChar
-///
-/// Group: "serial"
-///
-/// Offset: 0x8a0 (0x37fc8a0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSerialReadChar%28&type=code)
-///
-pub const vexSerialReadChar = serial.vexSerialReadChar;
-/// # vexSerialPeekChar
-///
-/// Group: "serial"
-///
-/// Offset: 0x8a4 (0x37fc8a4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSerialPeekChar%28&type=code)
-///
-pub const vexSerialPeekChar = serial.vexSerialPeekChar;
-/// # vexSerialWriteFree
-///
-/// Group: "serial"
-///
-/// Offset: 0x8ac (0x37fc8ac)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexSerialWriteFree%28&type=code)
-///
-pub const vexSerialWriteFree = serial.vexSerialWriteFree;
+/// ```c
+/// void vexDeviceAbsEncReverseFlagSet(V5_DeviceT device, int value);
+/// ```
+const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,value: types.int) callconv(.c) void = rotation.vexDeviceAbsEncReverseFlagSet;
 
-// Group 'generic_serial'
+/// # vexDeviceAbsEncReverseFlagGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x04a0 (_0x037fc4a0_)
+///
+/// _defined in devices/rotation.zig. from public_signatures.h:181._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReverseFlagGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDeviceAbsEncReverseFlagGet(V5_DeviceT device);
+/// ```
+const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = rotation.vexDeviceAbsEncReverseFlagGet;
 
-/// # vexDeviceGenericSerialEnable
+/// # vexDeviceAbsEncStatusGet
 ///
-/// Group: "generic_serial"
+/// **Public API**
 ///
-/// Offset: 0xa50 (0x37fca50)
+/// **Jumptable Offset:** 0x04a4 (_0x037fc4a4_)
 ///
-/// Private: False
+/// _defined in devices/rotation.zig. from public_signatures.h:182._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncStatusGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialEnable%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceGenericSerialEnable = generic_serial.vexDeviceGenericSerialEnable;
-/// # vexDeviceGenericSerialBaudrate
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa54 (0x37fca54)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialBaudrate%28&type=code)
-///
-pub const vexDeviceGenericSerialBaudrate = generic_serial.vexDeviceGenericSerialBaudrate;
-/// # vexDeviceGenericSerialWriteChar
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa58 (0x37fca58)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialWriteChar%28&type=code)
-///
-pub const vexDeviceGenericSerialWriteChar = generic_serial.vexDeviceGenericSerialWriteChar;
-/// # vexDeviceGenericSerialWriteFree
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa5c (0x37fca5c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialWriteFree%28&type=code)
-///
-pub const vexDeviceGenericSerialWriteFree = generic_serial.vexDeviceGenericSerialWriteFree;
-/// # vexDeviceGenericSerialTransmit
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa60 (0x37fca60)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialTransmit%28&type=code)
-///
-pub const vexDeviceGenericSerialTransmit = generic_serial.vexDeviceGenericSerialTransmit;
-/// # vexDeviceGenericSerialReadChar
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa64 (0x37fca64)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialReadChar%28&type=code)
-///
-pub const vexDeviceGenericSerialReadChar = generic_serial.vexDeviceGenericSerialReadChar;
-/// # vexDeviceGenericSerialPeekChar
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa68 (0x37fca68)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialPeekChar%28&type=code)
-///
-pub const vexDeviceGenericSerialPeekChar = generic_serial.vexDeviceGenericSerialPeekChar;
-/// # vexDeviceGenericSerialReceiveAvail
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa6c (0x37fca6c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialReceiveAvail%28&type=code)
-///
-pub const vexDeviceGenericSerialReceiveAvail = generic_serial.vexDeviceGenericSerialReceiveAvail;
-/// # vexDeviceGenericSerialReceive
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa70 (0x37fca70)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialReceive%28&type=code)
-///
-pub const vexDeviceGenericSerialReceive = generic_serial.vexDeviceGenericSerialReceive;
-/// # vexDeviceGenericSerialFlush
-///
-/// Group: "generic_serial"
-///
-/// Offset: 0xa74 (0x37fca74)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericSerialFlush%28&type=code)
-///
-pub const vexDeviceGenericSerialFlush = generic_serial.vexDeviceGenericSerialFlush;
+/// ```c
+/// uint32_t vexDeviceAbsEncStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceAbsEncStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = rotation.vexDeviceAbsEncStatusGet;
 
-// Group 'generic_radio'
+/// # vexDeviceAbsEncDataRateSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x04c0 (_0x037fc4c0_)
+///
+/// _defined in devices/rotation.zig. from public_signatures.h:183._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncDataRateSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceAbsEncDataRateSet(V5_DeviceT device, uint32_t rate);
+/// ```
+const vexDeviceAbsEncDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = rotation.vexDeviceAbsEncDataRateSet;
 
-/// # vexDeviceGenericRadioConnection
+/// # vexDeviceOpticalHueGet
 ///
-/// Group: "generic_radio"
+/// **Public API**
 ///
-/// Offset: 0xaa4 (0x37fcaa4)
+/// **Jumptable Offset:** 0x0528 (_0x037fc528_)
 ///
-/// Private: False
+/// _defined in devices/optical.zig. from public_signatures.h:186._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalHueGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericRadioConnection%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceGenericRadioConnection = generic_radio.vexDeviceGenericRadioConnection;
-/// # vexDeviceGenericRadioWriteFree
-///
-/// Group: "generic_radio"
-///
-/// Offset: 0xaac (0x37fcaac)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericRadioWriteFree%28&type=code)
-///
-pub const vexDeviceGenericRadioWriteFree = generic_radio.vexDeviceGenericRadioWriteFree;
-/// # vexDeviceGenericRadioTransmit
-///
-/// Group: "generic_radio"
-///
-/// Offset: 0xab0 (0x37fcab0)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericRadioTransmit%28&type=code)
-///
-pub const vexDeviceGenericRadioTransmit = generic_radio.vexDeviceGenericRadioTransmit;
-/// # vexDeviceGenericRadioReceiveAvail
-///
-/// Group: "generic_radio"
-///
-/// Offset: 0xabc (0x37fcabc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericRadioReceiveAvail%28&type=code)
-///
-pub const vexDeviceGenericRadioReceiveAvail = generic_radio.vexDeviceGenericRadioReceiveAvail;
-/// # vexDeviceGenericRadioReceive
-///
-/// Group: "generic_radio"
-///
-/// Offset: 0xac0 (0x37fcac0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericRadioReceive%28&type=code)
-///
-pub const vexDeviceGenericRadioReceive = generic_radio.vexDeviceGenericRadioReceive;
-/// # vexDeviceGenericRadioLinkStatus
-///
-/// Group: "generic_radio"
-///
-/// Offset: 0xac8 (0x37fcac8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceGenericRadioLinkStatus%28&type=code)
-///
-pub const vexDeviceGenericRadioLinkStatus = generic_radio.vexDeviceGenericRadioLinkStatus;
+/// ```c
+/// double vexDeviceOpticalHueGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalHueGet;
 
-// Group 'task'
+/// # vexDeviceOpticalSatGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x052c (_0x037fc52c_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:187._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalSatGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceOpticalSatGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalSatGet;
 
-/// # vexTaskAdd
+/// # vexDeviceOpticalBrightnessGet
 ///
-/// Group: "task"
+/// **Public API**
 ///
-/// Offset: 0x028 (0x37fc028)
+/// **Jumptable Offset:** 0x0530 (_0x037fc530_)
 ///
-/// Private: False
+/// _defined in devices/optical.zig. from public_signatures.h:188._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalBrightnessGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexTaskAdd%28&type=code)
+/// **Original signature:**
 ///
-pub const vexTaskAdd = task.vexTaskAdd;
-/// # vexTasksRun
-///
-/// Group: "task"
-///
-/// Offset: 0x05c (0x37fc05c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexTasksRun%28&type=code)
-///
-pub const vexTasksRun = task.vexTasksRun;
-/// # vexTaskSleep
-///
-/// Group: "task"
-///
-/// Offset: 0x06c (0x37fc06c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexTaskSleep%28&type=code)
-///
-pub const vexTaskSleep = task.vexTaskSleep;
-/// # vexTaskGetCallbackAndId
-///
-/// Group: "task"
-///
-/// Offset: 0x084 (0x37fc084)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexTaskGetCallbackAndId%28&type=code)
-///
-pub const vexTaskGetCallbackAndId = task.vexTaskGetCallbackAndId;
-/// # vexBackgroundProcessing
-///
-/// Group: "task"
-///
-/// Offset: 0xf74 (0x37fcf74)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexBackgroundProcessing%28&type=code)
-///
-pub const vexBackgroundProcessing = task.vexBackgroundProcessing;
+/// ```c
+/// double vexDeviceOpticalBrightnessGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalBrightnessGet;
 
-// Group 'display'
+/// # vexDeviceOpticalProximityGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0534 (_0x037fc534_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:189._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalProximityGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceOpticalProximityGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalProximityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = optical.vexDeviceOpticalProximityGet;
 
-/// # vexDisplayForegroundColor
+/// # vexDeviceOpticalRgbGet
 ///
-/// Group: "display"
+/// **Public API**
 ///
-/// Offset: 0x640 (0x37fc640)
+/// **Jumptable Offset:** 0x0538 (_0x037fc538_)
 ///
-/// Private: False
+/// _defined in devices/optical.zig. from public_signatures.h:190._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalRgbGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayForegroundColor%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDisplayForegroundColor = display.vexDisplayForegroundColor;
-/// # vexDisplayBackgroundColor
-///
-/// Group: "display"
-///
-/// Offset: 0x644 (0x37fc644)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayBackgroundColor%28&type=code)
-///
-pub const vexDisplayBackgroundColor = display.vexDisplayBackgroundColor;
-/// # vexDisplayErase
-///
-/// Group: "display"
-///
-/// Offset: 0x648 (0x37fc648)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayErase%28&type=code)
-///
-pub const vexDisplayErase = display.vexDisplayErase;
-/// # vexDisplayScroll
-///
-/// Group: "display"
-///
-/// Offset: 0x64c (0x37fc64c)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayScroll%28&type=code)
-///
-pub const vexDisplayScroll = display.vexDisplayScroll;
-/// # vexDisplayScrollRect
-///
-/// Group: "display"
-///
-/// Offset: 0x650 (0x37fc650)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayScrollRect%28&type=code)
-///
-pub const vexDisplayScrollRect = display.vexDisplayScrollRect;
-/// # vexDisplayCopyRect
-///
-/// Group: "display"
-///
-/// Offset: 0x654 (0x37fc654)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayCopyRect%28&type=code)
-///
-pub const vexDisplayCopyRect = display.vexDisplayCopyRect;
-/// # vexDisplayPixelSet
-///
-/// Group: "display"
-///
-/// Offset: 0x658 (0x37fc658)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayPixelSet%28&type=code)
-///
-pub const vexDisplayPixelSet = display.vexDisplayPixelSet;
-/// # vexDisplayPixelClear
-///
-/// Group: "display"
-///
-/// Offset: 0x65c (0x37fc65c)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayPixelClear%28&type=code)
-///
-pub const vexDisplayPixelClear = display.vexDisplayPixelClear;
-/// # vexDisplayLineDraw
-///
-/// Group: "display"
-///
-/// Offset: 0x660 (0x37fc660)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayLineDraw%28&type=code)
-///
-pub const vexDisplayLineDraw = display.vexDisplayLineDraw;
-/// # vexDisplayLineClear
-///
-/// Group: "display"
-///
-/// Offset: 0x664 (0x37fc664)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayLineClear%28&type=code)
-///
-pub const vexDisplayLineClear = display.vexDisplayLineClear;
-/// # vexDisplayRectDraw
-///
-/// Group: "display"
-///
-/// Offset: 0x668 (0x37fc668)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayRectDraw%28&type=code)
-///
-pub const vexDisplayRectDraw = display.vexDisplayRectDraw;
-/// # vexDisplayRectClear
-///
-/// Group: "display"
-///
-/// Offset: 0x66c (0x37fc66c)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayRectClear%28&type=code)
-///
-pub const vexDisplayRectClear = display.vexDisplayRectClear;
-/// # vexDisplayRectFill
-///
-/// Group: "display"
-///
-/// Offset: 0x670 (0x37fc670)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayRectFill%28&type=code)
-///
-pub const vexDisplayRectFill = display.vexDisplayRectFill;
-/// # vexDisplayCircleDraw
-///
-/// Group: "display"
-///
-/// Offset: 0x674 (0x37fc674)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayCircleDraw%28&type=code)
-///
-pub const vexDisplayCircleDraw = display.vexDisplayCircleDraw;
-/// # vexDisplayCircleClear
-///
-/// Group: "display"
-///
-/// Offset: 0x678 (0x37fc678)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayCircleClear%28&type=code)
-///
-pub const vexDisplayCircleClear = display.vexDisplayCircleClear;
-/// # vexDisplayCircleFill
-///
-/// Group: "display"
-///
-/// Offset: 0x67c (0x37fc67c)
-///
-/// Private: True
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayCircleFill%28&type=code)
-///
-pub const vexDisplayCircleFill = display.vexDisplayCircleFill;
-/// # vexDisplayVPrintf
-///
-/// Group: "display"
-///
-/// Offset: 0x680 (0x37fc680)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVPrintf%28&type=code)
-///
-pub const vexDisplayVPrintf = display.vexDisplayVPrintf;
-/// # vexDisplayVString
-///
-/// Group: "display"
-///
-/// Offset: 0x684 (0x37fc684)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVString%28&type=code)
-///
-pub const vexDisplayVString = display.vexDisplayVString;
-/// # vexDisplayVStringAt
-///
-/// Group: "display"
-///
-/// Offset: 0x688 (0x37fc688)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVStringAt%28&type=code)
-///
-pub const vexDisplayVStringAt = display.vexDisplayVStringAt;
-/// # vexDisplayVBigString
-///
-/// Group: "display"
-///
-/// Offset: 0x68c (0x37fc68c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVBigString%28&type=code)
-///
-pub const vexDisplayVBigString = display.vexDisplayVBigString;
-/// # vexDisplayVBigStringAt
-///
-/// Group: "display"
-///
-/// Offset: 0x690 (0x37fc690)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVBigStringAt%28&type=code)
-///
-pub const vexDisplayVBigStringAt = display.vexDisplayVBigStringAt;
-/// # vexDisplayVCenteredString
-///
-/// Group: "display"
-///
-/// Offset: 0x694 (0x37fc694)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVCenteredString%28&type=code)
-///
-pub const vexDisplayVCenteredString = display.vexDisplayVCenteredString;
-/// # vexDisplayVBigCenteredString
-///
-/// Group: "display"
-///
-/// Offset: 0x698 (0x37fc698)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVBigCenteredString%28&type=code)
-///
-pub const vexDisplayVBigCenteredString = display.vexDisplayVBigCenteredString;
-/// # vexDisplayTextSize
-///
-/// Group: "display"
-///
-/// Offset: 0x6a8 (0x37fc6a8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayTextSize%28&type=code)
-///
-pub const vexDisplayTextSize = display.vexDisplayTextSize;
-/// # vexDisplayVSmallStringAt
-///
-/// Group: "display"
-///
-/// Offset: 0x6b0 (0x37fc6b0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayVSmallStringAt%28&type=code)
-///
-pub const vexDisplayVSmallStringAt = display.vexDisplayVSmallStringAt;
-/// # vexDisplayFontNamedSet
-///
-/// Group: "display"
-///
-/// Offset: 0x6b4 (0x37fc6b4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayFontNamedSet%28&type=code)
-///
-pub const vexDisplayFontNamedSet = display.vexDisplayFontNamedSet;
-/// # vexDisplayForegroundColorGet
-///
-/// Group: "display"
-///
-/// Offset: 0x6b8 (0x37fc6b8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayForegroundColorGet%28&type=code)
-///
-pub const vexDisplayForegroundColorGet = display.vexDisplayForegroundColorGet;
-/// # vexDisplayBackgroundColorGet
-///
-/// Group: "display"
-///
-/// Offset: 0x6bc (0x37fc6bc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayBackgroundColorGet%28&type=code)
-///
-pub const vexDisplayBackgroundColorGet = display.vexDisplayBackgroundColorGet;
-/// # vexDisplayStringWidthGet
-///
-/// Group: "display"
-///
-/// Offset: 0x6c0 (0x37fc6c0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayStringWidthGet%28&type=code)
-///
-pub const vexDisplayStringWidthGet = display.vexDisplayStringWidthGet;
-/// # vexDisplayStringHeightGet
-///
-/// Group: "display"
-///
-/// Offset: 0x6c4 (0x37fc6c4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayStringHeightGet%28&type=code)
-///
-pub const vexDisplayStringHeightGet = display.vexDisplayStringHeightGet;
-/// # vexDisplayClipRegionSet
-///
-/// Group: "display"
-///
-/// Offset: 0x794 (0x37fc794)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayClipRegionSet%28&type=code)
-///
-pub const vexDisplayClipRegionSet = display.vexDisplayClipRegionSet;
-/// # vexDisplayRender
-///
-/// Group: "display"
-///
-/// Offset: 0x7a0 (0x37fc7a0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayRender%28&type=code)
-///
-pub const vexDisplayRender = display.vexDisplayRender;
-/// # vexDisplayDoubleBufferDisable
-///
-/// Group: "display"
-///
-/// Offset: 0x7a4 (0x37fc7a4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayDoubleBufferDisable%28&type=code)
-///
-pub const vexDisplayDoubleBufferDisable = display.vexDisplayDoubleBufferDisable;
-/// # vexDisplayClipRegionSetWithIndex
-///
-/// Group: "display"
-///
-/// Offset: 0x7a8 (0x37fc7a8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDisplayClipRegionSetWithIndex%28&type=code)
-///
-pub const vexDisplayClipRegionSetWithIndex = display.vexDisplayClipRegionSetWithIndex;
-/// # vexImageBmpRead
-///
-/// Group: "display"
-///
-/// Offset: 0x990 (0x37fc990)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexImageBmpRead%28&type=code)
-///
-pub const vexImageBmpRead = display.vexImageBmpRead;
-/// # vexImagePngRead
-///
-/// Group: "display"
-///
-/// Offset: 0x994 (0x37fc994)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexImagePngRead%28&type=code)
-///
-pub const vexImagePngRead = display.vexImagePngRead;
+/// ```c
+/// void vexDeviceOpticalRgbGet(V5_DeviceT device, V5_DeviceOpticalRgb * data);
+/// ```
+const vexDeviceOpticalRgbGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRgb) callconv(.c) void = optical.vexDeviceOpticalRgbGet;
 
-// Group 'file'
+/// # vexDeviceOpticalLedPwmSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x053c (_0x037fc53c_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:191._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalLedPwmSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceOpticalLedPwmSet(V5_DeviceT device, int32_t value);
+/// ```
+const vexDeviceOpticalLedPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = optical.vexDeviceOpticalLedPwmSet;
 
-/// # vexFileMountSD
+/// # vexDeviceOpticalLedPwmGet
 ///
-/// Group: "file"
+/// **Public API**
 ///
-/// Offset: 0x7d0 (0x37fc7d0)
+/// **Jumptable Offset:** 0x0540 (_0x037fc540_)
 ///
-/// Private: False
+/// _defined in devices/optical.zig. from public_signatures.h:192._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalLedPwmGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileMountSD%28&type=code)
+/// **Original signature:**
 ///
-pub const vexFileMountSD = file.vexFileMountSD;
-/// # vexFileDirectoryGet
-///
-/// Group: "file"
-///
-/// Offset: 0x7d4 (0x37fc7d4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileDirectoryGet%28&type=code)
-///
-pub const vexFileDirectoryGet = file.vexFileDirectoryGet;
-/// # vexFileOpen
-///
-/// Group: "file"
-///
-/// Offset: 0x7d8 (0x37fc7d8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileOpen%28&type=code)
-///
-pub const vexFileOpen = file.vexFileOpen;
-/// # vexFileOpenWrite
-///
-/// Group: "file"
-///
-/// Offset: 0x7dc (0x37fc7dc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileOpenWrite%28&type=code)
-///
-pub const vexFileOpenWrite = file.vexFileOpenWrite;
-/// # vexFileOpenCreate
-///
-/// Group: "file"
-///
-/// Offset: 0x7e0 (0x37fc7e0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileOpenCreate%28&type=code)
-///
-pub const vexFileOpenCreate = file.vexFileOpenCreate;
-/// # vexFileClose
-///
-/// Group: "file"
-///
-/// Offset: 0x7e4 (0x37fc7e4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileClose%28&type=code)
-///
-pub const vexFileClose = file.vexFileClose;
-/// # vexFileWrite
-///
-/// Group: "file"
-///
-/// Offset: 0x7ec (0x37fc7ec)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileWrite%28&type=code)
-///
-pub const vexFileWrite = file.vexFileWrite;
-/// # vexFileSize
-///
-/// Group: "file"
-///
-/// Offset: 0x7f0 (0x37fc7f0)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileSize%28&type=code)
-///
-pub const vexFileSize = file.vexFileSize;
-/// # vexFileSeek
-///
-/// Group: "file"
-///
-/// Offset: 0x7f4 (0x37fc7f4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileSeek%28&type=code)
-///
-pub const vexFileSeek = file.vexFileSeek;
-/// # vexFileRead
-///
-/// Group: "file"
-///
-/// Offset: 0x7f8 (0x37fc7f8)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileRead%28&type=code)
-///
-pub const vexFileRead = file.vexFileRead;
-/// # vexFileDriveStatus
-///
-/// Group: "file"
-///
-/// Offset: 0x7fc (0x37fc7fc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileDriveStatus%28&type=code)
-///
-pub const vexFileDriveStatus = file.vexFileDriveStatus;
-/// # vexFileTell
-///
-/// Group: "file"
-///
-/// Offset: 0x800 (0x37fc800)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileTell%28&type=code)
-///
-pub const vexFileTell = file.vexFileTell;
-/// # vexFileSync
-///
-/// Group: "file"
-///
-/// Offset: 0x804 (0x37fc804)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileSync%28&type=code)
-///
-pub const vexFileSync = file.vexFileSync;
-/// # vexFileStatus
-///
-/// Group: "file"
-///
-/// Offset: 0x808 (0x37fc808)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexFileStatus%28&type=code)
-///
-pub const vexFileStatus = file.vexFileStatus;
+/// ```c
+/// int32_t vexDeviceOpticalLedPwmGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalLedPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = optical.vexDeviceOpticalLedPwmGet;
 
-// Group 'pneumatic'
+/// # vexDeviceOpticalStatusGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0544 (_0x037fc544_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:193._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalStatusGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceOpticalStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = optical.vexDeviceOpticalStatusGet;
 
-/// # vexDevicePneumaticCompressorSet
+/// # vexDeviceOpticalRawGet
 ///
-/// Group: "pneumatic"
+/// **Public API**
 ///
-/// Offset: 0xc08 (0x37fcc08)
+/// **Jumptable Offset:** 0x0548 (_0x037fc548_)
 ///
-/// Private: False
+/// _defined in devices/optical.zig. from public_signatures.h:194._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalRawGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticCompressorSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDevicePneumaticCompressorSet = pneumatic.vexDevicePneumaticCompressorSet;
-/// # vexDevicePneumaticCylinderSet
-///
-/// Group: "pneumatic"
-///
-/// Offset: 0xc0c (0x37fcc0c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticCylinderSet%28&type=code)
-///
-pub const vexDevicePneumaticCylinderSet = pneumatic.vexDevicePneumaticCylinderSet;
-/// # vexDevicePneumaticCtrlSet
-///
-/// Group: "pneumatic"
-///
-/// Offset: 0xc10 (0x37fcc10)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticCtrlSet%28&type=code)
-///
-pub const vexDevicePneumaticCtrlSet = pneumatic.vexDevicePneumaticCtrlSet;
-/// # vexDevicePneumaticStatusGet
-///
-/// Group: "pneumatic"
-///
-/// Offset: 0xc14 (0x37fcc14)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticStatusGet%28&type=code)
-///
-pub const vexDevicePneumaticStatusGet = pneumatic.vexDevicePneumaticStatusGet;
-/// # vexDevicePneumaticPwmSet
-///
-/// Group: "pneumatic"
-///
-/// Offset: 0xc18 (0x37fcc18)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticPwmSet%28&type=code)
-///
-pub const vexDevicePneumaticPwmSet = pneumatic.vexDevicePneumaticPwmSet;
-/// # vexDevicePneumaticPwmGet
-///
-/// Group: "pneumatic"
-///
-/// Offset: 0xc1c (0x37fcc1c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticPwmGet%28&type=code)
-///
-pub const vexDevicePneumaticPwmGet = pneumatic.vexDevicePneumaticPwmGet;
-/// # vexDevicePneumaticCylinderPwmSet
-///
-/// Group: "pneumatic"
-///
-/// Offset: 0xc20 (0x37fcc20)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticCylinderPwmSet%28&type=code)
-///
-pub const vexDevicePneumaticCylinderPwmSet = pneumatic.vexDevicePneumaticCylinderPwmSet;
-/// # vexDevicePneumaticActuationStatusGet
-///
-/// Group: "pneumatic"
-///
-/// Offset: 0xc28 (0x37fcc28)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDevicePneumaticActuationStatusGet%28&type=code)
-///
-pub const vexDevicePneumaticActuationStatusGet = pneumatic.vexDevicePneumaticActuationStatusGet;
+/// ```c
+/// void vexDeviceOpticalRawGet(V5_DeviceT device, V5_DeviceOpticalRaw * data);
+/// ```
+const vexDeviceOpticalRawGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRaw) callconv(.c) void = optical.vexDeviceOpticalRawGet;
 
-// Group 'competition'
+/// # vexDeviceOpticalModeSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0550 (_0x037fc550_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:195._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalModeSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceOpticalModeSet(V5_DeviceT device, uint32_t mode);
+/// ```
+const vexDeviceOpticalModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = optical.vexDeviceOpticalModeSet;
 
-/// # vexCompetitionStatus
+/// # vexDeviceOpticalModeGet
 ///
-/// Group: "competition"
+/// **Public API**
 ///
-/// Offset: 0x9d8 (0x37fc9d8)
+/// **Jumptable Offset:** 0x0554 (_0x037fc554_)
 ///
-/// Private: True
+/// _defined in devices/optical.zig. from public_signatures.h:196._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalModeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexCompetitionStatus%28&type=code)
+/// **Original signature:**
 ///
-pub const vexCompetitionStatus = competition.vexCompetitionStatus;
-/// # vexCompetitionControl
-///
-/// Group: "competition"
-///
-/// Offset: 0x9dc (0x37fc9dc)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexCompetitionControl%28&type=code)
-///
-pub const vexCompetitionControl = competition.vexCompetitionControl;
+/// ```c
+/// uint32_t vexDeviceOpticalModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = optical.vexDeviceOpticalModeGet;
 
-// Group 'magnet'
+/// # vexDeviceOpticalGestureGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0558 (_0x037fc558_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:197._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceOpticalGestureGet(V5_DeviceT, V5_DeviceOpticalGesture * pData);
+/// ```
+const vexDeviceOpticalGestureGet: *const fn(_: types.V5_DeviceT,pData: [*c]types.V5_DeviceOpticalGesture) callconv(.c) u32 = optical.vexDeviceOpticalGestureGet;
+
+/// # vexDeviceOpticalGestureEnable
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x055c (_0x037fc55c_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:198._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureEnable%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceOpticalGestureEnable(V5_DeviceT);
+/// ```
+const vexDeviceOpticalGestureEnable: *const fn(_: types.V5_DeviceT) callconv(.c) void = optical.vexDeviceOpticalGestureEnable;
+
+/// # vexDeviceOpticalGestureDisable
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0560 (_0x037fc560_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:199._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureDisable%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceOpticalGestureDisable(V5_DeviceT);
+/// ```
+const vexDeviceOpticalGestureDisable: *const fn(_: types.V5_DeviceT) callconv(.c) void = optical.vexDeviceOpticalGestureDisable;
+
+/// # vexDeviceOpticalProximityThreshold
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0564 (_0x037fc564_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:200._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalProximityThreshold%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceOpticalProximityThreshold(V5_DeviceT device, int32_t value);
+/// ```
+const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) i32 = optical.vexDeviceOpticalProximityThreshold;
+
+/// # vexDeviceOpticalIntegrationTimeSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0b40 (_0x037fcb40_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:201._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalIntegrationTimeSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceOpticalIntegrationTimeSet(V5_DeviceT device, double timeMs);
+/// ```
+const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT,timeMs: types.double) callconv(.c) void = optical.vexDeviceOpticalIntegrationTimeSet;
+
+/// # vexDeviceOpticalIntegrationTimeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0b44 (_0x037fcb44_)
+///
+/// _defined in devices/optical.zig. from public_signatures.h:202._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalIntegrationTimeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceOpticalIntegrationTimeGet(V5_DeviceT device);
+/// ```
+const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalIntegrationTimeGet;
 
 /// # vexDeviceMagnetPowerSet
 ///
-/// Group: "magnet"
+/// **Public API**
 ///
-/// Offset: 0x578 (0x37fc578)
+/// **Jumptable Offset:** 0x0578 (_0x037fc578_)
 ///
-/// Private: False
+/// _defined in devices/magnet.zig. from public_signatures.h:205._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPowerSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMagnetPowerSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceMagnetPowerSet = magnet.vexDeviceMagnetPowerSet;
+/// ```c
+/// void vexDeviceMagnetPowerSet(V5_DeviceT device, int32_t value, int32_t time);
+/// ```
+const vexDeviceMagnetPowerSet: *const fn(device: types.V5_DeviceT,value: i32,time: i32) callconv(.c) void = magnet.vexDeviceMagnetPowerSet;
+
 /// # vexDeviceMagnetPowerGet
 ///
-/// Group: "magnet"
+/// **Public API**
 ///
-/// Offset: 0x57c (0x37fc57c)
+/// **Jumptable Offset:** 0x057c (_0x037fc57c_)
 ///
-/// Private: False
+/// _defined in devices/magnet.zig. from public_signatures.h:206._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPowerGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMagnetPowerGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceMagnetPowerGet = magnet.vexDeviceMagnetPowerGet;
+/// ```c
+/// int32_t vexDeviceMagnetPowerGet(V5_DeviceT device);
+/// ```
+const vexDeviceMagnetPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = magnet.vexDeviceMagnetPowerGet;
+
 /// # vexDeviceMagnetPickup
 ///
-/// Group: "magnet"
+/// **Public API**
 ///
-/// Offset: 0x580 (0x37fc580)
+/// **Jumptable Offset:** 0x0580 (_0x037fc580_)
 ///
-/// Private: False
+/// _defined in devices/magnet.zig. from public_signatures.h:207._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPickup%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMagnetPickup%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceMagnetPickup = magnet.vexDeviceMagnetPickup;
+/// ```c
+/// void vexDeviceMagnetPickup(V5_DeviceT device, V5_DeviceMagnetDuration duration);
+/// ```
+const vexDeviceMagnetPickup: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void = magnet.vexDeviceMagnetPickup;
+
 /// # vexDeviceMagnetDrop
 ///
-/// Group: "magnet"
+/// **Public API**
 ///
-/// Offset: 0x584 (0x37fc584)
+/// **Jumptable Offset:** 0x0584 (_0x037fc584_)
 ///
-/// Private: False
+/// _defined in devices/magnet.zig. from public_signatures.h:208._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetDrop%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMagnetDrop%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceMagnetDrop = magnet.vexDeviceMagnetDrop;
+/// ```c
+/// void vexDeviceMagnetDrop(V5_DeviceT device, V5_DeviceMagnetDuration duration);
+/// ```
+const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void = magnet.vexDeviceMagnetDrop;
+
 /// # vexDeviceMagnetTemperatureGet
 ///
-/// Group: "magnet"
+/// **Public API**
 ///
-/// Offset: 0x588 (0x37fc588)
+/// **Jumptable Offset:** 0x0588 (_0x037fc588_)
 ///
-/// Private: False
+/// _defined in devices/magnet.zig. from public_signatures.h:209._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetTemperatureGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMagnetTemperatureGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceMagnetTemperatureGet = magnet.vexDeviceMagnetTemperatureGet;
+/// ```c
+/// double vexDeviceMagnetTemperatureGet(V5_DeviceT device);
+/// ```
+const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = magnet.vexDeviceMagnetTemperatureGet;
+
 /// # vexDeviceMagnetCurrentGet
 ///
-/// Group: "magnet"
+/// **Public API**
 ///
-/// Offset: 0x58c (0x37fc58c)
+/// **Jumptable Offset:** 0x058c (_0x037fc58c_)
 ///
-/// Private: False
+/// _defined in devices/magnet.zig. from public_signatures.h:210._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetCurrentGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMagnetCurrentGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceMagnetCurrentGet = magnet.vexDeviceMagnetCurrentGet;
+/// ```c
+/// double vexDeviceMagnetCurrentGet(V5_DeviceT device);
+/// ```
+const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = magnet.vexDeviceMagnetCurrentGet;
+
 /// # vexDeviceMagnetStatusGet
 ///
-/// Group: "magnet"
+/// **Public API**
 ///
-/// Offset: 0x590 (0x37fc590)
+/// **Jumptable Offset:** 0x0590 (_0x037fc590_)
 ///
-/// Private: False
+/// _defined in devices/magnet.zig. from public_signatures.h:211._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetStatusGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceMagnetStatusGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceMagnetStatusGet = magnet.vexDeviceMagnetStatusGet;
-
-// Group 'arm'
-
-/// # vexDeviceArmMoveTipCommandLinearAdv
-///
-/// Group: "arm"
-///
-/// Offset: 0xb54 (0x37fcb54)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmMoveTipCommandLinearAdv%28&type=code)
-///
-pub const vexDeviceArmMoveTipCommandLinearAdv = arm.vexDeviceArmMoveTipCommandLinearAdv;
-/// # vexDeviceArmMoveTipCommandJointAdv
-///
-/// Group: "arm"
-///
-/// Offset: 0xb58 (0x37fcb58)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmMoveTipCommandJointAdv%28&type=code)
-///
-pub const vexDeviceArmMoveTipCommandJointAdv = arm.vexDeviceArmMoveTipCommandJointAdv;
-/// # vexDeviceArmTipPositionGetAdv
-///
-/// Group: "arm"
-///
-/// Offset: 0xb5c (0x37fcb5c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmTipPositionGetAdv%28&type=code)
-///
-pub const vexDeviceArmTipPositionGetAdv = arm.vexDeviceArmTipPositionGetAdv;
-/// # vexDeviceArmPoseSet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc30 (0x37fcc30)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmPoseSet%28&type=code)
-///
-pub const vexDeviceArmPoseSet = arm.vexDeviceArmPoseSet;
-/// # vexDeviceArmMoveTipCommandLinear
-///
-/// Group: "arm"
-///
-/// Offset: 0xc34 (0x37fcc34)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmMoveTipCommandLinear%28&type=code)
-///
-pub const vexDeviceArmMoveTipCommandLinear = arm.vexDeviceArmMoveTipCommandLinear;
-/// # vexDeviceArmMoveTipCommandJoint
-///
-/// Group: "arm"
-///
-/// Offset: 0xc38 (0x37fcc38)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmMoveTipCommandJoint%28&type=code)
-///
-pub const vexDeviceArmMoveTipCommandJoint = arm.vexDeviceArmMoveTipCommandJoint;
-/// # vexDeviceArmMoveJointsCommand
-///
-/// Group: "arm"
-///
-/// Offset: 0xc3c (0x37fcc3c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmMoveJointsCommand%28&type=code)
-///
-pub const vexDeviceArmMoveJointsCommand = arm.vexDeviceArmMoveJointsCommand;
-/// # vexDeviceArmSpinJoints
-///
-/// Group: "arm"
-///
-/// Offset: 0xc40 (0x37fcc40)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmSpinJoints%28&type=code)
-///
-pub const vexDeviceArmSpinJoints = arm.vexDeviceArmSpinJoints;
-/// # vexDeviceArmSetJointPositions
-///
-/// Group: "arm"
-///
-/// Offset: 0xc44 (0x37fcc44)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmSetJointPositions%28&type=code)
-///
-pub const vexDeviceArmSetJointPositions = arm.vexDeviceArmSetJointPositions;
-/// # vexDeviceArmPickUpCommand
-///
-/// Group: "arm"
-///
-/// Offset: 0xc48 (0x37fcc48)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmPickUpCommand%28&type=code)
-///
-pub const vexDeviceArmPickUpCommand = arm.vexDeviceArmPickUpCommand;
-/// # vexDeviceArmDropCommand
-///
-/// Group: "arm"
-///
-/// Offset: 0xc4c (0x37fcc4c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmDropCommand%28&type=code)
-///
-pub const vexDeviceArmDropCommand = arm.vexDeviceArmDropCommand;
-/// # vexDeviceArmMoveVoltsCommand
-///
-/// Group: "arm"
-///
-/// Offset: 0xc50 (0x37fcc50)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmMoveVoltsCommand%28&type=code)
-///
-pub const vexDeviceArmMoveVoltsCommand = arm.vexDeviceArmMoveVoltsCommand;
-/// # vexDeviceArmFullStop
-///
-/// Group: "arm"
-///
-/// Offset: 0xc54 (0x37fcc54)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmFullStop%28&type=code)
-///
-pub const vexDeviceArmFullStop = arm.vexDeviceArmFullStop;
-/// # vexDeviceArmEnableProfiler
-///
-/// Group: "arm"
-///
-/// Offset: 0xc58 (0x37fcc58)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmEnableProfiler%28&type=code)
-///
-pub const vexDeviceArmEnableProfiler = arm.vexDeviceArmEnableProfiler;
-/// # vexDeviceArmProfilerVelocitySet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc5c (0x37fcc5c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmProfilerVelocitySet%28&type=code)
-///
-pub const vexDeviceArmProfilerVelocitySet = arm.vexDeviceArmProfilerVelocitySet;
-/// # vexDeviceArmSaveZeroValues
-///
-/// Group: "arm"
-///
-/// Offset: 0xc60 (0x37fcc60)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmSaveZeroValues%28&type=code)
-///
-pub const vexDeviceArmSaveZeroValues = arm.vexDeviceArmSaveZeroValues;
-/// # vexDeviceArmForceZeroCommand
-///
-/// Group: "arm"
-///
-/// Offset: 0xc64 (0x37fcc64)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmForceZeroCommand%28&type=code)
-///
-pub const vexDeviceArmForceZeroCommand = arm.vexDeviceArmForceZeroCommand;
-/// # vexDeviceArmClearZeroValues
-///
-/// Group: "arm"
-///
-/// Offset: 0xc68 (0x37fcc68)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmClearZeroValues%28&type=code)
-///
-pub const vexDeviceArmClearZeroValues = arm.vexDeviceArmClearZeroValues;
-/// # vexDeviceArmBootload
-///
-/// Group: "arm"
-///
-/// Offset: 0xc6c (0x37fcc6c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmBootload%28&type=code)
-///
-pub const vexDeviceArmBootload = arm.vexDeviceArmBootload;
-/// # vexDeviceArmTipPositionGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc70 (0x37fcc70)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmTipPositionGet%28&type=code)
-///
-pub const vexDeviceArmTipPositionGet = arm.vexDeviceArmTipPositionGet;
-/// # vexDeviceArmJointInfoGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc74 (0x37fcc74)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmJointInfoGet%28&type=code)
-///
-pub const vexDeviceArmJointInfoGet = arm.vexDeviceArmJointInfoGet;
-/// # vexDeviceArmJ6PositionGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc78 (0x37fcc78)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmJ6PositionGet%28&type=code)
-///
-pub const vexDeviceArmJ6PositionGet = arm.vexDeviceArmJ6PositionGet;
-/// # vexDeviceArmBatteryGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc7c (0x37fcc7c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmBatteryGet%28&type=code)
-///
-pub const vexDeviceArmBatteryGet = arm.vexDeviceArmBatteryGet;
-/// # vexDeviceArmServoFlagsGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc80 (0x37fcc80)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmServoFlagsGet%28&type=code)
-///
-pub const vexDeviceArmServoFlagsGet = arm.vexDeviceArmServoFlagsGet;
-/// # vexDeviceArmStatusGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc84 (0x37fcc84)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmStatusGet%28&type=code)
-///
-pub const vexDeviceArmStatusGet = arm.vexDeviceArmStatusGet;
-/// # vexDeviceArmDebugGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc88 (0x37fcc88)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmDebugGet%28&type=code)
-///
-pub const vexDeviceArmDebugGet = arm.vexDeviceArmDebugGet;
-/// # vexDeviceArmJointErrorsGet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc8c (0x37fcc8c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmJointErrorsGet%28&type=code)
-///
-pub const vexDeviceArmJointErrorsGet = arm.vexDeviceArmJointErrorsGet;
-/// # vexDeviceArmJ6PositionSet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc90 (0x37fcc90)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmJ6PositionSet%28&type=code)
-///
-pub const vexDeviceArmJ6PositionSet = arm.vexDeviceArmJ6PositionSet;
-/// # vexDeviceArmStopJointsCommand
-///
-/// Group: "arm"
-///
-/// Offset: 0xc94 (0x37fcc94)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmStopJointsCommand%28&type=code)
-///
-pub const vexDeviceArmStopJointsCommand = arm.vexDeviceArmStopJointsCommand;
-/// # vexDeviceArmReboot
-///
-/// Group: "arm"
-///
-/// Offset: 0xc98 (0x37fcc98)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmReboot%28&type=code)
-///
-pub const vexDeviceArmReboot = arm.vexDeviceArmReboot;
-/// # vexDeviceArmTipOffsetSet
-///
-/// Group: "arm"
-///
-/// Offset: 0xc9c (0x37fcc9c)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceArmTipOffsetSet%28&type=code)
-///
-pub const vexDeviceArmTipOffsetSet = arm.vexDeviceArmTipOffsetSet;
-
-// Group 'light_tower'
+/// ```c
+/// uint32_t vexDeviceMagnetStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceMagnetStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = magnet.vexDeviceMagnetStatusGet;
 
 /// # vexDeviceLightTowerRgbSet
 ///
-/// Group: "light_tower"
+/// **Public API**
 ///
-/// Offset: 0x5a0 (0x37fc5a0)
+/// **Jumptable Offset:** 0x05a0 (_0x037fc5a0_)
 ///
-/// Private: False
+/// _defined in devices/light_tower.zig. from public_signatures.h:214._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerRgbSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLightTowerRgbSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLightTowerRgbSet = light_tower.vexDeviceLightTowerRgbSet;
+/// ```c
+/// void vexDeviceLightTowerRgbSet(V5_DeviceT device, uint32_t rgb_value, uint32_t xyw_value);
+/// ```
+const vexDeviceLightTowerRgbSet: *const fn(device: types.V5_DeviceT,rgb_value: u32,xyw_value: u32) callconv(.c) void = light_tower.vexDeviceLightTowerRgbSet;
+
 /// # vexDeviceLightTowerColorSet
 ///
-/// Group: "light_tower"
+/// **Public API**
 ///
-/// Offset: 0x5a4 (0x37fc5a4)
+/// **Jumptable Offset:** 0x05a4 (_0x037fc5a4_)
 ///
-/// Private: False
+/// _defined in devices/light_tower.zig. from public_signatures.h:216._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerColorSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLightTowerColorSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLightTowerColorSet = light_tower.vexDeviceLightTowerColorSet;
+/// ```c
+/// void vexDeviceLightTowerColorSet(V5_DeviceT device, uint32_t color_id, uint32_t value);
+/// ```
+const vexDeviceLightTowerColorSet: *const fn(device: types.V5_DeviceT,color_id: u32,value: u32) callconv(.c) void = light_tower.vexDeviceLightTowerColorSet;
+
 /// # vexDeviceLightTowerRgbGet
 ///
-/// Group: "light_tower"
+/// **Public API**
 ///
-/// Offset: 0x5a8 (0x37fc5a8)
+/// **Jumptable Offset:** 0x05a8 (_0x037fc5a8_)
 ///
-/// Private: False
+/// _defined in devices/light_tower.zig. from public_signatures.h:218._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerRgbGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLightTowerRgbGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLightTowerRgbGet = light_tower.vexDeviceLightTowerRgbGet;
+/// ```c
+/// uint32_t vexDeviceLightTowerRgbGet(V5_DeviceT device);
+/// ```
+const vexDeviceLightTowerRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerRgbGet;
+
 /// # vexDeviceLightTowerXywGet
 ///
-/// Group: "light_tower"
+/// **Public API**
 ///
-/// Offset: 0x5ac (0x37fc5ac)
+/// **Jumptable Offset:** 0x05ac (_0x037fc5ac_)
 ///
-/// Private: False
+/// _defined in devices/light_tower.zig. from public_signatures.h:219._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerXywGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLightTowerXywGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLightTowerXywGet = light_tower.vexDeviceLightTowerXywGet;
+/// ```c
+/// uint32_t vexDeviceLightTowerXywGet(V5_DeviceT device);
+/// ```
+const vexDeviceLightTowerXywGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerXywGet;
+
 /// # vexDeviceLightTowerStatusGet
 ///
-/// Group: "light_tower"
+/// **Public API**
 ///
-/// Offset: 0x5b0 (0x37fc5b0)
+/// **Jumptable Offset:** 0x05b0 (_0x037fc5b0_)
 ///
-/// Private: False
+/// _defined in devices/light_tower.zig. from public_signatures.h:220._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerStatusGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLightTowerStatusGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLightTowerStatusGet = light_tower.vexDeviceLightTowerStatusGet;
-/// # vexDeviceLightTowerDebugGet
-///
-/// Group: "light_tower"
-///
-/// Offset: 0x5b4 (0x37fc5b4)
-///
-/// Private: False
-///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLightTowerDebugGet%28&type=code)
-///
-pub const vexDeviceLightTowerDebugGet = light_tower.vexDeviceLightTowerDebugGet;
+/// ```c
+/// uint32_t vexDeviceLightTowerStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceLightTowerStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerStatusGet;
+
 /// # vexDeviceLightTowerBlinkSet
 ///
-/// Group: "light_tower"
+/// **Public API**
 ///
-/// Offset: 0x5b8 (0x37fc5b8)
+/// **Jumptable Offset:** 0x05b8 (_0x037fc5b8_)
 ///
-/// Private: False
+/// _defined in devices/light_tower.zig. from public_signatures.h:221._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerBlinkSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceLightTowerBlinkSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceLightTowerBlinkSet = light_tower.vexDeviceLightTowerBlinkSet;
+/// ```c
+/// void vexDeviceLightTowerBlinkSet(V5_DeviceT device, uint8_t select, uint8_t mask, int32_t onTime, int32_t offTime);
+/// ```
+const vexDeviceLightTowerBlinkSet: *const fn(device: types.V5_DeviceT,select: u8,mask: u8,onTime: i32,offTime: i32) callconv(.c) void = light_tower.vexDeviceLightTowerBlinkSet;
 
-// Group 'ai_vision'
+/// # vexDeviceDistanceDistanceGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0500 (_0x037fc500_)
+///
+/// _defined in devices/distance.zig. from public_signatures.h:225._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceDistanceGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceDistanceDistanceGet(V5_DeviceT device);
+/// ```
+const vexDeviceDistanceDistanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceDistanceGet;
+
+/// # vexDeviceDistanceConfidenceGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0504 (_0x037fc504_)
+///
+/// _defined in devices/distance.zig. from public_signatures.h:226._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceConfidenceGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceDistanceConfidenceGet(V5_DeviceT device);
+/// ```
+const vexDeviceDistanceConfidenceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceConfidenceGet;
+
+/// # vexDeviceDistanceObjectSizeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0518 (_0x037fc518_)
+///
+/// _defined in devices/distance.zig. from public_signatures.h:227._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceObjectSizeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceDistanceObjectSizeGet(V5_DeviceT device);
+/// ```
+const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = distance.vexDeviceDistanceObjectSizeGet;
+
+/// # vexDeviceDistanceObjectVelocityGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x051c (_0x037fc51c_)
+///
+/// _defined in devices/distance.zig. from public_signatures.h:228._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceObjectVelocityGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceDistanceObjectVelocityGet(V5_DeviceT device);
+/// ```
+const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = distance.vexDeviceDistanceObjectVelocityGet;
+
+/// # vexDeviceDistanceStatusGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0508 (_0x037fc508_)
+///
+/// _defined in devices/distance.zig. from public_signatures.h:229._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceStatusGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceDistanceStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceDistanceStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceStatusGet;
+
+/// # vexDeviceGpsReset
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05c8 (_0x037fc5c8_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:232._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsReset%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsReset(V5_DeviceT device);
+/// ```
+const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = gps.vexDeviceGpsReset;
+
+/// # vexDeviceGpsHeadingGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05cc (_0x037fc5cc_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:233._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsHeadingGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceGpsHeadingGet(V5_DeviceT device);
+/// ```
+const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsHeadingGet;
+
+/// # vexDeviceGpsDegreesGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05d0 (_0x037fc5d0_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:234._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsDegreesGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceGpsDegreesGet(V5_DeviceT device);
+/// ```
+const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsDegreesGet;
+
+/// # vexDeviceGpsQuaternionGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05d4 (_0x037fc5d4_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:235._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsQuaternionGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsQuaternionGet(V5_DeviceT device, V5_DeviceGpsQuaternion * data);
+/// ```
+const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsQuaternion) callconv(.c) void = gps.vexDeviceGpsQuaternionGet;
+
+/// # vexDeviceGpsAttitudeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05d8 (_0x037fc5d8_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:236._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsAttitudeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsAttitudeGet(V5_DeviceT device, V5_DeviceGpsAttitude * data, int bRaw);
+/// ```
+const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsAttitude,bRaw: types.int) callconv(.c) void = gps.vexDeviceGpsAttitudeGet;
+
+/// # vexDeviceGpsRawGyroGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05dc (_0x037fc5dc_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:238._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRawGyroGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsRawGyroGet(V5_DeviceT device, V5_DeviceGpsRaw * data);
+/// ```
+const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void = gps.vexDeviceGpsRawGyroGet;
+
+/// # vexDeviceGpsRawAccelGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05e0 (_0x037fc5e0_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:239._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRawAccelGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsRawAccelGet(V5_DeviceT device, V5_DeviceGpsRaw * data);
+/// ```
+const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void = gps.vexDeviceGpsRawAccelGet;
+
+/// # vexDeviceGpsStatusGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05e4 (_0x037fc5e4_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:240._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsStatusGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceGpsStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = gps.vexDeviceGpsStatusGet;
+
+/// # vexDeviceGpsModeSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05f0 (_0x037fc5f0_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:241._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsModeSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsModeSet(V5_DeviceT device, uint32_t mode);
+/// ```
+const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = gps.vexDeviceGpsModeSet;
+
+/// # vexDeviceGpsModeGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05f4 (_0x037fc5f4_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:242._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsModeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDeviceGpsModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = gps.vexDeviceGpsModeGet;
+
+/// # vexDeviceGpsDataRateSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05f8 (_0x037fc5f8_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:243._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsDataRateSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsDataRateSet(V5_DeviceT device, uint32_t rate);
+/// ```
+const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = gps.vexDeviceGpsDataRateSet;
+
+/// # vexDeviceGpsOriginSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x05fc (_0x037fc5fc_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:244._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsOriginSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsOriginSet(V5_DeviceT device, double ox, double oy);
+/// ```
+const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: types.double,oy: types.double) callconv(.c) void = gps.vexDeviceGpsOriginSet;
+
+/// # vexDeviceGpsOriginGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0600 (_0x037fc600_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:245._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsOriginGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsOriginGet(V5_DeviceT device, double * ox, double * oy);
+/// ```
+const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [*c]types.double,oy: [*c]types.double) callconv(.c) void = gps.vexDeviceGpsOriginGet;
+
+/// # vexDeviceGpsRotationSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0604 (_0x037fc604_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:246._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRotationSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsRotationSet(V5_DeviceT device, double value);
+/// ```
+const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,value: types.double) callconv(.c) void = gps.vexDeviceGpsRotationSet;
+
+/// # vexDeviceGpsRotationGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0608 (_0x037fc608_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:247._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRotationGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceGpsRotationGet(V5_DeviceT device);
+/// ```
+const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsRotationGet;
+
+/// # vexDeviceGpsInitialPositionSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x060c (_0x037fc60c_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:248._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsInitialPositionSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGpsInitialPositionSet(V5_DeviceT device, double initial_x, double initial_y, double initial_rotation);
+/// ```
+const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_DeviceT,initial_x: types.double,initial_y: types.double,initial_rotation: types.double) callconv(.c) void = gps.vexDeviceGpsInitialPositionSet;
+
+/// # vexDeviceGpsErrorGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0614 (_0x037fc614_)
+///
+/// _defined in devices/gps.zig. from public_signatures.h:250._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsErrorGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexDeviceGpsErrorGet(V5_DeviceT device);
+/// ```
+const vexDeviceGpsErrorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsErrorGet;
 
 /// # vexDeviceAiVisionModeSet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xca8 (0x37fcca8)
+/// **Jumptable Offset:** 0x0ca8 (_0x037fcca8_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:253._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionModeSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionModeSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionModeSet = ai_vision.vexDeviceAiVisionModeSet;
+/// ```c
+/// void vexDeviceAiVisionModeSet(V5_DeviceT device, uint32_t mode);
+/// ```
+const vexDeviceAiVisionModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = ai_vision.vexDeviceAiVisionModeSet;
+
 /// # vexDeviceAiVisionModeGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcac (0x37fccac)
+/// **Jumptable Offset:** 0x0cac (_0x037fccac_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:254._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionModeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionModeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionModeGet = ai_vision.vexDeviceAiVisionModeGet;
+/// ```c
+/// uint32_t vexDeviceAiVisionModeGet(V5_DeviceT device);
+/// ```
+const vexDeviceAiVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = ai_vision.vexDeviceAiVisionModeGet;
+
 /// # vexDeviceAiVisionObjectCountGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcb0 (0x37fccb0)
+/// **Jumptable Offset:** 0x0cb0 (_0x037fccb0_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:255._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionObjectCountGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionObjectCountGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionObjectCountGet = ai_vision.vexDeviceAiVisionObjectCountGet;
+/// ```c
+/// int32_t vexDeviceAiVisionObjectCountGet(V5_DeviceT device);
+/// ```
+const vexDeviceAiVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = ai_vision.vexDeviceAiVisionObjectCountGet;
+
 /// # vexDeviceAiVisionObjectGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcb4 (0x37fccb4)
+/// **Jumptable Offset:** 0x0cb4 (_0x037fccb4_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:256._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionObjectGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionObjectGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionObjectGet = ai_vision.vexDeviceAiVisionObjectGet;
+/// ```c
+/// int32_t vexDeviceAiVisionObjectGet(V5_DeviceT device, uint32_t indexObj, V5_DeviceAiVisionObject * pObject);
+/// ```
+const vexDeviceAiVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32,pObject: [*c]types.V5_DeviceAiVisionObject) callconv(.c) i32 = ai_vision.vexDeviceAiVisionObjectGet;
+
 /// # vexDeviceAiVisionColorSet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcb8 (0x37fccb8)
+/// **Jumptable Offset:** 0x0cb8 (_0x037fccb8_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:258._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionColorSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionColorSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionColorSet = ai_vision.vexDeviceAiVisionColorSet;
+/// ```c
+/// void vexDeviceAiVisionColorSet(V5_DeviceT device, V5_DeviceAiVisionColor * pColor);
+/// ```
+const vexDeviceAiVisionColorSet: *const fn(device: types.V5_DeviceT,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) void = ai_vision.vexDeviceAiVisionColorSet;
+
 /// # vexDeviceAiVisionColorGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcbc (0x37fccbc)
+/// **Jumptable Offset:** 0x0cbc (_0x037fccbc_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:260._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionColorGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionColorGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionColorGet = ai_vision.vexDeviceAiVisionColorGet;
+/// ```c
+/// int vexDeviceAiVisionColorGet(V5_DeviceT device, uint32_t id, V5_DeviceAiVisionColor * pColor);
+/// ```
+const vexDeviceAiVisionColorGet: *const fn(device: types.V5_DeviceT,id: u32,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) types.int = ai_vision.vexDeviceAiVisionColorGet;
+
 /// # vexDeviceAiVisionCodeSet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcc0 (0x37fccc0)
+/// **Jumptable Offset:** 0x0cc0 (_0x037fccc0_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:262._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionCodeSet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionCodeSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionCodeSet = ai_vision.vexDeviceAiVisionCodeSet;
+/// ```c
+/// void vexDeviceAiVisionCodeSet(V5_DeviceT device, V5_DeviceAiVisionCode * pCode);
+/// ```
+const vexDeviceAiVisionCodeSet: *const fn(device: types.V5_DeviceT,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) void = ai_vision.vexDeviceAiVisionCodeSet;
+
 /// # vexDeviceAiVisionCodeGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcc4 (0x37fccc4)
+/// **Jumptable Offset:** 0x0cc4 (_0x037fccc4_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:263._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionCodeGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionCodeGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionCodeGet = ai_vision.vexDeviceAiVisionCodeGet;
+/// ```c
+/// int vexDeviceAiVisionCodeGet(V5_DeviceT device, uint32_t id, V5_DeviceAiVisionCode * pCode);
+/// ```
+const vexDeviceAiVisionCodeGet: *const fn(device: types.V5_DeviceT,id: u32,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) types.int = ai_vision.vexDeviceAiVisionCodeGet;
+
 /// # vexDeviceAiVisionStatusGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcc8 (0x37fccc8)
+/// **Jumptable Offset:** 0x0cc8 (_0x037fccc8_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:265._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionStatusGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionStatusGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionStatusGet = ai_vision.vexDeviceAiVisionStatusGet;
+/// ```c
+/// uint32_t vexDeviceAiVisionStatusGet(V5_DeviceT device);
+/// ```
+const vexDeviceAiVisionStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = ai_vision.vexDeviceAiVisionStatusGet;
+
 /// # vexDeviceAiVisionTemperatureGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xccc (0x37fcccc)
+/// **Jumptable Offset:** 0x0ccc (_0x037fcccc_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:266._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionTemperatureGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionTemperatureGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionTemperatureGet = ai_vision.vexDeviceAiVisionTemperatureGet;
+/// ```c
+/// double vexDeviceAiVisionTemperatureGet(V5_DeviceT device);
+/// ```
+const vexDeviceAiVisionTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = ai_vision.vexDeviceAiVisionTemperatureGet;
+
 /// # vexDeviceAiVisionClassNameGet
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcd4 (0x37fccd4)
+/// **Jumptable Offset:** 0x0cd4 (_0x037fccd4_)
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:267._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionClassNameGet%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionClassNameGet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionClassNameGet = ai_vision.vexDeviceAiVisionClassNameGet;
-/// # vexDeviceAiVisionSensorSet
+/// ```c
+/// int32_t vexDeviceAiVisionClassNameGet(V5_DeviceT device, int32_t id, uint8_t * pName);
+/// ```
+const vexDeviceAiVisionClassNameGet: *const fn(device: types.V5_DeviceT,id: i32,pName: [*c]u8) callconv(.c) i32 = ai_vision.vexDeviceAiVisionClassNameGet;
+
+/// # vexDeviceAiVisionReset
 ///
-/// Group: "ai_vision"
+/// **Public API**
 ///
-/// Offset: 0xcd8 (0x37fccd8)
+/// 
 ///
-/// Private: False
+/// _defined in devices/ai_vision.zig. from public_signatures.h:269._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionReset%28&type=code)
 ///
-/// [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20vexDeviceAiVisionSensorSet%28&type=code)
+/// **Original signature:**
 ///
-pub const vexDeviceAiVisionSensorSet = ai_vision.vexDeviceAiVisionSensorSet;
+/// ```c
+/// void vexDeviceAiVisionReset(V5_DeviceT device);
+/// ```
+const vexDeviceAiVisionReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = ai_vision.vexDeviceAiVisionReset;
+
+/// # vexDeviceAiVisionEnableSet
+///
+/// **Public API**
+///
+/// 
+///
+/// _defined in devices/ai_vision.zig. from public_signatures.h:270._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionEnableSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceAiVisionEnableSet(V5_DeviceT device, uint8_t nEnables, uint8_t nMask);
+/// ```
+const vexDeviceAiVisionEnableSet: *const fn(device: types.V5_DeviceT,nEnables: u8,nMask: u8) callconv(.c) void = ai_vision.vexDeviceAiVisionEnableSet;
+
+/// # vexDeviceAiVisionEnableGet
+///
+/// **Public API**
+///
+/// 
+///
+/// _defined in devices/ai_vision.zig. from public_signatures.h:272._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionEnableGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint8_t vexDeviceAiVisionEnableGet(V5_DeviceT device);
+/// ```
+const vexDeviceAiVisionEnableGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = ai_vision.vexDeviceAiVisionEnableGet;
+
+/// # vexDevicePneumaticCompressorSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c08 (_0x037fcc08_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:275._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCompressorSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDevicePneumaticCompressorSet(V5_DeviceT device, int bState);
+/// ```
+const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_DeviceT,bState: types.int) callconv(.c) void = pneumatic.vexDevicePneumaticCompressorSet;
+
+/// # vexDevicePneumaticCylinderSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c0c (_0x037fcc0c_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:276._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCylinderSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDevicePneumaticCylinderSet(V5_DeviceT device, uint32_t id, int bState);
+/// ```
+const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_DeviceT,id: u32,bState: types.int) callconv(.c) void = pneumatic.vexDevicePneumaticCylinderSet;
+
+/// # vexDevicePneumaticCtrlSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c10 (_0x037fcc10_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:277._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCtrlSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDevicePneumaticCtrlSet(V5_DeviceT device, V5_DevicePneumaticCtrl * pCtrl);
+/// ```
+const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,pCtrl: [*c]types.V5_DevicePneumaticCtrl) callconv(.c) void = pneumatic.vexDevicePneumaticCtrlSet;
+
+/// # vexDevicePneumaticStatusGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c14 (_0x037fcc14_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:279._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticStatusGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDevicePneumaticStatusGet(V5_DeviceT device);
+/// ```
+const vexDevicePneumaticStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = pneumatic.vexDevicePneumaticStatusGet;
+
+/// # vexDevicePneumaticPwmSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c18 (_0x037fcc18_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:280._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticPwmSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDevicePneumaticPwmSet(V5_DeviceT device, uint8_t pwm);
+/// ```
+const vexDevicePneumaticPwmSet: *const fn(device: types.V5_DeviceT,pwm: u8) callconv(.c) void = pneumatic.vexDevicePneumaticPwmSet;
+
+/// # vexDevicePneumaticPwmGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c1c (_0x037fcc1c_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:281._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticPwmGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDevicePneumaticPwmGet(V5_DeviceT device);
+/// ```
+const vexDevicePneumaticPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = pneumatic.vexDevicePneumaticPwmGet;
+
+/// # vexDevicePneumaticCylinderPwmSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c20 (_0x037fcc20_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:282._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCylinderPwmSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDevicePneumaticCylinderPwmSet(V5_DeviceT device, uint32_t id, int bState, uint8_t pwm);
+/// ```
+const vexDevicePneumaticCylinderPwmSet: *const fn(device: types.V5_DeviceT,id: u32,bState: types.int,pwm: u8) callconv(.c) void = pneumatic.vexDevicePneumaticCylinderPwmSet;
+
+/// # vexDevicePneumaticActuationStatusGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0c28 (_0x037fcc28_)
+///
+/// _defined in devices/pneumatic.zig. from public_signatures.h:284._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticActuationStatusGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDevicePneumaticActuationStatusGet(V5_DeviceT device, uint16_t * ac1, uint16_t * ac2, uint16_t * ac3, uint16_t * ac4);
+/// ```
+const vexDevicePneumaticActuationStatusGet: *const fn(device: types.V5_DeviceT,ac1: [*c]u16,ac2: [*c]u16,ac3: [*c]u16,ac4: [*c]u16) callconv(.c) u32 = pneumatic.vexDevicePneumaticActuationStatusGet;
+
+/// # vexDeviceGenericSerialEnable
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a50 (_0x037fca50_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:289._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialEnable%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGenericSerialEnable(V5_DeviceT device, int32_t options);
+/// ```
+const vexDeviceGenericSerialEnable: *const fn(device: types.V5_DeviceT,options: i32) callconv(.c) void = generic_serial.vexDeviceGenericSerialEnable;
+
+/// # vexDeviceGenericSerialBaudrate
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a54 (_0x037fca54_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:290._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialBaudrate%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGenericSerialBaudrate(V5_DeviceT device, int32_t baudrate);
+/// ```
+const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_DeviceT,baudrate: i32) callconv(.c) void = generic_serial.vexDeviceGenericSerialBaudrate;
+
+/// # vexDeviceGenericSerialWriteChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a58 (_0x037fca58_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:291._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialWriteChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericSerialWriteChar(V5_DeviceT device, uint8_t c);
+/// ```
+const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialWriteChar;
+
+/// # vexDeviceGenericSerialWriteFree
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a5c (_0x037fca5c_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:292._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialWriteFree%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericSerialWriteFree(V5_DeviceT device);
+/// ```
+const vexDeviceGenericSerialWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialWriteFree;
+
+/// # vexDeviceGenericSerialTransmit
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a60 (_0x037fca60_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:293._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialTransmit%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericSerialTransmit(V5_DeviceT device, uint8_t * buffer, int32_t length);
+/// ```
+const vexDeviceGenericSerialTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialTransmit;
+
+/// # vexDeviceGenericSerialReadChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a64 (_0x037fca64_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:295._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReadChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericSerialReadChar(V5_DeviceT device);
+/// ```
+const vexDeviceGenericSerialReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReadChar;
+
+/// # vexDeviceGenericSerialPeekChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a68 (_0x037fca68_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:296._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialPeekChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericSerialPeekChar(V5_DeviceT device);
+/// ```
+const vexDeviceGenericSerialPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialPeekChar;
+
+/// # vexDeviceGenericSerialReceiveAvail
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a6c (_0x037fca6c_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:297._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReceiveAvail%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericSerialReceiveAvail(V5_DeviceT device);
+/// ```
+const vexDeviceGenericSerialReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReceiveAvail;
+
+/// # vexDeviceGenericSerialReceive
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a70 (_0x037fca70_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:298._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReceive%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericSerialReceive(V5_DeviceT device, uint8_t * buffer, int32_t length);
+/// ```
+const vexDeviceGenericSerialReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReceive;
+
+/// # vexDeviceGenericSerialFlush
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a74 (_0x037fca74_)
+///
+/// _defined in devices/generic_serial.zig. from public_signatures.h:300._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialFlush%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGenericSerialFlush(V5_DeviceT device);
+/// ```
+const vexDeviceGenericSerialFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void = generic_serial.vexDeviceGenericSerialFlush;
+
+/// # vexDeviceGenericRadioConnection
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0aa4 (_0x037fcaa4_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:303._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioConnection%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGenericRadioConnection(V5_DeviceT device, char * pName, int bMaster, int bAllowRadioOverride);
+/// ```
+const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]types.char,bMaster: types.int,bAllowRadioOverride: types.int) callconv(.c) void = generic_radio.vexDeviceGenericRadioConnection;
+
+/// # vexDeviceGenericRadioWriteChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0aa8 (_0x037fcaa8_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:305._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioWriteChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericRadioWriteChar(V5_DeviceT device, uint8_t c);
+/// ```
+const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioWriteChar;
+
+/// # vexDeviceGenericRadioWriteFree
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0aac (_0x037fcaac_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:306._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioWriteFree%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericRadioWriteFree(V5_DeviceT device);
+/// ```
+const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioWriteFree;
+
+/// # vexDeviceGenericRadioTransmit
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0ab0 (_0x037fcab0_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:307._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioTransmit%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericRadioTransmit(V5_DeviceT device, uint8_t * buffer, int32_t length);
+/// ```
+const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioTransmit;
+
+/// # vexDeviceGenericRadioReadChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0ab4 (_0x037fcab4_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:309._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReadChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericRadioReadChar(V5_DeviceT device);
+/// ```
+const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReadChar;
+
+/// # vexDeviceGenericRadioPeekChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0ab8 (_0x037fcab8_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:310._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioPeekChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericRadioPeekChar(V5_DeviceT device);
+/// ```
+const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioPeekChar;
+
+/// # vexDeviceGenericRadioReceiveAvail
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0abc (_0x037fcabc_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:311._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReceiveAvail%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericRadioReceiveAvail(V5_DeviceT device);
+/// ```
+const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReceiveAvail;
+
+/// # vexDeviceGenericRadioReceive
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0ac0 (_0x037fcac0_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:312._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReceive%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDeviceGenericRadioReceive(V5_DeviceT device, uint8_t * buffer, int32_t length);
+/// ```
+const vexDeviceGenericRadioReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReceive;
+
+/// # vexDeviceGenericRadioFlush
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0ac4 (_0x037fcac4_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:314._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioFlush%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDeviceGenericRadioFlush(V5_DeviceT device);
+/// ```
+const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void = generic_radio.vexDeviceGenericRadioFlush;
+
+/// # vexDeviceGenericRadioLinkStatus
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0ac8 (_0x037fcac8_)
+///
+/// _defined in devices/generic_radio.zig. from public_signatures.h:315._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioLinkStatus%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDeviceGenericRadioLinkStatus(V5_DeviceT device);
+/// ```
+const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = generic_radio.vexDeviceGenericRadioLinkStatus;
+
+/// # vexDisplayForegroundColor
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0640 (_0x037fc640_)
+///
+/// _defined in display.zig. from public_signatures.h:318._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayForegroundColor%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayForegroundColor(uint32_t col);
+/// ```
+const vexDisplayForegroundColor: *const fn(col: u32) callconv(.c) void = display.vexDisplayForegroundColor;
+
+/// # vexDisplayBackgroundColor
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0644 (_0x037fc644_)
+///
+/// _defined in display.zig. from public_signatures.h:319._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBackgroundColor%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayBackgroundColor(uint32_t col);
+/// ```
+const vexDisplayBackgroundColor: *const fn(col: u32) callconv(.c) void = display.vexDisplayBackgroundColor;
+
+/// # vexDisplayForegroundColorGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06b8 (_0x037fc6b8_)
+///
+/// _defined in display.zig. from public_signatures.h:320._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayForegroundColorGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDisplayForegroundColorGet();
+/// ```
+const vexDisplayForegroundColorGet: *const fn() callconv(.c) u32 = display.vexDisplayForegroundColorGet;
+
+/// # vexDisplayBackgroundColorGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06bc (_0x037fc6bc_)
+///
+/// _defined in display.zig. from public_signatures.h:321._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBackgroundColorGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDisplayBackgroundColorGet();
+/// ```
+const vexDisplayBackgroundColorGet: *const fn() callconv(.c) u32 = display.vexDisplayBackgroundColorGet;
+
+/// # vexDisplayErase
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0648 (_0x037fc648_)
+///
+/// _defined in display.zig. from public_signatures.h:322._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayErase%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayErase();
+/// ```
+const vexDisplayErase: *const fn() callconv(.c) void = display.vexDisplayErase;
+
+/// # vexDisplayScroll
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x064c (_0x037fc64c_)
+///
+/// _defined in display.zig. from public_signatures.h:323._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayScroll%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayScroll(int32_t nStartLine, int32_t nLines);
+/// ```
+const vexDisplayScroll: *const fn(nStartLine: i32,nLines: i32) callconv(.c) void = display.vexDisplayScroll;
+
+/// # vexDisplayScrollRect
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0650 (_0x037fc650_)
+///
+/// _defined in display.zig. from public_signatures.h:324._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayScrollRect%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayScrollRect(int32_t x1, int32_t y1, int32_t x2, int32_t y2, int32_t nLines);
+/// ```
+const vexDisplayScrollRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,nLines: i32) callconv(.c) void = display.vexDisplayScrollRect;
+
+/// # vexDisplayCopyRect
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0654 (_0x037fc654_)
+///
+/// _defined in display.zig. from public_signatures.h:326._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCopyRect%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayCopyRect(int32_t x1, int32_t y1, int32_t x2, int32_t y2, uint32_t * pSrc, int32_t srcStride);
+/// ```
+const vexDisplayCopyRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,pSrc: [*c]u32,srcStride: i32) callconv(.c) void = display.vexDisplayCopyRect;
+
+/// # vexDisplayPixelSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0658 (_0x037fc658_)
+///
+/// _defined in display.zig. from public_signatures.h:328._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPixelSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayPixelSet(uint32_t x, uint32_t y);
+/// ```
+const vexDisplayPixelSet: *const fn(x: u32,y: u32) callconv(.c) void = display.vexDisplayPixelSet;
+
+/// # vexDisplayPixelClear
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x065c (_0x037fc65c_)
+///
+/// _defined in display.zig. from public_signatures.h:329._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPixelClear%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayPixelClear(uint32_t x, uint32_t y);
+/// ```
+const vexDisplayPixelClear: *const fn(x: u32,y: u32) callconv(.c) void = display.vexDisplayPixelClear;
+
+/// # vexDisplayLineDraw
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0660 (_0x037fc660_)
+///
+/// _defined in display.zig. from public_signatures.h:330._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayLineDraw%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayLineDraw(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
+/// ```
+const vexDisplayLineDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayLineDraw;
+
+/// # vexDisplayLineClear
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0664 (_0x037fc664_)
+///
+/// _defined in display.zig. from public_signatures.h:331._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayLineClear%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayLineClear(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
+/// ```
+const vexDisplayLineClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayLineClear;
+
+/// # vexDisplayRectDraw
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0668 (_0x037fc668_)
+///
+/// _defined in display.zig. from public_signatures.h:332._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectDraw%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayRectDraw(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
+/// ```
+const vexDisplayRectDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectDraw;
+
+/// # vexDisplayRectClear
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x066c (_0x037fc66c_)
+///
+/// _defined in display.zig. from public_signatures.h:333._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectClear%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayRectClear(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
+/// ```
+const vexDisplayRectClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectClear;
+
+/// # vexDisplayRectFill
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0670 (_0x037fc670_)
+///
+/// _defined in display.zig. from public_signatures.h:334._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectFill%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayRectFill(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
+/// ```
+const vexDisplayRectFill: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectFill;
+
+/// # vexDisplayCircleDraw
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0674 (_0x037fc674_)
+///
+/// _defined in display.zig. from public_signatures.h:335._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleDraw%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayCircleDraw(int32_t xc, int32_t yc, int32_t radius);
+/// ```
+const vexDisplayCircleDraw: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleDraw;
+
+/// # vexDisplayCircleClear
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0678 (_0x037fc678_)
+///
+/// _defined in display.zig. from public_signatures.h:336._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleClear%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayCircleClear(int32_t xc, int32_t yc, int32_t radius);
+/// ```
+const vexDisplayCircleClear: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleClear;
+
+/// # vexDisplayCircleFill
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x067c (_0x037fc67c_)
+///
+/// _defined in display.zig. from public_signatures.h:337._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleFill%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayCircleFill(int32_t xc, int32_t yc, int32_t radius);
+/// ```
+const vexDisplayCircleFill: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleFill;
+
+/// # vexDisplayPrintf
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0680 (_0x037fc680_)
+///
+/// _defined in display.zig. from public_signatures.h:339._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPrintf%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayPrintf(int32_t xpos, int32_t ypos, uint32_t bOpaque, const char * format);
+/// ```
+const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayPrintf;
+
+/// # vexDisplayString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0684 (_0x037fc684_)
+///
+/// _defined in display.zig. from public_signatures.h:341._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayString(const int32_t nLineNumber, const char * format);
+/// ```
+const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayString;
+
+/// # vexDisplayStringAt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0688 (_0x037fc688_)
+///
+/// _defined in display.zig. from public_signatures.h:342._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringAt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayStringAt(int32_t xpos, int32_t ypos, const char * format);
+/// ```
+const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayStringAt;
+
+/// # vexDisplayBigString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x068c (_0x037fc68c_)
+///
+/// _defined in display.zig. from public_signatures.h:343._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayBigString(const int32_t nLineNumber, const char * format);
+/// ```
+const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigString;
+
+/// # vexDisplayBigStringAt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0690 (_0x037fc690_)
+///
+/// _defined in display.zig. from public_signatures.h:344._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigStringAt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayBigStringAt(int32_t xpos, int32_t ypos, const char * format);
+/// ```
+const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigStringAt;
+
+/// # vexDisplaySmallStringAt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06b0 (_0x037fc6b0_)
+///
+/// _defined in display.zig. from public_signatures.h:345._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplaySmallStringAt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplaySmallStringAt(int32_t xpos, int32_t ypos, const char * format);
+/// ```
+const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplaySmallStringAt;
+
+/// # vexDisplayCenteredString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0694 (_0x037fc694_)
+///
+/// _defined in display.zig. from public_signatures.h:347._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCenteredString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayCenteredString(const int32_t nLineNumber, const char * format);
+/// ```
+const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayCenteredString;
+
+/// # vexDisplayBigCenteredString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0698 (_0x037fc698_)
+///
+/// _defined in display.zig. from public_signatures.h:349._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigCenteredString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayBigCenteredString(const int32_t nLineNumber, const char * format);
+/// ```
+const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigCenteredString;
+
+/// # vexDisplayVPrintf
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0680 (_0x037fc680_)
+///
+/// _defined in display.zig. from public_signatures.h:353._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVPrintf%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVPrintf(int32_t xpos, int32_t ypos, uint32_t bOpaque, const char * format, int args);
+/// ```
+const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVPrintf;
+
+/// # vexDisplayVString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0684 (_0x037fc684_)
+///
+/// _defined in display.zig. from public_signatures.h:355._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVString(const int32_t nLineNumber, const char * format, int args);
+/// ```
+const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVString;
+
+/// # vexDisplayVStringAt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0688 (_0x037fc688_)
+///
+/// _defined in display.zig. from public_signatures.h:357._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVStringAt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
+/// ```
+const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVStringAt;
+
+/// # vexDisplayVBigString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x068c (_0x037fc68c_)
+///
+/// _defined in display.zig. from public_signatures.h:359._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVBigString(const int32_t nLineNumber, const char * format, int args);
+/// ```
+const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigString;
+
+/// # vexDisplayVBigStringAt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0690 (_0x037fc690_)
+///
+/// _defined in display.zig. from public_signatures.h:361._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigStringAt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVBigStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
+/// ```
+const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigStringAt;
+
+/// # vexDisplayVSmallStringAt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06b0 (_0x037fc6b0_)
+///
+/// _defined in display.zig. from public_signatures.h:363._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVSmallStringAt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVSmallStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
+/// ```
+const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVSmallStringAt;
+
+/// # vexDisplayVCenteredString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0694 (_0x037fc694_)
+///
+/// _defined in display.zig. from public_signatures.h:365._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVCenteredString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVCenteredString(const int32_t nLineNumber, const char * format, int args);
+/// ```
+const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVCenteredString;
+
+/// # vexDisplayVBigCenteredString
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0698 (_0x037fc698_)
+///
+/// _defined in display.zig. from public_signatures.h:367._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigCenteredString%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayVBigCenteredString(const int32_t nLineNumber, const char * format, int args);
+/// ```
+const vexDisplayVBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigCenteredString;
+
+/// # vexDisplayTextSize
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06a8 (_0x037fc6a8_)
+///
+/// _defined in display.zig. from public_signatures.h:370._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayTextSize%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayTextSize(uint32_t n, uint32_t d);
+/// ```
+const vexDisplayTextSize: *const fn(n: u32,d: u32) callconv(.c) void = display.vexDisplayTextSize;
+
+/// # vexDisplayFontNamedSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06b4 (_0x037fc6b4_)
+///
+/// _defined in display.zig. from public_signatures.h:371._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayFontNamedSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayFontNamedSet(const char * pFontName);
+/// ```
+const vexDisplayFontNamedSet: *const fn(pFontName: [*:0]const u8) callconv(.c) void = display.vexDisplayFontNamedSet;
+
+/// # vexDisplayStringWidthGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06c0 (_0x037fc6c0_)
+///
+/// _defined in display.zig. from public_signatures.h:372._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringWidthGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDisplayStringWidthGet(const char * pString);
+/// ```
+const vexDisplayStringWidthGet: *const fn(pString: [*:0]const u8) callconv(.c) i32 = display.vexDisplayStringWidthGet;
+
+/// # vexDisplayStringHeightGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x06c4 (_0x037fc6c4_)
+///
+/// _defined in display.zig. from public_signatures.h:373._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringHeightGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexDisplayStringHeightGet(const char * pString);
+/// ```
+const vexDisplayStringHeightGet: *const fn(pString: [*:0]const u8) callconv(.c) i32 = display.vexDisplayStringHeightGet;
+
+/// # vexDisplayRender
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07a0 (_0x037fc7a0_)
+///
+/// _defined in display.zig. from public_signatures.h:375._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRender%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDisplayRender(int bVsyncWait, int bRunScheduler);
+/// ```
+const vexDisplayRender: *const fn(bVsyncWait: types.int,bRunScheduler: types.int) callconv(.c) types.int = display.vexDisplayRender;
+
+/// # vexDisplayDoubleBufferDisable
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07a4 (_0x037fc7a4_)
+///
+/// _defined in display.zig. from public_signatures.h:376._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayDoubleBufferDisable%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayDoubleBufferDisable();
+/// ```
+const vexDisplayDoubleBufferDisable: *const fn() callconv(.c) void = display.vexDisplayDoubleBufferDisable;
+
+/// # vexDisplayClipRegionSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0794 (_0x037fc794_)
+///
+/// _defined in display.zig. from public_signatures.h:378._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayClipRegionSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayClipRegionSet(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
+/// ```
+const vexDisplayClipRegionSet: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayClipRegionSet;
+
+/// # vexDisplayClipRegionClear
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0794 (_0x037fc794_)
+///
+/// _defined in display.zig. from public_signatures.h:379._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayClipRegionClear%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayClipRegionClear();
+/// ```
+const vexDisplayClipRegionClear: *const fn() callconv(.c) void = display.vexDisplayClipRegionClear;
+
+/// # vexImageBmpRead
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0990 (_0x037fc990_)
+///
+/// _defined in image.zig. from public_signatures.h:381._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexImageBmpRead%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexImageBmpRead(const uint8_t * ibuf, v5_image * oBuf, uint32_t maxw, uint32_t maxh);
+/// ```
+const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32) callconv(.c) u32 = image.vexImageBmpRead;
+
+/// # vexImagePngRead
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0994 (_0x037fc994_)
+///
+/// _defined in image.zig. from public_signatures.h:383._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexImagePngRead%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexImagePngRead(const uint8_t * ibuf, v5_image * oBuf, uint32_t maxw, uint32_t maxh, uint32_t ibuflen);
+/// ```
+const vexImagePngRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32,ibuflen: u32) callconv(.c) u32 = image.vexImagePngRead;
+
+/// # vexScratchMemoryPtr
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x001c (_0x037fc01c_)
+///
+/// _defined in memory.zig. from public_signatures.h:386._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryPtr%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexScratchMemoryPtr(void ** ptr);
+/// ```
+const vexScratchMemoryPtr: *const fn(ptr: [*c]void) callconv(.c) i32 = memory.vexScratchMemoryPtr;
+
+/// # vexScratchMemoryLock
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0998 (_0x037fc998_)
+///
+/// _defined in memory.zig. from public_signatures.h:387._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryLock%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexScratchMemoryLock();
+/// ```
+const vexScratchMemoryLock: *const fn() callconv(.c) types.int = memory.vexScratchMemoryLock;
+
+/// # vexScratchMemoryUnlock
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x099c (_0x037fc99c_)
+///
+/// _defined in memory.zig. from public_signatures.h:388._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryUnlock%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexScratchMemoryUnlock();
+/// ```
+const vexScratchMemoryUnlock: *const fn() callconv(.c) void = memory.vexScratchMemoryUnlock;
+
+/// # vexFileMountSD
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07d0 (_0x037fc7d0_)
+///
+/// _defined in file.zig. from public_signatures.h:391._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileMountSD%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// FRESULT vexFileMountSD();
+/// ```
+const vexFileMountSD: *const fn() callconv(.c) types.FRESULT = file.vexFileMountSD;
+
+/// # vexFileDirectoryGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07d4 (_0x037fc7d4_)
+///
+/// _defined in file.zig. from public_signatures.h:392._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileDirectoryGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// FRESULT vexFileDirectoryGet(const char * path, char * buffer, uint32_t len);
+/// ```
+const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]types.char,len: u32) callconv(.c) types.FRESULT = file.vexFileDirectoryGet;
+
+/// # vexFileOpen
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07d8 (_0x037fc7d8_)
+///
+/// _defined in file.zig. from public_signatures.h:393._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpen%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// FIL * vexFileOpen(const char * filename, const char * mode);
+/// ```
+const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpen;
+
+/// # vexFileOpenWrite
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07dc (_0x037fc7dc_)
+///
+/// _defined in file.zig. from public_signatures.h:394._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpenWrite%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// FIL * vexFileOpenWrite(const char * filename);
+/// ```
+const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpenWrite;
+
+/// # vexFileOpenCreate
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07e0 (_0x037fc7e0_)
+///
+/// _defined in file.zig. from public_signatures.h:395._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpenCreate%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// FIL * vexFileOpenCreate(const char * filename);
+/// ```
+const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpenCreate;
+
+/// # vexFileClose
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07e4 (_0x037fc7e4_)
+///
+/// _defined in file.zig. from public_signatures.h:396._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileClose%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexFileClose(FIL * fdp);
+/// ```
+const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFileClose;
+
+/// # vexFileRead
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07f8 (_0x037fc7f8_)
+///
+/// _defined in file.zig. from public_signatures.h:397._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileRead%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexFileRead(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
+/// ```
+const vexFileRead: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileRead;
+
+/// # vexFileWrite
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07ec (_0x037fc7ec_)
+///
+/// _defined in file.zig. from public_signatures.h:398._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileWrite%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexFileWrite(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
+/// ```
+const vexFileWrite: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileWrite;
+
+/// # vexFileSize
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07f0 (_0x037fc7f0_)
+///
+/// _defined in file.zig. from public_signatures.h:399._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSize%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexFileSize(FIL * fdp);
+/// ```
+const vexFileSize: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileSize;
+
+/// # vexFileSeek
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07f4 (_0x037fc7f4_)
+///
+/// _defined in file.zig. from public_signatures.h:400._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSeek%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// FRESULT vexFileSeek(FIL * fdp, uint32_t offset, int32_t whence);
+/// ```
+const vexFileSeek: *const fn(fdp: [*c]types.FIL,offset: u32,whence: i32) callconv(.c) types.FRESULT = file.vexFileSeek;
+
+/// # vexFileDriveStatus
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x07fc (_0x037fc7fc_)
+///
+/// _defined in file.zig. from public_signatures.h:401._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileDriveStatus%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexFileDriveStatus(uint32_t drive);
+/// ```
+const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) types.int = file.vexFileDriveStatus;
+
+/// # vexFileTell
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0800 (_0x037fc800_)
+///
+/// _defined in file.zig. from public_signatures.h:402._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileTell%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexFileTell(FIL * fdp);
+/// ```
+const vexFileTell: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileTell;
+
+/// # vexFileSync
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0804 (_0x037fc804_)
+///
+/// _defined in file.zig. from public_signatures.h:403._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSync%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexFileSync(FIL * fdp);
+/// ```
+const vexFileSync: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFileSync;
+
+/// # vexFileStatus
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0808 (_0x037fc808_)
+///
+/// _defined in file.zig. from public_signatures.h:404._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileStatus%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexFileStatus(const char * filename);
+/// ```
+const vexFileStatus: *const fn(filename: [*:0]const u8) callconv(.c) u32 = file.vexFileStatus;
+
+/// # vexSerialWriteChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0898 (_0x037fc898_)
+///
+/// _defined in serial.zig. from public_signatures.h:407._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexSerialWriteChar(uint32_t channel, uint8_t c);
+/// ```
+const vexSerialWriteChar: *const fn(channel: u32,c: u8) callconv(.c) i32 = serial.vexSerialWriteChar;
+
+/// # vexSerialWriteBuffer
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x089c (_0x037fc89c_)
+///
+/// _defined in serial.zig. from public_signatures.h:408._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteBuffer%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexSerialWriteBuffer(uint32_t channel, uint8_t * data, uint32_t data_len);
+/// ```
+const vexSerialWriteBuffer: *const fn(channel: u32,data: [*c]u8,data_len: u32) callconv(.c) i32 = serial.vexSerialWriteBuffer;
+
+/// # vexSerialReadChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08a0 (_0x037fc8a0_)
+///
+/// _defined in serial.zig. from public_signatures.h:410._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialReadChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexSerialReadChar(uint32_t channel);
+/// ```
+const vexSerialReadChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialReadChar;
+
+/// # vexSerialPeekChar
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08a4 (_0x037fc8a4_)
+///
+/// _defined in serial.zig. from public_signatures.h:411._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialPeekChar%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexSerialPeekChar(uint32_t channel);
+/// ```
+const vexSerialPeekChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialPeekChar;
+
+/// # vexSerialWriteFree
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08ac (_0x037fc8ac_)
+///
+/// _defined in serial.zig. from public_signatures.h:412._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteFree%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexSerialWriteFree(uint32_t channel);
+/// ```
+const vexSerialWriteFree: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialWriteFree;
+
+/// # vexSystemTimerStop
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08c0 (_0x037fc8c0_)
+///
+/// _defined in system.zig. from public_signatures.h:415._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerStop%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemTimerStop();
+/// ```
+const vexSystemTimerStop: *const fn() callconv(.c) void = system.vexSystemTimerStop;
+
+/// # vexSystemTimerClearInterrupt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08c4 (_0x037fc8c4_)
+///
+/// _defined in system.zig. from public_signatures.h:416._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerClearInterrupt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemTimerClearInterrupt();
+/// ```
+const vexSystemTimerClearInterrupt: *const fn() callconv(.c) void = system.vexSystemTimerClearInterrupt;
+
+/// # vexSystemTimerReinitForRtos
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08c8 (_0x037fc8c8_)
+///
+/// _defined in system.zig. from public_signatures.h:417._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerReinitForRtos%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexSystemTimerReinitForRtos(uint32_t priority, void (*)(void *) handler);
+/// ```
+const vexSystemTimerReinitForRtos: *const fn(priority: u32,handler: [*c]fn() callconv(.c) void) callconv(.c) i32 = system.vexSystemTimerReinitForRtos;
+
+/// # vexSystemApplicationIRQHandler
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08cc (_0x037fc8cc_)
+///
+/// _defined in system.zig. from public_signatures.h:419._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemApplicationIRQHandler%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemApplicationIRQHandler(uint32_t ulICCIAR);
+/// ```
+const vexSystemApplicationIRQHandler: *const fn(ulICCIAR: u32) callconv(.c) void = system.vexSystemApplicationIRQHandler;
+
+/// # vexSystemWatchdogReinitRtos
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08d0 (_0x037fc8d0_)
+///
+/// _defined in system.zig. from public_signatures.h:420._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemWatchdogReinitRtos%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexSystemWatchdogReinitRtos();
+/// ```
+const vexSystemWatchdogReinitRtos: *const fn() callconv(.c) i32 = system.vexSystemWatchdogReinitRtos;
+
+/// # vexSystemWatchdogGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x08d4 (_0x037fc8d4_)
+///
+/// _defined in system.zig. from public_signatures.h:421._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemWatchdogGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexSystemWatchdogGet();
+/// ```
+const vexSystemWatchdogGet: *const fn() callconv(.c) u32 = system.vexSystemWatchdogGet;
+
+/// # vexSystemBoot
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0910 (_0x037fc910_)
+///
+/// _defined in system.zig. from public_signatures.h:425._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemBoot%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemBoot();
+/// ```
+const vexSystemBoot: *const fn() callconv(.c) void = system.vexSystemBoot;
+
+/// # vexSystemUndefinedException
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0914 (_0x037fc914_)
+///
+/// _defined in system.zig. from public_signatures.h:426._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemUndefinedException%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemUndefinedException();
+/// ```
+const vexSystemUndefinedException: *const fn() callconv(.c) void = system.vexSystemUndefinedException;
+
+/// # vexSystemFIQInterrupt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0918 (_0x037fc918_)
+///
+/// _defined in system.zig. from public_signatures.h:427._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemFIQInterrupt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemFIQInterrupt();
+/// ```
+const vexSystemFIQInterrupt: *const fn() callconv(.c) void = system.vexSystemFIQInterrupt;
+
+/// # vexSystemIQRQnterrupt
+///
+/// **Public API**
+///
+/// 
+///
+/// _defined in system.zig. from public_signatures.h:428._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemIQRQnterrupt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemIQRQnterrupt();
+/// ```
+const vexSystemIQRQnterrupt: *const fn() callconv(.c) void = system.vexSystemIQRQnterrupt;
+
+/// # vexSystemSWInterrupt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0920 (_0x037fc920_)
+///
+/// _defined in system.zig. from public_signatures.h:429._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemSWInterrupt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemSWInterrupt();
+/// ```
+const vexSystemSWInterrupt: *const fn() callconv(.c) void = system.vexSystemSWInterrupt;
+
+/// # vexSystemDataAbortInterrupt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0924 (_0x037fc924_)
+///
+/// _defined in system.zig. from public_signatures.h:430._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemDataAbortInterrupt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemDataAbortInterrupt();
+/// ```
+const vexSystemDataAbortInterrupt: *const fn() callconv(.c) void = system.vexSystemDataAbortInterrupt;
+
+/// # vexSystemPrefetchAbortInterrupt
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0928 (_0x037fc928_)
+///
+/// _defined in system.zig. from public_signatures.h:431._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemPrefetchAbortInterrupt%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexSystemPrefetchAbortInterrupt();
+/// ```
+const vexSystemPrefetchAbortInterrupt: *const fn() callconv(.c) void = system.vexSystemPrefetchAbortInterrupt;
+
+/// # vexTouchUserCallbackSet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0960 (_0x037fc960_)
+///
+/// _defined in touch.zig. from public_signatures.h:434._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTouchUserCallbackSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTouchUserCallbackSet(void (*)(V5_TouchEvent, int32_t, int32_t) callback);
+/// ```
+const vexTouchUserCallbackSet: *const fn(callback: [*c]fn(types.V5_TouchEvent, i32, i32) callconv(.c) void) callconv(.c) void = touch.vexTouchUserCallbackSet;
+
+/// # vexTouchDataGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0964 (_0x037fc964_)
+///
+/// _defined in touch.zig. from public_signatures.h:435._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTouchDataGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexTouchDataGet(V5_TouchStatus * status);
+/// ```
+const vexTouchDataGet: *const fn(status: [*c]types.V5_TouchStatus) callconv(.c) types.int = touch.vexTouchDataGet;
+
+/// # vexStdlibVersion
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x1004 (_0x037fd004_)
+///
+/// _defined in version.zig. from public_signatures.h:438._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersion%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexStdlibVersion();
+/// ```
+const vexStdlibVersion: *const fn() callconv(.c) u32 = version.vexStdlibVersion;
+
+/// # vexSdkVersion
+///
+/// **Public API**
+///
+/// 
+///
+/// _defined in version.zig. from public_signatures.h:440._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSdkVersion%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexSdkVersion();
+/// ```
+const vexSdkVersion: *const fn() callconv(.c) u32 = version.vexSdkVersion;
+
+/// # vexStdlibVersionLinked
+///
+/// **Public API**
+///
+/// 
+///
+/// _defined in version.zig. from public_signatures.h:443._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersionLinked%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexStdlibVersionLinked();
+/// ```
+const vexStdlibVersionLinked: *const fn() callconv(.c) u32 = version.vexStdlibVersionLinked;
+
+/// # vexStdlibVersionVerify
+///
+/// **Public API**
+///
+/// 
+///
+/// _defined in version.zig. from public_signatures.h:444._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersionVerify%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexStdlibVersionVerify();
+/// ```
+const vexStdlibVersionVerify: *const fn() callconv(.c) types.int = version.vexStdlibVersionVerify;
+
+/// # vexCompetitionStatus
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x09d8 (_0x037fc9d8_)
+///
+/// _defined in competition.zig. from public_signatures.h:447._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCompetitionStatus%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexCompetitionStatus();
+/// ```
+const vexCompetitionStatus: *const fn() callconv(.c) u32 = competition.vexCompetitionStatus;
+
+/// # vexCompetitionControl
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x09dc (_0x037fc9dc_)
+///
+/// _defined in competition.zig. from public_signatures.h:448._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCompetitionControl%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexCompetitionControl(uint32_t data);
+/// ```
+const vexCompetitionControl: *const fn(data: u32) callconv(.c) void = competition.vexCompetitionControl;
+
+/// # vexBatteryVoltageGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a00 (_0x037fca00_)
+///
+/// _defined in battery.zig. from public_signatures.h:451._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryVoltageGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexBatteryVoltageGet();
+/// ```
+const vexBatteryVoltageGet: *const fn() callconv(.c) i32 = battery.vexBatteryVoltageGet;
+
+/// # vexBatteryCurrentGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a04 (_0x037fca04_)
+///
+/// _defined in battery.zig. from public_signatures.h:452._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryCurrentGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexBatteryCurrentGet();
+/// ```
+const vexBatteryCurrentGet: *const fn() callconv(.c) i32 = battery.vexBatteryCurrentGet;
+
+/// # vexBatteryTemperatureGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a08 (_0x037fca08_)
+///
+/// _defined in battery.zig. from public_signatures.h:453._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryTemperatureGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexBatteryTemperatureGet();
+/// ```
+const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double = battery.vexBatteryTemperatureGet;
+
+/// # vexBatteryCapacityGet
+///
+/// **Public API**
+///
+/// **Jumptable Offset:** 0x0a0c (_0x037fca0c_)
+///
+/// _defined in battery.zig. from public_signatures.h:454._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryCapacityGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// double vexBatteryCapacityGet();
+/// ```
+const vexBatteryCapacityGet: *const fn() callconv(.c) types.double = battery.vexBatteryCapacityGet;
+
+/// # vexDisplayOffscreenBufferGet
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:4._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t * vexDisplayOffscreenBufferGet(uint32_t width, uint32_t height, uint32_t pixelSize);
+/// ```
+const vexDisplayOffscreenBufferGet: *const fn(width: u32,height: u32,pixelSize: u32) callconv(.c) [*c]u32 = display.vexDisplayOffscreenBufferGet;
+
+/// # vexDisplayOffscreenBufferDestroy
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:6._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferDestroy%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayOffscreenBufferDestroy(uint32_t * buffer);
+/// ```
+const vexDisplayOffscreenBufferDestroy: *const fn(buffer: [*c]u32) callconv(.c) void = display.vexDisplayOffscreenBufferDestroy;
+
+/// # vexDisplayOffscreenBufferPixelSet
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:7._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferPixelSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayOffscreenBufferPixelSet(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t color);
+/// ```
+const vexDisplayOffscreenBufferPixelSet: *const fn(buffer: [*c]u32,x: u32,y: u32,color: u32) callconv(.c) void = display.vexDisplayOffscreenBufferPixelSet;
+
+/// # vexDisplayOffscreenBufferPixelGet
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:9._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferPixelGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexDisplayOffscreenBufferPixelGet(uint32_t * buffer, uint32_t x, uint32_t y);
+/// ```
+const vexDisplayOffscreenBufferPixelGet: *const fn(buffer: [*c]u32,x: u32,y: u32) callconv(.c) u32 = display.vexDisplayOffscreenBufferPixelGet;
+
+/// # vexDisplayOffscreenBufferRectDraw
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:11._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferRectDraw%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayOffscreenBufferRectDraw(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
+/// ```
+const vexDisplayOffscreenBufferRectDraw: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectDraw;
+
+/// # vexDisplayOffscreenBufferRectFill
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:13._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferRectFill%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayOffscreenBufferRectFill(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
+/// ```
+const vexDisplayOffscreenBufferRectFill: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectFill;
+
+/// # vexDisplayOffscreenBufferScrollH
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:15._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferScrollH%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayOffscreenBufferScrollH(uint32_t * buffer, uint32_t pixels);
+/// ```
+const vexDisplayOffscreenBufferScrollH: *const fn(buffer: [*c]u32,pixels: u32) callconv(.c) void = display.vexDisplayOffscreenBufferScrollH;
+
+/// # vexDisplayOffscreenBufferBlit
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in display.zig. from private_signatures.h:16._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferBlit%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayOffscreenBufferBlit(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
+/// ```
+const vexDisplayOffscreenBufferBlit: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferBlit;
+
+/// # vexMain
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in core.zig. from private_signatures.h:19._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexMain%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexMain();
+/// ```
+const vexMain: *const fn() callconv(.c) void = core.vexMain;
+
+/// # vexStartup
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in core.zig. from private_signatures.h:20._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStartup%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexStartup();
+/// ```
+const vexStartup: *const fn() callconv(.c) void = core.vexStartup;
+
+/// # vexSystemVersion
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x1000 (_0x037fd000_)
+///
+/// _defined in system.zig. from private_signatures.h:27._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemVersion%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexSystemVersion();
+/// ```
+const vexSystemVersion: *const fn() callconv(.c) u32 = system.vexSystemVersion;
+
+/// # vexVexosVersion
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x1008 (_0x037fd008_)
+///
+/// _defined in vexos.zig. from private_signatures.h:30._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexVexosVersion%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexVexosVersion();
+/// ```
+const vexVexosVersion: *const fn() callconv(.c) u32 = vexos.vexVexosVersion;
+
+/// # vexCpu0Version
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x100c (_0x037fd00c_)
+///
+/// _defined in version.zig. from private_signatures.h:31._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCpu0Version%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexCpu0Version();
+/// ```
+const vexCpu0Version: *const fn() callconv(.c) u32 = version.vexCpu0Version;

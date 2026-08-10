@@ -1,0 +1,18 @@
+const types = @import("types.zig");
+pub extern const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsQuaternion) callconv(.c) void;
+pub extern const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsAttitude,bRaw: types.int) callconv(.c) void;
+pub extern const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void;
+pub extern const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void;
+pub extern const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void;
+pub extern const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void;
+pub extern const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: types.double,oy: types.double) callconv(.c) void;
+pub extern const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [*c]types.double,oy: [*c]types.double) callconv(.c) void;
+pub extern const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,value: types.double) callconv(.c) void;
+pub extern const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_DeviceT,initial_x: types.double,initial_y: types.double,initial_rotation: types.double) callconv(.c) void;
+pub extern const vexDeviceGpsErrorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;

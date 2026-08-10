@@ -153,7 +153,7 @@ def generate_docs(addr, entry):
         Group: "{group}"
         Offset: {addr} ({hex(int(addr, 16) + JMPTABLE_ADDR)})
         Private: {is_private}
-        [Find Usages](https://github.com/search?q={urllib.parse.quote(f"org:purduesigbots OR org:vexide OR repo:cetio/VEXAPI OR repo:sy1vi3/sylib OR user:skzidev {entry['name']}(")}&type=code)"""
+        [Find Usages](https://github.com/search?q={urllib.parse.quote(f"org:purduesigbots OR org:vexide OR repo:cetio/VEXAPI OR repo:sy1vi3/sylib OR user:skzidev OR repo:MobMasher21/evAPI OR repo:Gavin-Niederman/student-centered-arcade-drive {entry['name']}(")}&type=code)"""
     return "\n".join([f"/// {line.strip()}\n///" for line in docs.splitlines()]) + "\n"
 
 

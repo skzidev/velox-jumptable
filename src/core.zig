@@ -1,0 +1,12 @@
+const types = @import("types.zig");
+pub extern const vexBackgroundProcessing: *const fn() callconv(.c) void;
+pub extern const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
+pub extern const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
+pub extern const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) callconv(.c) i32;
+pub extern const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8) callconv(.c) i32;
+pub extern const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const u8,args: types.int) callconv(.c) i32;
+pub extern const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8,args: types.int) callconv(.c) i32;
+pub extern const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void;
+pub extern const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void;
+pub extern const vexMain: *const fn() callconv(.c) void;
+pub extern const vexStartup: *const fn() callconv(.c) void;

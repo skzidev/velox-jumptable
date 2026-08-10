@@ -1,0 +1,11 @@
+const types = @import("types.zig");
+pub extern const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]types.char,bMaster: types.int,bAllowRadioOverride: types.int) callconv(.c) void;
+pub extern const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callconv(.c) types.int;

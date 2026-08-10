@@ -1,0 +1,12 @@
+const types = @import("types.zig");
+pub extern const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuQuaternion) callconv(.c) void;
+pub extern const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuAttitude) callconv(.c) void;
+pub extern const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void;
+pub extern const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void;
+pub extern const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void;
+pub extern const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceImuDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void;
