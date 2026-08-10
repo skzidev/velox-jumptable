@@ -225,3 +225,8 @@ with open(join(".", "src", "root.zig"), "w") as f:
 
 for file in files.values():
     file.close()
+
+with open(join(".", "addrs.ld"), "w") as f:
+    f.writelines(
+        [f"{k} = {v['address']};\n" for k, v in offset_data["functions"].items()]
+    )

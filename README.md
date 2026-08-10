@@ -44,35 +44,6 @@ python ./extract_firmware.py
 
 It takes a couple of minutes since it has to disassemble and analyze the entire archive. This writes a single data store, `data/jumptable_offsets.json`:
 
-```json
-{
-  "base": "0x037fc000",
-  "size": "0x1040",
-  "jumptable": {
-    "0x0a00": "0x0341e3b0"
-  },
-  "functions": {
-    "vexBatteryVoltageGet": {
-      "offset": "0x0a00",
-      "address": "0x037fca00",
-      "target": "0x0341e3b0"
-    }
-  },
-  "glue": {
-    "vexMotorVelocitySet": ["vexDeviceMotorVelocitySet"]
-  },
-  "unresolved": ["vexStartup"]
-}
-```
-
-Where:
-
-- `base` / `size` — the jumptable partition's load address and size in bytes.
-- `jumptable` — every nonzero slot in the firmware table
-- `functions` — symbols resolved to a jumptable slot, with the slot offset, the absolute memory `address` of that slot (`base + offset`), and the firmware implementation `target` it points to (data slots have `target: null`).
-- `glue` — symbols whose implementation has real logic and ends in a tail call (e.g. a version check before forwarding to the device-level function). These have no dedicated jumptable slot; their tail-call targets are listed so codegen can decide whether to reimplement the glue.
-- `unresolved` — symbols with no jumptable dispatch at all (pure SDK code, version stubs, libc installers).
-
 Finally, generate Zig bindings by running the code generator:
 
 ```bash
