@@ -4,7 +4,7 @@ import textwrap
 import urllib.parse
 from io import TextIOWrapper
 from os import mkdir
-from os.path import basename, join
+from os.path import basename, join, relpath
 
 from tools.clangutil import Symbol, read_header
 
@@ -182,7 +182,7 @@ defd_funcs = []
 with open(join(".", "src", "root.zig"), "w") as f:
     f.writelines(
         [
-            f'const {basename(file).removesuffix(".zig")} = @import("{file}");\n'
+            f'const {basename(file).removesuffix(".zig")} = @import("{relpath(file, join(".", "src"))}");\n'
             for file in files
         ]
     )

@@ -7,3 +7,4 @@ pyvenv.cfg
 data/private_api
 data/offsets.txt
 *__pycache__
+lib64
