@@ -221,7 +221,7 @@ with open(join(".", "src", "root.zig"), "w") as f:
             )
         )
         f.write(
-            f"const {func.name}: *const fn({','.join([f'{param.name if param.name else "_"}: {c_to_zig(param.type)}' for param in func.params])}) callconv(.c) {c_to_zig(func.returns)} = {mod_name}.{func.name};\n"
+            f"pub const {func.name}: *const fn({','.join([f'{param.name if param.name else "_"}: {c_to_zig(param.type)}' for param in func.params])}) callconv(.c) {c_to_zig(func.returns)} = {mod_name}.{func.name};\n"
         )
         defd_funcs.append(func.name)
 

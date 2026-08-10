@@ -46,7 +46,7 @@ const types = @import("types.zig");
 /// ```c
 /// void vexBackgroundProcessing();
 /// ```
-const vexBackgroundProcessing: *const fn() callconv(.c) void = core.vexBackgroundProcessing;
+pub const vexBackgroundProcessing: *const fn() callconv(.c) void = core.vexBackgroundProcessing;
 
 /// # vexDebug
 ///
@@ -61,7 +61,7 @@ const vexBackgroundProcessing: *const fn() callconv(.c) void = core.vexBackgroun
 /// ```c
 /// int32_t vexDebug(const char * fmt);
 /// ```
-const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vexDebug;
+pub const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vexDebug;
 
 /// # vex_printf
 ///
@@ -76,7 +76,7 @@ const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vexDebug;
 /// ```c
 /// int32_t vex_printf(const char * fmt);
 /// ```
-const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vex_printf;
+pub const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vex_printf;
 
 /// # vex_sprintf
 ///
@@ -91,7 +91,7 @@ const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vex_prin
 /// ```c
 /// int32_t vex_sprintf(char * out, const char * format);
 /// ```
-const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) callconv(.c) i32 = core.vex_sprintf;
+pub const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) callconv(.c) i32 = core.vex_sprintf;
 
 /// # vex_snprintf
 ///
@@ -106,7 +106,7 @@ const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) callconv
 /// ```c
 /// int32_t vex_snprintf(char * out, uint32_t max_len, const char * format);
 /// ```
-const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8) callconv(.c) i32 = core.vex_snprintf;
+pub const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8) callconv(.c) i32 = core.vex_snprintf;
 
 /// # vex_vsprintf
 ///
@@ -121,7 +121,7 @@ const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]cons
 /// ```c
 /// int32_t vex_vsprintf(char * out, const char * format, int args);
 /// ```
-const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const u8,args: types.int) callconv(.c) i32 = core.vex_vsprintf;
+pub const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const u8,args: types.int) callconv(.c) i32 = core.vex_vsprintf;
 
 /// # vex_vsnprintf
 ///
@@ -136,7 +136,7 @@ const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const u8,args: ty
 /// ```c
 /// int32_t vex_vsnprintf(char * out, uint32_t max_len, const char * format, int args);
 /// ```
-const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8,args: types.int) callconv(.c) i32 = core.vex_vsnprintf;
+pub const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8,args: types.int) callconv(.c) i32 = core.vex_vsnprintf;
 
 /// # vexSystemTimeGet
 ///
@@ -151,7 +151,7 @@ const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]con
 /// ```c
 /// uint32_t vexSystemTimeGet();
 /// ```
-const vexSystemTimeGet: *const fn() callconv(.c) u32 = system.vexSystemTimeGet;
+pub const vexSystemTimeGet: *const fn() callconv(.c) u32 = system.vexSystemTimeGet;
 
 /// # vexGettime
 ///
@@ -166,7 +166,7 @@ const vexSystemTimeGet: *const fn() callconv(.c) u32 = system.vexSystemTimeGet;
 /// ```c
 /// void vexGettime(struct time * pTime);
 /// ```
-const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void = core.vexGettime;
+pub const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void = core.vexGettime;
 
 /// # vexGetdate
 ///
@@ -181,7 +181,7 @@ const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void = core.vexG
 /// ```c
 /// void vexGetdate(struct date * pDate);
 /// ```
-const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void = core.vexGetdate;
+pub const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void = core.vexGetdate;
 
 /// # vexSystemMemoryDump
 ///
@@ -196,7 +196,7 @@ const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void = core.vexG
 /// ```c
 /// void vexSystemMemoryDump();
 /// ```
-const vexSystemMemoryDump: *const fn() callconv(.c) void = system.vexSystemMemoryDump;
+pub const vexSystemMemoryDump: *const fn() callconv(.c) void = system.vexSystemMemoryDump;
 
 /// # vexSystemDigitalIO
 ///
@@ -211,7 +211,7 @@ const vexSystemMemoryDump: *const fn() callconv(.c) void = system.vexSystemMemor
 /// ```c
 /// void vexSystemDigitalIO(uint32_t pin, uint32_t value);
 /// ```
-const vexSystemDigitalIO: *const fn(pin: u32,value: u32) callconv(.c) void = system.vexSystemDigitalIO;
+pub const vexSystemDigitalIO: *const fn(pin: u32,value: u32) callconv(.c) void = system.vexSystemDigitalIO;
 
 /// # vexSystemStartupOptions
 ///
@@ -226,7 +226,7 @@ const vexSystemDigitalIO: *const fn(pin: u32,value: u32) callconv(.c) void = sys
 /// ```c
 /// uint32_t vexSystemStartupOptions();
 /// ```
-const vexSystemStartupOptions: *const fn() callconv(.c) u32 = system.vexSystemStartupOptions;
+pub const vexSystemStartupOptions: *const fn() callconv(.c) u32 = system.vexSystemStartupOptions;
 
 /// # vexSystemExitRequest
 ///
@@ -241,7 +241,7 @@ const vexSystemStartupOptions: *const fn() callconv(.c) u32 = system.vexSystemSt
 /// ```c
 /// void vexSystemExitRequest();
 /// ```
-const vexSystemExitRequest: *const fn() callconv(.c) void = system.vexSystemExitRequest;
+pub const vexSystemExitRequest: *const fn() callconv(.c) void = system.vexSystemExitRequest;
 
 /// # vexSystemHighResTimeGet
 ///
@@ -256,7 +256,7 @@ const vexSystemExitRequest: *const fn() callconv(.c) void = system.vexSystemExit
 /// ```c
 /// uint64_t vexSystemHighResTimeGet();
 /// ```
-const vexSystemHighResTimeGet: *const fn() callconv(.c) u64 = system.vexSystemHighResTimeGet;
+pub const vexSystemHighResTimeGet: *const fn() callconv(.c) u64 = system.vexSystemHighResTimeGet;
 
 /// # vexSystemPowerupTimeGet
 ///
@@ -271,7 +271,7 @@ const vexSystemHighResTimeGet: *const fn() callconv(.c) u64 = system.vexSystemHi
 /// ```c
 /// uint64_t vexSystemPowerupTimeGet();
 /// ```
-const vexSystemPowerupTimeGet: *const fn() callconv(.c) u64 = system.vexSystemPowerupTimeGet;
+pub const vexSystemPowerupTimeGet: *const fn() callconv(.c) u64 = system.vexSystemPowerupTimeGet;
 
 /// # vexSystemLinkAddrGet
 ///
@@ -286,7 +286,7 @@ const vexSystemPowerupTimeGet: *const fn() callconv(.c) u64 = system.vexSystemPo
 /// ```c
 /// uint32_t vexSystemLinkAddrGet();
 /// ```
-const vexSystemLinkAddrGet: *const fn() callconv(.c) u32 = system.vexSystemLinkAddrGet;
+pub const vexSystemLinkAddrGet: *const fn() callconv(.c) u32 = system.vexSystemLinkAddrGet;
 
 /// # vexSystemUsbStatus
 ///
@@ -301,7 +301,7 @@ const vexSystemLinkAddrGet: *const fn() callconv(.c) u32 = system.vexSystemLinkA
 /// ```c
 /// uint32_t vexSystemUsbStatus();
 /// ```
-const vexSystemUsbStatus: *const fn() callconv(.c) u32 = system.vexSystemUsbStatus;
+pub const vexSystemUsbStatus: *const fn() callconv(.c) u32 = system.vexSystemUsbStatus;
 
 /// # vexDevicesGetNumber
 ///
@@ -316,7 +316,7 @@ const vexSystemUsbStatus: *const fn() callconv(.c) u32 = system.vexSystemUsbStat
 /// ```c
 /// uint32_t vexDevicesGetNumber();
 /// ```
-const vexDevicesGetNumber: *const fn() callconv(.c) u32 = devices.vexDevicesGetNumber;
+pub const vexDevicesGetNumber: *const fn() callconv(.c) u32 = devices.vexDevicesGetNumber;
 
 /// # vexDevicesGetNumberByType
 ///
@@ -331,7 +331,7 @@ const vexDevicesGetNumber: *const fn() callconv(.c) u32 = devices.vexDevicesGetN
 /// ```c
 /// uint32_t vexDevicesGetNumberByType(V5_DeviceType type);
 /// ```
-const vexDevicesGetNumberByType: *const fn(type: types.V5_DeviceType) callconv(.c) u32 = devices.vexDevicesGetNumberByType;
+pub const vexDevicesGetNumberByType: *const fn(type: types.V5_DeviceType) callconv(.c) u32 = devices.vexDevicesGetNumberByType;
 
 /// # vexDevicesGet
 ///
@@ -346,7 +346,7 @@ const vexDevicesGetNumberByType: *const fn(type: types.V5_DeviceType) callconv(.
 /// ```c
 /// V5_DeviceT vexDevicesGet();
 /// ```
-const vexDevicesGet: *const fn() callconv(.c) types.V5_DeviceT = devices.vexDevicesGet;
+pub const vexDevicesGet: *const fn() callconv(.c) types.V5_DeviceT = devices.vexDevicesGet;
 
 /// # vexDeviceGetByIndex
 ///
@@ -361,7 +361,7 @@ const vexDevicesGet: *const fn() callconv(.c) types.V5_DeviceT = devices.vexDevi
 /// ```c
 /// V5_DeviceT vexDeviceGetByIndex(uint32_t index);
 /// ```
-const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) types.V5_DeviceT = devices.vexDeviceGetByIndex;
+pub const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) types.V5_DeviceT = devices.vexDeviceGetByIndex;
 
 /// # vexDeviceGetStatus
 ///
@@ -376,7 +376,7 @@ const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) types.V5_DeviceT =
 /// ```c
 /// int32_t vexDeviceGetStatus(V5_DeviceType * buffer);
 /// ```
-const vexDeviceGetStatus: *const fn(buffer: [*c]types.V5_DeviceType) callconv(.c) i32 = devices.vexDeviceGetStatus;
+pub const vexDeviceGetStatus: *const fn(buffer: [*c]types.V5_DeviceType) callconv(.c) i32 = devices.vexDeviceGetStatus;
 
 /// # vexDeviceGetTimestamp
 ///
@@ -391,7 +391,7 @@ const vexDeviceGetStatus: *const fn(buffer: [*c]types.V5_DeviceType) callconv(.c
 /// ```c
 /// int32_t vexDeviceGetTimestamp(V5_DeviceT device);
 /// ```
-const vexDeviceGetTimestamp: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = devices.vexDeviceGetTimestamp;
+pub const vexDeviceGetTimestamp: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = devices.vexDeviceGetTimestamp;
 
 /// # vexDeviceGetTimestampByIndex
 ///
@@ -406,7 +406,7 @@ const vexDeviceGetTimestamp: *const fn(device: types.V5_DeviceT) callconv(.c) i3
 /// ```c
 /// int32_t vexDeviceGetTimestampByIndex(int32_t index);
 /// ```
-const vexDeviceGetTimestampByIndex: *const fn(index: i32) callconv(.c) i32 = devices.vexDeviceGetTimestampByIndex;
+pub const vexDeviceGetTimestampByIndex: *const fn(index: i32) callconv(.c) i32 = devices.vexDeviceGetTimestampByIndex;
 
 /// # vexDeviceButtonStateGet
 ///
@@ -421,7 +421,7 @@ const vexDeviceGetTimestampByIndex: *const fn(index: i32) callconv(.c) i32 = dev
 /// ```c
 /// uint32_t vexDeviceButtonStateGet();
 /// ```
-const vexDeviceButtonStateGet: *const fn() callconv(.c) u32 = devices.vexDeviceButtonStateGet;
+pub const vexDeviceButtonStateGet: *const fn() callconv(.c) u32 = devices.vexDeviceButtonStateGet;
 
 /// # vexControllerGet
 ///
@@ -436,7 +436,7 @@ const vexDeviceButtonStateGet: *const fn() callconv(.c) u32 = devices.vexDeviceB
 /// ```c
 /// int32_t vexControllerGet(V5_ControllerId id, V5_ControllerIndex index);
 /// ```
-const vexControllerGet: *const fn(id: types.V5_ControllerId,index: types.V5_ControllerIndex) callconv(.c) i32 = controller.vexControllerGet;
+pub const vexControllerGet: *const fn(id: types.V5_ControllerId,index: types.V5_ControllerIndex) callconv(.c) i32 = controller.vexControllerGet;
 
 /// # vexControllerConnectionStatusGet
 ///
@@ -451,7 +451,7 @@ const vexControllerGet: *const fn(id: types.V5_ControllerId,index: types.V5_Cont
 /// ```c
 /// V5_ControllerStatus vexControllerConnectionStatusGet(V5_ControllerId id);
 /// ```
-const vexControllerConnectionStatusGet: *const fn(id: types.V5_ControllerId) callconv(.c) types.V5_ControllerStatus = controller.vexControllerConnectionStatusGet;
+pub const vexControllerConnectionStatusGet: *const fn(id: types.V5_ControllerId) callconv(.c) types.V5_ControllerStatus = controller.vexControllerConnectionStatusGet;
 
 /// # vexControllerTextSet
 ///
@@ -466,7 +466,7 @@ const vexControllerConnectionStatusGet: *const fn(id: types.V5_ControllerId) cal
 /// ```c
 /// int vexControllerTextSet(V5_ControllerId id, uint32_t line, uint32_t col, const char * str);
 /// ```
-const vexControllerTextSet: *const fn(id: types.V5_ControllerId,line: u32,col: u32,str: [*:0]const u8) callconv(.c) types.int = controller.vexControllerTextSet;
+pub const vexControllerTextSet: *const fn(id: types.V5_ControllerId,line: u32,col: u32,str: [*:0]const u8) callconv(.c) types.int = controller.vexControllerTextSet;
 
 /// # vexDeviceLedSet
 ///
@@ -481,7 +481,7 @@ const vexControllerTextSet: *const fn(id: types.V5_ControllerId,line: u32,col: u
 /// ```c
 /// void vexDeviceLedSet(V5_DeviceT device, V5_DeviceLedColor value);
 /// ```
-const vexDeviceLedSet: *const fn(device: types.V5_DeviceT,value: types.V5_DeviceLedColor) callconv(.c) void = led.vexDeviceLedSet;
+pub const vexDeviceLedSet: *const fn(device: types.V5_DeviceT,value: types.V5_DeviceLedColor) callconv(.c) void = led.vexDeviceLedSet;
 
 /// # vexDeviceLedRgbSet
 ///
@@ -496,7 +496,7 @@ const vexDeviceLedSet: *const fn(device: types.V5_DeviceT,value: types.V5_Device
 /// ```c
 /// void vexDeviceLedRgbSet(V5_DeviceT device, uint32_t color);
 /// ```
-const vexDeviceLedRgbSet: *const fn(device: types.V5_DeviceT,color: u32) callconv(.c) void = led.vexDeviceLedRgbSet;
+pub const vexDeviceLedRgbSet: *const fn(device: types.V5_DeviceT,color: u32) callconv(.c) void = led.vexDeviceLedRgbSet;
 
 /// # vexDeviceLedGet
 ///
@@ -511,7 +511,7 @@ const vexDeviceLedRgbSet: *const fn(device: types.V5_DeviceT,color: u32) callcon
 /// ```c
 /// V5_DeviceLedColor vexDeviceLedGet(V5_DeviceT device);
 /// ```
-const vexDeviceLedGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceLedColor = led.vexDeviceLedGet;
+pub const vexDeviceLedGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceLedColor = led.vexDeviceLedGet;
 
 /// # vexDeviceLedRgbGet
 ///
@@ -526,7 +526,7 @@ const vexDeviceLedGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5
 /// ```c
 /// uint32_t vexDeviceLedRgbGet(V5_DeviceT device);
 /// ```
-const vexDeviceLedRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = led.vexDeviceLedRgbGet;
+pub const vexDeviceLedRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = led.vexDeviceLedRgbGet;
 
 /// # vexDeviceAdiPortConfigSet
 ///
@@ -541,7 +541,7 @@ const vexDeviceLedRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 =
 /// ```c
 /// void vexDeviceAdiPortConfigSet(V5_DeviceT device, uint32_t port, V5_AdiPortConfiguration type);
 /// ```
-const vexDeviceAdiPortConfigSet: *const fn(device: types.V5_DeviceT,port: u32,type: types.V5_AdiPortConfiguration) callconv(.c) void = adi.vexDeviceAdiPortConfigSet;
+pub const vexDeviceAdiPortConfigSet: *const fn(device: types.V5_DeviceT,port: u32,type: types.V5_AdiPortConfiguration) callconv(.c) void = adi.vexDeviceAdiPortConfigSet;
 
 /// # vexDeviceAdiPortConfigGet
 ///
@@ -556,7 +556,7 @@ const vexDeviceAdiPortConfigSet: *const fn(device: types.V5_DeviceT,port: u32,ty
 /// ```c
 /// V5_AdiPortConfiguration vexDeviceAdiPortConfigGet(V5_DeviceT device, uint32_t port);
 /// ```
-const vexDeviceAdiPortConfigGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) types.V5_AdiPortConfiguration = adi.vexDeviceAdiPortConfigGet;
+pub const vexDeviceAdiPortConfigGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) types.V5_AdiPortConfiguration = adi.vexDeviceAdiPortConfigGet;
 
 /// # vexDeviceAdiValueSet
 ///
@@ -571,7 +571,7 @@ const vexDeviceAdiPortConfigGet: *const fn(device: types.V5_DeviceT,port: u32) c
 /// ```c
 /// void vexDeviceAdiValueSet(V5_DeviceT device, uint32_t port, int32_t value);
 /// ```
-const vexDeviceAdiValueSet: *const fn(device: types.V5_DeviceT,port: u32,value: i32) callconv(.c) void = adi.vexDeviceAdiValueSet;
+pub const vexDeviceAdiValueSet: *const fn(device: types.V5_DeviceT,port: u32,value: i32) callconv(.c) void = adi.vexDeviceAdiValueSet;
 
 /// # vexDeviceAdiValueGet
 ///
@@ -586,7 +586,7 @@ const vexDeviceAdiValueSet: *const fn(device: types.V5_DeviceT,port: u32,value: 
 /// ```c
 /// int32_t vexDeviceAdiValueGet(V5_DeviceT device, uint32_t port);
 /// ```
-const vexDeviceAdiValueGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) i32 = adi.vexDeviceAdiValueGet;
+pub const vexDeviceAdiValueGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) i32 = adi.vexDeviceAdiValueGet;
 
 /// # vexDeviceBumperGet
 ///
@@ -601,7 +601,7 @@ const vexDeviceAdiValueGet: *const fn(device: types.V5_DeviceT,port: u32) callco
 /// ```c
 /// V5_DeviceBumperState vexDeviceBumperGet(V5_DeviceT device);
 /// ```
-const vexDeviceBumperGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceBumperState = bumper.vexDeviceBumperGet;
+pub const vexDeviceBumperGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceBumperState = bumper.vexDeviceBumperGet;
 
 /// # vexDeviceGyroReset
 ///
@@ -616,7 +616,7 @@ const vexDeviceBumperGet: *const fn(device: types.V5_DeviceT) callconv(.c) types
 /// ```c
 /// void vexDeviceGyroReset(V5_DeviceT device);
 /// ```
-const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = gyro.vexDeviceGyroReset;
+pub const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = gyro.vexDeviceGyroReset;
 
 /// # vexDeviceGyroHeadingGet
 ///
@@ -631,7 +631,7 @@ const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callconv(.c) void 
 /// ```c
 /// double vexDeviceGyroHeadingGet(V5_DeviceT device);
 /// ```
-const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gyro.vexDeviceGyroHeadingGet;
+pub const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gyro.vexDeviceGyroHeadingGet;
 
 /// # vexDeviceGyroDegreesGet
 ///
@@ -646,7 +646,7 @@ const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// double vexDeviceGyroDegreesGet(V5_DeviceT device);
 /// ```
-const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gyro.vexDeviceGyroDegreesGet;
+pub const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gyro.vexDeviceGyroDegreesGet;
 
 /// # vexDeviceSonarValueGet
 ///
@@ -661,7 +661,7 @@ const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// int32_t vexDeviceSonarValueGet(V5_DeviceT device);
 /// ```
-const vexDeviceSonarValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = sonar.vexDeviceSonarValueGet;
+pub const vexDeviceSonarValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = sonar.vexDeviceSonarValueGet;
 
 /// # vexDeviceGenericValueGet
 ///
@@ -676,7 +676,7 @@ const vexDeviceSonarValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i
 /// ```c
 /// int32_t vexDeviceGenericValueGet(V5_DeviceT device);
 /// ```
-const vexDeviceGenericValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic.vexDeviceGenericValueGet;
+pub const vexDeviceGenericValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic.vexDeviceGenericValueGet;
 
 /// # vexDeviceMotorVelocitySet
 ///
@@ -691,7 +691,7 @@ const vexDeviceGenericValueGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// void vexDeviceMotorVelocitySet(V5_DeviceT device, int32_t velocity);
 /// ```
-const vexDeviceMotorVelocitySet: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void = motor.vexDeviceMotorVelocitySet;
+pub const vexDeviceMotorVelocitySet: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void = motor.vexDeviceMotorVelocitySet;
 
 /// # vexDeviceMotorVelocityUpdate
 ///
@@ -706,7 +706,7 @@ const vexDeviceMotorVelocitySet: *const fn(device: types.V5_DeviceT,velocity: i3
 /// ```c
 /// void vexDeviceMotorVelocityUpdate(V5_DeviceT device, int32_t velocity);
 /// ```
-const vexDeviceMotorVelocityUpdate: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void = motor.vexDeviceMotorVelocityUpdate;
+pub const vexDeviceMotorVelocityUpdate: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void = motor.vexDeviceMotorVelocityUpdate;
 
 /// # vexDeviceMotorVoltageSet
 ///
@@ -721,7 +721,7 @@ const vexDeviceMotorVelocityUpdate: *const fn(device: types.V5_DeviceT,velocity:
 /// ```c
 /// void vexDeviceMotorVoltageSet(V5_DeviceT device, int32_t value);
 /// ```
-const vexDeviceMotorVoltageSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorVoltageSet;
+pub const vexDeviceMotorVoltageSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorVoltageSet;
 
 /// # vexDeviceMotorVelocityGet
 ///
@@ -736,7 +736,7 @@ const vexDeviceMotorVoltageSet: *const fn(device: types.V5_DeviceT,value: i32) c
 /// ```c
 /// int32_t vexDeviceMotorVelocityGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVelocityGet;
+pub const vexDeviceMotorVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVelocityGet;
 
 /// # vexDeviceMotorActualVelocityGet
 ///
@@ -751,7 +751,7 @@ const vexDeviceMotorVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// double vexDeviceMotorActualVelocityGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorActualVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorActualVelocityGet;
+pub const vexDeviceMotorActualVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorActualVelocityGet;
 
 /// # vexDeviceMotorDirectionGet
 ///
@@ -766,7 +766,7 @@ const vexDeviceMotorActualVelocityGet: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// int32_t vexDeviceMotorDirectionGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorDirectionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorDirectionGet;
+pub const vexDeviceMotorDirectionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorDirectionGet;
 
 /// # vexDeviceMotorModeSet
 ///
@@ -781,7 +781,7 @@ const vexDeviceMotorDirectionGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// void vexDeviceMotorModeSet(V5_DeviceT device, V5MotorControlMode mode);
 /// ```
-const vexDeviceMotorModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorControlMode) callconv(.c) void = motor.vexDeviceMotorModeSet;
+pub const vexDeviceMotorModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorControlMode) callconv(.c) void = motor.vexDeviceMotorModeSet;
 
 /// # vexDeviceMotorModeGet
 ///
@@ -796,7 +796,7 @@ const vexDeviceMotorModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5Mo
 /// ```c
 /// V5MotorControlMode vexDeviceMotorModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorControlMode = motor.vexDeviceMotorModeGet;
+pub const vexDeviceMotorModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorControlMode = motor.vexDeviceMotorModeGet;
 
 /// # vexDeviceMotorPwmSet
 ///
@@ -811,7 +811,7 @@ const vexDeviceMotorModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) ty
 /// ```c
 /// void vexDeviceMotorPwmSet(V5_DeviceT device, int32_t value);
 /// ```
-const vexDeviceMotorPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorPwmSet;
+pub const vexDeviceMotorPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorPwmSet;
 
 /// # vexDeviceMotorPwmGet
 ///
@@ -826,7 +826,7 @@ const vexDeviceMotorPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callc
 /// ```c
 /// int32_t vexDeviceMotorPwmGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorPwmGet;
+pub const vexDeviceMotorPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorPwmGet;
 
 /// # vexDeviceMotorCurrentLimitSet
 ///
@@ -841,7 +841,7 @@ const vexDeviceMotorPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32
 /// ```c
 /// void vexDeviceMotorCurrentLimitSet(V5_DeviceT device, int32_t value);
 /// ```
-const vexDeviceMotorCurrentLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorCurrentLimitSet;
+pub const vexDeviceMotorCurrentLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorCurrentLimitSet;
 
 /// # vexDeviceMotorCurrentLimitGet
 ///
@@ -856,7 +856,7 @@ const vexDeviceMotorCurrentLimitSet: *const fn(device: types.V5_DeviceT,value: i
 /// ```c
 /// int32_t vexDeviceMotorCurrentLimitGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorCurrentLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorCurrentLimitGet;
+pub const vexDeviceMotorCurrentLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorCurrentLimitGet;
 
 /// # vexDeviceMotorVoltageLimitSet
 ///
@@ -871,7 +871,7 @@ const vexDeviceMotorCurrentLimitGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// void vexDeviceMotorVoltageLimitSet(V5_DeviceT device, int32_t value);
 /// ```
-const vexDeviceMotorVoltageLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorVoltageLimitSet;
+pub const vexDeviceMotorVoltageLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = motor.vexDeviceMotorVoltageLimitSet;
 
 /// # vexDeviceMotorVoltageLimitGet
 ///
@@ -886,7 +886,7 @@ const vexDeviceMotorVoltageLimitSet: *const fn(device: types.V5_DeviceT,value: i
 /// ```c
 /// int32_t vexDeviceMotorVoltageLimitGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorVoltageLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVoltageLimitGet;
+pub const vexDeviceMotorVoltageLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVoltageLimitGet;
 
 /// # vexDeviceMotorPositionPidSet
 ///
@@ -901,7 +901,7 @@ const vexDeviceMotorVoltageLimitGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// void vexDeviceMotorPositionPidSet(V5_DeviceT device, V5_DeviceMotorPid * pid);
 /// ```
-const vexDeviceMotorPositionPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void = motor.vexDeviceMotorPositionPidSet;
+pub const vexDeviceMotorPositionPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void = motor.vexDeviceMotorPositionPidSet;
 
 /// # vexDeviceMotorVelocityPidSet
 ///
@@ -916,7 +916,7 @@ const vexDeviceMotorPositionPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]
 /// ```c
 /// void vexDeviceMotorVelocityPidSet(V5_DeviceT device, V5_DeviceMotorPid * pid);
 /// ```
-const vexDeviceMotorVelocityPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void = motor.vexDeviceMotorVelocityPidSet;
+pub const vexDeviceMotorVelocityPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void = motor.vexDeviceMotorVelocityPidSet;
 
 /// # vexDeviceMotorCurrentGet
 ///
@@ -931,7 +931,7 @@ const vexDeviceMotorVelocityPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]
 /// ```c
 /// int32_t vexDeviceMotorCurrentGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorCurrentGet;
+pub const vexDeviceMotorCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorCurrentGet;
 
 /// # vexDeviceMotorVoltageGet
 ///
@@ -946,7 +946,7 @@ const vexDeviceMotorCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// int32_t vexDeviceMotorVoltageGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorVoltageGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVoltageGet;
+pub const vexDeviceMotorVoltageGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorVoltageGet;
 
 /// # vexDeviceMotorPowerGet
 ///
@@ -961,7 +961,7 @@ const vexDeviceMotorVoltageGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// double vexDeviceMotorPowerGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorPowerGet;
+pub const vexDeviceMotorPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorPowerGet;
 
 /// # vexDeviceMotorTorqueGet
 ///
@@ -976,7 +976,7 @@ const vexDeviceMotorPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// double vexDeviceMotorTorqueGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorTorqueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTorqueGet;
+pub const vexDeviceMotorTorqueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTorqueGet;
 
 /// # vexDeviceMotorEfficiencyGet
 ///
@@ -991,7 +991,7 @@ const vexDeviceMotorTorqueGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// double vexDeviceMotorEfficiencyGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorEfficiencyGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorEfficiencyGet;
+pub const vexDeviceMotorEfficiencyGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorEfficiencyGet;
 
 /// # vexDeviceMotorTemperatureGet
 ///
@@ -1006,7 +1006,7 @@ const vexDeviceMotorEfficiencyGet: *const fn(device: types.V5_DeviceT) callconv(
 /// ```c
 /// double vexDeviceMotorTemperatureGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTemperatureGet;
+pub const vexDeviceMotorTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTemperatureGet;
 
 /// # vexDeviceMotorOverTempFlagGet
 ///
@@ -1021,7 +1021,7 @@ const vexDeviceMotorTemperatureGet: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// int vexDeviceMotorOverTempFlagGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorOverTempFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorOverTempFlagGet;
+pub const vexDeviceMotorOverTempFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorOverTempFlagGet;
 
 /// # vexDeviceMotorCurrentLimitFlagGet
 ///
@@ -1036,7 +1036,7 @@ const vexDeviceMotorOverTempFlagGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// int vexDeviceMotorCurrentLimitFlagGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorCurrentLimitFlagGet;
+pub const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorCurrentLimitFlagGet;
 
 /// # vexDeviceMotorFaultsGet
 ///
@@ -1051,7 +1051,7 @@ const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// uint32_t vexDeviceMotorFaultsGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorFaultsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = motor.vexDeviceMotorFaultsGet;
+pub const vexDeviceMotorFaultsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = motor.vexDeviceMotorFaultsGet;
 
 /// # vexDeviceMotorZeroVelocityFlagGet
 ///
@@ -1066,7 +1066,7 @@ const vexDeviceMotorFaultsGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// int vexDeviceMotorZeroVelocityFlagGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorZeroVelocityFlagGet;
+pub const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorZeroVelocityFlagGet;
 
 /// # vexDeviceMotorZeroPositionFlagGet
 ///
@@ -1081,7 +1081,7 @@ const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// int vexDeviceMotorZeroPositionFlagGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorZeroPositionFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorZeroPositionFlagGet;
+pub const vexDeviceMotorZeroPositionFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorZeroPositionFlagGet;
 
 /// # vexDeviceMotorFlagsGet
 ///
@@ -1096,7 +1096,7 @@ const vexDeviceMotorZeroPositionFlagGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// uint32_t vexDeviceMotorFlagsGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorFlagsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = motor.vexDeviceMotorFlagsGet;
+pub const vexDeviceMotorFlagsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = motor.vexDeviceMotorFlagsGet;
 
 /// # vexDeviceMotorReverseFlagSet
 ///
@@ -1111,7 +1111,7 @@ const vexDeviceMotorFlagsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u
 /// ```c
 /// void vexDeviceMotorReverseFlagSet(V5_DeviceT device, int value);
 /// ```
-const vexDeviceMotorReverseFlagSet: *const fn(device: types.V5_DeviceT,value: types.int) callconv(.c) void = motor.vexDeviceMotorReverseFlagSet;
+pub const vexDeviceMotorReverseFlagSet: *const fn(device: types.V5_DeviceT,value: types.int) callconv(.c) void = motor.vexDeviceMotorReverseFlagSet;
 
 /// # vexDeviceMotorReverseFlagGet
 ///
@@ -1126,7 +1126,7 @@ const vexDeviceMotorReverseFlagSet: *const fn(device: types.V5_DeviceT,value: ty
 /// ```c
 /// int vexDeviceMotorReverseFlagGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorReverseFlagGet;
+pub const vexDeviceMotorReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = motor.vexDeviceMotorReverseFlagGet;
 
 /// # vexDeviceMotorEncoderUnitsSet
 ///
@@ -1141,7 +1141,7 @@ const vexDeviceMotorReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// void vexDeviceMotorEncoderUnitsSet(V5_DeviceT device, V5MotorEncoderUnits units);
 /// ```
-const vexDeviceMotorEncoderUnitsSet: *const fn(device: types.V5_DeviceT,units: types.V5MotorEncoderUnits) callconv(.c) void = motor.vexDeviceMotorEncoderUnitsSet;
+pub const vexDeviceMotorEncoderUnitsSet: *const fn(device: types.V5_DeviceT,units: types.V5MotorEncoderUnits) callconv(.c) void = motor.vexDeviceMotorEncoderUnitsSet;
 
 /// # vexDeviceMotorEncoderUnitsGet
 ///
@@ -1156,7 +1156,7 @@ const vexDeviceMotorEncoderUnitsSet: *const fn(device: types.V5_DeviceT,units: t
 /// ```c
 /// V5MotorEncoderUnits vexDeviceMotorEncoderUnitsGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorEncoderUnitsGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorEncoderUnits = motor.vexDeviceMotorEncoderUnitsGet;
+pub const vexDeviceMotorEncoderUnitsGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorEncoderUnits = motor.vexDeviceMotorEncoderUnitsGet;
 
 /// # vexDeviceMotorBrakeModeSet
 ///
@@ -1171,7 +1171,7 @@ const vexDeviceMotorEncoderUnitsGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// void vexDeviceMotorBrakeModeSet(V5_DeviceT device, V5MotorBrakeMode mode);
 /// ```
-const vexDeviceMotorBrakeModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorBrakeMode) callconv(.c) void = motor.vexDeviceMotorBrakeModeSet;
+pub const vexDeviceMotorBrakeModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorBrakeMode) callconv(.c) void = motor.vexDeviceMotorBrakeModeSet;
 
 /// # vexDeviceMotorBrakeModeGet
 ///
@@ -1186,7 +1186,7 @@ const vexDeviceMotorBrakeModeSet: *const fn(device: types.V5_DeviceT,mode: types
 /// ```c
 /// V5MotorBrakeMode vexDeviceMotorBrakeModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorBrakeModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorBrakeMode = motor.vexDeviceMotorBrakeModeGet;
+pub const vexDeviceMotorBrakeModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorBrakeMode = motor.vexDeviceMotorBrakeModeGet;
 
 /// # vexDeviceMotorPositionSet
 ///
@@ -1201,7 +1201,7 @@ const vexDeviceMotorBrakeModeGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// void vexDeviceMotorPositionSet(V5_DeviceT device, double position);
 /// ```
-const vexDeviceMotorPositionSet: *const fn(device: types.V5_DeviceT,position: types.double) callconv(.c) void = motor.vexDeviceMotorPositionSet;
+pub const vexDeviceMotorPositionSet: *const fn(device: types.V5_DeviceT,position: types.double) callconv(.c) void = motor.vexDeviceMotorPositionSet;
 
 /// # vexDeviceMotorPositionGet
 ///
@@ -1216,7 +1216,7 @@ const vexDeviceMotorPositionSet: *const fn(device: types.V5_DeviceT,position: ty
 /// ```c
 /// double vexDeviceMotorPositionGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorPositionGet;
+pub const vexDeviceMotorPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorPositionGet;
 
 /// # vexDeviceMotorPositionRawGet
 ///
@@ -1231,7 +1231,7 @@ const vexDeviceMotorPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// int32_t vexDeviceMotorPositionRawGet(V5_DeviceT device, uint32_t * timestamp);
 /// ```
-const vexDeviceMotorPositionRawGet: *const fn(device: types.V5_DeviceT,timestamp: [*c]u32) callconv(.c) i32 = motor.vexDeviceMotorPositionRawGet;
+pub const vexDeviceMotorPositionRawGet: *const fn(device: types.V5_DeviceT,timestamp: [*c]u32) callconv(.c) i32 = motor.vexDeviceMotorPositionRawGet;
 
 /// # vexDeviceMotorPositionReset
 ///
@@ -1246,7 +1246,7 @@ const vexDeviceMotorPositionRawGet: *const fn(device: types.V5_DeviceT,timestamp
 /// ```c
 /// void vexDeviceMotorPositionReset(V5_DeviceT device);
 /// ```
-const vexDeviceMotorPositionReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = motor.vexDeviceMotorPositionReset;
+pub const vexDeviceMotorPositionReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = motor.vexDeviceMotorPositionReset;
 
 /// # vexDeviceMotorTargetGet
 ///
@@ -1261,7 +1261,7 @@ const vexDeviceMotorPositionReset: *const fn(device: types.V5_DeviceT) callconv(
 /// ```c
 /// double vexDeviceMotorTargetGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorTargetGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTargetGet;
+pub const vexDeviceMotorTargetGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = motor.vexDeviceMotorTargetGet;
 
 /// # vexDeviceMotorServoTargetSet
 ///
@@ -1276,7 +1276,7 @@ const vexDeviceMotorTargetGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// void vexDeviceMotorServoTargetSet(V5_DeviceT device, double position);
 /// ```
-const vexDeviceMotorServoTargetSet: *const fn(device: types.V5_DeviceT,position: types.double) callconv(.c) void = motor.vexDeviceMotorServoTargetSet;
+pub const vexDeviceMotorServoTargetSet: *const fn(device: types.V5_DeviceT,position: types.double) callconv(.c) void = motor.vexDeviceMotorServoTargetSet;
 
 /// # vexDeviceMotorAbsoluteTargetSet
 ///
@@ -1291,7 +1291,7 @@ const vexDeviceMotorServoTargetSet: *const fn(device: types.V5_DeviceT,position:
 /// ```c
 /// void vexDeviceMotorAbsoluteTargetSet(V5_DeviceT device, double position, int32_t velocity);
 /// ```
-const vexDeviceMotorAbsoluteTargetSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorAbsoluteTargetSet;
+pub const vexDeviceMotorAbsoluteTargetSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorAbsoluteTargetSet;
 
 /// # vexDeviceMotorRelativeTargetSet
 ///
@@ -1306,7 +1306,7 @@ const vexDeviceMotorAbsoluteTargetSet: *const fn(device: types.V5_DeviceT,positi
 /// ```c
 /// void vexDeviceMotorRelativeTargetSet(V5_DeviceT device, double position, int32_t velocity);
 /// ```
-const vexDeviceMotorRelativeTargetSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorRelativeTargetSet;
+pub const vexDeviceMotorRelativeTargetSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorRelativeTargetSet;
 
 /// # vexDeviceMotorGearingSet
 ///
@@ -1321,7 +1321,7 @@ const vexDeviceMotorRelativeTargetSet: *const fn(device: types.V5_DeviceT,positi
 /// ```c
 /// void vexDeviceMotorGearingSet(V5_DeviceT device, V5MotorGearset value);
 /// ```
-const vexDeviceMotorGearingSet: *const fn(device: types.V5_DeviceT,value: types.V5MotorGearset) callconv(.c) void = motor.vexDeviceMotorGearingSet;
+pub const vexDeviceMotorGearingSet: *const fn(device: types.V5_DeviceT,value: types.V5MotorGearset) callconv(.c) void = motor.vexDeviceMotorGearingSet;
 
 /// # vexDeviceMotorGearingGet
 ///
@@ -1336,7 +1336,7 @@ const vexDeviceMotorGearingSet: *const fn(device: types.V5_DeviceT,value: types.
 /// ```c
 /// V5MotorGearset vexDeviceMotorGearingGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorGearingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorGearset = motor.vexDeviceMotorGearingGet;
+pub const vexDeviceMotorGearingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorGearset = motor.vexDeviceMotorGearingGet;
 
 /// # vexDeviceMotorExternalProfileSet
 ///
@@ -1351,7 +1351,7 @@ const vexDeviceMotorGearingGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// void vexDeviceMotorExternalProfileSet(V5_DeviceT device, double position, int32_t velocity);
 /// ```
-const vexDeviceMotorExternalProfileSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorExternalProfileSet;
+pub const vexDeviceMotorExternalProfileSet: *const fn(device: types.V5_DeviceT,position: types.double,velocity: i32) callconv(.c) void = motor.vexDeviceMotorExternalProfileSet;
 
 /// # vexDeviceMotorTypeGet
 ///
@@ -1366,7 +1366,7 @@ const vexDeviceMotorExternalProfileSet: *const fn(device: types.V5_DeviceT,posit
 /// ```c
 /// int32_t vexDeviceMotorTypeGet(V5_DeviceT device);
 /// ```
-const vexDeviceMotorTypeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorTypeGet;
+pub const vexDeviceMotorTypeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = motor.vexDeviceMotorTypeGet;
 
 /// # vexDeviceVisionModeSet
 ///
@@ -1381,7 +1381,7 @@ const vexDeviceMotorTypeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i3
 /// ```c
 /// void vexDeviceVisionModeSet(V5_DeviceT device, V5VisionMode mode);
 /// ```
-const vexDeviceVisionModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionMode) callconv(.c) void = vision.vexDeviceVisionModeSet;
+pub const vexDeviceVisionModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionMode) callconv(.c) void = vision.vexDeviceVisionModeSet;
 
 /// # vexDeviceVisionModeGet
 ///
@@ -1396,7 +1396,7 @@ const vexDeviceVisionModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5V
 /// ```c
 /// V5VisionMode vexDeviceVisionModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionMode = vision.vexDeviceVisionModeGet;
+pub const vexDeviceVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionMode = vision.vexDeviceVisionModeGet;
 
 /// # vexDeviceVisionObjectCountGet
 ///
@@ -1411,7 +1411,7 @@ const vexDeviceVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// int32_t vexDeviceVisionObjectCountGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = vision.vexDeviceVisionObjectCountGet;
+pub const vexDeviceVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = vision.vexDeviceVisionObjectCountGet;
 
 /// # vexDeviceVisionObjectGet
 ///
@@ -1426,7 +1426,7 @@ const vexDeviceVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// int32_t vexDeviceVisionObjectGet(V5_DeviceT device, uint32_t indexObj, V5_DeviceVisionObject * pObject);
 /// ```
-const vexDeviceVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32,pObject: [*c]types.V5_DeviceVisionObject) callconv(.c) i32 = vision.vexDeviceVisionObjectGet;
+pub const vexDeviceVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32,pObject: [*c]types.V5_DeviceVisionObject) callconv(.c) i32 = vision.vexDeviceVisionObjectGet;
 
 /// # vexDeviceVisionSignatureSet
 ///
@@ -1441,7 +1441,7 @@ const vexDeviceVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32
 /// ```c
 /// void vexDeviceVisionSignatureSet(V5_DeviceT device, V5_DeviceVisionSignature * pSignature);
 /// ```
-const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) void = vision.vexDeviceVisionSignatureSet;
+pub const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) void = vision.vexDeviceVisionSignatureSet;
 
 /// # vexDeviceVisionSignatureGet
 ///
@@ -1456,7 +1456,7 @@ const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT,pSignature
 /// ```c
 /// int vexDeviceVisionSignatureGet(V5_DeviceT device, uint32_t id, V5_DeviceVisionSignature * pSignature);
 /// ```
-const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u32,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) types.int = vision.vexDeviceVisionSignatureGet;
+pub const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u32,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) types.int = vision.vexDeviceVisionSignatureGet;
 
 /// # vexDeviceVisionBrightnessSet
 ///
@@ -1471,7 +1471,7 @@ const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u32,pS
 /// ```c
 /// void vexDeviceVisionBrightnessSet(V5_DeviceT device, uint8_t percent);
 /// ```
-const vexDeviceVisionBrightnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void = vision.vexDeviceVisionBrightnessSet;
+pub const vexDeviceVisionBrightnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void = vision.vexDeviceVisionBrightnessSet;
 
 /// # vexDeviceVisionBrightnessGet
 ///
@@ -1486,7 +1486,7 @@ const vexDeviceVisionBrightnessSet: *const fn(device: types.V5_DeviceT,percent: 
 /// ```c
 /// uint8_t vexDeviceVisionBrightnessGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = vision.vexDeviceVisionBrightnessGet;
+pub const vexDeviceVisionBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = vision.vexDeviceVisionBrightnessGet;
 
 /// # vexDeviceVisionWhiteBalanceModeSet
 ///
@@ -1501,7 +1501,7 @@ const vexDeviceVisionBrightnessGet: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// void vexDeviceVisionWhiteBalanceModeSet(V5_DeviceT device, V5VisionWBMode mode);
 /// ```
-const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWBMode) callconv(.c) void = vision.vexDeviceVisionWhiteBalanceModeSet;
+pub const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWBMode) callconv(.c) void = vision.vexDeviceVisionWhiteBalanceModeSet;
 
 /// # vexDeviceVisionWhiteBalanceModeGet
 ///
@@ -1516,7 +1516,7 @@ const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: types.V5_DeviceT,mod
 /// ```c
 /// V5VisionWBMode vexDeviceVisionWhiteBalanceModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWBMode = vision.vexDeviceVisionWhiteBalanceModeGet;
+pub const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWBMode = vision.vexDeviceVisionWhiteBalanceModeGet;
 
 /// # vexDeviceVisionWhiteBalanceSet
 ///
@@ -1531,7 +1531,7 @@ const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// void vexDeviceVisionWhiteBalanceSet(V5_DeviceT device, V5_DeviceVisionRgb color);
 /// ```
-const vexDeviceVisionWhiteBalanceSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void = vision.vexDeviceVisionWhiteBalanceSet;
+pub const vexDeviceVisionWhiteBalanceSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void = vision.vexDeviceVisionWhiteBalanceSet;
 
 /// # vexDeviceVisionWhiteBalanceGet
 ///
@@ -1546,7 +1546,7 @@ const vexDeviceVisionWhiteBalanceSet: *const fn(device: types.V5_DeviceT,color: 
 /// ```c
 /// V5_DeviceVisionRgb vexDeviceVisionWhiteBalanceGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionWhiteBalanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb = vision.vexDeviceVisionWhiteBalanceGet;
+pub const vexDeviceVisionWhiteBalanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb = vision.vexDeviceVisionWhiteBalanceGet;
 
 /// # vexDeviceVisionLedModeSet
 ///
@@ -1561,7 +1561,7 @@ const vexDeviceVisionWhiteBalanceGet: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// void vexDeviceVisionLedModeSet(V5_DeviceT device, V5VisionLedMode mode);
 /// ```
-const vexDeviceVisionLedModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionLedMode) callconv(.c) void = vision.vexDeviceVisionLedModeSet;
+pub const vexDeviceVisionLedModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionLedMode) callconv(.c) void = vision.vexDeviceVisionLedModeSet;
 
 /// # vexDeviceVisionLedModeGet
 ///
@@ -1576,7 +1576,7 @@ const vexDeviceVisionLedModeSet: *const fn(device: types.V5_DeviceT,mode: types.
 /// ```c
 /// V5VisionLedMode vexDeviceVisionLedModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionLedModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionLedMode = vision.vexDeviceVisionLedModeGet;
+pub const vexDeviceVisionLedModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionLedMode = vision.vexDeviceVisionLedModeGet;
 
 /// # vexDeviceVisionLedBrigntnessSet
 ///
@@ -1591,7 +1591,7 @@ const vexDeviceVisionLedModeGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// void vexDeviceVisionLedBrigntnessSet(V5_DeviceT device, uint8_t percent);
 /// ```
-const vexDeviceVisionLedBrigntnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void = vision.vexDeviceVisionLedBrigntnessSet;
+pub const vexDeviceVisionLedBrigntnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void = vision.vexDeviceVisionLedBrigntnessSet;
 
 /// # vexDeviceVisionLedBrigntnessGet
 ///
@@ -1606,7 +1606,7 @@ const vexDeviceVisionLedBrigntnessSet: *const fn(device: types.V5_DeviceT,percen
 /// ```c
 /// uint8_t vexDeviceVisionLedBrigntnessGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionLedBrigntnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = vision.vexDeviceVisionLedBrigntnessGet;
+pub const vexDeviceVisionLedBrigntnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = vision.vexDeviceVisionLedBrigntnessGet;
 
 /// # vexDeviceVisionLedColorSet
 ///
@@ -1621,7 +1621,7 @@ const vexDeviceVisionLedBrigntnessGet: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// void vexDeviceVisionLedColorSet(V5_DeviceT device, V5_DeviceVisionRgb color);
 /// ```
-const vexDeviceVisionLedColorSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void = vision.vexDeviceVisionLedColorSet;
+pub const vexDeviceVisionLedColorSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void = vision.vexDeviceVisionLedColorSet;
 
 /// # vexDeviceVisionLedColorGet
 ///
@@ -1636,7 +1636,7 @@ const vexDeviceVisionLedColorSet: *const fn(device: types.V5_DeviceT,color: type
 /// ```c
 /// V5_DeviceVisionRgb vexDeviceVisionLedColorGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionLedColorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb = vision.vexDeviceVisionLedColorGet;
+pub const vexDeviceVisionLedColorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb = vision.vexDeviceVisionLedColorGet;
 
 /// # vexDeviceVisionWifiModeSet
 ///
@@ -1651,7 +1651,7 @@ const vexDeviceVisionLedColorGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// void vexDeviceVisionWifiModeSet(V5_DeviceT device, V5VisionWifiMode mode);
 /// ```
-const vexDeviceVisionWifiModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWifiMode) callconv(.c) void = vision.vexDeviceVisionWifiModeSet;
+pub const vexDeviceVisionWifiModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWifiMode) callconv(.c) void = vision.vexDeviceVisionWifiModeSet;
 
 /// # vexDeviceVisionWifiModeGet
 ///
@@ -1666,7 +1666,7 @@ const vexDeviceVisionWifiModeSet: *const fn(device: types.V5_DeviceT,mode: types
 /// ```c
 /// V5VisionWifiMode vexDeviceVisionWifiModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceVisionWifiModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWifiMode = vision.vexDeviceVisionWifiModeGet;
+pub const vexDeviceVisionWifiModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWifiMode = vision.vexDeviceVisionWifiModeGet;
 
 /// # vexDeviceImuReset
 ///
@@ -1681,7 +1681,7 @@ const vexDeviceVisionWifiModeGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// void vexDeviceImuReset(V5_DeviceT device);
 /// ```
-const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = imu.vexDeviceImuReset;
+pub const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = imu.vexDeviceImuReset;
 
 /// # vexDeviceImuHeadingGet
 ///
@@ -1696,7 +1696,7 @@ const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) void =
 /// ```c
 /// double vexDeviceImuHeadingGet(V5_DeviceT device);
 /// ```
-const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = imu.vexDeviceImuHeadingGet;
+pub const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = imu.vexDeviceImuHeadingGet;
 
 /// # vexDeviceImuDegreesGet
 ///
@@ -1711,7 +1711,7 @@ const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// double vexDeviceImuDegreesGet(V5_DeviceT device);
 /// ```
-const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = imu.vexDeviceImuDegreesGet;
+pub const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = imu.vexDeviceImuDegreesGet;
 
 /// # vexDeviceImuQuaternionGet
 ///
@@ -1726,7 +1726,7 @@ const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// void vexDeviceImuQuaternionGet(V5_DeviceT device, V5_DeviceImuQuaternion * data);
 /// ```
-const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuQuaternion) callconv(.c) void = imu.vexDeviceImuQuaternionGet;
+pub const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuQuaternion) callconv(.c) void = imu.vexDeviceImuQuaternionGet;
 
 /// # vexDeviceImuAttitudeGet
 ///
@@ -1741,7 +1741,7 @@ const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]ty
 /// ```c
 /// void vexDeviceImuAttitudeGet(V5_DeviceT device, V5_DeviceImuAttitude * data);
 /// ```
-const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuAttitude) callconv(.c) void = imu.vexDeviceImuAttitudeGet;
+pub const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuAttitude) callconv(.c) void = imu.vexDeviceImuAttitudeGet;
 
 /// # vexDeviceImuRawGyroGet
 ///
@@ -1756,7 +1756,7 @@ const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]type
 /// ```c
 /// void vexDeviceImuRawGyroGet(V5_DeviceT device, V5_DeviceImuRaw * data);
 /// ```
-const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void = imu.vexDeviceImuRawGyroGet;
+pub const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void = imu.vexDeviceImuRawGyroGet;
 
 /// # vexDeviceImuRawAccelGet
 ///
@@ -1771,7 +1771,7 @@ const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types
 /// ```c
 /// void vexDeviceImuRawAccelGet(V5_DeviceT device, V5_DeviceImuRaw * data);
 /// ```
-const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void = imu.vexDeviceImuRawAccelGet;
+pub const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void = imu.vexDeviceImuRawAccelGet;
 
 /// # vexDeviceImuStatusGet
 ///
@@ -1786,7 +1786,7 @@ const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]type
 /// ```c
 /// uint32_t vexDeviceImuStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = imu.vexDeviceImuStatusGet;
+pub const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = imu.vexDeviceImuStatusGet;
 
 /// # vexDeviceImuModeSet
 ///
@@ -1801,7 +1801,7 @@ const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u3
 /// ```c
 /// void vexDeviceImuModeSet(V5_DeviceT device, uint32_t mode);
 /// ```
-const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = imu.vexDeviceImuModeSet;
+pub const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = imu.vexDeviceImuModeSet;
 
 /// # vexDeviceImuModeGet
 ///
@@ -1816,7 +1816,7 @@ const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callcon
 /// ```c
 /// uint32_t vexDeviceImuModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = imu.vexDeviceImuModeGet;
+pub const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = imu.vexDeviceImuModeGet;
 
 /// # vexDeviceImuDataRateSet
 ///
@@ -1831,7 +1831,7 @@ const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 
 /// ```c
 /// void vexDeviceImuDataRateSet(V5_DeviceT device, uint32_t rate);
 /// ```
-const vexDeviceImuDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = imu.vexDeviceImuDataRateSet;
+pub const vexDeviceImuDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = imu.vexDeviceImuDataRateSet;
 
 /// # vexDeviceRangeValueGet
 ///
@@ -1846,7 +1846,7 @@ const vexDeviceImuDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) cal
 /// ```c
 /// int32_t vexDeviceRangeValueGet(V5_DeviceT device);
 /// ```
-const vexDeviceRangeValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = range.vexDeviceRangeValueGet;
+pub const vexDeviceRangeValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = range.vexDeviceRangeValueGet;
 
 /// # vexDeviceAbsEncReset
 ///
@@ -1861,7 +1861,7 @@ const vexDeviceRangeValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i
 /// ```c
 /// void vexDeviceAbsEncReset(V5_DeviceT device);
 /// ```
-const vexDeviceAbsEncReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = rotation.vexDeviceAbsEncReset;
+pub const vexDeviceAbsEncReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = rotation.vexDeviceAbsEncReset;
 
 /// # vexDeviceAbsEncPositionSet
 ///
@@ -1876,7 +1876,7 @@ const vexDeviceAbsEncReset: *const fn(device: types.V5_DeviceT) callconv(.c) voi
 /// ```c
 /// void vexDeviceAbsEncPositionSet(V5_DeviceT device, int32_t position);
 /// ```
-const vexDeviceAbsEncPositionSet: *const fn(device: types.V5_DeviceT,position: i32) callconv(.c) void = rotation.vexDeviceAbsEncPositionSet;
+pub const vexDeviceAbsEncPositionSet: *const fn(device: types.V5_DeviceT,position: i32) callconv(.c) void = rotation.vexDeviceAbsEncPositionSet;
 
 /// # vexDeviceAbsEncPositionGet
 ///
@@ -1891,7 +1891,7 @@ const vexDeviceAbsEncPositionSet: *const fn(device: types.V5_DeviceT,position: i
 /// ```c
 /// int32_t vexDeviceAbsEncPositionGet(V5_DeviceT device);
 /// ```
-const vexDeviceAbsEncPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncPositionGet;
+pub const vexDeviceAbsEncPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncPositionGet;
 
 /// # vexDeviceAbsEncVelocityGet
 ///
@@ -1906,7 +1906,7 @@ const vexDeviceAbsEncPositionGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// int32_t vexDeviceAbsEncVelocityGet(V5_DeviceT device);
 /// ```
-const vexDeviceAbsEncVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncVelocityGet;
+pub const vexDeviceAbsEncVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncVelocityGet;
 
 /// # vexDeviceAbsEncAngleGet
 ///
@@ -1921,7 +1921,7 @@ const vexDeviceAbsEncVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// int32_t vexDeviceAbsEncAngleGet(V5_DeviceT device);
 /// ```
-const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncAngleGet;
+pub const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = rotation.vexDeviceAbsEncAngleGet;
 
 /// # vexDeviceAbsEncReverseFlagSet
 ///
@@ -1936,7 +1936,7 @@ const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// void vexDeviceAbsEncReverseFlagSet(V5_DeviceT device, int value);
 /// ```
-const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,value: types.int) callconv(.c) void = rotation.vexDeviceAbsEncReverseFlagSet;
+pub const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,value: types.int) callconv(.c) void = rotation.vexDeviceAbsEncReverseFlagSet;
 
 /// # vexDeviceAbsEncReverseFlagGet
 ///
@@ -1951,7 +1951,7 @@ const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,value: t
 /// ```c
 /// int vexDeviceAbsEncReverseFlagGet(V5_DeviceT device);
 /// ```
-const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = rotation.vexDeviceAbsEncReverseFlagGet;
+pub const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = rotation.vexDeviceAbsEncReverseFlagGet;
 
 /// # vexDeviceAbsEncStatusGet
 ///
@@ -1966,7 +1966,7 @@ const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// uint32_t vexDeviceAbsEncStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceAbsEncStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = rotation.vexDeviceAbsEncStatusGet;
+pub const vexDeviceAbsEncStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = rotation.vexDeviceAbsEncStatusGet;
 
 /// # vexDeviceAbsEncDataRateSet
 ///
@@ -1981,7 +1981,7 @@ const vexDeviceAbsEncStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// void vexDeviceAbsEncDataRateSet(V5_DeviceT device, uint32_t rate);
 /// ```
-const vexDeviceAbsEncDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = rotation.vexDeviceAbsEncDataRateSet;
+pub const vexDeviceAbsEncDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = rotation.vexDeviceAbsEncDataRateSet;
 
 /// # vexDeviceOpticalHueGet
 ///
@@ -1996,7 +1996,7 @@ const vexDeviceAbsEncDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) 
 /// ```c
 /// double vexDeviceOpticalHueGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalHueGet;
+pub const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalHueGet;
 
 /// # vexDeviceOpticalSatGet
 ///
@@ -2011,7 +2011,7 @@ const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// double vexDeviceOpticalSatGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalSatGet;
+pub const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalSatGet;
 
 /// # vexDeviceOpticalBrightnessGet
 ///
@@ -2026,7 +2026,7 @@ const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// double vexDeviceOpticalBrightnessGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalBrightnessGet;
+pub const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalBrightnessGet;
 
 /// # vexDeviceOpticalProximityGet
 ///
@@ -2041,7 +2041,7 @@ const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// int32_t vexDeviceOpticalProximityGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalProximityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = optical.vexDeviceOpticalProximityGet;
+pub const vexDeviceOpticalProximityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = optical.vexDeviceOpticalProximityGet;
 
 /// # vexDeviceOpticalRgbGet
 ///
@@ -2056,7 +2056,7 @@ const vexDeviceOpticalProximityGet: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// void vexDeviceOpticalRgbGet(V5_DeviceT device, V5_DeviceOpticalRgb * data);
 /// ```
-const vexDeviceOpticalRgbGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRgb) callconv(.c) void = optical.vexDeviceOpticalRgbGet;
+pub const vexDeviceOpticalRgbGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRgb) callconv(.c) void = optical.vexDeviceOpticalRgbGet;
 
 /// # vexDeviceOpticalLedPwmSet
 ///
@@ -2071,7 +2071,7 @@ const vexDeviceOpticalRgbGet: *const fn(device: types.V5_DeviceT,data: [*c]types
 /// ```c
 /// void vexDeviceOpticalLedPwmSet(V5_DeviceT device, int32_t value);
 /// ```
-const vexDeviceOpticalLedPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = optical.vexDeviceOpticalLedPwmSet;
+pub const vexDeviceOpticalLedPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void = optical.vexDeviceOpticalLedPwmSet;
 
 /// # vexDeviceOpticalLedPwmGet
 ///
@@ -2086,7 +2086,7 @@ const vexDeviceOpticalLedPwmSet: *const fn(device: types.V5_DeviceT,value: i32) 
 /// ```c
 /// int32_t vexDeviceOpticalLedPwmGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalLedPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = optical.vexDeviceOpticalLedPwmGet;
+pub const vexDeviceOpticalLedPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = optical.vexDeviceOpticalLedPwmGet;
 
 /// # vexDeviceOpticalStatusGet
 ///
@@ -2101,7 +2101,7 @@ const vexDeviceOpticalLedPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// uint32_t vexDeviceOpticalStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = optical.vexDeviceOpticalStatusGet;
+pub const vexDeviceOpticalStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = optical.vexDeviceOpticalStatusGet;
 
 /// # vexDeviceOpticalRawGet
 ///
@@ -2116,7 +2116,7 @@ const vexDeviceOpticalStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// void vexDeviceOpticalRawGet(V5_DeviceT device, V5_DeviceOpticalRaw * data);
 /// ```
-const vexDeviceOpticalRawGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRaw) callconv(.c) void = optical.vexDeviceOpticalRawGet;
+pub const vexDeviceOpticalRawGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRaw) callconv(.c) void = optical.vexDeviceOpticalRawGet;
 
 /// # vexDeviceOpticalModeSet
 ///
@@ -2131,7 +2131,7 @@ const vexDeviceOpticalRawGet: *const fn(device: types.V5_DeviceT,data: [*c]types
 /// ```c
 /// void vexDeviceOpticalModeSet(V5_DeviceT device, uint32_t mode);
 /// ```
-const vexDeviceOpticalModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = optical.vexDeviceOpticalModeSet;
+pub const vexDeviceOpticalModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = optical.vexDeviceOpticalModeSet;
 
 /// # vexDeviceOpticalModeGet
 ///
@@ -2146,7 +2146,7 @@ const vexDeviceOpticalModeSet: *const fn(device: types.V5_DeviceT,mode: u32) cal
 /// ```c
 /// uint32_t vexDeviceOpticalModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = optical.vexDeviceOpticalModeGet;
+pub const vexDeviceOpticalModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = optical.vexDeviceOpticalModeGet;
 
 /// # vexDeviceOpticalGestureGet
 ///
@@ -2161,7 +2161,7 @@ const vexDeviceOpticalModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// uint32_t vexDeviceOpticalGestureGet(V5_DeviceT, V5_DeviceOpticalGesture * pData);
 /// ```
-const vexDeviceOpticalGestureGet: *const fn(_: types.V5_DeviceT,pData: [*c]types.V5_DeviceOpticalGesture) callconv(.c) u32 = optical.vexDeviceOpticalGestureGet;
+pub const vexDeviceOpticalGestureGet: *const fn(_: types.V5_DeviceT,pData: [*c]types.V5_DeviceOpticalGesture) callconv(.c) u32 = optical.vexDeviceOpticalGestureGet;
 
 /// # vexDeviceOpticalGestureEnable
 ///
@@ -2176,7 +2176,7 @@ const vexDeviceOpticalGestureGet: *const fn(_: types.V5_DeviceT,pData: [*c]types
 /// ```c
 /// void vexDeviceOpticalGestureEnable(V5_DeviceT);
 /// ```
-const vexDeviceOpticalGestureEnable: *const fn(_: types.V5_DeviceT) callconv(.c) void = optical.vexDeviceOpticalGestureEnable;
+pub const vexDeviceOpticalGestureEnable: *const fn(_: types.V5_DeviceT) callconv(.c) void = optical.vexDeviceOpticalGestureEnable;
 
 /// # vexDeviceOpticalGestureDisable
 ///
@@ -2191,7 +2191,7 @@ const vexDeviceOpticalGestureEnable: *const fn(_: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// void vexDeviceOpticalGestureDisable(V5_DeviceT);
 /// ```
-const vexDeviceOpticalGestureDisable: *const fn(_: types.V5_DeviceT) callconv(.c) void = optical.vexDeviceOpticalGestureDisable;
+pub const vexDeviceOpticalGestureDisable: *const fn(_: types.V5_DeviceT) callconv(.c) void = optical.vexDeviceOpticalGestureDisable;
 
 /// # vexDeviceOpticalProximityThreshold
 ///
@@ -2206,7 +2206,7 @@ const vexDeviceOpticalGestureDisable: *const fn(_: types.V5_DeviceT) callconv(.c
 /// ```c
 /// int32_t vexDeviceOpticalProximityThreshold(V5_DeviceT device, int32_t value);
 /// ```
-const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) i32 = optical.vexDeviceOpticalProximityThreshold;
+pub const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) i32 = optical.vexDeviceOpticalProximityThreshold;
 
 /// # vexDeviceOpticalIntegrationTimeSet
 ///
@@ -2221,7 +2221,7 @@ const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_DeviceT,val
 /// ```c
 /// void vexDeviceOpticalIntegrationTimeSet(V5_DeviceT device, double timeMs);
 /// ```
-const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT,timeMs: types.double) callconv(.c) void = optical.vexDeviceOpticalIntegrationTimeSet;
+pub const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT,timeMs: types.double) callconv(.c) void = optical.vexDeviceOpticalIntegrationTimeSet;
 
 /// # vexDeviceOpticalIntegrationTimeGet
 ///
@@ -2236,7 +2236,7 @@ const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT,tim
 /// ```c
 /// double vexDeviceOpticalIntegrationTimeGet(V5_DeviceT device);
 /// ```
-const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalIntegrationTimeGet;
+pub const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = optical.vexDeviceOpticalIntegrationTimeGet;
 
 /// # vexDeviceMagnetPowerSet
 ///
@@ -2251,7 +2251,7 @@ const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// void vexDeviceMagnetPowerSet(V5_DeviceT device, int32_t value, int32_t time);
 /// ```
-const vexDeviceMagnetPowerSet: *const fn(device: types.V5_DeviceT,value: i32,time: i32) callconv(.c) void = magnet.vexDeviceMagnetPowerSet;
+pub const vexDeviceMagnetPowerSet: *const fn(device: types.V5_DeviceT,value: i32,time: i32) callconv(.c) void = magnet.vexDeviceMagnetPowerSet;
 
 /// # vexDeviceMagnetPowerGet
 ///
@@ -2266,7 +2266,7 @@ const vexDeviceMagnetPowerSet: *const fn(device: types.V5_DeviceT,value: i32,tim
 /// ```c
 /// int32_t vexDeviceMagnetPowerGet(V5_DeviceT device);
 /// ```
-const vexDeviceMagnetPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = magnet.vexDeviceMagnetPowerGet;
+pub const vexDeviceMagnetPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = magnet.vexDeviceMagnetPowerGet;
 
 /// # vexDeviceMagnetPickup
 ///
@@ -2281,7 +2281,7 @@ const vexDeviceMagnetPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// void vexDeviceMagnetPickup(V5_DeviceT device, V5_DeviceMagnetDuration duration);
 /// ```
-const vexDeviceMagnetPickup: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void = magnet.vexDeviceMagnetPickup;
+pub const vexDeviceMagnetPickup: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void = magnet.vexDeviceMagnetPickup;
 
 /// # vexDeviceMagnetDrop
 ///
@@ -2296,7 +2296,7 @@ const vexDeviceMagnetPickup: *const fn(device: types.V5_DeviceT,duration: types.
 /// ```c
 /// void vexDeviceMagnetDrop(V5_DeviceT device, V5_DeviceMagnetDuration duration);
 /// ```
-const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void = magnet.vexDeviceMagnetDrop;
+pub const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void = magnet.vexDeviceMagnetDrop;
 
 /// # vexDeviceMagnetTemperatureGet
 ///
@@ -2311,7 +2311,7 @@ const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duration: types.V5
 /// ```c
 /// double vexDeviceMagnetTemperatureGet(V5_DeviceT device);
 /// ```
-const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = magnet.vexDeviceMagnetTemperatureGet;
+pub const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = magnet.vexDeviceMagnetTemperatureGet;
 
 /// # vexDeviceMagnetCurrentGet
 ///
@@ -2326,7 +2326,7 @@ const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// double vexDeviceMagnetCurrentGet(V5_DeviceT device);
 /// ```
-const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = magnet.vexDeviceMagnetCurrentGet;
+pub const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = magnet.vexDeviceMagnetCurrentGet;
 
 /// # vexDeviceMagnetStatusGet
 ///
@@ -2341,7 +2341,7 @@ const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// uint32_t vexDeviceMagnetStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceMagnetStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = magnet.vexDeviceMagnetStatusGet;
+pub const vexDeviceMagnetStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = magnet.vexDeviceMagnetStatusGet;
 
 /// # vexDeviceLightTowerRgbSet
 ///
@@ -2356,7 +2356,7 @@ const vexDeviceMagnetStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// void vexDeviceLightTowerRgbSet(V5_DeviceT device, uint32_t rgb_value, uint32_t xyw_value);
 /// ```
-const vexDeviceLightTowerRgbSet: *const fn(device: types.V5_DeviceT,rgb_value: u32,xyw_value: u32) callconv(.c) void = light_tower.vexDeviceLightTowerRgbSet;
+pub const vexDeviceLightTowerRgbSet: *const fn(device: types.V5_DeviceT,rgb_value: u32,xyw_value: u32) callconv(.c) void = light_tower.vexDeviceLightTowerRgbSet;
 
 /// # vexDeviceLightTowerColorSet
 ///
@@ -2371,7 +2371,7 @@ const vexDeviceLightTowerRgbSet: *const fn(device: types.V5_DeviceT,rgb_value: u
 /// ```c
 /// void vexDeviceLightTowerColorSet(V5_DeviceT device, uint32_t color_id, uint32_t value);
 /// ```
-const vexDeviceLightTowerColorSet: *const fn(device: types.V5_DeviceT,color_id: u32,value: u32) callconv(.c) void = light_tower.vexDeviceLightTowerColorSet;
+pub const vexDeviceLightTowerColorSet: *const fn(device: types.V5_DeviceT,color_id: u32,value: u32) callconv(.c) void = light_tower.vexDeviceLightTowerColorSet;
 
 /// # vexDeviceLightTowerRgbGet
 ///
@@ -2386,7 +2386,7 @@ const vexDeviceLightTowerColorSet: *const fn(device: types.V5_DeviceT,color_id: 
 /// ```c
 /// uint32_t vexDeviceLightTowerRgbGet(V5_DeviceT device);
 /// ```
-const vexDeviceLightTowerRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerRgbGet;
+pub const vexDeviceLightTowerRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerRgbGet;
 
 /// # vexDeviceLightTowerXywGet
 ///
@@ -2401,7 +2401,7 @@ const vexDeviceLightTowerRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// uint32_t vexDeviceLightTowerXywGet(V5_DeviceT device);
 /// ```
-const vexDeviceLightTowerXywGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerXywGet;
+pub const vexDeviceLightTowerXywGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerXywGet;
 
 /// # vexDeviceLightTowerStatusGet
 ///
@@ -2416,7 +2416,7 @@ const vexDeviceLightTowerXywGet: *const fn(device: types.V5_DeviceT) callconv(.c
 /// ```c
 /// uint32_t vexDeviceLightTowerStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceLightTowerStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerStatusGet;
+pub const vexDeviceLightTowerStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = light_tower.vexDeviceLightTowerStatusGet;
 
 /// # vexDeviceLightTowerBlinkSet
 ///
@@ -2431,7 +2431,7 @@ const vexDeviceLightTowerStatusGet: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// void vexDeviceLightTowerBlinkSet(V5_DeviceT device, uint8_t select, uint8_t mask, int32_t onTime, int32_t offTime);
 /// ```
-const vexDeviceLightTowerBlinkSet: *const fn(device: types.V5_DeviceT,select: u8,mask: u8,onTime: i32,offTime: i32) callconv(.c) void = light_tower.vexDeviceLightTowerBlinkSet;
+pub const vexDeviceLightTowerBlinkSet: *const fn(device: types.V5_DeviceT,select: u8,mask: u8,onTime: i32,offTime: i32) callconv(.c) void = light_tower.vexDeviceLightTowerBlinkSet;
 
 /// # vexDeviceDistanceDistanceGet
 ///
@@ -2446,7 +2446,7 @@ const vexDeviceLightTowerBlinkSet: *const fn(device: types.V5_DeviceT,select: u8
 /// ```c
 /// uint32_t vexDeviceDistanceDistanceGet(V5_DeviceT device);
 /// ```
-const vexDeviceDistanceDistanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceDistanceGet;
+pub const vexDeviceDistanceDistanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceDistanceGet;
 
 /// # vexDeviceDistanceConfidenceGet
 ///
@@ -2461,7 +2461,7 @@ const vexDeviceDistanceDistanceGet: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// uint32_t vexDeviceDistanceConfidenceGet(V5_DeviceT device);
 /// ```
-const vexDeviceDistanceConfidenceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceConfidenceGet;
+pub const vexDeviceDistanceConfidenceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceConfidenceGet;
 
 /// # vexDeviceDistanceObjectSizeGet
 ///
@@ -2476,7 +2476,7 @@ const vexDeviceDistanceConfidenceGet: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// int32_t vexDeviceDistanceObjectSizeGet(V5_DeviceT device);
 /// ```
-const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = distance.vexDeviceDistanceObjectSizeGet;
+pub const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = distance.vexDeviceDistanceObjectSizeGet;
 
 /// # vexDeviceDistanceObjectVelocityGet
 ///
@@ -2491,7 +2491,7 @@ const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// double vexDeviceDistanceObjectVelocityGet(V5_DeviceT device);
 /// ```
-const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = distance.vexDeviceDistanceObjectVelocityGet;
+pub const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = distance.vexDeviceDistanceObjectVelocityGet;
 
 /// # vexDeviceDistanceStatusGet
 ///
@@ -2506,7 +2506,7 @@ const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// uint32_t vexDeviceDistanceStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceDistanceStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceStatusGet;
+pub const vexDeviceDistanceStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = distance.vexDeviceDistanceStatusGet;
 
 /// # vexDeviceGpsReset
 ///
@@ -2521,7 +2521,7 @@ const vexDeviceDistanceStatusGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// void vexDeviceGpsReset(V5_DeviceT device);
 /// ```
-const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = gps.vexDeviceGpsReset;
+pub const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = gps.vexDeviceGpsReset;
 
 /// # vexDeviceGpsHeadingGet
 ///
@@ -2536,7 +2536,7 @@ const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) void =
 /// ```c
 /// double vexDeviceGpsHeadingGet(V5_DeviceT device);
 /// ```
-const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsHeadingGet;
+pub const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsHeadingGet;
 
 /// # vexDeviceGpsDegreesGet
 ///
@@ -2551,7 +2551,7 @@ const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// double vexDeviceGpsDegreesGet(V5_DeviceT device);
 /// ```
-const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsDegreesGet;
+pub const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsDegreesGet;
 
 /// # vexDeviceGpsQuaternionGet
 ///
@@ -2566,7 +2566,7 @@ const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 /// ```c
 /// void vexDeviceGpsQuaternionGet(V5_DeviceT device, V5_DeviceGpsQuaternion * data);
 /// ```
-const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsQuaternion) callconv(.c) void = gps.vexDeviceGpsQuaternionGet;
+pub const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsQuaternion) callconv(.c) void = gps.vexDeviceGpsQuaternionGet;
 
 /// # vexDeviceGpsAttitudeGet
 ///
@@ -2581,7 +2581,7 @@ const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]ty
 /// ```c
 /// void vexDeviceGpsAttitudeGet(V5_DeviceT device, V5_DeviceGpsAttitude * data, int bRaw);
 /// ```
-const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsAttitude,bRaw: types.int) callconv(.c) void = gps.vexDeviceGpsAttitudeGet;
+pub const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsAttitude,bRaw: types.int) callconv(.c) void = gps.vexDeviceGpsAttitudeGet;
 
 /// # vexDeviceGpsRawGyroGet
 ///
@@ -2596,7 +2596,7 @@ const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]type
 /// ```c
 /// void vexDeviceGpsRawGyroGet(V5_DeviceT device, V5_DeviceGpsRaw * data);
 /// ```
-const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void = gps.vexDeviceGpsRawGyroGet;
+pub const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void = gps.vexDeviceGpsRawGyroGet;
 
 /// # vexDeviceGpsRawAccelGet
 ///
@@ -2611,7 +2611,7 @@ const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types
 /// ```c
 /// void vexDeviceGpsRawAccelGet(V5_DeviceT device, V5_DeviceGpsRaw * data);
 /// ```
-const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void = gps.vexDeviceGpsRawAccelGet;
+pub const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void = gps.vexDeviceGpsRawAccelGet;
 
 /// # vexDeviceGpsStatusGet
 ///
@@ -2626,7 +2626,7 @@ const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]type
 /// ```c
 /// uint32_t vexDeviceGpsStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = gps.vexDeviceGpsStatusGet;
+pub const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = gps.vexDeviceGpsStatusGet;
 
 /// # vexDeviceGpsModeSet
 ///
@@ -2641,7 +2641,7 @@ const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u3
 /// ```c
 /// void vexDeviceGpsModeSet(V5_DeviceT device, uint32_t mode);
 /// ```
-const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = gps.vexDeviceGpsModeSet;
+pub const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = gps.vexDeviceGpsModeSet;
 
 /// # vexDeviceGpsModeGet
 ///
@@ -2656,7 +2656,7 @@ const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callcon
 /// ```c
 /// uint32_t vexDeviceGpsModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = gps.vexDeviceGpsModeGet;
+pub const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = gps.vexDeviceGpsModeGet;
 
 /// # vexDeviceGpsDataRateSet
 ///
@@ -2671,7 +2671,7 @@ const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 
 /// ```c
 /// void vexDeviceGpsDataRateSet(V5_DeviceT device, uint32_t rate);
 /// ```
-const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = gps.vexDeviceGpsDataRateSet;
+pub const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void = gps.vexDeviceGpsDataRateSet;
 
 /// # vexDeviceGpsOriginSet
 ///
@@ -2686,7 +2686,7 @@ const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) cal
 /// ```c
 /// void vexDeviceGpsOriginSet(V5_DeviceT device, double ox, double oy);
 /// ```
-const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: types.double,oy: types.double) callconv(.c) void = gps.vexDeviceGpsOriginSet;
+pub const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: types.double,oy: types.double) callconv(.c) void = gps.vexDeviceGpsOriginSet;
 
 /// # vexDeviceGpsOriginGet
 ///
@@ -2701,7 +2701,7 @@ const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: types.double
 /// ```c
 /// void vexDeviceGpsOriginGet(V5_DeviceT device, double * ox, double * oy);
 /// ```
-const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [*c]types.double,oy: [*c]types.double) callconv(.c) void = gps.vexDeviceGpsOriginGet;
+pub const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [*c]types.double,oy: [*c]types.double) callconv(.c) void = gps.vexDeviceGpsOriginGet;
 
 /// # vexDeviceGpsRotationSet
 ///
@@ -2716,7 +2716,7 @@ const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [*c]types.do
 /// ```c
 /// void vexDeviceGpsRotationSet(V5_DeviceT device, double value);
 /// ```
-const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,value: types.double) callconv(.c) void = gps.vexDeviceGpsRotationSet;
+pub const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,value: types.double) callconv(.c) void = gps.vexDeviceGpsRotationSet;
 
 /// # vexDeviceGpsRotationGet
 ///
@@ -2731,7 +2731,7 @@ const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,value: types.d
 /// ```c
 /// double vexDeviceGpsRotationGet(V5_DeviceT device);
 /// ```
-const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsRotationGet;
+pub const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsRotationGet;
 
 /// # vexDeviceGpsInitialPositionSet
 ///
@@ -2746,7 +2746,7 @@ const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 /// ```c
 /// void vexDeviceGpsInitialPositionSet(V5_DeviceT device, double initial_x, double initial_y, double initial_rotation);
 /// ```
-const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_DeviceT,initial_x: types.double,initial_y: types.double,initial_rotation: types.double) callconv(.c) void = gps.vexDeviceGpsInitialPositionSet;
+pub const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_DeviceT,initial_x: types.double,initial_y: types.double,initial_rotation: types.double) callconv(.c) void = gps.vexDeviceGpsInitialPositionSet;
 
 /// # vexDeviceGpsErrorGet
 ///
@@ -2761,7 +2761,7 @@ const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_DeviceT,initial
 /// ```c
 /// double vexDeviceGpsErrorGet(V5_DeviceT device);
 /// ```
-const vexDeviceGpsErrorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsErrorGet;
+pub const vexDeviceGpsErrorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = gps.vexDeviceGpsErrorGet;
 
 /// # vexDeviceAiVisionModeSet
 ///
@@ -2776,7 +2776,7 @@ const vexDeviceGpsErrorGet: *const fn(device: types.V5_DeviceT) callconv(.c) typ
 /// ```c
 /// void vexDeviceAiVisionModeSet(V5_DeviceT device, uint32_t mode);
 /// ```
-const vexDeviceAiVisionModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = ai_vision.vexDeviceAiVisionModeSet;
+pub const vexDeviceAiVisionModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void = ai_vision.vexDeviceAiVisionModeSet;
 
 /// # vexDeviceAiVisionModeGet
 ///
@@ -2791,7 +2791,7 @@ const vexDeviceAiVisionModeSet: *const fn(device: types.V5_DeviceT,mode: u32) ca
 /// ```c
 /// uint32_t vexDeviceAiVisionModeGet(V5_DeviceT device);
 /// ```
-const vexDeviceAiVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = ai_vision.vexDeviceAiVisionModeGet;
+pub const vexDeviceAiVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = ai_vision.vexDeviceAiVisionModeGet;
 
 /// # vexDeviceAiVisionObjectCountGet
 ///
@@ -2806,7 +2806,7 @@ const vexDeviceAiVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// int32_t vexDeviceAiVisionObjectCountGet(V5_DeviceT device);
 /// ```
-const vexDeviceAiVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = ai_vision.vexDeviceAiVisionObjectCountGet;
+pub const vexDeviceAiVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = ai_vision.vexDeviceAiVisionObjectCountGet;
 
 /// # vexDeviceAiVisionObjectGet
 ///
@@ -2821,7 +2821,7 @@ const vexDeviceAiVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// int32_t vexDeviceAiVisionObjectGet(V5_DeviceT device, uint32_t indexObj, V5_DeviceAiVisionObject * pObject);
 /// ```
-const vexDeviceAiVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32,pObject: [*c]types.V5_DeviceAiVisionObject) callconv(.c) i32 = ai_vision.vexDeviceAiVisionObjectGet;
+pub const vexDeviceAiVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32,pObject: [*c]types.V5_DeviceAiVisionObject) callconv(.c) i32 = ai_vision.vexDeviceAiVisionObjectGet;
 
 /// # vexDeviceAiVisionColorSet
 ///
@@ -2836,7 +2836,7 @@ const vexDeviceAiVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u
 /// ```c
 /// void vexDeviceAiVisionColorSet(V5_DeviceT device, V5_DeviceAiVisionColor * pColor);
 /// ```
-const vexDeviceAiVisionColorSet: *const fn(device: types.V5_DeviceT,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) void = ai_vision.vexDeviceAiVisionColorSet;
+pub const vexDeviceAiVisionColorSet: *const fn(device: types.V5_DeviceT,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) void = ai_vision.vexDeviceAiVisionColorSet;
 
 /// # vexDeviceAiVisionColorGet
 ///
@@ -2851,7 +2851,7 @@ const vexDeviceAiVisionColorSet: *const fn(device: types.V5_DeviceT,pColor: [*c]
 /// ```c
 /// int vexDeviceAiVisionColorGet(V5_DeviceT device, uint32_t id, V5_DeviceAiVisionColor * pColor);
 /// ```
-const vexDeviceAiVisionColorGet: *const fn(device: types.V5_DeviceT,id: u32,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) types.int = ai_vision.vexDeviceAiVisionColorGet;
+pub const vexDeviceAiVisionColorGet: *const fn(device: types.V5_DeviceT,id: u32,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) types.int = ai_vision.vexDeviceAiVisionColorGet;
 
 /// # vexDeviceAiVisionCodeSet
 ///
@@ -2866,7 +2866,7 @@ const vexDeviceAiVisionColorGet: *const fn(device: types.V5_DeviceT,id: u32,pCol
 /// ```c
 /// void vexDeviceAiVisionCodeSet(V5_DeviceT device, V5_DeviceAiVisionCode * pCode);
 /// ```
-const vexDeviceAiVisionCodeSet: *const fn(device: types.V5_DeviceT,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) void = ai_vision.vexDeviceAiVisionCodeSet;
+pub const vexDeviceAiVisionCodeSet: *const fn(device: types.V5_DeviceT,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) void = ai_vision.vexDeviceAiVisionCodeSet;
 
 /// # vexDeviceAiVisionCodeGet
 ///
@@ -2881,7 +2881,7 @@ const vexDeviceAiVisionCodeSet: *const fn(device: types.V5_DeviceT,pCode: [*c]ty
 /// ```c
 /// int vexDeviceAiVisionCodeGet(V5_DeviceT device, uint32_t id, V5_DeviceAiVisionCode * pCode);
 /// ```
-const vexDeviceAiVisionCodeGet: *const fn(device: types.V5_DeviceT,id: u32,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) types.int = ai_vision.vexDeviceAiVisionCodeGet;
+pub const vexDeviceAiVisionCodeGet: *const fn(device: types.V5_DeviceT,id: u32,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) types.int = ai_vision.vexDeviceAiVisionCodeGet;
 
 /// # vexDeviceAiVisionStatusGet
 ///
@@ -2896,7 +2896,7 @@ const vexDeviceAiVisionCodeGet: *const fn(device: types.V5_DeviceT,id: u32,pCode
 /// ```c
 /// uint32_t vexDeviceAiVisionStatusGet(V5_DeviceT device);
 /// ```
-const vexDeviceAiVisionStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = ai_vision.vexDeviceAiVisionStatusGet;
+pub const vexDeviceAiVisionStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = ai_vision.vexDeviceAiVisionStatusGet;
 
 /// # vexDeviceAiVisionTemperatureGet
 ///
@@ -2911,7 +2911,7 @@ const vexDeviceAiVisionStatusGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// double vexDeviceAiVisionTemperatureGet(V5_DeviceT device);
 /// ```
-const vexDeviceAiVisionTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = ai_vision.vexDeviceAiVisionTemperatureGet;
+pub const vexDeviceAiVisionTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double = ai_vision.vexDeviceAiVisionTemperatureGet;
 
 /// # vexDeviceAiVisionClassNameGet
 ///
@@ -2926,7 +2926,7 @@ const vexDeviceAiVisionTemperatureGet: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// int32_t vexDeviceAiVisionClassNameGet(V5_DeviceT device, int32_t id, uint8_t * pName);
 /// ```
-const vexDeviceAiVisionClassNameGet: *const fn(device: types.V5_DeviceT,id: i32,pName: [*c]u8) callconv(.c) i32 = ai_vision.vexDeviceAiVisionClassNameGet;
+pub const vexDeviceAiVisionClassNameGet: *const fn(device: types.V5_DeviceT,id: i32,pName: [*c]u8) callconv(.c) i32 = ai_vision.vexDeviceAiVisionClassNameGet;
 
 /// # vexDeviceAiVisionReset
 ///
@@ -2941,7 +2941,7 @@ const vexDeviceAiVisionClassNameGet: *const fn(device: types.V5_DeviceT,id: i32,
 /// ```c
 /// void vexDeviceAiVisionReset(V5_DeviceT device);
 /// ```
-const vexDeviceAiVisionReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = ai_vision.vexDeviceAiVisionReset;
+pub const vexDeviceAiVisionReset: *const fn(device: types.V5_DeviceT) callconv(.c) void = ai_vision.vexDeviceAiVisionReset;
 
 /// # vexDeviceAiVisionEnableSet
 ///
@@ -2956,7 +2956,7 @@ const vexDeviceAiVisionReset: *const fn(device: types.V5_DeviceT) callconv(.c) v
 /// ```c
 /// void vexDeviceAiVisionEnableSet(V5_DeviceT device, uint8_t nEnables, uint8_t nMask);
 /// ```
-const vexDeviceAiVisionEnableSet: *const fn(device: types.V5_DeviceT,nEnables: u8,nMask: u8) callconv(.c) void = ai_vision.vexDeviceAiVisionEnableSet;
+pub const vexDeviceAiVisionEnableSet: *const fn(device: types.V5_DeviceT,nEnables: u8,nMask: u8) callconv(.c) void = ai_vision.vexDeviceAiVisionEnableSet;
 
 /// # vexDeviceAiVisionEnableGet
 ///
@@ -2971,7 +2971,7 @@ const vexDeviceAiVisionEnableSet: *const fn(device: types.V5_DeviceT,nEnables: u
 /// ```c
 /// uint8_t vexDeviceAiVisionEnableGet(V5_DeviceT device);
 /// ```
-const vexDeviceAiVisionEnableGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = ai_vision.vexDeviceAiVisionEnableGet;
+pub const vexDeviceAiVisionEnableGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8 = ai_vision.vexDeviceAiVisionEnableGet;
 
 /// # vexDevicePneumaticCompressorSet
 ///
@@ -2986,7 +2986,7 @@ const vexDeviceAiVisionEnableGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// void vexDevicePneumaticCompressorSet(V5_DeviceT device, int bState);
 /// ```
-const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_DeviceT,bState: types.int) callconv(.c) void = pneumatic.vexDevicePneumaticCompressorSet;
+pub const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_DeviceT,bState: types.int) callconv(.c) void = pneumatic.vexDevicePneumaticCompressorSet;
 
 /// # vexDevicePneumaticCylinderSet
 ///
@@ -3001,7 +3001,7 @@ const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_DeviceT,bState
 /// ```c
 /// void vexDevicePneumaticCylinderSet(V5_DeviceT device, uint32_t id, int bState);
 /// ```
-const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_DeviceT,id: u32,bState: types.int) callconv(.c) void = pneumatic.vexDevicePneumaticCylinderSet;
+pub const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_DeviceT,id: u32,bState: types.int) callconv(.c) void = pneumatic.vexDevicePneumaticCylinderSet;
 
 /// # vexDevicePneumaticCtrlSet
 ///
@@ -3016,7 +3016,7 @@ const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_DeviceT,id: u32,
 /// ```c
 /// void vexDevicePneumaticCtrlSet(V5_DeviceT device, V5_DevicePneumaticCtrl * pCtrl);
 /// ```
-const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,pCtrl: [*c]types.V5_DevicePneumaticCtrl) callconv(.c) void = pneumatic.vexDevicePneumaticCtrlSet;
+pub const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,pCtrl: [*c]types.V5_DevicePneumaticCtrl) callconv(.c) void = pneumatic.vexDevicePneumaticCtrlSet;
 
 /// # vexDevicePneumaticStatusGet
 ///
@@ -3031,7 +3031,7 @@ const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,pCtrl: [*c]t
 /// ```c
 /// uint32_t vexDevicePneumaticStatusGet(V5_DeviceT device);
 /// ```
-const vexDevicePneumaticStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = pneumatic.vexDevicePneumaticStatusGet;
+pub const vexDevicePneumaticStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = pneumatic.vexDevicePneumaticStatusGet;
 
 /// # vexDevicePneumaticPwmSet
 ///
@@ -3046,7 +3046,7 @@ const vexDevicePneumaticStatusGet: *const fn(device: types.V5_DeviceT) callconv(
 /// ```c
 /// void vexDevicePneumaticPwmSet(V5_DeviceT device, uint8_t pwm);
 /// ```
-const vexDevicePneumaticPwmSet: *const fn(device: types.V5_DeviceT,pwm: u8) callconv(.c) void = pneumatic.vexDevicePneumaticPwmSet;
+pub const vexDevicePneumaticPwmSet: *const fn(device: types.V5_DeviceT,pwm: u8) callconv(.c) void = pneumatic.vexDevicePneumaticPwmSet;
 
 /// # vexDevicePneumaticPwmGet
 ///
@@ -3061,7 +3061,7 @@ const vexDevicePneumaticPwmSet: *const fn(device: types.V5_DeviceT,pwm: u8) call
 /// ```c
 /// uint32_t vexDevicePneumaticPwmGet(V5_DeviceT device);
 /// ```
-const vexDevicePneumaticPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = pneumatic.vexDevicePneumaticPwmGet;
+pub const vexDevicePneumaticPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32 = pneumatic.vexDevicePneumaticPwmGet;
 
 /// # vexDevicePneumaticCylinderPwmSet
 ///
@@ -3076,7 +3076,7 @@ const vexDevicePneumaticPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 /// ```c
 /// void vexDevicePneumaticCylinderPwmSet(V5_DeviceT device, uint32_t id, int bState, uint8_t pwm);
 /// ```
-const vexDevicePneumaticCylinderPwmSet: *const fn(device: types.V5_DeviceT,id: u32,bState: types.int,pwm: u8) callconv(.c) void = pneumatic.vexDevicePneumaticCylinderPwmSet;
+pub const vexDevicePneumaticCylinderPwmSet: *const fn(device: types.V5_DeviceT,id: u32,bState: types.int,pwm: u8) callconv(.c) void = pneumatic.vexDevicePneumaticCylinderPwmSet;
 
 /// # vexDevicePneumaticActuationStatusGet
 ///
@@ -3091,7 +3091,7 @@ const vexDevicePneumaticCylinderPwmSet: *const fn(device: types.V5_DeviceT,id: u
 /// ```c
 /// uint32_t vexDevicePneumaticActuationStatusGet(V5_DeviceT device, uint16_t * ac1, uint16_t * ac2, uint16_t * ac3, uint16_t * ac4);
 /// ```
-const vexDevicePneumaticActuationStatusGet: *const fn(device: types.V5_DeviceT,ac1: [*c]u16,ac2: [*c]u16,ac3: [*c]u16,ac4: [*c]u16) callconv(.c) u32 = pneumatic.vexDevicePneumaticActuationStatusGet;
+pub const vexDevicePneumaticActuationStatusGet: *const fn(device: types.V5_DeviceT,ac1: [*c]u16,ac2: [*c]u16,ac3: [*c]u16,ac4: [*c]u16) callconv(.c) u32 = pneumatic.vexDevicePneumaticActuationStatusGet;
 
 /// # vexDeviceGenericSerialEnable
 ///
@@ -3106,7 +3106,7 @@ const vexDevicePneumaticActuationStatusGet: *const fn(device: types.V5_DeviceT,a
 /// ```c
 /// void vexDeviceGenericSerialEnable(V5_DeviceT device, int32_t options);
 /// ```
-const vexDeviceGenericSerialEnable: *const fn(device: types.V5_DeviceT,options: i32) callconv(.c) void = generic_serial.vexDeviceGenericSerialEnable;
+pub const vexDeviceGenericSerialEnable: *const fn(device: types.V5_DeviceT,options: i32) callconv(.c) void = generic_serial.vexDeviceGenericSerialEnable;
 
 /// # vexDeviceGenericSerialBaudrate
 ///
@@ -3121,7 +3121,7 @@ const vexDeviceGenericSerialEnable: *const fn(device: types.V5_DeviceT,options: 
 /// ```c
 /// void vexDeviceGenericSerialBaudrate(V5_DeviceT device, int32_t baudrate);
 /// ```
-const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_DeviceT,baudrate: i32) callconv(.c) void = generic_serial.vexDeviceGenericSerialBaudrate;
+pub const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_DeviceT,baudrate: i32) callconv(.c) void = generic_serial.vexDeviceGenericSerialBaudrate;
 
 /// # vexDeviceGenericSerialWriteChar
 ///
@@ -3136,7 +3136,7 @@ const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_DeviceT,baudrat
 /// ```c
 /// int32_t vexDeviceGenericSerialWriteChar(V5_DeviceT device, uint8_t c);
 /// ```
-const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialWriteChar;
+pub const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialWriteChar;
 
 /// # vexDeviceGenericSerialWriteFree
 ///
@@ -3151,7 +3151,7 @@ const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_DeviceT,c: u8)
 /// ```c
 /// int32_t vexDeviceGenericSerialWriteFree(V5_DeviceT device);
 /// ```
-const vexDeviceGenericSerialWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialWriteFree;
+pub const vexDeviceGenericSerialWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialWriteFree;
 
 /// # vexDeviceGenericSerialTransmit
 ///
@@ -3166,7 +3166,7 @@ const vexDeviceGenericSerialWriteFree: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// int32_t vexDeviceGenericSerialTransmit(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-const vexDeviceGenericSerialTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialTransmit;
+pub const vexDeviceGenericSerialTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialTransmit;
 
 /// # vexDeviceGenericSerialReadChar
 ///
@@ -3181,7 +3181,7 @@ const vexDeviceGenericSerialTransmit: *const fn(device: types.V5_DeviceT,buffer:
 /// ```c
 /// int32_t vexDeviceGenericSerialReadChar(V5_DeviceT device);
 /// ```
-const vexDeviceGenericSerialReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReadChar;
+pub const vexDeviceGenericSerialReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReadChar;
 
 /// # vexDeviceGenericSerialPeekChar
 ///
@@ -3196,7 +3196,7 @@ const vexDeviceGenericSerialReadChar: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// int32_t vexDeviceGenericSerialPeekChar(V5_DeviceT device);
 /// ```
-const vexDeviceGenericSerialPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialPeekChar;
+pub const vexDeviceGenericSerialPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialPeekChar;
 
 /// # vexDeviceGenericSerialReceiveAvail
 ///
@@ -3211,7 +3211,7 @@ const vexDeviceGenericSerialPeekChar: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// int32_t vexDeviceGenericSerialReceiveAvail(V5_DeviceT device);
 /// ```
-const vexDeviceGenericSerialReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReceiveAvail;
+pub const vexDeviceGenericSerialReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReceiveAvail;
 
 /// # vexDeviceGenericSerialReceive
 ///
@@ -3226,7 +3226,7 @@ const vexDeviceGenericSerialReceiveAvail: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// int32_t vexDeviceGenericSerialReceive(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-const vexDeviceGenericSerialReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReceive;
+pub const vexDeviceGenericSerialReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_serial.vexDeviceGenericSerialReceive;
 
 /// # vexDeviceGenericSerialFlush
 ///
@@ -3241,7 +3241,7 @@ const vexDeviceGenericSerialReceive: *const fn(device: types.V5_DeviceT,buffer: 
 /// ```c
 /// void vexDeviceGenericSerialFlush(V5_DeviceT device);
 /// ```
-const vexDeviceGenericSerialFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void = generic_serial.vexDeviceGenericSerialFlush;
+pub const vexDeviceGenericSerialFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void = generic_serial.vexDeviceGenericSerialFlush;
 
 /// # vexDeviceGenericRadioConnection
 ///
@@ -3256,7 +3256,7 @@ const vexDeviceGenericSerialFlush: *const fn(device: types.V5_DeviceT) callconv(
 /// ```c
 /// void vexDeviceGenericRadioConnection(V5_DeviceT device, char * pName, int bMaster, int bAllowRadioOverride);
 /// ```
-const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]types.char,bMaster: types.int,bAllowRadioOverride: types.int) callconv(.c) void = generic_radio.vexDeviceGenericRadioConnection;
+pub const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]types.char,bMaster: types.int,bAllowRadioOverride: types.int) callconv(.c) void = generic_radio.vexDeviceGenericRadioConnection;
 
 /// # vexDeviceGenericRadioWriteChar
 ///
@@ -3271,7 +3271,7 @@ const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName:
 /// ```c
 /// int32_t vexDeviceGenericRadioWriteChar(V5_DeviceT device, uint8_t c);
 /// ```
-const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioWriteChar;
+pub const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioWriteChar;
 
 /// # vexDeviceGenericRadioWriteFree
 ///
@@ -3286,7 +3286,7 @@ const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: u8) 
 /// ```c
 /// int32_t vexDeviceGenericRadioWriteFree(V5_DeviceT device);
 /// ```
-const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioWriteFree;
+pub const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioWriteFree;
 
 /// # vexDeviceGenericRadioTransmit
 ///
@@ -3301,7 +3301,7 @@ const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// int32_t vexDeviceGenericRadioTransmit(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioTransmit;
+pub const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioTransmit;
 
 /// # vexDeviceGenericRadioReadChar
 ///
@@ -3316,7 +3316,7 @@ const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_DeviceT,buffer: 
 /// ```c
 /// int32_t vexDeviceGenericRadioReadChar(V5_DeviceT device);
 /// ```
-const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReadChar;
+pub const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReadChar;
 
 /// # vexDeviceGenericRadioPeekChar
 ///
@@ -3331,7 +3331,7 @@ const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// int32_t vexDeviceGenericRadioPeekChar(V5_DeviceT device);
 /// ```
-const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioPeekChar;
+pub const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioPeekChar;
 
 /// # vexDeviceGenericRadioReceiveAvail
 ///
@@ -3346,7 +3346,7 @@ const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// int32_t vexDeviceGenericRadioReceiveAvail(V5_DeviceT device);
 /// ```
-const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReceiveAvail;
+pub const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReceiveAvail;
 
 /// # vexDeviceGenericRadioReceive
 ///
@@ -3361,7 +3361,7 @@ const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// int32_t vexDeviceGenericRadioReceive(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-const vexDeviceGenericRadioReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReceive;
+pub const vexDeviceGenericRadioReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32 = generic_radio.vexDeviceGenericRadioReceive;
 
 /// # vexDeviceGenericRadioFlush
 ///
@@ -3376,7 +3376,7 @@ const vexDeviceGenericRadioReceive: *const fn(device: types.V5_DeviceT,buffer: [
 /// ```c
 /// void vexDeviceGenericRadioFlush(V5_DeviceT device);
 /// ```
-const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void = generic_radio.vexDeviceGenericRadioFlush;
+pub const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void = generic_radio.vexDeviceGenericRadioFlush;
 
 /// # vexDeviceGenericRadioLinkStatus
 ///
@@ -3391,7 +3391,7 @@ const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// int vexDeviceGenericRadioLinkStatus(V5_DeviceT device);
 /// ```
-const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = generic_radio.vexDeviceGenericRadioLinkStatus;
+pub const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callconv(.c) types.int = generic_radio.vexDeviceGenericRadioLinkStatus;
 
 /// # vexDisplayForegroundColor
 ///
@@ -3406,7 +3406,7 @@ const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// void vexDisplayForegroundColor(uint32_t col);
 /// ```
-const vexDisplayForegroundColor: *const fn(col: u32) callconv(.c) void = display.vexDisplayForegroundColor;
+pub const vexDisplayForegroundColor: *const fn(col: u32) callconv(.c) void = display.vexDisplayForegroundColor;
 
 /// # vexDisplayBackgroundColor
 ///
@@ -3421,7 +3421,7 @@ const vexDisplayForegroundColor: *const fn(col: u32) callconv(.c) void = display
 /// ```c
 /// void vexDisplayBackgroundColor(uint32_t col);
 /// ```
-const vexDisplayBackgroundColor: *const fn(col: u32) callconv(.c) void = display.vexDisplayBackgroundColor;
+pub const vexDisplayBackgroundColor: *const fn(col: u32) callconv(.c) void = display.vexDisplayBackgroundColor;
 
 /// # vexDisplayForegroundColorGet
 ///
@@ -3436,7 +3436,7 @@ const vexDisplayBackgroundColor: *const fn(col: u32) callconv(.c) void = display
 /// ```c
 /// uint32_t vexDisplayForegroundColorGet();
 /// ```
-const vexDisplayForegroundColorGet: *const fn() callconv(.c) u32 = display.vexDisplayForegroundColorGet;
+pub const vexDisplayForegroundColorGet: *const fn() callconv(.c) u32 = display.vexDisplayForegroundColorGet;
 
 /// # vexDisplayBackgroundColorGet
 ///
@@ -3451,7 +3451,7 @@ const vexDisplayForegroundColorGet: *const fn() callconv(.c) u32 = display.vexDi
 /// ```c
 /// uint32_t vexDisplayBackgroundColorGet();
 /// ```
-const vexDisplayBackgroundColorGet: *const fn() callconv(.c) u32 = display.vexDisplayBackgroundColorGet;
+pub const vexDisplayBackgroundColorGet: *const fn() callconv(.c) u32 = display.vexDisplayBackgroundColorGet;
 
 /// # vexDisplayErase
 ///
@@ -3466,7 +3466,7 @@ const vexDisplayBackgroundColorGet: *const fn() callconv(.c) u32 = display.vexDi
 /// ```c
 /// void vexDisplayErase();
 /// ```
-const vexDisplayErase: *const fn() callconv(.c) void = display.vexDisplayErase;
+pub const vexDisplayErase: *const fn() callconv(.c) void = display.vexDisplayErase;
 
 /// # vexDisplayScroll
 ///
@@ -3481,7 +3481,7 @@ const vexDisplayErase: *const fn() callconv(.c) void = display.vexDisplayErase;
 /// ```c
 /// void vexDisplayScroll(int32_t nStartLine, int32_t nLines);
 /// ```
-const vexDisplayScroll: *const fn(nStartLine: i32,nLines: i32) callconv(.c) void = display.vexDisplayScroll;
+pub const vexDisplayScroll: *const fn(nStartLine: i32,nLines: i32) callconv(.c) void = display.vexDisplayScroll;
 
 /// # vexDisplayScrollRect
 ///
@@ -3496,7 +3496,7 @@ const vexDisplayScroll: *const fn(nStartLine: i32,nLines: i32) callconv(.c) void
 /// ```c
 /// void vexDisplayScrollRect(int32_t x1, int32_t y1, int32_t x2, int32_t y2, int32_t nLines);
 /// ```
-const vexDisplayScrollRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,nLines: i32) callconv(.c) void = display.vexDisplayScrollRect;
+pub const vexDisplayScrollRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,nLines: i32) callconv(.c) void = display.vexDisplayScrollRect;
 
 /// # vexDisplayCopyRect
 ///
@@ -3511,7 +3511,7 @@ const vexDisplayScrollRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,nLines: i3
 /// ```c
 /// void vexDisplayCopyRect(int32_t x1, int32_t y1, int32_t x2, int32_t y2, uint32_t * pSrc, int32_t srcStride);
 /// ```
-const vexDisplayCopyRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,pSrc: [*c]u32,srcStride: i32) callconv(.c) void = display.vexDisplayCopyRect;
+pub const vexDisplayCopyRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,pSrc: [*c]u32,srcStride: i32) callconv(.c) void = display.vexDisplayCopyRect;
 
 /// # vexDisplayPixelSet
 ///
@@ -3526,7 +3526,7 @@ const vexDisplayCopyRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,pSrc: [*c]u3
 /// ```c
 /// void vexDisplayPixelSet(uint32_t x, uint32_t y);
 /// ```
-const vexDisplayPixelSet: *const fn(x: u32,y: u32) callconv(.c) void = display.vexDisplayPixelSet;
+pub const vexDisplayPixelSet: *const fn(x: u32,y: u32) callconv(.c) void = display.vexDisplayPixelSet;
 
 /// # vexDisplayPixelClear
 ///
@@ -3541,7 +3541,7 @@ const vexDisplayPixelSet: *const fn(x: u32,y: u32) callconv(.c) void = display.v
 /// ```c
 /// void vexDisplayPixelClear(uint32_t x, uint32_t y);
 /// ```
-const vexDisplayPixelClear: *const fn(x: u32,y: u32) callconv(.c) void = display.vexDisplayPixelClear;
+pub const vexDisplayPixelClear: *const fn(x: u32,y: u32) callconv(.c) void = display.vexDisplayPixelClear;
 
 /// # vexDisplayLineDraw
 ///
@@ -3556,7 +3556,7 @@ const vexDisplayPixelClear: *const fn(x: u32,y: u32) callconv(.c) void = display
 /// ```c
 /// void vexDisplayLineDraw(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 /// ```
-const vexDisplayLineDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayLineDraw;
+pub const vexDisplayLineDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayLineDraw;
 
 /// # vexDisplayLineClear
 ///
@@ -3571,7 +3571,7 @@ const vexDisplayLineDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c
 /// ```c
 /// void vexDisplayLineClear(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 /// ```
-const vexDisplayLineClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayLineClear;
+pub const vexDisplayLineClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayLineClear;
 
 /// # vexDisplayRectDraw
 ///
@@ -3586,7 +3586,7 @@ const vexDisplayLineClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.
 /// ```c
 /// void vexDisplayRectDraw(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 /// ```
-const vexDisplayRectDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectDraw;
+pub const vexDisplayRectDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectDraw;
 
 /// # vexDisplayRectClear
 ///
@@ -3601,7 +3601,7 @@ const vexDisplayRectDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c
 /// ```c
 /// void vexDisplayRectClear(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 /// ```
-const vexDisplayRectClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectClear;
+pub const vexDisplayRectClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectClear;
 
 /// # vexDisplayRectFill
 ///
@@ -3616,7 +3616,7 @@ const vexDisplayRectClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.
 /// ```c
 /// void vexDisplayRectFill(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 /// ```
-const vexDisplayRectFill: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectFill;
+pub const vexDisplayRectFill: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayRectFill;
 
 /// # vexDisplayCircleDraw
 ///
@@ -3631,7 +3631,7 @@ const vexDisplayRectFill: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c
 /// ```c
 /// void vexDisplayCircleDraw(int32_t xc, int32_t yc, int32_t radius);
 /// ```
-const vexDisplayCircleDraw: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleDraw;
+pub const vexDisplayCircleDraw: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleDraw;
 
 /// # vexDisplayCircleClear
 ///
@@ -3646,7 +3646,7 @@ const vexDisplayCircleDraw: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) 
 /// ```c
 /// void vexDisplayCircleClear(int32_t xc, int32_t yc, int32_t radius);
 /// ```
-const vexDisplayCircleClear: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleClear;
+pub const vexDisplayCircleClear: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleClear;
 
 /// # vexDisplayCircleFill
 ///
@@ -3661,7 +3661,7 @@ const vexDisplayCircleClear: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c)
 /// ```c
 /// void vexDisplayCircleFill(int32_t xc, int32_t yc, int32_t radius);
 /// ```
-const vexDisplayCircleFill: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleFill;
+pub const vexDisplayCircleFill: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) void = display.vexDisplayCircleFill;
 
 /// # vexDisplayPrintf
 ///
@@ -3676,7 +3676,7 @@ const vexDisplayCircleFill: *const fn(xc: i32,yc: i32,radius: i32) callconv(.c) 
 /// ```c
 /// void vexDisplayPrintf(int32_t xpos, int32_t ypos, uint32_t bOpaque, const char * format);
 /// ```
-const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayPrintf;
+pub const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayPrintf;
 
 /// # vexDisplayString
 ///
@@ -3691,7 +3691,7 @@ const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]
 /// ```c
 /// void vexDisplayString(const int32_t nLineNumber, const char * format);
 /// ```
-const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayString;
+pub const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayString;
 
 /// # vexDisplayStringAt
 ///
@@ -3706,7 +3706,7 @@ const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const u8) callco
 /// ```c
 /// void vexDisplayStringAt(int32_t xpos, int32_t ypos, const char * format);
 /// ```
-const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayStringAt;
+pub const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayStringAt;
 
 /// # vexDisplayBigString
 ///
@@ -3721,7 +3721,7 @@ const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) c
 /// ```c
 /// void vexDisplayBigString(const int32_t nLineNumber, const char * format);
 /// ```
-const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigString;
+pub const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigString;
 
 /// # vexDisplayBigStringAt
 ///
@@ -3736,7 +3736,7 @@ const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]const u8) cal
 /// ```c
 /// void vexDisplayBigStringAt(int32_t xpos, int32_t ypos, const char * format);
 /// ```
-const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigStringAt;
+pub const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigStringAt;
 
 /// # vexDisplaySmallStringAt
 ///
@@ -3751,7 +3751,7 @@ const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8
 /// ```c
 /// void vexDisplaySmallStringAt(int32_t xpos, int32_t ypos, const char * format);
 /// ```
-const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplaySmallStringAt;
+pub const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplaySmallStringAt;
 
 /// # vexDisplayCenteredString
 ///
@@ -3766,7 +3766,7 @@ const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const 
 /// ```c
 /// void vexDisplayCenteredString(const int32_t nLineNumber, const char * format);
 /// ```
-const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayCenteredString;
+pub const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayCenteredString;
 
 /// # vexDisplayBigCenteredString
 ///
@@ -3781,7 +3781,7 @@ const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8
 /// ```c
 /// void vexDisplayBigCenteredString(const int32_t nLineNumber, const char * format);
 /// ```
-const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigCenteredString;
+pub const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void = display.vexDisplayBigCenteredString;
 
 /// # vexDisplayVPrintf
 ///
@@ -3796,7 +3796,7 @@ const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const
 /// ```c
 /// void vexDisplayVPrintf(int32_t xpos, int32_t ypos, uint32_t bOpaque, const char * format, int args);
 /// ```
-const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVPrintf;
+pub const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVPrintf;
 
 /// # vexDisplayVString
 ///
@@ -3811,7 +3811,7 @@ const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0
 /// ```c
 /// void vexDisplayVString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVString;
+pub const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVString;
 
 /// # vexDisplayVStringAt
 ///
@@ -3826,7 +3826,7 @@ const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: 
 /// ```c
 /// void vexDisplayVStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
 /// ```
-const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVStringAt;
+pub const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVStringAt;
 
 /// # vexDisplayVBigString
 ///
@@ -3841,7 +3841,7 @@ const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,a
 /// ```c
 /// void vexDisplayVBigString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigString;
+pub const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigString;
 
 /// # vexDisplayVBigStringAt
 ///
@@ -3856,7 +3856,7 @@ const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]const u8,arg
 /// ```c
 /// void vexDisplayVBigStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
 /// ```
-const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigStringAt;
+pub const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigStringAt;
 
 /// # vexDisplayVSmallStringAt
 ///
@@ -3871,7 +3871,7 @@ const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u
 /// ```c
 /// void vexDisplayVSmallStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
 /// ```
-const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVSmallStringAt;
+pub const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVSmallStringAt;
 
 /// # vexDisplayVCenteredString
 ///
@@ -3886,7 +3886,7 @@ const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const
 /// ```c
 /// void vexDisplayVCenteredString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVCenteredString;
+pub const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVCenteredString;
 
 /// # vexDisplayVBigCenteredString
 ///
@@ -3901,7 +3901,7 @@ const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u
 /// ```c
 /// void vexDisplayVBigCenteredString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-const vexDisplayVBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigCenteredString;
+pub const vexDisplayVBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void = display.vexDisplayVBigCenteredString;
 
 /// # vexDisplayTextSize
 ///
@@ -3916,7 +3916,7 @@ const vexDisplayVBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]cons
 /// ```c
 /// void vexDisplayTextSize(uint32_t n, uint32_t d);
 /// ```
-const vexDisplayTextSize: *const fn(n: u32,d: u32) callconv(.c) void = display.vexDisplayTextSize;
+pub const vexDisplayTextSize: *const fn(n: u32,d: u32) callconv(.c) void = display.vexDisplayTextSize;
 
 /// # vexDisplayFontNamedSet
 ///
@@ -3931,7 +3931,7 @@ const vexDisplayTextSize: *const fn(n: u32,d: u32) callconv(.c) void = display.v
 /// ```c
 /// void vexDisplayFontNamedSet(const char * pFontName);
 /// ```
-const vexDisplayFontNamedSet: *const fn(pFontName: [*:0]const u8) callconv(.c) void = display.vexDisplayFontNamedSet;
+pub const vexDisplayFontNamedSet: *const fn(pFontName: [*:0]const u8) callconv(.c) void = display.vexDisplayFontNamedSet;
 
 /// # vexDisplayStringWidthGet
 ///
@@ -3946,7 +3946,7 @@ const vexDisplayFontNamedSet: *const fn(pFontName: [*:0]const u8) callconv(.c) v
 /// ```c
 /// int32_t vexDisplayStringWidthGet(const char * pString);
 /// ```
-const vexDisplayStringWidthGet: *const fn(pString: [*:0]const u8) callconv(.c) i32 = display.vexDisplayStringWidthGet;
+pub const vexDisplayStringWidthGet: *const fn(pString: [*:0]const u8) callconv(.c) i32 = display.vexDisplayStringWidthGet;
 
 /// # vexDisplayStringHeightGet
 ///
@@ -3961,7 +3961,7 @@ const vexDisplayStringWidthGet: *const fn(pString: [*:0]const u8) callconv(.c) i
 /// ```c
 /// int32_t vexDisplayStringHeightGet(const char * pString);
 /// ```
-const vexDisplayStringHeightGet: *const fn(pString: [*:0]const u8) callconv(.c) i32 = display.vexDisplayStringHeightGet;
+pub const vexDisplayStringHeightGet: *const fn(pString: [*:0]const u8) callconv(.c) i32 = display.vexDisplayStringHeightGet;
 
 /// # vexDisplayRender
 ///
@@ -3976,7 +3976,7 @@ const vexDisplayStringHeightGet: *const fn(pString: [*:0]const u8) callconv(.c) 
 /// ```c
 /// int vexDisplayRender(int bVsyncWait, int bRunScheduler);
 /// ```
-const vexDisplayRender: *const fn(bVsyncWait: types.int,bRunScheduler: types.int) callconv(.c) types.int = display.vexDisplayRender;
+pub const vexDisplayRender: *const fn(bVsyncWait: types.int,bRunScheduler: types.int) callconv(.c) types.int = display.vexDisplayRender;
 
 /// # vexDisplayDoubleBufferDisable
 ///
@@ -3991,7 +3991,7 @@ const vexDisplayRender: *const fn(bVsyncWait: types.int,bRunScheduler: types.int
 /// ```c
 /// void vexDisplayDoubleBufferDisable();
 /// ```
-const vexDisplayDoubleBufferDisable: *const fn() callconv(.c) void = display.vexDisplayDoubleBufferDisable;
+pub const vexDisplayDoubleBufferDisable: *const fn() callconv(.c) void = display.vexDisplayDoubleBufferDisable;
 
 /// # vexDisplayClipRegionSet
 ///
@@ -4006,7 +4006,7 @@ const vexDisplayDoubleBufferDisable: *const fn() callconv(.c) void = display.vex
 /// ```c
 /// void vexDisplayClipRegionSet(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 /// ```
-const vexDisplayClipRegionSet: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayClipRegionSet;
+pub const vexDisplayClipRegionSet: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayClipRegionSet;
 
 /// # vexDisplayClipRegionClear
 ///
@@ -4021,7 +4021,7 @@ const vexDisplayClipRegionSet: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callco
 /// ```c
 /// void vexDisplayClipRegionClear();
 /// ```
-const vexDisplayClipRegionClear: *const fn() callconv(.c) void = display.vexDisplayClipRegionClear;
+pub const vexDisplayClipRegionClear: *const fn() callconv(.c) void = display.vexDisplayClipRegionClear;
 
 /// # vexImageBmpRead
 ///
@@ -4036,7 +4036,7 @@ const vexDisplayClipRegionClear: *const fn() callconv(.c) void = display.vexDisp
 /// ```c
 /// uint32_t vexImageBmpRead(const uint8_t * ibuf, v5_image * oBuf, uint32_t maxw, uint32_t maxh);
 /// ```
-const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32) callconv(.c) u32 = image.vexImageBmpRead;
+pub const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32) callconv(.c) u32 = image.vexImageBmpRead;
 
 /// # vexImagePngRead
 ///
@@ -4051,7 +4051,7 @@ const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32
 /// ```c
 /// uint32_t vexImagePngRead(const uint8_t * ibuf, v5_image * oBuf, uint32_t maxw, uint32_t maxh, uint32_t ibuflen);
 /// ```
-const vexImagePngRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32,ibuflen: u32) callconv(.c) u32 = image.vexImagePngRead;
+pub const vexImagePngRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32,ibuflen: u32) callconv(.c) u32 = image.vexImagePngRead;
 
 /// # vexScratchMemoryPtr
 ///
@@ -4066,7 +4066,7 @@ const vexImagePngRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32
 /// ```c
 /// int32_t vexScratchMemoryPtr(void ** ptr);
 /// ```
-const vexScratchMemoryPtr: *const fn(ptr: [*c]void) callconv(.c) i32 = memory.vexScratchMemoryPtr;
+pub const vexScratchMemoryPtr: *const fn(ptr: [*c]void) callconv(.c) i32 = memory.vexScratchMemoryPtr;
 
 /// # vexScratchMemoryLock
 ///
@@ -4081,7 +4081,7 @@ const vexScratchMemoryPtr: *const fn(ptr: [*c]void) callconv(.c) i32 = memory.ve
 /// ```c
 /// int vexScratchMemoryLock();
 /// ```
-const vexScratchMemoryLock: *const fn() callconv(.c) types.int = memory.vexScratchMemoryLock;
+pub const vexScratchMemoryLock: *const fn() callconv(.c) types.int = memory.vexScratchMemoryLock;
 
 /// # vexScratchMemoryUnlock
 ///
@@ -4096,7 +4096,7 @@ const vexScratchMemoryLock: *const fn() callconv(.c) types.int = memory.vexScrat
 /// ```c
 /// void vexScratchMemoryUnlock();
 /// ```
-const vexScratchMemoryUnlock: *const fn() callconv(.c) void = memory.vexScratchMemoryUnlock;
+pub const vexScratchMemoryUnlock: *const fn() callconv(.c) void = memory.vexScratchMemoryUnlock;
 
 /// # vexFileMountSD
 ///
@@ -4111,7 +4111,7 @@ const vexScratchMemoryUnlock: *const fn() callconv(.c) void = memory.vexScratchM
 /// ```c
 /// FRESULT vexFileMountSD();
 /// ```
-const vexFileMountSD: *const fn() callconv(.c) types.FRESULT = file.vexFileMountSD;
+pub const vexFileMountSD: *const fn() callconv(.c) types.FRESULT = file.vexFileMountSD;
 
 /// # vexFileDirectoryGet
 ///
@@ -4126,7 +4126,7 @@ const vexFileMountSD: *const fn() callconv(.c) types.FRESULT = file.vexFileMount
 /// ```c
 /// FRESULT vexFileDirectoryGet(const char * path, char * buffer, uint32_t len);
 /// ```
-const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]types.char,len: u32) callconv(.c) types.FRESULT = file.vexFileDirectoryGet;
+pub const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]types.char,len: u32) callconv(.c) types.FRESULT = file.vexFileDirectoryGet;
 
 /// # vexFileOpen
 ///
@@ -4141,7 +4141,7 @@ const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]types.char,
 /// ```c
 /// FIL * vexFileOpen(const char * filename, const char * mode);
 /// ```
-const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpen;
+pub const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpen;
 
 /// # vexFileOpenWrite
 ///
@@ -4156,7 +4156,7 @@ const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const u8) callco
 /// ```c
 /// FIL * vexFileOpenWrite(const char * filename);
 /// ```
-const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpenWrite;
+pub const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpenWrite;
 
 /// # vexFileOpenCreate
 ///
@@ -4171,7 +4171,7 @@ const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.c) [*c]type
 /// ```c
 /// FIL * vexFileOpenCreate(const char * filename);
 /// ```
-const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpenCreate;
+pub const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL = file.vexFileOpenCreate;
 
 /// # vexFileClose
 ///
@@ -4186,7 +4186,7 @@ const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(.c) [*c]typ
 /// ```c
 /// void vexFileClose(FIL * fdp);
 /// ```
-const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFileClose;
+pub const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFileClose;
 
 /// # vexFileRead
 ///
@@ -4201,7 +4201,7 @@ const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFi
 /// ```c
 /// int32_t vexFileRead(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
 /// ```
-const vexFileRead: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileRead;
+pub const vexFileRead: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileRead;
 
 /// # vexFileWrite
 ///
@@ -4216,7 +4216,7 @@ const vexFileRead: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]
 /// ```c
 /// int32_t vexFileWrite(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
 /// ```
-const vexFileWrite: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileWrite;
+pub const vexFileWrite: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileWrite;
 
 /// # vexFileSize
 ///
@@ -4231,7 +4231,7 @@ const vexFileWrite: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c
 /// ```c
 /// int32_t vexFileSize(FIL * fdp);
 /// ```
-const vexFileSize: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileSize;
+pub const vexFileSize: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileSize;
 
 /// # vexFileSeek
 ///
@@ -4246,7 +4246,7 @@ const vexFileSize: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFile
 /// ```c
 /// FRESULT vexFileSeek(FIL * fdp, uint32_t offset, int32_t whence);
 /// ```
-const vexFileSeek: *const fn(fdp: [*c]types.FIL,offset: u32,whence: i32) callconv(.c) types.FRESULT = file.vexFileSeek;
+pub const vexFileSeek: *const fn(fdp: [*c]types.FIL,offset: u32,whence: i32) callconv(.c) types.FRESULT = file.vexFileSeek;
 
 /// # vexFileDriveStatus
 ///
@@ -4261,7 +4261,7 @@ const vexFileSeek: *const fn(fdp: [*c]types.FIL,offset: u32,whence: i32) callcon
 /// ```c
 /// int vexFileDriveStatus(uint32_t drive);
 /// ```
-const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) types.int = file.vexFileDriveStatus;
+pub const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) types.int = file.vexFileDriveStatus;
 
 /// # vexFileTell
 ///
@@ -4276,7 +4276,7 @@ const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) types.int = file.ve
 /// ```c
 /// int32_t vexFileTell(FIL * fdp);
 /// ```
-const vexFileTell: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileTell;
+pub const vexFileTell: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFileTell;
 
 /// # vexFileSync
 ///
@@ -4291,7 +4291,7 @@ const vexFileTell: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vexFile
 /// ```c
 /// void vexFileSync(FIL * fdp);
 /// ```
-const vexFileSync: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFileSync;
+pub const vexFileSync: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFileSync;
 
 /// # vexFileStatus
 ///
@@ -4306,7 +4306,7 @@ const vexFileSync: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.vexFil
 /// ```c
 /// uint32_t vexFileStatus(const char * filename);
 /// ```
-const vexFileStatus: *const fn(filename: [*:0]const u8) callconv(.c) u32 = file.vexFileStatus;
+pub const vexFileStatus: *const fn(filename: [*:0]const u8) callconv(.c) u32 = file.vexFileStatus;
 
 /// # vexSerialWriteChar
 ///
@@ -4321,7 +4321,7 @@ const vexFileStatus: *const fn(filename: [*:0]const u8) callconv(.c) u32 = file.
 /// ```c
 /// int32_t vexSerialWriteChar(uint32_t channel, uint8_t c);
 /// ```
-const vexSerialWriteChar: *const fn(channel: u32,c: u8) callconv(.c) i32 = serial.vexSerialWriteChar;
+pub const vexSerialWriteChar: *const fn(channel: u32,c: u8) callconv(.c) i32 = serial.vexSerialWriteChar;
 
 /// # vexSerialWriteBuffer
 ///
@@ -4336,7 +4336,7 @@ const vexSerialWriteChar: *const fn(channel: u32,c: u8) callconv(.c) i32 = seria
 /// ```c
 /// int32_t vexSerialWriteBuffer(uint32_t channel, uint8_t * data, uint32_t data_len);
 /// ```
-const vexSerialWriteBuffer: *const fn(channel: u32,data: [*c]u8,data_len: u32) callconv(.c) i32 = serial.vexSerialWriteBuffer;
+pub const vexSerialWriteBuffer: *const fn(channel: u32,data: [*c]u8,data_len: u32) callconv(.c) i32 = serial.vexSerialWriteBuffer;
 
 /// # vexSerialReadChar
 ///
@@ -4351,7 +4351,7 @@ const vexSerialWriteBuffer: *const fn(channel: u32,data: [*c]u8,data_len: u32) c
 /// ```c
 /// int32_t vexSerialReadChar(uint32_t channel);
 /// ```
-const vexSerialReadChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialReadChar;
+pub const vexSerialReadChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialReadChar;
 
 /// # vexSerialPeekChar
 ///
@@ -4366,7 +4366,7 @@ const vexSerialReadChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSe
 /// ```c
 /// int32_t vexSerialPeekChar(uint32_t channel);
 /// ```
-const vexSerialPeekChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialPeekChar;
+pub const vexSerialPeekChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialPeekChar;
 
 /// # vexSerialWriteFree
 ///
@@ -4381,7 +4381,7 @@ const vexSerialPeekChar: *const fn(channel: u32) callconv(.c) i32 = serial.vexSe
 /// ```c
 /// int32_t vexSerialWriteFree(uint32_t channel);
 /// ```
-const vexSerialWriteFree: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialWriteFree;
+pub const vexSerialWriteFree: *const fn(channel: u32) callconv(.c) i32 = serial.vexSerialWriteFree;
 
 /// # vexSystemTimerStop
 ///
@@ -4396,7 +4396,7 @@ const vexSerialWriteFree: *const fn(channel: u32) callconv(.c) i32 = serial.vexS
 /// ```c
 /// void vexSystemTimerStop();
 /// ```
-const vexSystemTimerStop: *const fn() callconv(.c) void = system.vexSystemTimerStop;
+pub const vexSystemTimerStop: *const fn() callconv(.c) void = system.vexSystemTimerStop;
 
 /// # vexSystemTimerClearInterrupt
 ///
@@ -4411,7 +4411,7 @@ const vexSystemTimerStop: *const fn() callconv(.c) void = system.vexSystemTimerS
 /// ```c
 /// void vexSystemTimerClearInterrupt();
 /// ```
-const vexSystemTimerClearInterrupt: *const fn() callconv(.c) void = system.vexSystemTimerClearInterrupt;
+pub const vexSystemTimerClearInterrupt: *const fn() callconv(.c) void = system.vexSystemTimerClearInterrupt;
 
 /// # vexSystemTimerReinitForRtos
 ///
@@ -4426,7 +4426,7 @@ const vexSystemTimerClearInterrupt: *const fn() callconv(.c) void = system.vexSy
 /// ```c
 /// int32_t vexSystemTimerReinitForRtos(uint32_t priority, void (*)(void *) handler);
 /// ```
-const vexSystemTimerReinitForRtos: *const fn(priority: u32,handler: [*c]fn() callconv(.c) void) callconv(.c) i32 = system.vexSystemTimerReinitForRtos;
+pub const vexSystemTimerReinitForRtos: *const fn(priority: u32,handler: [*c]fn() callconv(.c) void) callconv(.c) i32 = system.vexSystemTimerReinitForRtos;
 
 /// # vexSystemApplicationIRQHandler
 ///
@@ -4441,7 +4441,7 @@ const vexSystemTimerReinitForRtos: *const fn(priority: u32,handler: [*c]fn() cal
 /// ```c
 /// void vexSystemApplicationIRQHandler(uint32_t ulICCIAR);
 /// ```
-const vexSystemApplicationIRQHandler: *const fn(ulICCIAR: u32) callconv(.c) void = system.vexSystemApplicationIRQHandler;
+pub const vexSystemApplicationIRQHandler: *const fn(ulICCIAR: u32) callconv(.c) void = system.vexSystemApplicationIRQHandler;
 
 /// # vexSystemWatchdogReinitRtos
 ///
@@ -4456,7 +4456,7 @@ const vexSystemApplicationIRQHandler: *const fn(ulICCIAR: u32) callconv(.c) void
 /// ```c
 /// int32_t vexSystemWatchdogReinitRtos();
 /// ```
-const vexSystemWatchdogReinitRtos: *const fn() callconv(.c) i32 = system.vexSystemWatchdogReinitRtos;
+pub const vexSystemWatchdogReinitRtos: *const fn() callconv(.c) i32 = system.vexSystemWatchdogReinitRtos;
 
 /// # vexSystemWatchdogGet
 ///
@@ -4471,7 +4471,7 @@ const vexSystemWatchdogReinitRtos: *const fn() callconv(.c) i32 = system.vexSyst
 /// ```c
 /// uint32_t vexSystemWatchdogGet();
 /// ```
-const vexSystemWatchdogGet: *const fn() callconv(.c) u32 = system.vexSystemWatchdogGet;
+pub const vexSystemWatchdogGet: *const fn() callconv(.c) u32 = system.vexSystemWatchdogGet;
 
 /// # vexSystemBoot
 ///
@@ -4486,7 +4486,7 @@ const vexSystemWatchdogGet: *const fn() callconv(.c) u32 = system.vexSystemWatch
 /// ```c
 /// void vexSystemBoot();
 /// ```
-const vexSystemBoot: *const fn() callconv(.c) void = system.vexSystemBoot;
+pub const vexSystemBoot: *const fn() callconv(.c) void = system.vexSystemBoot;
 
 /// # vexSystemUndefinedException
 ///
@@ -4501,7 +4501,7 @@ const vexSystemBoot: *const fn() callconv(.c) void = system.vexSystemBoot;
 /// ```c
 /// void vexSystemUndefinedException();
 /// ```
-const vexSystemUndefinedException: *const fn() callconv(.c) void = system.vexSystemUndefinedException;
+pub const vexSystemUndefinedException: *const fn() callconv(.c) void = system.vexSystemUndefinedException;
 
 /// # vexSystemFIQInterrupt
 ///
@@ -4516,7 +4516,7 @@ const vexSystemUndefinedException: *const fn() callconv(.c) void = system.vexSys
 /// ```c
 /// void vexSystemFIQInterrupt();
 /// ```
-const vexSystemFIQInterrupt: *const fn() callconv(.c) void = system.vexSystemFIQInterrupt;
+pub const vexSystemFIQInterrupt: *const fn() callconv(.c) void = system.vexSystemFIQInterrupt;
 
 /// # vexSystemIQRQnterrupt
 ///
@@ -4531,7 +4531,7 @@ const vexSystemFIQInterrupt: *const fn() callconv(.c) void = system.vexSystemFIQ
 /// ```c
 /// void vexSystemIQRQnterrupt();
 /// ```
-const vexSystemIQRQnterrupt: *const fn() callconv(.c) void = system.vexSystemIQRQnterrupt;
+pub const vexSystemIQRQnterrupt: *const fn() callconv(.c) void = system.vexSystemIQRQnterrupt;
 
 /// # vexSystemSWInterrupt
 ///
@@ -4546,7 +4546,7 @@ const vexSystemIQRQnterrupt: *const fn() callconv(.c) void = system.vexSystemIQR
 /// ```c
 /// void vexSystemSWInterrupt();
 /// ```
-const vexSystemSWInterrupt: *const fn() callconv(.c) void = system.vexSystemSWInterrupt;
+pub const vexSystemSWInterrupt: *const fn() callconv(.c) void = system.vexSystemSWInterrupt;
 
 /// # vexSystemDataAbortInterrupt
 ///
@@ -4561,7 +4561,7 @@ const vexSystemSWInterrupt: *const fn() callconv(.c) void = system.vexSystemSWIn
 /// ```c
 /// void vexSystemDataAbortInterrupt();
 /// ```
-const vexSystemDataAbortInterrupt: *const fn() callconv(.c) void = system.vexSystemDataAbortInterrupt;
+pub const vexSystemDataAbortInterrupt: *const fn() callconv(.c) void = system.vexSystemDataAbortInterrupt;
 
 /// # vexSystemPrefetchAbortInterrupt
 ///
@@ -4576,7 +4576,7 @@ const vexSystemDataAbortInterrupt: *const fn() callconv(.c) void = system.vexSys
 /// ```c
 /// void vexSystemPrefetchAbortInterrupt();
 /// ```
-const vexSystemPrefetchAbortInterrupt: *const fn() callconv(.c) void = system.vexSystemPrefetchAbortInterrupt;
+pub const vexSystemPrefetchAbortInterrupt: *const fn() callconv(.c) void = system.vexSystemPrefetchAbortInterrupt;
 
 /// # vexTouchUserCallbackSet
 ///
@@ -4591,7 +4591,7 @@ const vexSystemPrefetchAbortInterrupt: *const fn() callconv(.c) void = system.ve
 /// ```c
 /// void vexTouchUserCallbackSet(void (*)(V5_TouchEvent, int32_t, int32_t) callback);
 /// ```
-const vexTouchUserCallbackSet: *const fn(callback: [*c]fn(types.V5_TouchEvent, i32, i32) callconv(.c) void) callconv(.c) void = touch.vexTouchUserCallbackSet;
+pub const vexTouchUserCallbackSet: *const fn(callback: [*c]fn(types.V5_TouchEvent, i32, i32) callconv(.c) void) callconv(.c) void = touch.vexTouchUserCallbackSet;
 
 /// # vexTouchDataGet
 ///
@@ -4606,7 +4606,7 @@ const vexTouchUserCallbackSet: *const fn(callback: [*c]fn(types.V5_TouchEvent, i
 /// ```c
 /// int vexTouchDataGet(V5_TouchStatus * status);
 /// ```
-const vexTouchDataGet: *const fn(status: [*c]types.V5_TouchStatus) callconv(.c) types.int = touch.vexTouchDataGet;
+pub const vexTouchDataGet: *const fn(status: [*c]types.V5_TouchStatus) callconv(.c) types.int = touch.vexTouchDataGet;
 
 /// # vexStdlibVersion
 ///
@@ -4621,7 +4621,7 @@ const vexTouchDataGet: *const fn(status: [*c]types.V5_TouchStatus) callconv(.c) 
 /// ```c
 /// uint32_t vexStdlibVersion();
 /// ```
-const vexStdlibVersion: *const fn() callconv(.c) u32 = version.vexStdlibVersion;
+pub const vexStdlibVersion: *const fn() callconv(.c) u32 = version.vexStdlibVersion;
 
 /// # vexSdkVersion
 ///
@@ -4636,7 +4636,7 @@ const vexStdlibVersion: *const fn() callconv(.c) u32 = version.vexStdlibVersion;
 /// ```c
 /// uint32_t vexSdkVersion();
 /// ```
-const vexSdkVersion: *const fn() callconv(.c) u32 = version.vexSdkVersion;
+pub const vexSdkVersion: *const fn() callconv(.c) u32 = version.vexSdkVersion;
 
 /// # vexStdlibVersionLinked
 ///
@@ -4651,7 +4651,7 @@ const vexSdkVersion: *const fn() callconv(.c) u32 = version.vexSdkVersion;
 /// ```c
 /// uint32_t vexStdlibVersionLinked();
 /// ```
-const vexStdlibVersionLinked: *const fn() callconv(.c) u32 = version.vexStdlibVersionLinked;
+pub const vexStdlibVersionLinked: *const fn() callconv(.c) u32 = version.vexStdlibVersionLinked;
 
 /// # vexStdlibVersionVerify
 ///
@@ -4666,7 +4666,7 @@ const vexStdlibVersionLinked: *const fn() callconv(.c) u32 = version.vexStdlibVe
 /// ```c
 /// int vexStdlibVersionVerify();
 /// ```
-const vexStdlibVersionVerify: *const fn() callconv(.c) types.int = version.vexStdlibVersionVerify;
+pub const vexStdlibVersionVerify: *const fn() callconv(.c) types.int = version.vexStdlibVersionVerify;
 
 /// # vexCompetitionStatus
 ///
@@ -4681,7 +4681,7 @@ const vexStdlibVersionVerify: *const fn() callconv(.c) types.int = version.vexSt
 /// ```c
 /// uint32_t vexCompetitionStatus();
 /// ```
-const vexCompetitionStatus: *const fn() callconv(.c) u32 = competition.vexCompetitionStatus;
+pub const vexCompetitionStatus: *const fn() callconv(.c) u32 = competition.vexCompetitionStatus;
 
 /// # vexCompetitionControl
 ///
@@ -4696,7 +4696,7 @@ const vexCompetitionStatus: *const fn() callconv(.c) u32 = competition.vexCompet
 /// ```c
 /// void vexCompetitionControl(uint32_t data);
 /// ```
-const vexCompetitionControl: *const fn(data: u32) callconv(.c) void = competition.vexCompetitionControl;
+pub const vexCompetitionControl: *const fn(data: u32) callconv(.c) void = competition.vexCompetitionControl;
 
 /// # vexBatteryVoltageGet
 ///
@@ -4711,7 +4711,7 @@ const vexCompetitionControl: *const fn(data: u32) callconv(.c) void = competitio
 /// ```c
 /// int32_t vexBatteryVoltageGet();
 /// ```
-const vexBatteryVoltageGet: *const fn() callconv(.c) i32 = battery.vexBatteryVoltageGet;
+pub const vexBatteryVoltageGet: *const fn() callconv(.c) i32 = battery.vexBatteryVoltageGet;
 
 /// # vexBatteryCurrentGet
 ///
@@ -4726,7 +4726,7 @@ const vexBatteryVoltageGet: *const fn() callconv(.c) i32 = battery.vexBatteryVol
 /// ```c
 /// int32_t vexBatteryCurrentGet();
 /// ```
-const vexBatteryCurrentGet: *const fn() callconv(.c) i32 = battery.vexBatteryCurrentGet;
+pub const vexBatteryCurrentGet: *const fn() callconv(.c) i32 = battery.vexBatteryCurrentGet;
 
 /// # vexBatteryTemperatureGet
 ///
@@ -4741,7 +4741,7 @@ const vexBatteryCurrentGet: *const fn() callconv(.c) i32 = battery.vexBatteryCur
 /// ```c
 /// double vexBatteryTemperatureGet();
 /// ```
-const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double = battery.vexBatteryTemperatureGet;
+pub const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double = battery.vexBatteryTemperatureGet;
 
 /// # vexBatteryCapacityGet
 ///
@@ -4756,7 +4756,7 @@ const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double = battery.
 /// ```c
 /// double vexBatteryCapacityGet();
 /// ```
-const vexBatteryCapacityGet: *const fn() callconv(.c) types.double = battery.vexBatteryCapacityGet;
+pub const vexBatteryCapacityGet: *const fn() callconv(.c) types.double = battery.vexBatteryCapacityGet;
 
 /// # vexDisplayOffscreenBufferGet
 ///
@@ -4771,7 +4771,7 @@ const vexBatteryCapacityGet: *const fn() callconv(.c) types.double = battery.vex
 /// ```c
 /// uint32_t * vexDisplayOffscreenBufferGet(uint32_t width, uint32_t height, uint32_t pixelSize);
 /// ```
-const vexDisplayOffscreenBufferGet: *const fn(width: u32,height: u32,pixelSize: u32) callconv(.c) [*c]u32 = display.vexDisplayOffscreenBufferGet;
+pub const vexDisplayOffscreenBufferGet: *const fn(width: u32,height: u32,pixelSize: u32) callconv(.c) [*c]u32 = display.vexDisplayOffscreenBufferGet;
 
 /// # vexDisplayOffscreenBufferDestroy
 ///
@@ -4786,7 +4786,7 @@ const vexDisplayOffscreenBufferGet: *const fn(width: u32,height: u32,pixelSize: 
 /// ```c
 /// void vexDisplayOffscreenBufferDestroy(uint32_t * buffer);
 /// ```
-const vexDisplayOffscreenBufferDestroy: *const fn(buffer: [*c]u32) callconv(.c) void = display.vexDisplayOffscreenBufferDestroy;
+pub const vexDisplayOffscreenBufferDestroy: *const fn(buffer: [*c]u32) callconv(.c) void = display.vexDisplayOffscreenBufferDestroy;
 
 /// # vexDisplayOffscreenBufferPixelSet
 ///
@@ -4801,7 +4801,7 @@ const vexDisplayOffscreenBufferDestroy: *const fn(buffer: [*c]u32) callconv(.c) 
 /// ```c
 /// void vexDisplayOffscreenBufferPixelSet(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t color);
 /// ```
-const vexDisplayOffscreenBufferPixelSet: *const fn(buffer: [*c]u32,x: u32,y: u32,color: u32) callconv(.c) void = display.vexDisplayOffscreenBufferPixelSet;
+pub const vexDisplayOffscreenBufferPixelSet: *const fn(buffer: [*c]u32,x: u32,y: u32,color: u32) callconv(.c) void = display.vexDisplayOffscreenBufferPixelSet;
 
 /// # vexDisplayOffscreenBufferPixelGet
 ///
@@ -4816,7 +4816,7 @@ const vexDisplayOffscreenBufferPixelSet: *const fn(buffer: [*c]u32,x: u32,y: u32
 /// ```c
 /// uint32_t vexDisplayOffscreenBufferPixelGet(uint32_t * buffer, uint32_t x, uint32_t y);
 /// ```
-const vexDisplayOffscreenBufferPixelGet: *const fn(buffer: [*c]u32,x: u32,y: u32) callconv(.c) u32 = display.vexDisplayOffscreenBufferPixelGet;
+pub const vexDisplayOffscreenBufferPixelGet: *const fn(buffer: [*c]u32,x: u32,y: u32) callconv(.c) u32 = display.vexDisplayOffscreenBufferPixelGet;
 
 /// # vexDisplayOffscreenBufferRectDraw
 ///
@@ -4831,7 +4831,7 @@ const vexDisplayOffscreenBufferPixelGet: *const fn(buffer: [*c]u32,x: u32,y: u32
 /// ```c
 /// void vexDisplayOffscreenBufferRectDraw(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
 /// ```
-const vexDisplayOffscreenBufferRectDraw: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectDraw;
+pub const vexDisplayOffscreenBufferRectDraw: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectDraw;
 
 /// # vexDisplayOffscreenBufferRectFill
 ///
@@ -4846,7 +4846,7 @@ const vexDisplayOffscreenBufferRectDraw: *const fn(buffer: [*c]u32,x: u32,y: u32
 /// ```c
 /// void vexDisplayOffscreenBufferRectFill(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
 /// ```
-const vexDisplayOffscreenBufferRectFill: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectFill;
+pub const vexDisplayOffscreenBufferRectFill: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectFill;
 
 /// # vexDisplayOffscreenBufferScrollH
 ///
@@ -4861,7 +4861,7 @@ const vexDisplayOffscreenBufferRectFill: *const fn(buffer: [*c]u32,x: u32,y: u32
 /// ```c
 /// void vexDisplayOffscreenBufferScrollH(uint32_t * buffer, uint32_t pixels);
 /// ```
-const vexDisplayOffscreenBufferScrollH: *const fn(buffer: [*c]u32,pixels: u32) callconv(.c) void = display.vexDisplayOffscreenBufferScrollH;
+pub const vexDisplayOffscreenBufferScrollH: *const fn(buffer: [*c]u32,pixels: u32) callconv(.c) void = display.vexDisplayOffscreenBufferScrollH;
 
 /// # vexDisplayOffscreenBufferBlit
 ///
@@ -4876,7 +4876,7 @@ const vexDisplayOffscreenBufferScrollH: *const fn(buffer: [*c]u32,pixels: u32) c
 /// ```c
 /// void vexDisplayOffscreenBufferBlit(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
 /// ```
-const vexDisplayOffscreenBufferBlit: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferBlit;
+pub const vexDisplayOffscreenBufferBlit: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferBlit;
 
 /// # vexMain
 ///
@@ -4891,7 +4891,7 @@ const vexDisplayOffscreenBufferBlit: *const fn(buffer: [*c]u32,x: u32,y: u32,wid
 /// ```c
 /// void vexMain();
 /// ```
-const vexMain: *const fn() callconv(.c) void = core.vexMain;
+pub const vexMain: *const fn() callconv(.c) void = core.vexMain;
 
 /// # vexStartup
 ///
@@ -4906,7 +4906,7 @@ const vexMain: *const fn() callconv(.c) void = core.vexMain;
 /// ```c
 /// void vexStartup();
 /// ```
-const vexStartup: *const fn() callconv(.c) void = core.vexStartup;
+pub const vexStartup: *const fn() callconv(.c) void = core.vexStartup;
 
 /// # vexSystemVersion
 ///
@@ -4921,7 +4921,7 @@ const vexStartup: *const fn() callconv(.c) void = core.vexStartup;
 /// ```c
 /// uint32_t vexSystemVersion();
 /// ```
-const vexSystemVersion: *const fn() callconv(.c) u32 = system.vexSystemVersion;
+pub const vexSystemVersion: *const fn() callconv(.c) u32 = system.vexSystemVersion;
 
 /// # vexVexosVersion
 ///
@@ -4936,7 +4936,7 @@ const vexSystemVersion: *const fn() callconv(.c) u32 = system.vexSystemVersion;
 /// ```c
 /// uint32_t vexVexosVersion();
 /// ```
-const vexVexosVersion: *const fn() callconv(.c) u32 = vexos.vexVexosVersion;
+pub const vexVexosVersion: *const fn() callconv(.c) u32 = vexos.vexVexosVersion;
 
 /// # vexCpu0Version
 ///
@@ -4951,4 +4951,4 @@ const vexVexosVersion: *const fn() callconv(.c) u32 = vexos.vexVexosVersion;
 /// ```c
 /// uint32_t vexCpu0Version();
 /// ```
-const vexCpu0Version: *const fn() callconv(.c) u32 = version.vexCpu0Version;
+pub const vexCpu0Version: *const fn() callconv(.c) u32 = version.vexCpu0Version;
