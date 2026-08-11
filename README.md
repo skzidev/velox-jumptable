@@ -50,6 +50,14 @@ Finally, generate Zig bindings by running the code generator:
 python ./codegen.py
 ```
 
+Then verify the regenerated bindings actually compile:
+
+```bash
+zig build compile
+```
+
+This type-checks every generated binding (the default `zig build` and the test step do this as well), so a bad signature or stale data store is caught immediately instead of at runtime.
+
 > [!NOTE]
 > BOOT.bin is a proprietary Xilinx boot image. It should be opened using [bootgen](https://github.com/Xilinx/bootgen), AMD's official tool, or one of the open-source reimplementations.
 

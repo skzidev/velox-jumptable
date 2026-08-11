@@ -36,6 +36,23 @@ pub fn build(b: *std.Build) void {
         // which requires us to specify a target.
         .target = target,
     });
+
+    // Compile the bindings into a static library. This is the compilation step:
+    // it type-checks every generated binding so regenerated code is verified to
+    // actually build. The library itself is not useful to link against (the
+    // symbols resolve at runtime through the jumptable), but compiling it is a
+    // cheap, effective check.
+    const lib = b.addLibrary(.{
+        .name = "velox_jumptable",
+        .linkage = .static,
+        .root_module = mod,
+    });
+    b.installArtifact(lib);
+
+    // Explicit step so `zig build compile` can be run on its own.
+    const compile_step = b.step("compile", "Compile the bindings to verify they build");
+    compile_step.dependOn(&lib.step);
+
     // Creates an executable that will run `test` blocks from the provided module.
     // Here `mod` needs to define a target, which is why earlier we made sure to
     // set the releative field.

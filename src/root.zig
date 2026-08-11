@@ -4773,13 +4773,43 @@ pub const vexBatteryCapacityGet: *const fn() callconv(.c) types.double = battery
 /// ```
 pub const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,label: [*:0]const u8) callconv(.c) u32 = task.vexTaskAdd;
 
+/// # vexTaskAddSimple
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0030 (_0x037fc030_)
+///
+/// _defined in task.zig. from private_signatures.h:18._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddSimple%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskAddSimple(void * callback, int interval, char * label);
+/// ```
+pub const vexTaskAddSimple: *const fn(callback: [*c]void,interval: types.int,label: [*c]types.char) callconv(.c) void = task.vexTaskAddSimple;
+
+/// # vexTaskAddSimpleWithPriority
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0034 (_0x037fc034_)
+///
+/// _defined in task.zig. from private_signatures.h:19._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddSimpleWithPriority%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskAddSimpleWithPriority(void * callback, int interval, char * label, uint16_t priority);
+/// ```
+pub const vexTaskAddSimpleWithPriority: *const fn(callback: [*c]void,interval: types.int,label: [*c]types.char,priority: u16) callconv(.c) void = task.vexTaskAddSimpleWithPriority;
+
 /// # vexTaskAddWithArg
 ///
 /// **Private API**
 ///
 /// **Jumptable Offset:** 0x0f50 (_0x037fcf50_)
 ///
-/// _defined in task.zig. from private_signatures.h:33._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithArg%28&type=code)
+/// _defined in task.zig. from private_signatures.h:32._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithArg%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4794,7 +4824,7 @@ pub const vexTaskAddWithArg: *const fn(callback: [*c]fn() callconv(.c) i32,inter
 ///
 /// **Jumptable Offset:** 0x002c (_0x037fc02c_)
 ///
-/// _defined in task.zig. from private_signatures.h:46._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithPriority%28&type=code)
+/// _defined in task.zig. from private_signatures.h:45._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithPriority%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4809,7 +4839,7 @@ pub const vexTaskAddWithPriority: *const fn(callback: [*c]fn() callconv(.c) i32,
 ///
 /// **Jumptable Offset:** 0x0f54 (_0x037fcf54_)
 ///
-/// _defined in task.zig. from private_signatures.h:60._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithPriorityWithArg%28&type=code)
+/// _defined in task.zig. from private_signatures.h:59._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithPriorityWithArg%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4824,7 +4854,7 @@ pub const vexTaskAddWithPriorityWithArg: *const fn(callback: [*c]fn() callconv(.
 ///
 /// **Jumptable Offset:** 0x0064 (_0x037fc064_)
 ///
-/// _defined in task.zig. from private_signatures.h:70._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskCheckTimeslice%28&type=code)
+/// _defined in task.zig. from private_signatures.h:69._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskCheckTimeslice%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4833,13 +4863,43 @@ pub const vexTaskAddWithPriorityWithArg: *const fn(callback: [*c]fn() callconv(.
 /// ```
 pub const vexTaskCheckTimeslice: *const fn() callconv(.c) void = task.vexTaskCheckTimeslice;
 
+/// # vexTaskFree
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0158 (_0x037fc158_)
+///
+/// _defined in task.zig. from private_signatures.h:78._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskFree%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskFree(void *);
+/// ```
+pub const vexTaskFree: *const fn(_: [*c]void) callconv(.c) u32 = task.vexTaskFree;
+
+/// # vexTaskGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f7c (_0x037fcf7c_)
+///
+/// _defined in task.zig. from private_signatures.h:79._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint8_t vexTaskGet(void *);
+/// ```
+pub const vexTaskGet: *const fn(_: [*c]void) callconv(.c) u8 = task.vexTaskGet;
+
 /// # vexTaskGetCallbackAndId
 ///
 /// **Private API**
 ///
 /// **Jumptable Offset:** 0x0084 (_0x037fc084_)
 ///
-/// _defined in task.zig. from private_signatures.h:89._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetCallbackAndId%28&type=code)
+/// _defined in task.zig. from private_signatures.h:87._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetCallbackAndId%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4854,7 +4914,7 @@ pub const vexTaskGetCallbackAndId: *const fn(index: u32,callback_id: [*c]i32) ca
 ///
 /// **Jumptable Offset:** 0x0068 (_0x037fc068_)
 ///
-/// _defined in task.zig. from private_signatures.h:94._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetIndex%28&type=code)
+/// _defined in task.zig. from private_signatures.h:92._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetIndex%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4869,7 +4929,7 @@ pub const vexTaskGetIndex: *const fn() callconv(.c) u32 = task.vexTaskGetIndex;
 ///
 /// **Jumptable Offset:** 0x0090 (_0x037fc090_)
 ///
-/// _defined in task.zig. from private_signatures.h:101._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetTaskIndex%28&type=code)
+/// _defined in task.zig. from private_signatures.h:99._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetTaskIndex%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4884,7 +4944,7 @@ pub const vexTaskGetTaskIndex: *const fn(task: [*c]void) callconv(.c) u32 = task
 ///
 /// **Jumptable Offset:** 0x0140 (_0x037fc140_)
 ///
-/// _defined in task.zig. from private_signatures.h:110._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskHardwareConcurrency%28&type=code)
+/// _defined in task.zig. from private_signatures.h:108._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskHardwareConcurrency%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4893,13 +4953,28 @@ pub const vexTaskGetTaskIndex: *const fn(task: [*c]void) callconv(.c) u32 = task
 /// ```
 pub const vexTaskHardwareConcurrency: *const fn() callconv(.c) u32 = task.vexTaskHardwareConcurrency;
 
+/// # vexTaskPriorityGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0054 (_0x037fc054_)
+///
+/// _defined in task.zig. from private_signatures.h:110._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPriorityGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexTaskPriorityGet(void * callback);
+/// ```
+pub const vexTaskPriorityGet: *const fn(callback: [*c]void) callconv(.c) i32 = task.vexTaskPriorityGet;
+
 /// # vexTaskPriorityGetWithId
 ///
 /// **Private API**
 ///
 /// **Jumptable Offset:** 0x0f64 (_0x037fcf64_)
 ///
-/// _defined in task.zig. from private_signatures.h:120._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPriorityGetWithId%28&type=code)
+/// _defined in task.zig. from private_signatures.h:118._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPriorityGetWithId%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4908,13 +4983,28 @@ pub const vexTaskHardwareConcurrency: *const fn() callconv(.c) u32 = task.vexTas
 /// ```
 pub const vexTaskPriorityGetWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c) i32 = task.vexTaskPriorityGetWithId;
 
+/// # vexTaskPrioritySet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0058 (_0x037fc058_)
+///
+/// _defined in task.zig. from private_signatures.h:120._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPrioritySet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskPrioritySet(void * callback, int32_t);
+/// ```
+pub const vexTaskPrioritySet: *const fn(callback: [*c]void,_: i32) callconv(.c) void = task.vexTaskPrioritySet;
+
 /// # vexTaskPrioritySetWithId
 ///
 /// **Private API**
 ///
 /// **Jumptable Offset:** 0x0f68 (_0x037fcf68_)
 ///
-/// _defined in task.zig. from private_signatures.h:130._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPrioritySetWithId%28&type=code)
+/// _defined in task.zig. from private_signatures.h:128._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPrioritySetWithId%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4929,7 +5019,7 @@ pub const vexTaskPrioritySetWithId: *const fn(callback: [*c]void,ID: i32,priorit
 ///
 /// **Jumptable Offset:** 0x009c (_0x037fc09c_)
 ///
-/// _defined in task.zig. from private_signatures.h:142._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRemoveAllUser%28&type=code)
+/// _defined in task.zig. from private_signatures.h:140._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRemoveAllUser%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4944,7 +5034,7 @@ pub const vexTaskRemoveAllUser: *const fn(main: [*c]i32) callconv(.c) void = tas
 ///
 /// **Jumptable Offset:** 0x0f60 (_0x037fcf60_)
 ///
-/// _defined in task.zig. from private_signatures.h:154._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskResumeWithId%28&type=code)
+/// _defined in task.zig. from private_signatures.h:152._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskResumeWithId%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4959,7 +5049,7 @@ pub const vexTaskResumeWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c
 ///
 /// 
 ///
-/// _defined in task.zig. from private_signatures.h:156._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRegister%28&type=code)
+/// _defined in task.zig. from private_signatures.h:154._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRegister%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4974,7 +5064,7 @@ pub const vexTaskRegister: *const fn(name: [*c]types.char) callconv(.c) void = t
 ///
 /// 
 ///
-/// _defined in task.zig. from private_signatures.h:157._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRegisterPersistant%28&type=code)
+/// _defined in task.zig. from private_signatures.h:155._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRegisterPersistant%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4989,7 +5079,7 @@ pub const vexTaskRegisterPersistant: *const fn(name: [*c]types.char,p: types.int
 ///
 /// **Jumptable Offset:** 0x0080 (_0x037fc080_)
 ///
-/// _defined in task.zig. from private_signatures.h:165._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTasksDump%28&type=code)
+/// _defined in task.zig. from private_signatures.h:163._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTasksDump%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -5004,7 +5094,7 @@ pub const vexTasksDump: *const fn() callconv(.c) void = task.vexTasksDump;
 ///
 /// **Jumptable Offset:** 0x006c (_0x037fc06c_)
 ///
-/// _defined in task.zig. from private_signatures.h:173._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskSleep%28&type=code)
+/// _defined in task.zig. from private_signatures.h:171._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskSleep%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -5019,7 +5109,7 @@ pub const vexTaskSleep: *const fn(time: u32) callconv(.c) void = task.vexTaskSle
 ///
 /// **Jumptable Offset:** 0x005c (_0x037fc05c_)
 ///
-/// _defined in task.zig. from private_signatures.h:180._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTasksRun%28&type=code)
+/// _defined in task.zig. from private_signatures.h:178._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTasksRun%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -5027,6 +5117,66 @@ pub const vexTaskSleep: *const fn(time: u32) callconv(.c) void = task.vexTaskSle
 /// uint32_t vexTasksRun();
 /// ```
 pub const vexTasksRun: *const fn() callconv(.c) u32 = task.vexTasksRun;
+
+/// # vexTaskStackDefaultSizeGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x014c (_0x037fc14c_)
+///
+/// _defined in task.zig. from private_signatures.h:185._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskStackDefaultSizeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskStackDefaultSizeGet();
+/// ```
+pub const vexTaskStackDefaultSizeGet: *const fn() callconv(.c) u32 = task.vexTaskStackDefaultSizeGet;
+
+/// # vexTaskStackSizeGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0148 (_0x037fc148_)
+///
+/// _defined in task.zig. from private_signatures.h:186._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskStackSizeGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexTaskStackSizeGet();
+/// ```
+pub const vexTaskStackSizeGet: *const fn() callconv(.c) types.int = task.vexTaskStackSizeGet;
+
+/// # vexTaskStackTopGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0154 (_0x037fc154_)
+///
+/// _defined in task.zig. from private_signatures.h:187._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskStackTopGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void * vexTaskStackTopGet(uint32_t);
+/// ```
+pub const vexTaskStackTopGet: *const fn(_: u32) callconv(.c) [*c]void = task.vexTaskStackTopGet;
+
+/// # vexTaskStackUseGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0150 (_0x037fc150_)
+///
+/// _defined in task.zig. from private_signatures.h:188._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskStackUseGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexTaskStackUseGet(uint32_t);
+/// ```
+pub const vexTaskStackUseGet: *const fn(_: u32) callconv(.c) types.int = task.vexTaskStackUseGet;
 
 /// # vexTaskStateGetWithId
 ///
