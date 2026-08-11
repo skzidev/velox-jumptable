@@ -178,7 +178,7 @@ pub extern const vexSystemTimerClearInterrupt: *const fn() callconv(.c) void;
 /// ```c
 /// int32_t vexSystemTimerReinitForRtos(uint32_t priority, void (*)(void *) handler);
 /// ```
-pub extern const vexSystemTimerReinitForRtos: *const fn(priority: u32,handler: [*c]fn() callconv(.c) void) callconv(.c) i32;
+pub extern const vexSystemTimerReinitForRtos: *const fn(priority: u32,handler: *const fn() callconv(.c) void) callconv(.c) i32;
 
 /// # vexSystemApplicationIRQHandler
 ///

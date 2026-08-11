@@ -135,6 +135,12 @@ def c_to_zig(hc_type: str) -> str:
     if hc_type == "void":
         return "void"
 
+    # Function pointer: T (*name)(...)
+    if "*" in hc_type and "(" in hc_type and ")" in hc_type:
+        # Strip the pointer/name syntax so the function-type regex can handle it.
+        # For your current parser, this is the important distinction:
+        return "*const " + c_to_zig(hc_type.replace("*", "").strip())
+
     if "*" in hc_type:
         return "[*c]" + c_to_zig(hc_type.replace("*", "")).strip()
 

@@ -13,7 +13,7 @@ const types = @import("types.zig");
 /// ```c
 /// void vexTouchUserCallbackSet(void (*)(V5_TouchEvent, int32_t, int32_t) callback);
 /// ```
-pub extern const vexTouchUserCallbackSet: *const fn(callback: [*c]fn(types.V5_TouchEvent, i32, i32) callconv(.c) void) callconv(.c) void;
+pub extern const vexTouchUserCallbackSet: *const fn(callback: *const fn(types.V5_TouchEvent, i32, i32) callconv(.c) void) callconv(.c) void;
 
 /// # vexTouchDataGet
 ///

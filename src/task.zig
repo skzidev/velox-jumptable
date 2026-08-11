@@ -28,7 +28,7 @@ pub extern const vexBackgroundProcessing: *const fn() callconv(.c) void;
 /// ```c
 /// uint32_t vexTaskAdd(int32_t (*)(void) callback, int32_t interval, const char * label);
 /// ```
-pub extern const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,label: [*:0]const u8) callconv(.c) u32;
+pub extern const vexTaskAdd: *const fn(callback: *const fn() callconv(.c) i32,interval: i32,label: [*:0]const u8) callconv(.c) u32;
 
 /// # vexTaskAddSimple
 ///
@@ -41,9 +41,9 @@ pub extern const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) i32,inter
 /// **Original signature:**
 ///
 /// ```c
-/// void vexTaskAddSimple(void * callback, int interval, char * label);
+/// void vexTaskAddSimple(void * callback, int32_t interval, char * label);
 /// ```
-pub extern const vexTaskAddSimple: *const fn(callback: [*c]void,interval: types.int,label: [*c]types.char) callconv(.c) void;
+pub extern const vexTaskAddSimple: *const fn(callback: [*c]void,interval: i32,label: [*c]types.char) callconv(.c) void;
 
 /// # vexTaskAddSimpleWithPriority
 ///
@@ -56,9 +56,9 @@ pub extern const vexTaskAddSimple: *const fn(callback: [*c]void,interval: types.
 /// **Original signature:**
 ///
 /// ```c
-/// void vexTaskAddSimpleWithPriority(void * callback, int interval, char * label, uint16_t priority);
+/// void vexTaskAddSimpleWithPriority(void * callback, int32_t interval, char * label, uint16_t priority);
 /// ```
-pub extern const vexTaskAddSimpleWithPriority: *const fn(callback: [*c]void,interval: types.int,label: [*c]types.char,priority: u16) callconv(.c) void;
+pub extern const vexTaskAddSimpleWithPriority: *const fn(callback: [*c]void,interval: i32,label: [*c]types.char,priority: u16) callconv(.c) void;
 
 /// # vexTaskAddWithArg
 ///
@@ -73,7 +73,7 @@ pub extern const vexTaskAddSimpleWithPriority: *const fn(callback: [*c]void,inte
 /// ```c
 /// uint32_t vexTaskAddWithArg(int32_t (*)(void) callback, int32_t interval, void * arg, const char * label);
 /// ```
-pub extern const vexTaskAddWithArg: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,arg: [*c]void,label: [*:0]const u8) callconv(.c) u32;
+pub extern const vexTaskAddWithArg: *const fn(callback: *const fn() callconv(.c) i32,interval: i32,arg: [*c]void,label: [*:0]const u8) callconv(.c) u32;
 
 /// # vexTaskAddWithPriority
 ///
@@ -88,7 +88,7 @@ pub extern const vexTaskAddWithArg: *const fn(callback: [*c]fn() callconv(.c) i3
 /// ```c
 /// uint32_t vexTaskAddWithPriority(int32_t (*)(void) callback, int32_t interval, const char * label, int32_t priority);
 /// ```
-pub extern const vexTaskAddWithPriority: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,label: [*:0]const u8,priority: i32) callconv(.c) u32;
+pub extern const vexTaskAddWithPriority: *const fn(callback: *const fn() callconv(.c) i32,interval: i32,label: [*:0]const u8,priority: i32) callconv(.c) u32;
 
 /// # vexTaskAddWithPriorityWithArg
 ///
@@ -103,7 +103,7 @@ pub extern const vexTaskAddWithPriority: *const fn(callback: [*c]fn() callconv(.
 /// ```c
 /// uint32_t vexTaskAddWithPriorityWithArg(int32_t (*)(void) callback, int32_t interval, void * arg, const char * label, int32_t priority);
 /// ```
-pub extern const vexTaskAddWithPriorityWithArg: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,arg: [*c]void,label: [*:0]const u8,priority: i32) callconv(.c) u32;
+pub extern const vexTaskAddWithPriorityWithArg: *const fn(callback: *const fn() callconv(.c) i32,interval: i32,arg: [*c]void,label: [*:0]const u8,priority: i32) callconv(.c) u32;
 
 /// # vexTaskCheckTimeslice
 ///
@@ -401,9 +401,9 @@ pub extern const vexTaskStackDefaultSizeGet: *const fn() callconv(.c) u32;
 /// **Original signature:**
 ///
 /// ```c
-/// int vexTaskStackSizeGet();
+/// int32_t vexTaskStackSizeGet();
 /// ```
-pub extern const vexTaskStackSizeGet: *const fn() callconv(.c) types.int;
+pub extern const vexTaskStackSizeGet: *const fn() callconv(.c) i32;
 
 /// # vexTaskStackTopGet
 ///
@@ -431,9 +431,9 @@ pub extern const vexTaskStackTopGet: *const fn(_: u32) callconv(.c) [*c]void;
 /// **Original signature:**
 ///
 /// ```c
-/// int vexTaskStackUseGet(uint32_t);
+/// int32_t vexTaskStackUseGet(uint32_t);
 /// ```
-pub extern const vexTaskStackUseGet: *const fn(_: u32) callconv(.c) types.int;
+pub extern const vexTaskStackUseGet: *const fn(_: u32) callconv(.c) i32;
 
 /// # vexTaskStateGetWithId
 ///
