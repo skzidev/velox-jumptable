@@ -171,7 +171,10 @@ files: dict[str, TextIOWrapper] = {}
 
 def write_func_def(f: TextIOWrapper, function: Symbol):
     params_doc = ", ".join(
-        [f"{param.type}{" " + param.name if param.name else ""}" for param in function.params]
+        [
+            f"{param.type}{' ' + param.name if param.name else ''}"
+            for param in function.params
+        ]
     )
     if function.variadic:
         params_doc += ", ..."
@@ -196,7 +199,10 @@ def write_func_def(f: TextIOWrapper, function: Symbol):
         )
     )
     params_zig = ",".join(
-        [f'{param.name if param.name else "_"}: {c_to_zig(param.type)}' for param in function.params]
+        [
+            f"{param.name if param.name else '_'}: {c_to_zig(param.type)}"
+            for param in function.params
+        ]
     )
     if function.variadic:
         params_zig += ",..."

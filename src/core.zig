@@ -134,3 +134,33 @@ pub extern const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void;
 /// int32_t vexAdiAddrLedSet(uint32_t index, uint32_t port, uint32_t * pData, uint32_t nOffset, uint32_t nLength, uint32_t options);
 /// ```
 pub extern const vexAdiAddrLedSet: *const fn(index: u32,port: u32,pData: [*c]u32,nOffset: u32,nLength: u32,options: u32) callconv(.c) i32;
+
+/// # vexPrivateApiEnable
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in ./src/core.zig. from private_signatures.h:261._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexPrivateApiEnable%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexPrivateApiEnable();
+/// ```
+pub extern const vexPrivateApiEnable: *const fn() callconv(.c) void;
+
+/// # vexPrivateApiDisable
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in ./src/core.zig. from private_signatures.h:262._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexPrivateApiDisable%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexPrivateApiDisable();
+/// ```
+pub extern const vexPrivateApiDisable: *const fn() callconv(.c) void;
