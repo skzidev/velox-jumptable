@@ -28,7 +28,7 @@ pub extern const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// double vexDeviceImuHeadingGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceImuDegreesGet
 ///
@@ -43,7 +43,7 @@ pub extern const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceImuDegreesGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceImuQuaternionGet
 ///

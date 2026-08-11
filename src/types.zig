@@ -1,6 +1,4 @@
 //! typedefs for VEX SDK struct defs
-pub const char = opaque {};
-pub const int = opaque {};
 pub const time = opaque {};
 pub const date = opaque {};
 pub const V5_DeviceType = opaque {};
@@ -11,7 +9,6 @@ pub const V5_ControllerStatus = opaque {};
 pub const V5_DeviceLedColor = opaque {};
 pub const V5_AdiPortConfiguration = opaque {};
 pub const V5_DeviceBumperState = opaque {};
-pub const double = opaque {};
 pub const V5MotorControlMode = opaque {};
 pub const V5_DeviceMotorPid = opaque {};
 pub const V5MotorEncoderUnits = opaque {};

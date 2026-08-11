@@ -13,7 +13,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceGenericRadioConnection(V5_DeviceT device, char * pName, int bMaster, int bAllowRadioOverride);
 /// ```
-pub extern const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]types.char,bMaster: types.int,bAllowRadioOverride: types.int) callconv(.c) void;
+pub extern const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]u8,bMaster: i32,bAllowRadioOverride: i32) callconv(.c) void;
 
 /// # vexDeviceGenericRadioWriteChar
 ///
@@ -148,4 +148,4 @@ pub extern const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// int vexDeviceGenericRadioLinkStatus(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callconv(.c) types.int;
+pub extern const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callconv(.c) i32;

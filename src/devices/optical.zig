@@ -13,7 +13,7 @@ const types = @import("../types.zig");
 /// ```c
 /// double vexDeviceOpticalHueGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceOpticalSatGet
 ///
@@ -28,7 +28,7 @@ pub extern const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceOpticalSatGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceOpticalBrightnessGet
 ///
@@ -43,7 +43,7 @@ pub extern const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceOpticalBrightnessGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceOpticalProximityGet
 ///
@@ -238,7 +238,7 @@ pub extern const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_
 /// ```c
 /// void vexDeviceOpticalIntegrationTimeSet(V5_DeviceT device, double timeMs);
 /// ```
-pub extern const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT,timeMs: types.double) callconv(.c) void;
+pub extern const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT,timeMs: f64) callconv(.c) void;
 
 /// # vexDeviceOpticalIntegrationTimeGet
 ///
@@ -253,4 +253,4 @@ pub extern const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_
 /// ```c
 /// double vexDeviceOpticalIntegrationTimeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;

@@ -43,7 +43,7 @@ pub extern const vexTaskAdd: *const fn(callback: *const fn() callconv(.c) i32,in
 /// ```c
 /// void vexTaskAddSimple(void * callback, int32_t interval, char * label);
 /// ```
-pub extern const vexTaskAddSimple: *const fn(callback: [*c]void,interval: i32,label: [*c]types.char) callconv(.c) void;
+pub extern const vexTaskAddSimple: *const fn(callback: [*c]void,interval: i32,label: [*c]u8) callconv(.c) void;
 
 /// # vexTaskAddSimpleWithPriority
 ///
@@ -58,7 +58,7 @@ pub extern const vexTaskAddSimple: *const fn(callback: [*c]void,interval: i32,la
 /// ```c
 /// void vexTaskAddSimpleWithPriority(void * callback, int32_t interval, char * label, uint16_t priority);
 /// ```
-pub extern const vexTaskAddSimpleWithPriority: *const fn(callback: [*c]void,interval: i32,label: [*c]types.char,priority: u16) callconv(.c) void;
+pub extern const vexTaskAddSimpleWithPriority: *const fn(callback: [*c]void,interval: i32,label: [*c]u8,priority: u16) callconv(.c) void;
 
 /// # vexTaskAddWithArg
 ///
@@ -313,7 +313,7 @@ pub extern const vexTaskResumeWithId: *const fn(callback: [*c]void,ID: i32) call
 /// ```c
 /// void vexTaskRegister(char * name);
 /// ```
-pub extern const vexTaskRegister: *const fn(name: [*c]types.char) callconv(.c) void;
+pub extern const vexTaskRegister: *const fn(name: [*c]u8) callconv(.c) void;
 
 /// # vexTaskRegisterPersistant
 ///
@@ -328,7 +328,7 @@ pub extern const vexTaskRegister: *const fn(name: [*c]types.char) callconv(.c) v
 /// ```c
 /// void vexTaskRegisterPersistant(char * name, int p);
 /// ```
-pub extern const vexTaskRegisterPersistant: *const fn(name: [*c]types.char,p: types.int) callconv(.c) void;
+pub extern const vexTaskRegisterPersistant: *const fn(name: [*c]u8,p: i32) callconv(.c) void;
 
 /// # vexTasksDump
 ///

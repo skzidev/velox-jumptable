@@ -28,7 +28,7 @@ pub extern const vexFileMountSD: *const fn() callconv(.c) types.FRESULT;
 /// ```c
 /// FRESULT vexFileDirectoryGet(const char * path, char * buffer, uint32_t len);
 /// ```
-pub extern const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]types.char,len: u32) callconv(.c) types.FRESULT;
+pub extern const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]u8,len: u32) callconv(.c) types.FRESULT;
 
 /// # vexFileOpen
 ///
@@ -103,7 +103,7 @@ pub extern const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void;
 /// ```c
 /// int32_t vexFileRead(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
 /// ```
-pub extern const vexFileRead: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32;
+pub extern const vexFileRead: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32;
 
 /// # vexFileWrite
 ///
@@ -118,7 +118,7 @@ pub extern const vexFileRead: *const fn(buf: [*c]types.char,size: u32,nItems: u3
 /// ```c
 /// int32_t vexFileWrite(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
 /// ```
-pub extern const vexFileWrite: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32;
+pub extern const vexFileWrite: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32;
 
 /// # vexFileSize
 ///
@@ -163,7 +163,7 @@ pub extern const vexFileSeek: *const fn(fdp: [*c]types.FIL,offset: u32,whence: i
 /// ```c
 /// int vexFileDriveStatus(uint32_t drive);
 /// ```
-pub extern const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) types.int;
+pub extern const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) i32;
 
 /// # vexFileTell
 ///

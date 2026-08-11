@@ -18,13 +18,15 @@ class Symbol:
     line: int
     source: str
     isPublic: bool
+    variadic: bool
 
-    def __init__(self, name, params, ret, line, file):
+    def __init__(self, name, params, ret, line, file, variadic=False):
         self.name = name
         self.params = params
         self.returns = ret
         self.line = line
         self.source = file
+        self.variadic = variadic
 
 
 def read_header(fpath) -> list[Symbol]:
@@ -51,6 +53,9 @@ def read_header(fpath) -> list[Symbol]:
                     cursor.result_type.spelling,
                     cursor.location.line,
                     basename(fpath),
+                    cursor.type.kind
+                    == clang.cindex.TypeKind.FUNCTIONPROTO
+                    and cursor.type.is_function_variadic(),
                 )
             )
     return declarations

@@ -43,7 +43,7 @@ pub extern const vexBatteryCurrentGet: *const fn() callconv(.c) i32;
 /// ```c
 /// double vexBatteryTemperatureGet();
 /// ```
-pub extern const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double;
+pub extern const vexBatteryTemperatureGet: *const fn() callconv(.c) f64;
 
 /// # vexBatteryCapacityGet
 ///
@@ -58,4 +58,4 @@ pub extern const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double
 /// ```c
 /// double vexBatteryCapacityGet();
 /// ```
-pub extern const vexBatteryCapacityGet: *const fn() callconv(.c) types.double;
+pub extern const vexBatteryCapacityGet: *const fn() callconv(.c) f64;

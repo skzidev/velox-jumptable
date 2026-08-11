@@ -88,7 +88,7 @@ pub extern const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT
 /// ```c
 /// int vexDeviceVisionSignatureGet(V5_DeviceT device, uint32_t id, V5_DeviceVisionSignature * pSignature);
 /// ```
-pub extern const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u32,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) types.int;
+pub extern const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u32,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) i32;
 
 /// # vexDeviceVisionBrightnessSet
 ///

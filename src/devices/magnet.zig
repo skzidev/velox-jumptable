@@ -73,7 +73,7 @@ pub extern const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duratio
 /// ```c
 /// double vexDeviceMagnetTemperatureGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceMagnetCurrentGet
 ///
@@ -88,7 +88,7 @@ pub extern const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_Devic
 /// ```c
 /// double vexDeviceMagnetCurrentGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceMagnetStatusGet
 ///

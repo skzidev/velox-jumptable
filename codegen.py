@@ -132,6 +132,16 @@ def c_to_zig(hc_type: str) -> str:
     if bool(re.fullmatch(NUMERIC_PATTERN, hc_type)):
         return c_int_to_zig(hc_type)
 
+    # C scalar types that libclang spells as plain identifiers
+    if hc_type == "int":
+        return "i32"
+
+    if hc_type == "char":
+        return "u8"
+
+    if hc_type == "double":
+        return "f64"
+
     if hc_type == "void":
         return "void"
 
@@ -160,6 +170,12 @@ files: dict[str, TextIOWrapper] = {}
 
 
 def write_func_def(f: TextIOWrapper, function: Symbol):
+    params_doc = ", ".join(
+        [f"{param.type}{" " + param.name if param.name else ""}" for param in function.params]
+    )
+    if function.variadic:
+        params_doc += ", ..."
+
     f.write(
         textwrap.dedent(
             f"""
@@ -174,13 +190,19 @@ def write_func_def(f: TextIOWrapper, function: Symbol):
     /// **Original signature:**
     ///
     /// ```c
-    /// {function.returns} {function.name}({", ".join([f"{param.type}{" " + param.name if param.name else ""}" for param in function.params])});
+    /// {function.returns} {function.name}({params_doc});
     /// ```
     """
         )
     )
+    params_zig = ",".join(
+        [f'{param.name if param.name else "_"}: {c_to_zig(param.type)}' for param in function.params]
+    )
+    if function.variadic:
+        params_zig += ",..."
+
     f.write(
-        f"pub extern const {function.name}: *const fn({','.join([f'{param.name if param.name else "_"}: {c_to_zig(param.type)}' for param in function.params])}) callconv(.c) {c_to_zig(function.returns)};\n"
+        f"pub extern const {function.name}: *const fn({params_zig}) callconv(.c) {c_to_zig(function.returns)};\n"
     )
 
 

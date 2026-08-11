@@ -88,7 +88,7 @@ pub extern const vexDeviceAiVisionColorSet: *const fn(device: types.V5_DeviceT,p
 /// ```c
 /// int vexDeviceAiVisionColorGet(V5_DeviceT device, uint32_t id, V5_DeviceAiVisionColor * pColor);
 /// ```
-pub extern const vexDeviceAiVisionColorGet: *const fn(device: types.V5_DeviceT,id: u32,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) types.int;
+pub extern const vexDeviceAiVisionColorGet: *const fn(device: types.V5_DeviceT,id: u32,pColor: [*c]types.V5_DeviceAiVisionColor) callconv(.c) i32;
 
 /// # vexDeviceAiVisionCodeSet
 ///
@@ -118,7 +118,7 @@ pub extern const vexDeviceAiVisionCodeSet: *const fn(device: types.V5_DeviceT,pC
 /// ```c
 /// int vexDeviceAiVisionCodeGet(V5_DeviceT device, uint32_t id, V5_DeviceAiVisionCode * pCode);
 /// ```
-pub extern const vexDeviceAiVisionCodeGet: *const fn(device: types.V5_DeviceT,id: u32,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) types.int;
+pub extern const vexDeviceAiVisionCodeGet: *const fn(device: types.V5_DeviceT,id: u32,pCode: [*c]types.V5_DeviceAiVisionCode) callconv(.c) i32;
 
 /// # vexDeviceAiVisionStatusGet
 ///
@@ -148,7 +148,7 @@ pub extern const vexDeviceAiVisionStatusGet: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// double vexDeviceAiVisionTemperatureGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAiVisionTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceAiVisionTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceAiVisionClassNameGet
 ///

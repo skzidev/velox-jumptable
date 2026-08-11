@@ -281,9 +281,9 @@ pub extern const vexDisplayCircleFill: *const fn(xc: i32,yc: i32,radius: i32) ca
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplayPrintf(int32_t xpos, int32_t ypos, uint32_t bOpaque, const char * format);
+/// void vexDisplayPrintf(int32_t xpos, int32_t ypos, uint32_t bOpaque, const char * format, ...);
 /// ```
-pub extern const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplayString
 ///
@@ -296,9 +296,9 @@ pub extern const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,fo
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplayString(const int32_t nLineNumber, const char * format);
+/// void vexDisplayString(const int32_t nLineNumber, const char * format, ...);
 /// ```
-pub extern const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplayStringAt
 ///
@@ -311,9 +311,9 @@ pub extern const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplayStringAt(int32_t xpos, int32_t ypos, const char * format);
+/// void vexDisplayStringAt(int32_t xpos, int32_t ypos, const char * format, ...);
 /// ```
-pub extern const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplayBigString
 ///
@@ -326,9 +326,9 @@ pub extern const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplayBigString(const int32_t nLineNumber, const char * format);
+/// void vexDisplayBigString(const int32_t nLineNumber, const char * format, ...);
 /// ```
-pub extern const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplayBigStringAt
 ///
@@ -341,9 +341,9 @@ pub extern const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]co
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplayBigStringAt(int32_t xpos, int32_t ypos, const char * format);
+/// void vexDisplayBigStringAt(int32_t xpos, int32_t ypos, const char * format, ...);
 /// ```
-pub extern const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplaySmallStringAt
 ///
@@ -356,9 +356,9 @@ pub extern const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplaySmallStringAt(int32_t xpos, int32_t ypos, const char * format);
+/// void vexDisplaySmallStringAt(int32_t xpos, int32_t ypos, const char * format, ...);
 /// ```
-pub extern const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplayCenteredString
 ///
@@ -371,9 +371,9 @@ pub extern const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: 
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplayCenteredString(const int32_t nLineNumber, const char * format);
+/// void vexDisplayCenteredString(const int32_t nLineNumber, const char * format, ...);
 /// ```
-pub extern const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplayBigCenteredString
 ///
@@ -386,9 +386,9 @@ pub extern const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*
 /// **Original signature:**
 ///
 /// ```c
-/// void vexDisplayBigCenteredString(const int32_t nLineNumber, const char * format);
+/// void vexDisplayBigCenteredString(const int32_t nLineNumber, const char * format, ...);
 /// ```
-pub extern const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8) callconv(.c) void;
+pub extern const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,...) callconv(.c) void;
 
 /// # vexDisplayVPrintf
 ///
@@ -403,7 +403,7 @@ pub extern const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format:
 /// ```c
 /// void vexDisplayVPrintf(int32_t xpos, int32_t ypos, uint32_t bOpaque, const char * format, int args);
 /// ```
-pub extern const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayVString
 ///
@@ -418,7 +418,7 @@ pub extern const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,f
 /// ```c
 /// void vexDisplayVString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-pub extern const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayVStringAt
 ///
@@ -433,7 +433,7 @@ pub extern const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]cons
 /// ```c
 /// void vexDisplayVStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
 /// ```
-pub extern const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayVBigString
 ///
@@ -448,7 +448,7 @@ pub extern const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0
 /// ```c
 /// void vexDisplayVBigString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-pub extern const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayVBigStringAt
 ///
@@ -463,7 +463,7 @@ pub extern const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]c
 /// ```c
 /// void vexDisplayVBigStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
 /// ```
-pub extern const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayVSmallStringAt
 ///
@@ -478,7 +478,7 @@ pub extern const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [
 /// ```c
 /// void vexDisplayVSmallStringAt(int32_t xpos, int32_t ypos, const char * format, int args);
 /// ```
-pub extern const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayVCenteredString
 ///
@@ -493,7 +493,7 @@ pub extern const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format:
 /// ```c
 /// void vexDisplayVCenteredString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-pub extern const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayVBigCenteredString
 ///
@@ -508,7 +508,7 @@ pub extern const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [
 /// ```c
 /// void vexDisplayVBigCenteredString(const int32_t nLineNumber, const char * format, int args);
 /// ```
-pub extern const vexDisplayVBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: types.int) callconv(.c) void;
+pub extern const vexDisplayVBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]const u8,args: i32) callconv(.c) void;
 
 /// # vexDisplayTextSize
 ///
@@ -583,7 +583,7 @@ pub extern const vexDisplayStringHeightGet: *const fn(pString: [*:0]const u8) ca
 /// ```c
 /// int vexDisplayRender(int bVsyncWait, int bRunScheduler);
 /// ```
-pub extern const vexDisplayRender: *const fn(bVsyncWait: types.int,bRunScheduler: types.int) callconv(.c) types.int;
+pub extern const vexDisplayRender: *const fn(bVsyncWait: i32,bRunScheduler: i32) callconv(.c) i32;
 
 /// # vexDisplayDoubleBufferDisable
 ///
@@ -643,7 +643,7 @@ pub extern const vexDisplayClipRegionClear: *const fn() callconv(.c) void;
 /// ```c
 /// int vexDisplayThemeIdGet();
 /// ```
-pub extern const vexDisplayThemeIdGet: *const fn() callconv(.c) types.int;
+pub extern const vexDisplayThemeIdGet: *const fn() callconv(.c) i32;
 
 /// # vexDisplayRotateFlagGet
 ///
@@ -658,7 +658,7 @@ pub extern const vexDisplayThemeIdGet: *const fn() callconv(.c) types.int;
 /// ```c
 /// int vexDisplayRotateFlagGet();
 /// ```
-pub extern const vexDisplayRotateFlagGet: *const fn() callconv(.c) types.int;
+pub extern const vexDisplayRotateFlagGet: *const fn() callconv(.c) i32;
 
 /// # vexDisplayClipRegionSetWithIndex
 ///

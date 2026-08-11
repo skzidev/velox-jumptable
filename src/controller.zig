@@ -43,4 +43,4 @@ pub extern const vexControllerConnectionStatusGet: *const fn(id: types.V5_Contro
 /// ```c
 /// int vexControllerTextSet(V5_ControllerId id, uint32_t line, uint32_t col, const char * str);
 /// ```
-pub extern const vexControllerTextSet: *const fn(id: types.V5_ControllerId,line: u32,col: u32,str: [*:0]const u8) callconv(.c) types.int;
+pub extern const vexControllerTextSet: *const fn(id: types.V5_ControllerId,line: u32,col: u32,str: [*:0]const u8) callconv(.c) i32;

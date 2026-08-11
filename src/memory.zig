@@ -28,7 +28,7 @@ pub extern const vexScratchMemoryPtr: *const fn(ptr: [*c]void) callconv(.c) i32;
 /// ```c
 /// int vexScratchMemoryLock();
 /// ```
-pub extern const vexScratchMemoryLock: *const fn() callconv(.c) types.int;
+pub extern const vexScratchMemoryLock: *const fn() callconv(.c) i32;
 
 /// # vexScratchMemoryUnlock
 ///

@@ -88,7 +88,7 @@ pub extern const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// void vexDeviceAbsEncReverseFlagSet(V5_DeviceT device, int value);
 /// ```
-pub extern const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,value: types.int) callconv(.c) void;
+pub extern const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
 
 /// # vexDeviceAbsEncReverseFlagGet
 ///
@@ -103,7 +103,7 @@ pub extern const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_Devic
 /// ```c
 /// int vexDeviceAbsEncReverseFlagGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.int;
+pub extern const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
 
 /// # vexDeviceAbsEncStatusGet
 ///

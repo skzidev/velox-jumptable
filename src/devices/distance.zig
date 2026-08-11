@@ -58,7 +58,7 @@ pub extern const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_Devi
 /// ```c
 /// double vexDeviceDistanceObjectVelocityGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceDistanceStatusGet
 ///

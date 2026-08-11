@@ -58,4 +58,4 @@ pub extern const vexStdlibVersionLinked: *const fn() callconv(.c) u32;
 /// ```c
 /// int vexStdlibVersionVerify();
 /// ```
-pub extern const vexStdlibVersionVerify: *const fn() callconv(.c) types.int;
+pub extern const vexStdlibVersionVerify: *const fn() callconv(.c) i32;

@@ -28,7 +28,7 @@ pub extern const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// double vexDeviceGyroHeadingGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
 
 /// # vexDeviceGyroDegreesGet
 ///
@@ -43,4 +43,4 @@ pub extern const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// double vexDeviceGyroDegreesGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.double;
+pub extern const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;

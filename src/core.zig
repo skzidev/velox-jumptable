@@ -11,9 +11,9 @@ const types = @import("types.zig");
 /// **Original signature:**
 ///
 /// ```c
-/// int32_t vexDebug(const char * fmt);
+/// int32_t vexDebug(const char * fmt, ...);
 /// ```
-pub extern const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
+pub extern const vexDebug: *const fn(fmt: [*:0]const u8,...) callconv(.c) i32;
 
 /// # vex_printf
 ///
@@ -26,9 +26,9 @@ pub extern const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
 /// **Original signature:**
 ///
 /// ```c
-/// int32_t vex_printf(const char * fmt);
+/// int32_t vex_printf(const char * fmt, ...);
 /// ```
-pub extern const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
+pub extern const vex_printf: *const fn(fmt: [*:0]const u8,...) callconv(.c) i32;
 
 /// # vex_sprintf
 ///
@@ -41,9 +41,9 @@ pub extern const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32;
 /// **Original signature:**
 ///
 /// ```c
-/// int32_t vex_sprintf(char * out, const char * format);
+/// int32_t vex_sprintf(char * out, const char * format, ...);
 /// ```
-pub extern const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) callconv(.c) i32;
+pub extern const vex_sprintf: *const fn(out: [*c]u8,format: [*:0]const u8,...) callconv(.c) i32;
 
 /// # vex_snprintf
 ///
@@ -56,9 +56,9 @@ pub extern const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u
 /// **Original signature:**
 ///
 /// ```c
-/// int32_t vex_snprintf(char * out, uint32_t max_len, const char * format);
+/// int32_t vex_snprintf(char * out, uint32_t max_len, const char * format, ...);
 /// ```
-pub extern const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8) callconv(.c) i32;
+pub extern const vex_snprintf: *const fn(out: [*c]u8,max_len: u32,format: [*:0]const u8,...) callconv(.c) i32;
 
 /// # vex_vsprintf
 ///
@@ -73,7 +73,7 @@ pub extern const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format
 /// ```c
 /// int32_t vex_vsprintf(char * out, const char * format, int args);
 /// ```
-pub extern const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const u8,args: types.int) callconv(.c) i32;
+pub extern const vex_vsprintf: *const fn(out: [*c]u8,format: [*:0]const u8,args: i32) callconv(.c) i32;
 
 /// # vex_vsnprintf
 ///
@@ -88,7 +88,7 @@ pub extern const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const 
 /// ```c
 /// int32_t vex_vsnprintf(char * out, uint32_t max_len, const char * format, int args);
 /// ```
-pub extern const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8,args: types.int) callconv(.c) i32;
+pub extern const vex_vsnprintf: *const fn(out: [*c]u8,max_len: u32,format: [*:0]const u8,args: i32) callconv(.c) i32;
 
 /// # vexGettime
 ///
