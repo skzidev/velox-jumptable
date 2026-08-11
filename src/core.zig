@@ -7,5 +7,4 @@ pub extern const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const 
 pub extern const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]const u8,args: types.int) callconv(.c) i32;
 pub extern const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void;
 pub extern const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void;
-pub extern const vexMain: *const fn() callconv(.c) void;
-pub extern const vexStartup: *const fn() callconv(.c) void;
+pub extern const vexAdiAddrLedSet: *const fn(index: u32,port: u32,pData: [*c]u32,nOffset: u32,nLength: u32,options: u32) callconv(.c) i32;

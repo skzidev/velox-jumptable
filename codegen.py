@@ -213,7 +213,7 @@ with open(join(".", "src", "root.zig"), "w") as f:
             ///
             /// {f"**Jumptable Offset:** {offset_data["functions"][func.name]["offset"]} (_{offset_data["functions"][func.name]["address"]}_)" if type == "defd" else ""}
             ///
-            /// _defined in {file}. from {func.source}:{func.line}._ [Find Usages](https://github.com/search?q={urllib.parse.quote(f"org:purduesigbots OR org:vexide OR repo:cetio/VEXAPI OR repo:sy1vi3/sylib OR user:skzidev OR repo:MobMasher21/evAPI OR repo:Gavin-Niederman/student-centered-arcade-drive {func.name}(")}&type=code)
+            /// _defined in {file}. from {func.source}:{func.line}._ [Find Usages](https://github.com/search?q={urllib.parse.quote(f"org:purduesigbots OR org:vexide OR repo:cetio/VEXAPI OR repo:sy1vi3/sylib OR user:skzidev OR user:jpearman OR org:vex-robotics OR repo:MobMasher21/evAPI OR repo:CWood-sdf/lib46f OR tubaplayerdis/Gold4Team3CompProj OR repo:Gavin-Niederman/student-centered-arcade-drive {func.name}(")}&type=code)
             ///
             /// **Original signature:**
             ///

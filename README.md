@@ -52,3 +52,7 @@ python ./codegen.py
 
 > [!NOTE]
 > BOOT.bin is a proprietary Xilinx boot image. It should be opened using [bootgen](https://github.com/Xilinx/bootgen), AMD's official tool, or one of the open-source reimplementations.
+
+### Ghidra Loading
+
+If anyone wants to explore loading the VEX firmware into Ghidra for decompilation, a script (`make_ghidra_elf.py`) will extract the firmware into a proper .elf file which can be loaded into Ghidra, **with symbols from the jumptable**.

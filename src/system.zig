@@ -21,4 +21,3 @@ pub extern const vexSystemIQRQnterrupt: *const fn() callconv(.c) void;
 pub extern const vexSystemSWInterrupt: *const fn() callconv(.c) void;
 pub extern const vexSystemDataAbortInterrupt: *const fn() callconv(.c) void;
 pub extern const vexSystemPrefetchAbortInterrupt: *const fn() callconv(.c) void;
-pub extern const vexSystemVersion: *const fn() callconv(.c) u32;

@@ -32,7 +32,6 @@ const touch = @import("touch.zig");
 const version = @import("version.zig");
 const competition = @import("competition.zig");
 const battery = @import("battery.zig");
-const vexos = @import("vexos.zig");
 const types = @import("types.zig");
 /// # vexBackgroundProcessing
 ///
@@ -40,7 +39,7 @@ const types = @import("types.zig");
 ///
 /// **Jumptable Offset:** 0x0f74 (_0x037fcf74_)
 ///
-/// _defined in task.zig. from public_signatures.h:7._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBackgroundProcessing%28&type=code)
+/// _defined in task.zig. from public_signatures.h:7._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBackgroundProcessing%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -55,7 +54,7 @@ pub const vexBackgroundProcessing: *const fn() callconv(.c) void = task.vexBackg
 ///
 /// **Jumptable Offset:** 0x00f0 (_0x037fc0f0_)
 ///
-/// _defined in core.zig. from public_signatures.h:10._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDebug%28&type=code)
+/// _defined in core.zig. from public_signatures.h:10._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDebug%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -70,7 +69,7 @@ pub const vexDebug: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vexDeb
 ///
 /// **Jumptable Offset:** 0x00f0 (_0x037fc0f0_)
 ///
-/// _defined in core.zig. from public_signatures.h:11._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_printf%28&type=code)
+/// _defined in core.zig. from public_signatures.h:11._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_printf%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -85,7 +84,7 @@ pub const vex_printf: *const fn(fmt: [*:0]const u8) callconv(.c) i32 = core.vex_
 ///
 /// **Jumptable Offset:** 0x00f4 (_0x037fc0f4_)
 ///
-/// _defined in core.zig. from public_signatures.h:12._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_sprintf%28&type=code)
+/// _defined in core.zig. from public_signatures.h:12._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_sprintf%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -100,7 +99,7 @@ pub const vex_sprintf: *const fn(out: [*c]types.char,format: [*:0]const u8) call
 ///
 /// **Jumptable Offset:** 0x00f8 (_0x037fc0f8_)
 ///
-/// _defined in core.zig. from public_signatures.h:13._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_snprintf%28&type=code)
+/// _defined in core.zig. from public_signatures.h:13._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_snprintf%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -115,7 +114,7 @@ pub const vex_snprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0]
 ///
 /// **Jumptable Offset:** 0x00f4 (_0x037fc0f4_)
 ///
-/// _defined in core.zig. from public_signatures.h:14._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_vsprintf%28&type=code)
+/// _defined in core.zig. from public_signatures.h:14._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_vsprintf%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -130,7 +129,7 @@ pub const vex_vsprintf: *const fn(out: [*c]types.char,format: [*:0]const u8,args
 ///
 /// **Jumptable Offset:** 0x00f8 (_0x037fc0f8_)
 ///
-/// _defined in core.zig. from public_signatures.h:15._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_vsnprintf%28&type=code)
+/// _defined in core.zig. from public_signatures.h:15._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vex_vsnprintf%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -145,7 +144,7 @@ pub const vex_vsnprintf: *const fn(out: [*c]types.char,max_len: u32,format: [*:0
 ///
 /// **Jumptable Offset:** 0x0118 (_0x037fc118_)
 ///
-/// _defined in system.zig. from public_signatures.h:19._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimeGet%28&type=code)
+/// _defined in system.zig. from public_signatures.h:19._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -160,7 +159,7 @@ pub const vexSystemTimeGet: *const fn() callconv(.c) u32 = system.vexSystemTimeG
 ///
 /// **Jumptable Offset:** 0x011c (_0x037fc11c_)
 ///
-/// _defined in core.zig. from public_signatures.h:20._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexGettime%28&type=code)
+/// _defined in core.zig. from public_signatures.h:20._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexGettime%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -175,7 +174,7 @@ pub const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void = core.
 ///
 /// **Jumptable Offset:** 0x0120 (_0x037fc120_)
 ///
-/// _defined in core.zig. from public_signatures.h:21._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexGetdate%28&type=code)
+/// _defined in core.zig. from public_signatures.h:21._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexGetdate%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -190,7 +189,7 @@ pub const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void = core.
 ///
 /// **Jumptable Offset:** 0x0124 (_0x037fc124_)
 ///
-/// _defined in system.zig. from public_signatures.h:22._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemMemoryDump%28&type=code)
+/// _defined in system.zig. from public_signatures.h:22._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemMemoryDump%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -205,7 +204,7 @@ pub const vexSystemMemoryDump: *const fn() callconv(.c) void = system.vexSystemM
 ///
 /// **Jumptable Offset:** 0x0128 (_0x037fc128_)
 ///
-/// _defined in system.zig. from public_signatures.h:23._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemDigitalIO%28&type=code)
+/// _defined in system.zig. from public_signatures.h:23._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemDigitalIO%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -220,7 +219,7 @@ pub const vexSystemDigitalIO: *const fn(pin: u32,value: u32) callconv(.c) void =
 ///
 /// **Jumptable Offset:** 0x012c (_0x037fc12c_)
 ///
-/// _defined in system.zig. from public_signatures.h:24._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemStartupOptions%28&type=code)
+/// _defined in system.zig. from public_signatures.h:24._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemStartupOptions%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -235,7 +234,7 @@ pub const vexSystemStartupOptions: *const fn() callconv(.c) u32 = system.vexSyst
 ///
 /// **Jumptable Offset:** 0x0130 (_0x037fc130_)
 ///
-/// _defined in system.zig. from public_signatures.h:25._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemExitRequest%28&type=code)
+/// _defined in system.zig. from public_signatures.h:25._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemExitRequest%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -250,7 +249,7 @@ pub const vexSystemExitRequest: *const fn() callconv(.c) void = system.vexSystem
 ///
 /// **Jumptable Offset:** 0x0134 (_0x037fc134_)
 ///
-/// _defined in system.zig. from public_signatures.h:26._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemHighResTimeGet%28&type=code)
+/// _defined in system.zig. from public_signatures.h:26._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemHighResTimeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -265,7 +264,7 @@ pub const vexSystemHighResTimeGet: *const fn() callconv(.c) u64 = system.vexSyst
 ///
 /// **Jumptable Offset:** 0x0138 (_0x037fc138_)
 ///
-/// _defined in system.zig. from public_signatures.h:27._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemPowerupTimeGet%28&type=code)
+/// _defined in system.zig. from public_signatures.h:27._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemPowerupTimeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -280,7 +279,7 @@ pub const vexSystemPowerupTimeGet: *const fn() callconv(.c) u64 = system.vexSyst
 ///
 /// **Jumptable Offset:** 0x013c (_0x037fc13c_)
 ///
-/// _defined in system.zig. from public_signatures.h:28._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemLinkAddrGet%28&type=code)
+/// _defined in system.zig. from public_signatures.h:28._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemLinkAddrGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -295,7 +294,7 @@ pub const vexSystemLinkAddrGet: *const fn() callconv(.c) u32 = system.vexSystemL
 ///
 /// **Jumptable Offset:** 0x0174 (_0x037fc174_)
 ///
-/// _defined in system.zig. from public_signatures.h:29._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemUsbStatus%28&type=code)
+/// _defined in system.zig. from public_signatures.h:29._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemUsbStatus%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -310,7 +309,7 @@ pub const vexSystemUsbStatus: *const fn() callconv(.c) u32 = system.vexSystemUsb
 ///
 /// **Jumptable Offset:** 0x0190 (_0x037fc190_)
 ///
-/// _defined in devices.zig. from public_signatures.h:32._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGetNumber%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:32._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGetNumber%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -325,7 +324,7 @@ pub const vexDevicesGetNumber: *const fn() callconv(.c) u32 = devices.vexDevices
 ///
 /// **Jumptable Offset:** 0x0194 (_0x037fc194_)
 ///
-/// _defined in devices.zig. from public_signatures.h:33._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGetNumberByType%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:33._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGetNumberByType%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -340,7 +339,7 @@ pub const vexDevicesGetNumberByType: *const fn(type: types.V5_DeviceType) callco
 ///
 /// **Jumptable Offset:** 0x0198 (_0x037fc198_)
 ///
-/// _defined in devices.zig. from public_signatures.h:34._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGet%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:34._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicesGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -355,7 +354,7 @@ pub const vexDevicesGet: *const fn() callconv(.c) types.V5_DeviceT = devices.vex
 ///
 /// **Jumptable Offset:** 0x019c (_0x037fc19c_)
 ///
-/// _defined in devices.zig. from public_signatures.h:35._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetByIndex%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:35._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetByIndex%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -370,7 +369,7 @@ pub const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) types.V5_Devic
 ///
 /// **Jumptable Offset:** 0x01a0 (_0x037fc1a0_)
 ///
-/// _defined in devices.zig. from public_signatures.h:36._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetStatus%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:36._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetStatus%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -385,7 +384,7 @@ pub const vexDeviceGetStatus: *const fn(buffer: [*c]types.V5_DeviceType) callcon
 ///
 /// **Jumptable Offset:** 0x01b0 (_0x037fc1b0_)
 ///
-/// _defined in devices.zig. from public_signatures.h:37._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetTimestamp%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:37._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetTimestamp%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -400,7 +399,7 @@ pub const vexDeviceGetTimestamp: *const fn(device: types.V5_DeviceT) callconv(.c
 ///
 /// 
 ///
-/// _defined in devices.zig. from public_signatures.h:38._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetTimestampByIndex%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:38._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGetTimestampByIndex%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -415,7 +414,7 @@ pub const vexDeviceGetTimestampByIndex: *const fn(index: i32) callconv(.c) i32 =
 ///
 /// **Jumptable Offset:** 0x01b4 (_0x037fc1b4_)
 ///
-/// _defined in devices.zig. from public_signatures.h:39._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceButtonStateGet%28&type=code)
+/// _defined in devices.zig. from public_signatures.h:39._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceButtonStateGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -430,7 +429,7 @@ pub const vexDeviceButtonStateGet: *const fn() callconv(.c) u32 = devices.vexDev
 ///
 /// **Jumptable Offset:** 0x01a4 (_0x037fc1a4_)
 ///
-/// _defined in controller.zig. from public_signatures.h:47._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerGet%28&type=code)
+/// _defined in controller.zig. from public_signatures.h:47._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -445,7 +444,7 @@ pub const vexControllerGet: *const fn(id: types.V5_ControllerId,index: types.V5_
 ///
 /// **Jumptable Offset:** 0x01a8 (_0x037fc1a8_)
 ///
-/// _defined in controller.zig. from public_signatures.h:48._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerConnectionStatusGet%28&type=code)
+/// _defined in controller.zig. from public_signatures.h:48._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerConnectionStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -460,7 +459,7 @@ pub const vexControllerConnectionStatusGet: *const fn(id: types.V5_ControllerId)
 ///
 /// **Jumptable Offset:** 0x01ac (_0x037fc1ac_)
 ///
-/// _defined in controller.zig. from public_signatures.h:49._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerTextSet%28&type=code)
+/// _defined in controller.zig. from public_signatures.h:49._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexControllerTextSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -475,7 +474,7 @@ pub const vexControllerTextSet: *const fn(id: types.V5_ControllerId,line: u32,co
 ///
 /// **Jumptable Offset:** 0x01e0 (_0x037fc1e0_)
 ///
-/// _defined in devices/led.zig. from public_signatures.h:53._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedSet%28&type=code)
+/// _defined in devices/led.zig. from public_signatures.h:53._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -490,7 +489,7 @@ pub const vexDeviceLedSet: *const fn(device: types.V5_DeviceT,value: types.V5_De
 ///
 /// **Jumptable Offset:** 0x01e4 (_0x037fc1e4_)
 ///
-/// _defined in devices/led.zig. from public_signatures.h:54._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedRgbSet%28&type=code)
+/// _defined in devices/led.zig. from public_signatures.h:54._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedRgbSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -505,7 +504,7 @@ pub const vexDeviceLedRgbSet: *const fn(device: types.V5_DeviceT,color: u32) cal
 ///
 /// **Jumptable Offset:** 0x01e8 (_0x037fc1e8_)
 ///
-/// _defined in devices/led.zig. from public_signatures.h:55._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedGet%28&type=code)
+/// _defined in devices/led.zig. from public_signatures.h:55._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -520,7 +519,7 @@ pub const vexDeviceLedGet: *const fn(device: types.V5_DeviceT) callconv(.c) type
 ///
 /// **Jumptable Offset:** 0x01ec (_0x037fc1ec_)
 ///
-/// _defined in devices/led.zig. from public_signatures.h:56._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedRgbGet%28&type=code)
+/// _defined in devices/led.zig. from public_signatures.h:56._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLedRgbGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -535,7 +534,7 @@ pub const vexDeviceLedRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u
 ///
 /// **Jumptable Offset:** 0x0208 (_0x037fc208_)
 ///
-/// _defined in devices/adi.zig. from public_signatures.h:59._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiPortConfigSet%28&type=code)
+/// _defined in devices/adi.zig. from public_signatures.h:59._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiPortConfigSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -550,7 +549,7 @@ pub const vexDeviceAdiPortConfigSet: *const fn(device: types.V5_DeviceT,port: u3
 ///
 /// **Jumptable Offset:** 0x020c (_0x037fc20c_)
 ///
-/// _defined in devices/adi.zig. from public_signatures.h:61._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiPortConfigGet%28&type=code)
+/// _defined in devices/adi.zig. from public_signatures.h:61._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiPortConfigGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -565,7 +564,7 @@ pub const vexDeviceAdiPortConfigGet: *const fn(device: types.V5_DeviceT,port: u3
 ///
 /// **Jumptable Offset:** 0x0210 (_0x037fc210_)
 ///
-/// _defined in devices/adi.zig. from public_signatures.h:63._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiValueSet%28&type=code)
+/// _defined in devices/adi.zig. from public_signatures.h:63._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiValueSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -580,7 +579,7 @@ pub const vexDeviceAdiValueSet: *const fn(device: types.V5_DeviceT,port: u32,val
 ///
 /// **Jumptable Offset:** 0x0214 (_0x037fc214_)
 ///
-/// _defined in devices/adi.zig. from public_signatures.h:64._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiValueGet%28&type=code)
+/// _defined in devices/adi.zig. from public_signatures.h:64._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAdiValueGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -595,7 +594,7 @@ pub const vexDeviceAdiValueGet: *const fn(device: types.V5_DeviceT,port: u32) ca
 ///
 /// **Jumptable Offset:** 0x0230 (_0x037fc230_)
 ///
-/// _defined in devices/bumper.zig. from public_signatures.h:67._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceBumperGet%28&type=code)
+/// _defined in devices/bumper.zig. from public_signatures.h:67._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceBumperGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -610,7 +609,7 @@ pub const vexDeviceBumperGet: *const fn(device: types.V5_DeviceT) callconv(.c) t
 ///
 /// **Jumptable Offset:** 0x0258 (_0x037fc258_)
 ///
-/// _defined in devices/gyro.zig. from public_signatures.h:70._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroReset%28&type=code)
+/// _defined in devices/gyro.zig. from public_signatures.h:70._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroReset%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -625,7 +624,7 @@ pub const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callconv(.c) v
 ///
 /// **Jumptable Offset:** 0x025c (_0x037fc25c_)
 ///
-/// _defined in devices/gyro.zig. from public_signatures.h:71._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroHeadingGet%28&type=code)
+/// _defined in devices/gyro.zig. from public_signatures.h:71._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroHeadingGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -640,7 +639,7 @@ pub const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x0260 (_0x037fc260_)
 ///
-/// _defined in devices/gyro.zig. from public_signatures.h:72._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroDegreesGet%28&type=code)
+/// _defined in devices/gyro.zig. from public_signatures.h:72._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGyroDegreesGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -655,7 +654,7 @@ pub const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x0280 (_0x037fc280_)
 ///
-/// _defined in devices/sonar.zig. from public_signatures.h:75._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceSonarValueGet%28&type=code)
+/// _defined in devices/sonar.zig. from public_signatures.h:75._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceSonarValueGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -670,7 +669,7 @@ pub const vexDeviceSonarValueGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x02a8 (_0x037fc2a8_)
 ///
-/// _defined in devices/generic.zig. from public_signatures.h:78._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericValueGet%28&type=code)
+/// _defined in devices/generic.zig. from public_signatures.h:78._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericValueGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -685,7 +684,7 @@ pub const vexDeviceGenericValueGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x02d0 (_0x037fc2d0_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:81._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocitySet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:81._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocitySet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -700,7 +699,7 @@ pub const vexDeviceMotorVelocitySet: *const fn(device: types.V5_DeviceT,velocity
 ///
 /// **Jumptable Offset:** 0x0374 (_0x037fc374_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:82._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityUpdate%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:82._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityUpdate%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -715,7 +714,7 @@ pub const vexDeviceMotorVelocityUpdate: *const fn(device: types.V5_DeviceT,veloc
 ///
 /// **Jumptable Offset:** 0x035c (_0x037fc35c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:83._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:83._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -730,7 +729,7 @@ pub const vexDeviceMotorVoltageSet: *const fn(device: types.V5_DeviceT,value: i3
 ///
 /// **Jumptable Offset:** 0x02d4 (_0x037fc2d4_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:84._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:84._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -745,7 +744,7 @@ pub const vexDeviceMotorVelocityGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x02d8 (_0x037fc2d8_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:85._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorActualVelocityGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:85._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorActualVelocityGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -760,7 +759,7 @@ pub const vexDeviceMotorActualVelocityGet: *const fn(device: types.V5_DeviceT) c
 ///
 /// **Jumptable Offset:** 0x02dc (_0x037fc2dc_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:86._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorDirectionGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:86._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorDirectionGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -775,7 +774,7 @@ pub const vexDeviceMotorDirectionGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x02e0 (_0x037fc2e0_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:87._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorModeSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:87._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -790,7 +789,7 @@ pub const vexDeviceMotorModeSet: *const fn(device: types.V5_DeviceT,mode: types.
 ///
 /// **Jumptable Offset:** 0x02e4 (_0x037fc2e4_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:88._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorModeGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:88._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -805,7 +804,7 @@ pub const vexDeviceMotorModeGet: *const fn(device: types.V5_DeviceT) callconv(.c
 ///
 /// **Jumptable Offset:** 0x02e8 (_0x037fc2e8_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:89._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPwmSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:89._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPwmSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -820,7 +819,7 @@ pub const vexDeviceMotorPwmSet: *const fn(device: types.V5_DeviceT,value: i32) c
 ///
 /// **Jumptable Offset:** 0x02ec (_0x037fc2ec_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:90._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPwmGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:90._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPwmGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -835,7 +834,7 @@ pub const vexDeviceMotorPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 ///
 /// **Jumptable Offset:** 0x02f0 (_0x037fc2f0_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:91._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:91._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -850,7 +849,7 @@ pub const vexDeviceMotorCurrentLimitSet: *const fn(device: types.V5_DeviceT,valu
 ///
 /// **Jumptable Offset:** 0x02f4 (_0x037fc2f4_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:92._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:92._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -865,7 +864,7 @@ pub const vexDeviceMotorCurrentLimitGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x036c (_0x037fc36c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:93._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageLimitSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:93._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageLimitSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -880,7 +879,7 @@ pub const vexDeviceMotorVoltageLimitSet: *const fn(device: types.V5_DeviceT,valu
 ///
 /// **Jumptable Offset:** 0x0370 (_0x037fc370_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:94._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageLimitGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:94._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageLimitGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -895,7 +894,7 @@ pub const vexDeviceMotorVoltageLimitGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x0378 (_0x037fc378_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:95._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionPidSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:95._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionPidSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -910,7 +909,7 @@ pub const vexDeviceMotorPositionPidSet: *const fn(device: types.V5_DeviceT,pid: 
 ///
 /// **Jumptable Offset:** 0x037c (_0x037fc37c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:96._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityPidSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:96._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVelocityPidSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -925,7 +924,7 @@ pub const vexDeviceMotorVelocityPidSet: *const fn(device: types.V5_DeviceT,pid: 
 ///
 /// **Jumptable Offset:** 0x02f8 (_0x037fc2f8_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:97._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:97._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -940,7 +939,7 @@ pub const vexDeviceMotorCurrentGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x0360 (_0x037fc360_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:98._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:98._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorVoltageGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -955,7 +954,7 @@ pub const vexDeviceMotorVoltageGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x02fc (_0x037fc2fc_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:99._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPowerGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:99._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPowerGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -970,7 +969,7 @@ pub const vexDeviceMotorPowerGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x0300 (_0x037fc300_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:100._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTorqueGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:100._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTorqueGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -985,7 +984,7 @@ pub const vexDeviceMotorTorqueGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x0304 (_0x037fc304_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:101._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEfficiencyGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:101._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEfficiencyGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1000,7 +999,7 @@ pub const vexDeviceMotorEfficiencyGet: *const fn(device: types.V5_DeviceT) callc
 ///
 /// **Jumptable Offset:** 0x0308 (_0x037fc308_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:102._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTemperatureGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:102._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTemperatureGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1015,7 +1014,7 @@ pub const vexDeviceMotorTemperatureGet: *const fn(device: types.V5_DeviceT) call
 ///
 /// **Jumptable Offset:** 0x030c (_0x037fc30c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:103._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorOverTempFlagGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:103._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorOverTempFlagGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1030,7 +1029,7 @@ pub const vexDeviceMotorOverTempFlagGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x0310 (_0x037fc310_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:104._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitFlagGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:104._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorCurrentLimitFlagGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1045,7 +1044,7 @@ pub const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: types.V5_DeviceT)
 ///
 /// **Jumptable Offset:** 0x0354 (_0x037fc354_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:105._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorFaultsGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:105._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorFaultsGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1060,7 +1059,7 @@ pub const vexDeviceMotorFaultsGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x0314 (_0x037fc314_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:106._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorZeroVelocityFlagGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:106._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorZeroVelocityFlagGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1075,7 +1074,7 @@ pub const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: types.V5_DeviceT)
 ///
 /// **Jumptable Offset:** 0x0318 (_0x037fc318_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:107._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorZeroPositionFlagGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:107._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorZeroPositionFlagGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1090,7 +1089,7 @@ pub const vexDeviceMotorZeroPositionFlagGet: *const fn(device: types.V5_DeviceT)
 ///
 /// **Jumptable Offset:** 0x0358 (_0x037fc358_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:108._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorFlagsGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:108._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorFlagsGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1105,7 +1104,7 @@ pub const vexDeviceMotorFlagsGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x031c (_0x037fc31c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:109._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorReverseFlagSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:109._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorReverseFlagSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1120,7 +1119,7 @@ pub const vexDeviceMotorReverseFlagSet: *const fn(device: types.V5_DeviceT,value
 ///
 /// **Jumptable Offset:** 0x0320 (_0x037fc320_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:110._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorReverseFlagGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:110._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorReverseFlagGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1135,7 +1134,7 @@ pub const vexDeviceMotorReverseFlagGet: *const fn(device: types.V5_DeviceT) call
 ///
 /// **Jumptable Offset:** 0x0324 (_0x037fc324_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:111._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEncoderUnitsSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:111._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEncoderUnitsSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1150,7 +1149,7 @@ pub const vexDeviceMotorEncoderUnitsSet: *const fn(device: types.V5_DeviceT,unit
 ///
 /// **Jumptable Offset:** 0x0328 (_0x037fc328_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:113._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEncoderUnitsGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:113._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorEncoderUnitsGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1165,7 +1164,7 @@ pub const vexDeviceMotorEncoderUnitsGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x032c (_0x037fc32c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:114._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorBrakeModeSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:114._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorBrakeModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1180,7 +1179,7 @@ pub const vexDeviceMotorBrakeModeSet: *const fn(device: types.V5_DeviceT,mode: t
 ///
 /// **Jumptable Offset:** 0x0330 (_0x037fc330_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:115._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorBrakeModeGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:115._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorBrakeModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1195,7 +1194,7 @@ pub const vexDeviceMotorBrakeModeGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x0334 (_0x037fc334_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:116._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:116._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1210,7 +1209,7 @@ pub const vexDeviceMotorPositionSet: *const fn(device: types.V5_DeviceT,position
 ///
 /// **Jumptable Offset:** 0x0338 (_0x037fc338_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:117._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:117._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1225,7 +1224,7 @@ pub const vexDeviceMotorPositionGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x033c (_0x037fc33c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:118._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionRawGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:118._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionRawGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1240,7 +1239,7 @@ pub const vexDeviceMotorPositionRawGet: *const fn(device: types.V5_DeviceT,times
 ///
 /// **Jumptable Offset:** 0x0340 (_0x037fc340_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:119._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionReset%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:119._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorPositionReset%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1255,7 +1254,7 @@ pub const vexDeviceMotorPositionReset: *const fn(device: types.V5_DeviceT) callc
 ///
 /// **Jumptable Offset:** 0x0344 (_0x037fc344_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:120._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTargetGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:120._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTargetGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1270,7 +1269,7 @@ pub const vexDeviceMotorTargetGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x0348 (_0x037fc348_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:121._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorServoTargetSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:121._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorServoTargetSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1285,7 +1284,7 @@ pub const vexDeviceMotorServoTargetSet: *const fn(device: types.V5_DeviceT,posit
 ///
 /// **Jumptable Offset:** 0x034c (_0x037fc34c_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:122._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorAbsoluteTargetSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:122._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorAbsoluteTargetSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1300,7 +1299,7 @@ pub const vexDeviceMotorAbsoluteTargetSet: *const fn(device: types.V5_DeviceT,po
 ///
 /// **Jumptable Offset:** 0x0350 (_0x037fc350_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:124._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorRelativeTargetSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:124._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorRelativeTargetSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1315,7 +1314,7 @@ pub const vexDeviceMotorRelativeTargetSet: *const fn(device: types.V5_DeviceT,po
 ///
 /// **Jumptable Offset:** 0x0364 (_0x037fc364_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:126._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorGearingSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:126._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorGearingSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1330,7 +1329,7 @@ pub const vexDeviceMotorGearingSet: *const fn(device: types.V5_DeviceT,value: ty
 ///
 /// **Jumptable Offset:** 0x0368 (_0x037fc368_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:127._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorGearingGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:127._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorGearingGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1345,7 +1344,7 @@ pub const vexDeviceMotorGearingGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x0380 (_0x037fc380_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:128._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorExternalProfileSet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:128._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorExternalProfileSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1360,7 +1359,7 @@ pub const vexDeviceMotorExternalProfileSet: *const fn(device: types.V5_DeviceT,p
 ///
 /// **Jumptable Offset:** 0x0384 (_0x037fc384_)
 ///
-/// _defined in devices/motor.zig. from public_signatures.h:130._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTypeGet%28&type=code)
+/// _defined in devices/motor.zig. from public_signatures.h:130._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMotorTypeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1375,7 +1374,7 @@ pub const vexDeviceMotorTypeGet: *const fn(device: types.V5_DeviceT) callconv(.c
 ///
 /// **Jumptable Offset:** 0x0398 (_0x037fc398_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:133._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionModeSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:133._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1390,7 +1389,7 @@ pub const vexDeviceVisionModeSet: *const fn(device: types.V5_DeviceT,mode: types
 ///
 /// **Jumptable Offset:** 0x039c (_0x037fc39c_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:134._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionModeGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:134._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1405,7 +1404,7 @@ pub const vexDeviceVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x03a0 (_0x037fc3a0_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:135._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionObjectCountGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:135._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionObjectCountGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1420,7 +1419,7 @@ pub const vexDeviceVisionObjectCountGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x03a4 (_0x037fc3a4_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:136._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionObjectGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:136._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionObjectGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1435,7 +1434,7 @@ pub const vexDeviceVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj:
 ///
 /// **Jumptable Offset:** 0x03a8 (_0x037fc3a8_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:138._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionSignatureSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:138._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionSignatureSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1450,7 +1449,7 @@ pub const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT,pSigna
 ///
 /// **Jumptable Offset:** 0x03ac (_0x037fc3ac_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:140._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionSignatureGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:140._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionSignatureGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1465,7 +1464,7 @@ pub const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u3
 ///
 /// **Jumptable Offset:** 0x03b0 (_0x037fc3b0_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:142._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionBrightnessSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:142._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionBrightnessSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1480,7 +1479,7 @@ pub const vexDeviceVisionBrightnessSet: *const fn(device: types.V5_DeviceT,perce
 ///
 /// **Jumptable Offset:** 0x03b4 (_0x037fc3b4_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:143._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionBrightnessGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:143._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionBrightnessGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1495,7 +1494,7 @@ pub const vexDeviceVisionBrightnessGet: *const fn(device: types.V5_DeviceT) call
 ///
 /// **Jumptable Offset:** 0x03b8 (_0x037fc3b8_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:144._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceModeSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:144._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1510,7 +1509,7 @@ pub const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: types.V5_DeviceT
 ///
 /// **Jumptable Offset:** 0x03bc (_0x037fc3bc_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:145._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceModeGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:145._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1525,7 +1524,7 @@ pub const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: types.V5_DeviceT
 ///
 /// **Jumptable Offset:** 0x03c0 (_0x037fc3c0_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:146._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:146._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1540,7 +1539,7 @@ pub const vexDeviceVisionWhiteBalanceSet: *const fn(device: types.V5_DeviceT,col
 ///
 /// **Jumptable Offset:** 0x03c4 (_0x037fc3c4_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:148._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:148._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWhiteBalanceGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1555,7 +1554,7 @@ pub const vexDeviceVisionWhiteBalanceGet: *const fn(device: types.V5_DeviceT) ca
 ///
 /// **Jumptable Offset:** 0x03c8 (_0x037fc3c8_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:149._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedModeSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:149._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1570,7 +1569,7 @@ pub const vexDeviceVisionLedModeSet: *const fn(device: types.V5_DeviceT,mode: ty
 ///
 /// **Jumptable Offset:** 0x03cc (_0x037fc3cc_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:150._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedModeGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:150._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1585,7 +1584,7 @@ pub const vexDeviceVisionLedModeGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x03d0 (_0x037fc3d0_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:151._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedBrigntnessSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:151._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedBrigntnessSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1600,7 +1599,7 @@ pub const vexDeviceVisionLedBrigntnessSet: *const fn(device: types.V5_DeviceT,pe
 ///
 /// **Jumptable Offset:** 0x03d4 (_0x037fc3d4_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:152._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedBrigntnessGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:152._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedBrigntnessGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1615,7 +1614,7 @@ pub const vexDeviceVisionLedBrigntnessGet: *const fn(device: types.V5_DeviceT) c
 ///
 /// **Jumptable Offset:** 0x03d8 (_0x037fc3d8_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:153._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedColorSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:153._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedColorSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1630,7 +1629,7 @@ pub const vexDeviceVisionLedColorSet: *const fn(device: types.V5_DeviceT,color: 
 ///
 /// **Jumptable Offset:** 0x03dc (_0x037fc3dc_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:154._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedColorGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:154._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionLedColorGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1645,7 +1644,7 @@ pub const vexDeviceVisionLedColorGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x03e0 (_0x037fc3e0_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:155._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWifiModeSet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:155._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWifiModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1660,7 +1659,7 @@ pub const vexDeviceVisionWifiModeSet: *const fn(device: types.V5_DeviceT,mode: t
 ///
 /// **Jumptable Offset:** 0x03e4 (_0x037fc3e4_)
 ///
-/// _defined in devices/vision.zig. from public_signatures.h:156._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWifiModeGet%28&type=code)
+/// _defined in devices/vision.zig. from public_signatures.h:156._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceVisionWifiModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1675,7 +1674,7 @@ pub const vexDeviceVisionWifiModeGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x0410 (_0x037fc410_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:159._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuReset%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:159._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuReset%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1690,7 +1689,7 @@ pub const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) vo
 ///
 /// **Jumptable Offset:** 0x0414 (_0x037fc414_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:160._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuHeadingGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:160._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuHeadingGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1705,7 +1704,7 @@ pub const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x0418 (_0x037fc418_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:161._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuDegreesGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:161._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuDegreesGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1720,7 +1719,7 @@ pub const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x041c (_0x037fc41c_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:162._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuQuaternionGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:162._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuQuaternionGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1735,7 +1734,7 @@ pub const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*
 ///
 /// **Jumptable Offset:** 0x0420 (_0x037fc420_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:163._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuAttitudeGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:163._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuAttitudeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1750,7 +1749,7 @@ pub const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]
 ///
 /// **Jumptable Offset:** 0x0424 (_0x037fc424_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:164._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuRawGyroGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:164._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuRawGyroGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1765,7 +1764,7 @@ pub const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]t
 ///
 /// **Jumptable Offset:** 0x0428 (_0x037fc428_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:165._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuRawAccelGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:165._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuRawAccelGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1780,7 +1779,7 @@ pub const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]
 ///
 /// **Jumptable Offset:** 0x042c (_0x037fc42c_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:166._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuStatusGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:166._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1795,7 +1794,7 @@ pub const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c
 ///
 /// **Jumptable Offset:** 0x0438 (_0x037fc438_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:167._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuModeSet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:167._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1810,7 +1809,7 @@ pub const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u32) cal
 ///
 /// **Jumptable Offset:** 0x043c (_0x037fc43c_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:168._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuModeGet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:168._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1825,7 +1824,7 @@ pub const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 ///
 /// **Jumptable Offset:** 0x0444 (_0x037fc444_)
 ///
-/// _defined in devices/imu.zig. from public_signatures.h:169._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuDataRateSet%28&type=code)
+/// _defined in devices/imu.zig. from public_signatures.h:169._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceImuDataRateSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1840,7 +1839,7 @@ pub const vexDeviceImuDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32)
 ///
 /// **Jumptable Offset:** 0x04d8 (_0x037fc4d8_)
 ///
-/// _defined in devices/range.zig. from public_signatures.h:172._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceRangeValueGet%28&type=code)
+/// _defined in devices/range.zig. from public_signatures.h:172._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceRangeValueGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1855,7 +1854,7 @@ pub const vexDeviceRangeValueGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x0488 (_0x037fc488_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:175._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReset%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:175._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReset%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1870,7 +1869,7 @@ pub const vexDeviceAbsEncReset: *const fn(device: types.V5_DeviceT) callconv(.c)
 ///
 /// **Jumptable Offset:** 0x048c (_0x037fc48c_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:176._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncPositionSet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:176._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncPositionSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1885,7 +1884,7 @@ pub const vexDeviceAbsEncPositionSet: *const fn(device: types.V5_DeviceT,positio
 ///
 /// **Jumptable Offset:** 0x0490 (_0x037fc490_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:177._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncPositionGet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:177._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncPositionGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1900,7 +1899,7 @@ pub const vexDeviceAbsEncPositionGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x0494 (_0x037fc494_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:178._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncVelocityGet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:178._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncVelocityGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1915,7 +1914,7 @@ pub const vexDeviceAbsEncVelocityGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x0498 (_0x037fc498_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:179._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncAngleGet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:179._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncAngleGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1930,7 +1929,7 @@ pub const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x049c (_0x037fc49c_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:180._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReverseFlagSet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:180._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReverseFlagSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1945,7 +1944,7 @@ pub const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,valu
 ///
 /// **Jumptable Offset:** 0x04a0 (_0x037fc4a0_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:181._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReverseFlagGet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:181._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncReverseFlagGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1960,7 +1959,7 @@ pub const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x04a4 (_0x037fc4a4_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:182._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncStatusGet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:182._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1975,7 +1974,7 @@ pub const vexDeviceAbsEncStatusGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x04c0 (_0x037fc4c0_)
 ///
-/// _defined in devices/rotation.zig. from public_signatures.h:183._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncDataRateSet%28&type=code)
+/// _defined in devices/rotation.zig. from public_signatures.h:183._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAbsEncDataRateSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -1990,7 +1989,7 @@ pub const vexDeviceAbsEncDataRateSet: *const fn(device: types.V5_DeviceT,rate: u
 ///
 /// **Jumptable Offset:** 0x0528 (_0x037fc528_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:186._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalHueGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:186._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalHueGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2005,7 +2004,7 @@ pub const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x052c (_0x037fc52c_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:187._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalSatGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:187._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalSatGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2020,7 +2019,7 @@ pub const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x0530 (_0x037fc530_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:188._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalBrightnessGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:188._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalBrightnessGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2035,7 +2034,7 @@ pub const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x0534 (_0x037fc534_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:189._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalProximityGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:189._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalProximityGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2050,7 +2049,7 @@ pub const vexDeviceOpticalProximityGet: *const fn(device: types.V5_DeviceT) call
 ///
 /// **Jumptable Offset:** 0x0538 (_0x037fc538_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:190._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalRgbGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:190._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalRgbGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2065,7 +2064,7 @@ pub const vexDeviceOpticalRgbGet: *const fn(device: types.V5_DeviceT,data: [*c]t
 ///
 /// **Jumptable Offset:** 0x053c (_0x037fc53c_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:191._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalLedPwmSet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:191._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalLedPwmSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2080,7 +2079,7 @@ pub const vexDeviceOpticalLedPwmSet: *const fn(device: types.V5_DeviceT,value: i
 ///
 /// **Jumptable Offset:** 0x0540 (_0x037fc540_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:192._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalLedPwmGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:192._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalLedPwmGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2095,7 +2094,7 @@ pub const vexDeviceOpticalLedPwmGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x0544 (_0x037fc544_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:193._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalStatusGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:193._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2110,7 +2109,7 @@ pub const vexDeviceOpticalStatusGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x0548 (_0x037fc548_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:194._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalRawGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:194._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalRawGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2125,7 +2124,7 @@ pub const vexDeviceOpticalRawGet: *const fn(device: types.V5_DeviceT,data: [*c]t
 ///
 /// **Jumptable Offset:** 0x0550 (_0x037fc550_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:195._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalModeSet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:195._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2140,7 +2139,7 @@ pub const vexDeviceOpticalModeSet: *const fn(device: types.V5_DeviceT,mode: u32)
 ///
 /// **Jumptable Offset:** 0x0554 (_0x037fc554_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:196._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalModeGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:196._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2155,7 +2154,7 @@ pub const vexDeviceOpticalModeGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x0558 (_0x037fc558_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:197._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:197._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2170,7 +2169,7 @@ pub const vexDeviceOpticalGestureGet: *const fn(_: types.V5_DeviceT,pData: [*c]t
 ///
 /// **Jumptable Offset:** 0x055c (_0x037fc55c_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:198._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureEnable%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:198._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureEnable%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2185,7 +2184,7 @@ pub const vexDeviceOpticalGestureEnable: *const fn(_: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x0560 (_0x037fc560_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:199._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureDisable%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:199._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalGestureDisable%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2200,7 +2199,7 @@ pub const vexDeviceOpticalGestureDisable: *const fn(_: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x0564 (_0x037fc564_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:200._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalProximityThreshold%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:200._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalProximityThreshold%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2215,7 +2214,7 @@ pub const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_DeviceT
 ///
 /// **Jumptable Offset:** 0x0b40 (_0x037fcb40_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:201._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalIntegrationTimeSet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:201._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalIntegrationTimeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2230,7 +2229,7 @@ pub const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT
 ///
 /// **Jumptable Offset:** 0x0b44 (_0x037fcb44_)
 ///
-/// _defined in devices/optical.zig. from public_signatures.h:202._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalIntegrationTimeGet%28&type=code)
+/// _defined in devices/optical.zig. from public_signatures.h:202._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceOpticalIntegrationTimeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2245,7 +2244,7 @@ pub const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT
 ///
 /// **Jumptable Offset:** 0x0578 (_0x037fc578_)
 ///
-/// _defined in devices/magnet.zig. from public_signatures.h:205._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPowerSet%28&type=code)
+/// _defined in devices/magnet.zig. from public_signatures.h:205._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPowerSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2260,7 +2259,7 @@ pub const vexDeviceMagnetPowerSet: *const fn(device: types.V5_DeviceT,value: i32
 ///
 /// **Jumptable Offset:** 0x057c (_0x037fc57c_)
 ///
-/// _defined in devices/magnet.zig. from public_signatures.h:206._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPowerGet%28&type=code)
+/// _defined in devices/magnet.zig. from public_signatures.h:206._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPowerGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2275,7 +2274,7 @@ pub const vexDeviceMagnetPowerGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x0580 (_0x037fc580_)
 ///
-/// _defined in devices/magnet.zig. from public_signatures.h:207._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPickup%28&type=code)
+/// _defined in devices/magnet.zig. from public_signatures.h:207._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetPickup%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2290,7 +2289,7 @@ pub const vexDeviceMagnetPickup: *const fn(device: types.V5_DeviceT,duration: ty
 ///
 /// **Jumptable Offset:** 0x0584 (_0x037fc584_)
 ///
-/// _defined in devices/magnet.zig. from public_signatures.h:208._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetDrop%28&type=code)
+/// _defined in devices/magnet.zig. from public_signatures.h:208._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetDrop%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2305,7 +2304,7 @@ pub const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duration: type
 ///
 /// **Jumptable Offset:** 0x0588 (_0x037fc588_)
 ///
-/// _defined in devices/magnet.zig. from public_signatures.h:209._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetTemperatureGet%28&type=code)
+/// _defined in devices/magnet.zig. from public_signatures.h:209._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetTemperatureGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2320,7 +2319,7 @@ pub const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x058c (_0x037fc58c_)
 ///
-/// _defined in devices/magnet.zig. from public_signatures.h:210._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetCurrentGet%28&type=code)
+/// _defined in devices/magnet.zig. from public_signatures.h:210._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetCurrentGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2335,7 +2334,7 @@ pub const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x0590 (_0x037fc590_)
 ///
-/// _defined in devices/magnet.zig. from public_signatures.h:211._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetStatusGet%28&type=code)
+/// _defined in devices/magnet.zig. from public_signatures.h:211._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceMagnetStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2350,7 +2349,7 @@ pub const vexDeviceMagnetStatusGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x05a0 (_0x037fc5a0_)
 ///
-/// _defined in devices/light_tower.zig. from public_signatures.h:214._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerRgbSet%28&type=code)
+/// _defined in devices/light_tower.zig. from public_signatures.h:214._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerRgbSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2365,7 +2364,7 @@ pub const vexDeviceLightTowerRgbSet: *const fn(device: types.V5_DeviceT,rgb_valu
 ///
 /// **Jumptable Offset:** 0x05a4 (_0x037fc5a4_)
 ///
-/// _defined in devices/light_tower.zig. from public_signatures.h:216._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerColorSet%28&type=code)
+/// _defined in devices/light_tower.zig. from public_signatures.h:216._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerColorSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2380,7 +2379,7 @@ pub const vexDeviceLightTowerColorSet: *const fn(device: types.V5_DeviceT,color_
 ///
 /// **Jumptable Offset:** 0x05a8 (_0x037fc5a8_)
 ///
-/// _defined in devices/light_tower.zig. from public_signatures.h:218._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerRgbGet%28&type=code)
+/// _defined in devices/light_tower.zig. from public_signatures.h:218._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerRgbGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2395,7 +2394,7 @@ pub const vexDeviceLightTowerRgbGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x05ac (_0x037fc5ac_)
 ///
-/// _defined in devices/light_tower.zig. from public_signatures.h:219._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerXywGet%28&type=code)
+/// _defined in devices/light_tower.zig. from public_signatures.h:219._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerXywGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2410,7 +2409,7 @@ pub const vexDeviceLightTowerXywGet: *const fn(device: types.V5_DeviceT) callcon
 ///
 /// **Jumptable Offset:** 0x05b0 (_0x037fc5b0_)
 ///
-/// _defined in devices/light_tower.zig. from public_signatures.h:220._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerStatusGet%28&type=code)
+/// _defined in devices/light_tower.zig. from public_signatures.h:220._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2425,7 +2424,7 @@ pub const vexDeviceLightTowerStatusGet: *const fn(device: types.V5_DeviceT) call
 ///
 /// **Jumptable Offset:** 0x05b8 (_0x037fc5b8_)
 ///
-/// _defined in devices/light_tower.zig. from public_signatures.h:221._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerBlinkSet%28&type=code)
+/// _defined in devices/light_tower.zig. from public_signatures.h:221._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceLightTowerBlinkSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2440,7 +2439,7 @@ pub const vexDeviceLightTowerBlinkSet: *const fn(device: types.V5_DeviceT,select
 ///
 /// **Jumptable Offset:** 0x0500 (_0x037fc500_)
 ///
-/// _defined in devices/distance.zig. from public_signatures.h:225._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceDistanceGet%28&type=code)
+/// _defined in devices/distance.zig. from public_signatures.h:225._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceDistanceGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2455,7 +2454,7 @@ pub const vexDeviceDistanceDistanceGet: *const fn(device: types.V5_DeviceT) call
 ///
 /// **Jumptable Offset:** 0x0504 (_0x037fc504_)
 ///
-/// _defined in devices/distance.zig. from public_signatures.h:226._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceConfidenceGet%28&type=code)
+/// _defined in devices/distance.zig. from public_signatures.h:226._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceConfidenceGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2470,7 +2469,7 @@ pub const vexDeviceDistanceConfidenceGet: *const fn(device: types.V5_DeviceT) ca
 ///
 /// **Jumptable Offset:** 0x0518 (_0x037fc518_)
 ///
-/// _defined in devices/distance.zig. from public_signatures.h:227._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceObjectSizeGet%28&type=code)
+/// _defined in devices/distance.zig. from public_signatures.h:227._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceObjectSizeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2485,7 +2484,7 @@ pub const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_DeviceT) ca
 ///
 /// **Jumptable Offset:** 0x051c (_0x037fc51c_)
 ///
-/// _defined in devices/distance.zig. from public_signatures.h:228._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceObjectVelocityGet%28&type=code)
+/// _defined in devices/distance.zig. from public_signatures.h:228._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceObjectVelocityGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2500,7 +2499,7 @@ pub const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT
 ///
 /// **Jumptable Offset:** 0x0508 (_0x037fc508_)
 ///
-/// _defined in devices/distance.zig. from public_signatures.h:229._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceStatusGet%28&type=code)
+/// _defined in devices/distance.zig. from public_signatures.h:229._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceDistanceStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2515,7 +2514,7 @@ pub const vexDeviceDistanceStatusGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x05c8 (_0x037fc5c8_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:232._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsReset%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:232._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsReset%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2530,7 +2529,7 @@ pub const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) vo
 ///
 /// **Jumptable Offset:** 0x05cc (_0x037fc5cc_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:233._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsHeadingGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:233._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsHeadingGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2545,7 +2544,7 @@ pub const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x05d0 (_0x037fc5d0_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:234._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsDegreesGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:234._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsDegreesGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2560,7 +2559,7 @@ pub const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// **Jumptable Offset:** 0x05d4 (_0x037fc5d4_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:235._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsQuaternionGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:235._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsQuaternionGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2575,7 +2574,7 @@ pub const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*
 ///
 /// **Jumptable Offset:** 0x05d8 (_0x037fc5d8_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:236._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsAttitudeGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:236._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsAttitudeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2590,7 +2589,7 @@ pub const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]
 ///
 /// **Jumptable Offset:** 0x05dc (_0x037fc5dc_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:238._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRawGyroGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:238._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRawGyroGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2605,7 +2604,7 @@ pub const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]t
 ///
 /// **Jumptable Offset:** 0x05e0 (_0x037fc5e0_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:239._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRawAccelGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:239._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRawAccelGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2620,7 +2619,7 @@ pub const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]
 ///
 /// **Jumptable Offset:** 0x05e4 (_0x037fc5e4_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:240._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsStatusGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:240._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2635,7 +2634,7 @@ pub const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c
 ///
 /// **Jumptable Offset:** 0x05f0 (_0x037fc5f0_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:241._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsModeSet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:241._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2650,7 +2649,7 @@ pub const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u32) cal
 ///
 /// **Jumptable Offset:** 0x05f4 (_0x037fc5f4_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:242._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsModeGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:242._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2665,7 +2664,7 @@ pub const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) 
 ///
 /// **Jumptable Offset:** 0x05f8 (_0x037fc5f8_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:243._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsDataRateSet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:243._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsDataRateSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2680,7 +2679,7 @@ pub const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32)
 ///
 /// **Jumptable Offset:** 0x05fc (_0x037fc5fc_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:244._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsOriginSet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:244._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsOriginSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2695,7 +2694,7 @@ pub const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: types.do
 ///
 /// **Jumptable Offset:** 0x0600 (_0x037fc600_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:245._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsOriginGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:245._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsOriginGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2710,7 +2709,7 @@ pub const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [*c]type
 ///
 /// **Jumptable Offset:** 0x0604 (_0x037fc604_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:246._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRotationSet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:246._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRotationSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2725,7 +2724,7 @@ pub const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,value: typ
 ///
 /// **Jumptable Offset:** 0x0608 (_0x037fc608_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:247._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRotationGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:247._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsRotationGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2740,7 +2739,7 @@ pub const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) callconv(
 ///
 /// **Jumptable Offset:** 0x060c (_0x037fc60c_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:248._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsInitialPositionSet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:248._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsInitialPositionSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2755,7 +2754,7 @@ pub const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_DeviceT,ini
 ///
 /// **Jumptable Offset:** 0x0614 (_0x037fc614_)
 ///
-/// _defined in devices/gps.zig. from public_signatures.h:250._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsErrorGet%28&type=code)
+/// _defined in devices/gps.zig. from public_signatures.h:250._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGpsErrorGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2770,7 +2769,7 @@ pub const vexDeviceGpsErrorGet: *const fn(device: types.V5_DeviceT) callconv(.c)
 ///
 /// **Jumptable Offset:** 0x0ca8 (_0x037fcca8_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:253._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionModeSet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:253._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionModeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2785,7 +2784,7 @@ pub const vexDeviceAiVisionModeSet: *const fn(device: types.V5_DeviceT,mode: u32
 ///
 /// **Jumptable Offset:** 0x0cac (_0x037fccac_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:254._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionModeGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:254._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionModeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2800,7 +2799,7 @@ pub const vexDeviceAiVisionModeGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x0cb0 (_0x037fccb0_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:255._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionObjectCountGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:255._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionObjectCountGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2815,7 +2814,7 @@ pub const vexDeviceAiVisionObjectCountGet: *const fn(device: types.V5_DeviceT) c
 ///
 /// **Jumptable Offset:** 0x0cb4 (_0x037fccb4_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:256._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionObjectGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:256._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionObjectGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2830,7 +2829,7 @@ pub const vexDeviceAiVisionObjectGet: *const fn(device: types.V5_DeviceT,indexOb
 ///
 /// **Jumptable Offset:** 0x0cb8 (_0x037fccb8_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:258._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionColorSet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:258._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionColorSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2845,7 +2844,7 @@ pub const vexDeviceAiVisionColorSet: *const fn(device: types.V5_DeviceT,pColor: 
 ///
 /// **Jumptable Offset:** 0x0cbc (_0x037fccbc_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:260._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionColorGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:260._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionColorGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2860,7 +2859,7 @@ pub const vexDeviceAiVisionColorGet: *const fn(device: types.V5_DeviceT,id: u32,
 ///
 /// **Jumptable Offset:** 0x0cc0 (_0x037fccc0_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:262._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionCodeSet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:262._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionCodeSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2875,7 +2874,7 @@ pub const vexDeviceAiVisionCodeSet: *const fn(device: types.V5_DeviceT,pCode: [*
 ///
 /// **Jumptable Offset:** 0x0cc4 (_0x037fccc4_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:263._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionCodeGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:263._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionCodeGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2890,7 +2889,7 @@ pub const vexDeviceAiVisionCodeGet: *const fn(device: types.V5_DeviceT,id: u32,p
 ///
 /// **Jumptable Offset:** 0x0cc8 (_0x037fccc8_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:265._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionStatusGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:265._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2905,7 +2904,7 @@ pub const vexDeviceAiVisionStatusGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x0ccc (_0x037fcccc_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:266._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionTemperatureGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:266._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionTemperatureGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2920,7 +2919,7 @@ pub const vexDeviceAiVisionTemperatureGet: *const fn(device: types.V5_DeviceT) c
 ///
 /// **Jumptable Offset:** 0x0cd4 (_0x037fccd4_)
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:267._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionClassNameGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:267._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionClassNameGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2935,7 +2934,7 @@ pub const vexDeviceAiVisionClassNameGet: *const fn(device: types.V5_DeviceT,id: 
 ///
 /// 
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:269._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionReset%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:269._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionReset%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2950,7 +2949,7 @@ pub const vexDeviceAiVisionReset: *const fn(device: types.V5_DeviceT) callconv(.
 ///
 /// 
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:270._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionEnableSet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:270._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionEnableSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2965,7 +2964,7 @@ pub const vexDeviceAiVisionEnableSet: *const fn(device: types.V5_DeviceT,nEnable
 ///
 /// 
 ///
-/// _defined in devices/ai_vision.zig. from public_signatures.h:272._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionEnableGet%28&type=code)
+/// _defined in devices/ai_vision.zig. from public_signatures.h:272._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceAiVisionEnableGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2980,7 +2979,7 @@ pub const vexDeviceAiVisionEnableGet: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x0c08 (_0x037fcc08_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:275._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCompressorSet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:275._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCompressorSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -2995,7 +2994,7 @@ pub const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_DeviceT,bS
 ///
 /// **Jumptable Offset:** 0x0c0c (_0x037fcc0c_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:276._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCylinderSet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:276._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCylinderSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3010,7 +3009,7 @@ pub const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_DeviceT,id: 
 ///
 /// **Jumptable Offset:** 0x0c10 (_0x037fcc10_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:277._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCtrlSet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:277._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCtrlSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3025,7 +3024,7 @@ pub const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,pCtrl: [
 ///
 /// **Jumptable Offset:** 0x0c14 (_0x037fcc14_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:279._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticStatusGet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:279._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3040,7 +3039,7 @@ pub const vexDevicePneumaticStatusGet: *const fn(device: types.V5_DeviceT) callc
 ///
 /// **Jumptable Offset:** 0x0c18 (_0x037fcc18_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:280._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticPwmSet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:280._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticPwmSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3055,7 +3054,7 @@ pub const vexDevicePneumaticPwmSet: *const fn(device: types.V5_DeviceT,pwm: u8) 
 ///
 /// **Jumptable Offset:** 0x0c1c (_0x037fcc1c_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:281._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticPwmGet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:281._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticPwmGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3070,7 +3069,7 @@ pub const vexDevicePneumaticPwmGet: *const fn(device: types.V5_DeviceT) callconv
 ///
 /// **Jumptable Offset:** 0x0c20 (_0x037fcc20_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:282._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCylinderPwmSet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:282._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticCylinderPwmSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3085,7 +3084,7 @@ pub const vexDevicePneumaticCylinderPwmSet: *const fn(device: types.V5_DeviceT,i
 ///
 /// **Jumptable Offset:** 0x0c28 (_0x037fcc28_)
 ///
-/// _defined in devices/pneumatic.zig. from public_signatures.h:284._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticActuationStatusGet%28&type=code)
+/// _defined in devices/pneumatic.zig. from public_signatures.h:284._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDevicePneumaticActuationStatusGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3100,7 +3099,7 @@ pub const vexDevicePneumaticActuationStatusGet: *const fn(device: types.V5_Devic
 ///
 /// **Jumptable Offset:** 0x0a50 (_0x037fca50_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:289._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialEnable%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:289._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialEnable%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3115,7 +3114,7 @@ pub const vexDeviceGenericSerialEnable: *const fn(device: types.V5_DeviceT,optio
 ///
 /// **Jumptable Offset:** 0x0a54 (_0x037fca54_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:290._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialBaudrate%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:290._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialBaudrate%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3130,7 +3129,7 @@ pub const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_DeviceT,bau
 ///
 /// **Jumptable Offset:** 0x0a58 (_0x037fca58_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:291._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialWriteChar%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:291._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialWriteChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3145,7 +3144,7 @@ pub const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_DeviceT,c:
 ///
 /// **Jumptable Offset:** 0x0a5c (_0x037fca5c_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:292._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialWriteFree%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:292._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialWriteFree%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3160,7 +3159,7 @@ pub const vexDeviceGenericSerialWriteFree: *const fn(device: types.V5_DeviceT) c
 ///
 /// **Jumptable Offset:** 0x0a60 (_0x037fca60_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:293._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialTransmit%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:293._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialTransmit%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3175,7 +3174,7 @@ pub const vexDeviceGenericSerialTransmit: *const fn(device: types.V5_DeviceT,buf
 ///
 /// **Jumptable Offset:** 0x0a64 (_0x037fca64_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:295._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReadChar%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:295._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReadChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3190,7 +3189,7 @@ pub const vexDeviceGenericSerialReadChar: *const fn(device: types.V5_DeviceT) ca
 ///
 /// **Jumptable Offset:** 0x0a68 (_0x037fca68_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:296._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialPeekChar%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:296._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialPeekChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3205,7 +3204,7 @@ pub const vexDeviceGenericSerialPeekChar: *const fn(device: types.V5_DeviceT) ca
 ///
 /// **Jumptable Offset:** 0x0a6c (_0x037fca6c_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:297._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReceiveAvail%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:297._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReceiveAvail%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3220,7 +3219,7 @@ pub const vexDeviceGenericSerialReceiveAvail: *const fn(device: types.V5_DeviceT
 ///
 /// **Jumptable Offset:** 0x0a70 (_0x037fca70_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:298._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReceive%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:298._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialReceive%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3235,7 +3234,7 @@ pub const vexDeviceGenericSerialReceive: *const fn(device: types.V5_DeviceT,buff
 ///
 /// **Jumptable Offset:** 0x0a74 (_0x037fca74_)
 ///
-/// _defined in devices/generic_serial.zig. from public_signatures.h:300._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialFlush%28&type=code)
+/// _defined in devices/generic_serial.zig. from public_signatures.h:300._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericSerialFlush%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3250,7 +3249,7 @@ pub const vexDeviceGenericSerialFlush: *const fn(device: types.V5_DeviceT) callc
 ///
 /// **Jumptable Offset:** 0x0aa4 (_0x037fcaa4_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:303._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioConnection%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:303._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioConnection%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3265,7 +3264,7 @@ pub const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pN
 ///
 /// **Jumptable Offset:** 0x0aa8 (_0x037fcaa8_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:305._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioWriteChar%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:305._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioWriteChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3280,7 +3279,7 @@ pub const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: 
 ///
 /// **Jumptable Offset:** 0x0aac (_0x037fcaac_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:306._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioWriteFree%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:306._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioWriteFree%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3295,7 +3294,7 @@ pub const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) ca
 ///
 /// **Jumptable Offset:** 0x0ab0 (_0x037fcab0_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:307._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioTransmit%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:307._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioTransmit%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3310,7 +3309,7 @@ pub const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_DeviceT,buff
 ///
 /// **Jumptable Offset:** 0x0ab4 (_0x037fcab4_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:309._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReadChar%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:309._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReadChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3325,7 +3324,7 @@ pub const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x0ab8 (_0x037fcab8_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:310._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioPeekChar%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:310._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioPeekChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3340,7 +3339,7 @@ pub const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_DeviceT) cal
 ///
 /// **Jumptable Offset:** 0x0abc (_0x037fcabc_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:311._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReceiveAvail%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:311._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReceiveAvail%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3355,7 +3354,7 @@ pub const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_DeviceT)
 ///
 /// **Jumptable Offset:** 0x0ac0 (_0x037fcac0_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:312._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReceive%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:312._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioReceive%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3370,7 +3369,7 @@ pub const vexDeviceGenericRadioReceive: *const fn(device: types.V5_DeviceT,buffe
 ///
 /// **Jumptable Offset:** 0x0ac4 (_0x037fcac4_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:314._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioFlush%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:314._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioFlush%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3385,7 +3384,7 @@ pub const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT) callco
 ///
 /// **Jumptable Offset:** 0x0ac8 (_0x037fcac8_)
 ///
-/// _defined in devices/generic_radio.zig. from public_signatures.h:315._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioLinkStatus%28&type=code)
+/// _defined in devices/generic_radio.zig. from public_signatures.h:315._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDeviceGenericRadioLinkStatus%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3400,7 +3399,7 @@ pub const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) c
 ///
 /// **Jumptable Offset:** 0x0640 (_0x037fc640_)
 ///
-/// _defined in display.zig. from public_signatures.h:318._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayForegroundColor%28&type=code)
+/// _defined in display.zig. from public_signatures.h:318._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayForegroundColor%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3415,7 +3414,7 @@ pub const vexDisplayForegroundColor: *const fn(col: u32) callconv(.c) void = dis
 ///
 /// **Jumptable Offset:** 0x0644 (_0x037fc644_)
 ///
-/// _defined in display.zig. from public_signatures.h:319._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBackgroundColor%28&type=code)
+/// _defined in display.zig. from public_signatures.h:319._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBackgroundColor%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3430,7 +3429,7 @@ pub const vexDisplayBackgroundColor: *const fn(col: u32) callconv(.c) void = dis
 ///
 /// **Jumptable Offset:** 0x06b8 (_0x037fc6b8_)
 ///
-/// _defined in display.zig. from public_signatures.h:320._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayForegroundColorGet%28&type=code)
+/// _defined in display.zig. from public_signatures.h:320._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayForegroundColorGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3445,7 +3444,7 @@ pub const vexDisplayForegroundColorGet: *const fn() callconv(.c) u32 = display.v
 ///
 /// **Jumptable Offset:** 0x06bc (_0x037fc6bc_)
 ///
-/// _defined in display.zig. from public_signatures.h:321._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBackgroundColorGet%28&type=code)
+/// _defined in display.zig. from public_signatures.h:321._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBackgroundColorGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3460,7 +3459,7 @@ pub const vexDisplayBackgroundColorGet: *const fn() callconv(.c) u32 = display.v
 ///
 /// **Jumptable Offset:** 0x0648 (_0x037fc648_)
 ///
-/// _defined in display.zig. from public_signatures.h:322._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayErase%28&type=code)
+/// _defined in display.zig. from public_signatures.h:322._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayErase%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3475,7 +3474,7 @@ pub const vexDisplayErase: *const fn() callconv(.c) void = display.vexDisplayEra
 ///
 /// **Jumptable Offset:** 0x064c (_0x037fc64c_)
 ///
-/// _defined in display.zig. from public_signatures.h:323._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayScroll%28&type=code)
+/// _defined in display.zig. from public_signatures.h:323._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayScroll%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3490,7 +3489,7 @@ pub const vexDisplayScroll: *const fn(nStartLine: i32,nLines: i32) callconv(.c) 
 ///
 /// **Jumptable Offset:** 0x0650 (_0x037fc650_)
 ///
-/// _defined in display.zig. from public_signatures.h:324._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayScrollRect%28&type=code)
+/// _defined in display.zig. from public_signatures.h:324._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayScrollRect%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3505,7 +3504,7 @@ pub const vexDisplayScrollRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,nLines
 ///
 /// **Jumptable Offset:** 0x0654 (_0x037fc654_)
 ///
-/// _defined in display.zig. from public_signatures.h:326._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCopyRect%28&type=code)
+/// _defined in display.zig. from public_signatures.h:326._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCopyRect%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3520,7 +3519,7 @@ pub const vexDisplayCopyRect: *const fn(x1: i32,y1: i32,x2: i32,y2: i32,pSrc: [*
 ///
 /// **Jumptable Offset:** 0x0658 (_0x037fc658_)
 ///
-/// _defined in display.zig. from public_signatures.h:328._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPixelSet%28&type=code)
+/// _defined in display.zig. from public_signatures.h:328._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPixelSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3535,7 +3534,7 @@ pub const vexDisplayPixelSet: *const fn(x: u32,y: u32) callconv(.c) void = displ
 ///
 /// **Jumptable Offset:** 0x065c (_0x037fc65c_)
 ///
-/// _defined in display.zig. from public_signatures.h:329._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPixelClear%28&type=code)
+/// _defined in display.zig. from public_signatures.h:329._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPixelClear%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3550,7 +3549,7 @@ pub const vexDisplayPixelClear: *const fn(x: u32,y: u32) callconv(.c) void = dis
 ///
 /// **Jumptable Offset:** 0x0660 (_0x037fc660_)
 ///
-/// _defined in display.zig. from public_signatures.h:330._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayLineDraw%28&type=code)
+/// _defined in display.zig. from public_signatures.h:330._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayLineDraw%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3565,7 +3564,7 @@ pub const vexDisplayLineDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callcon
 ///
 /// **Jumptable Offset:** 0x0664 (_0x037fc664_)
 ///
-/// _defined in display.zig. from public_signatures.h:331._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayLineClear%28&type=code)
+/// _defined in display.zig. from public_signatures.h:331._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayLineClear%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3580,7 +3579,7 @@ pub const vexDisplayLineClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callco
 ///
 /// **Jumptable Offset:** 0x0668 (_0x037fc668_)
 ///
-/// _defined in display.zig. from public_signatures.h:332._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectDraw%28&type=code)
+/// _defined in display.zig. from public_signatures.h:332._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectDraw%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3595,7 +3594,7 @@ pub const vexDisplayRectDraw: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callcon
 ///
 /// **Jumptable Offset:** 0x066c (_0x037fc66c_)
 ///
-/// _defined in display.zig. from public_signatures.h:333._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectClear%28&type=code)
+/// _defined in display.zig. from public_signatures.h:333._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectClear%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3610,7 +3609,7 @@ pub const vexDisplayRectClear: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callco
 ///
 /// **Jumptable Offset:** 0x0670 (_0x037fc670_)
 ///
-/// _defined in display.zig. from public_signatures.h:334._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectFill%28&type=code)
+/// _defined in display.zig. from public_signatures.h:334._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRectFill%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3625,7 +3624,7 @@ pub const vexDisplayRectFill: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callcon
 ///
 /// **Jumptable Offset:** 0x0674 (_0x037fc674_)
 ///
-/// _defined in display.zig. from public_signatures.h:335._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleDraw%28&type=code)
+/// _defined in display.zig. from public_signatures.h:335._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleDraw%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3640,7 +3639,7 @@ pub const vexDisplayCircleDraw: *const fn(xc: i32,yc: i32,radius: i32) callconv(
 ///
 /// **Jumptable Offset:** 0x0678 (_0x037fc678_)
 ///
-/// _defined in display.zig. from public_signatures.h:336._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleClear%28&type=code)
+/// _defined in display.zig. from public_signatures.h:336._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleClear%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3655,7 +3654,7 @@ pub const vexDisplayCircleClear: *const fn(xc: i32,yc: i32,radius: i32) callconv
 ///
 /// **Jumptable Offset:** 0x067c (_0x037fc67c_)
 ///
-/// _defined in display.zig. from public_signatures.h:337._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleFill%28&type=code)
+/// _defined in display.zig. from public_signatures.h:337._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCircleFill%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3670,7 +3669,7 @@ pub const vexDisplayCircleFill: *const fn(xc: i32,yc: i32,radius: i32) callconv(
 ///
 /// **Jumptable Offset:** 0x0680 (_0x037fc680_)
 ///
-/// _defined in display.zig. from public_signatures.h:339._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPrintf%28&type=code)
+/// _defined in display.zig. from public_signatures.h:339._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayPrintf%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3685,7 +3684,7 @@ pub const vexDisplayPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: [
 ///
 /// **Jumptable Offset:** 0x0684 (_0x037fc684_)
 ///
-/// _defined in display.zig. from public_signatures.h:341._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:341._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3700,7 +3699,7 @@ pub const vexDisplayString: *const fn(nLineNumber: i32,format: [*:0]const u8) ca
 ///
 /// **Jumptable Offset:** 0x0688 (_0x037fc688_)
 ///
-/// _defined in display.zig. from public_signatures.h:342._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringAt%28&type=code)
+/// _defined in display.zig. from public_signatures.h:342._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringAt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3715,7 +3714,7 @@ pub const vexDisplayStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const u
 ///
 /// **Jumptable Offset:** 0x068c (_0x037fc68c_)
 ///
-/// _defined in display.zig. from public_signatures.h:343._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:343._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3730,7 +3729,7 @@ pub const vexDisplayBigString: *const fn(nLineNumber: i32,format: [*:0]const u8)
 ///
 /// **Jumptable Offset:** 0x0690 (_0x037fc690_)
 ///
-/// _defined in display.zig. from public_signatures.h:344._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigStringAt%28&type=code)
+/// _defined in display.zig. from public_signatures.h:344._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigStringAt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3745,7 +3744,7 @@ pub const vexDisplayBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]cons
 ///
 /// **Jumptable Offset:** 0x06b0 (_0x037fc6b0_)
 ///
-/// _defined in display.zig. from public_signatures.h:345._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplaySmallStringAt%28&type=code)
+/// _defined in display.zig. from public_signatures.h:345._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplaySmallStringAt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3760,7 +3759,7 @@ pub const vexDisplaySmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]co
 ///
 /// **Jumptable Offset:** 0x0694 (_0x037fc694_)
 ///
-/// _defined in display.zig. from public_signatures.h:347._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCenteredString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:347._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayCenteredString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3775,7 +3774,7 @@ pub const vexDisplayCenteredString: *const fn(nLineNumber: i32,format: [*:0]cons
 ///
 /// **Jumptable Offset:** 0x0698 (_0x037fc698_)
 ///
-/// _defined in display.zig. from public_signatures.h:349._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigCenteredString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:349._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayBigCenteredString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3790,7 +3789,7 @@ pub const vexDisplayBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]c
 ///
 /// **Jumptable Offset:** 0x0680 (_0x037fc680_)
 ///
-/// _defined in display.zig. from public_signatures.h:353._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVPrintf%28&type=code)
+/// _defined in display.zig. from public_signatures.h:353._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVPrintf%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3805,7 +3804,7 @@ pub const vexDisplayVPrintf: *const fn(xpos: i32,ypos: i32,bOpaque: u32,format: 
 ///
 /// **Jumptable Offset:** 0x0684 (_0x037fc684_)
 ///
-/// _defined in display.zig. from public_signatures.h:355._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:355._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3820,7 +3819,7 @@ pub const vexDisplayVString: *const fn(nLineNumber: i32,format: [*:0]const u8,ar
 ///
 /// **Jumptable Offset:** 0x0688 (_0x037fc688_)
 ///
-/// _defined in display.zig. from public_signatures.h:357._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVStringAt%28&type=code)
+/// _defined in display.zig. from public_signatures.h:357._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVStringAt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3835,7 +3834,7 @@ pub const vexDisplayVStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]const 
 ///
 /// **Jumptable Offset:** 0x068c (_0x037fc68c_)
 ///
-/// _defined in display.zig. from public_signatures.h:359._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:359._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3850,7 +3849,7 @@ pub const vexDisplayVBigString: *const fn(nLineNumber: i32,format: [*:0]const u8
 ///
 /// **Jumptable Offset:** 0x0690 (_0x037fc690_)
 ///
-/// _defined in display.zig. from public_signatures.h:361._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigStringAt%28&type=code)
+/// _defined in display.zig. from public_signatures.h:361._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigStringAt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3865,7 +3864,7 @@ pub const vexDisplayVBigStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]con
 ///
 /// **Jumptable Offset:** 0x06b0 (_0x037fc6b0_)
 ///
-/// _defined in display.zig. from public_signatures.h:363._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVSmallStringAt%28&type=code)
+/// _defined in display.zig. from public_signatures.h:363._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVSmallStringAt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3880,7 +3879,7 @@ pub const vexDisplayVSmallStringAt: *const fn(xpos: i32,ypos: i32,format: [*:0]c
 ///
 /// **Jumptable Offset:** 0x0694 (_0x037fc694_)
 ///
-/// _defined in display.zig. from public_signatures.h:365._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVCenteredString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:365._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVCenteredString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3895,7 +3894,7 @@ pub const vexDisplayVCenteredString: *const fn(nLineNumber: i32,format: [*:0]con
 ///
 /// **Jumptable Offset:** 0x0698 (_0x037fc698_)
 ///
-/// _defined in display.zig. from public_signatures.h:367._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigCenteredString%28&type=code)
+/// _defined in display.zig. from public_signatures.h:367._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayVBigCenteredString%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3910,7 +3909,7 @@ pub const vexDisplayVBigCenteredString: *const fn(nLineNumber: i32,format: [*:0]
 ///
 /// **Jumptable Offset:** 0x06a8 (_0x037fc6a8_)
 ///
-/// _defined in display.zig. from public_signatures.h:370._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayTextSize%28&type=code)
+/// _defined in display.zig. from public_signatures.h:370._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayTextSize%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3925,7 +3924,7 @@ pub const vexDisplayTextSize: *const fn(n: u32,d: u32) callconv(.c) void = displ
 ///
 /// **Jumptable Offset:** 0x06b4 (_0x037fc6b4_)
 ///
-/// _defined in display.zig. from public_signatures.h:371._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayFontNamedSet%28&type=code)
+/// _defined in display.zig. from public_signatures.h:371._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayFontNamedSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3940,7 +3939,7 @@ pub const vexDisplayFontNamedSet: *const fn(pFontName: [*:0]const u8) callconv(.
 ///
 /// **Jumptable Offset:** 0x06c0 (_0x037fc6c0_)
 ///
-/// _defined in display.zig. from public_signatures.h:372._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringWidthGet%28&type=code)
+/// _defined in display.zig. from public_signatures.h:372._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringWidthGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3955,7 +3954,7 @@ pub const vexDisplayStringWidthGet: *const fn(pString: [*:0]const u8) callconv(.
 ///
 /// **Jumptable Offset:** 0x06c4 (_0x037fc6c4_)
 ///
-/// _defined in display.zig. from public_signatures.h:373._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringHeightGet%28&type=code)
+/// _defined in display.zig. from public_signatures.h:373._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayStringHeightGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3970,7 +3969,7 @@ pub const vexDisplayStringHeightGet: *const fn(pString: [*:0]const u8) callconv(
 ///
 /// **Jumptable Offset:** 0x07a0 (_0x037fc7a0_)
 ///
-/// _defined in display.zig. from public_signatures.h:375._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRender%28&type=code)
+/// _defined in display.zig. from public_signatures.h:375._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRender%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -3985,7 +3984,7 @@ pub const vexDisplayRender: *const fn(bVsyncWait: types.int,bRunScheduler: types
 ///
 /// **Jumptable Offset:** 0x07a4 (_0x037fc7a4_)
 ///
-/// _defined in display.zig. from public_signatures.h:376._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayDoubleBufferDisable%28&type=code)
+/// _defined in display.zig. from public_signatures.h:376._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayDoubleBufferDisable%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4000,7 +3999,7 @@ pub const vexDisplayDoubleBufferDisable: *const fn() callconv(.c) void = display
 ///
 /// **Jumptable Offset:** 0x0794 (_0x037fc794_)
 ///
-/// _defined in display.zig. from public_signatures.h:378._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayClipRegionSet%28&type=code)
+/// _defined in display.zig. from public_signatures.h:378._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayClipRegionSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4015,7 +4014,7 @@ pub const vexDisplayClipRegionSet: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) ca
 ///
 /// **Jumptable Offset:** 0x0794 (_0x037fc794_)
 ///
-/// _defined in display.zig. from public_signatures.h:379._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayClipRegionClear%28&type=code)
+/// _defined in display.zig. from public_signatures.h:379._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayClipRegionClear%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4030,7 +4029,7 @@ pub const vexDisplayClipRegionClear: *const fn() callconv(.c) void = display.vex
 ///
 /// **Jumptable Offset:** 0x0990 (_0x037fc990_)
 ///
-/// _defined in image.zig. from public_signatures.h:381._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexImageBmpRead%28&type=code)
+/// _defined in image.zig. from public_signatures.h:381._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexImageBmpRead%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4045,7 +4044,7 @@ pub const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw:
 ///
 /// **Jumptable Offset:** 0x0994 (_0x037fc994_)
 ///
-/// _defined in image.zig. from public_signatures.h:383._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexImagePngRead%28&type=code)
+/// _defined in image.zig. from public_signatures.h:383._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexImagePngRead%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4060,7 +4059,7 @@ pub const vexImagePngRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw:
 ///
 /// **Jumptable Offset:** 0x001c (_0x037fc01c_)
 ///
-/// _defined in memory.zig. from public_signatures.h:386._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryPtr%28&type=code)
+/// _defined in memory.zig. from public_signatures.h:386._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryPtr%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4075,7 +4074,7 @@ pub const vexScratchMemoryPtr: *const fn(ptr: [*c]void) callconv(.c) i32 = memor
 ///
 /// **Jumptable Offset:** 0x0998 (_0x037fc998_)
 ///
-/// _defined in memory.zig. from public_signatures.h:387._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryLock%28&type=code)
+/// _defined in memory.zig. from public_signatures.h:387._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryLock%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4090,7 +4089,7 @@ pub const vexScratchMemoryLock: *const fn() callconv(.c) types.int = memory.vexS
 ///
 /// **Jumptable Offset:** 0x099c (_0x037fc99c_)
 ///
-/// _defined in memory.zig. from public_signatures.h:388._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryUnlock%28&type=code)
+/// _defined in memory.zig. from public_signatures.h:388._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexScratchMemoryUnlock%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4105,7 +4104,7 @@ pub const vexScratchMemoryUnlock: *const fn() callconv(.c) void = memory.vexScra
 ///
 /// **Jumptable Offset:** 0x07d0 (_0x037fc7d0_)
 ///
-/// _defined in file.zig. from public_signatures.h:391._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileMountSD%28&type=code)
+/// _defined in file.zig. from public_signatures.h:391._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileMountSD%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4120,7 +4119,7 @@ pub const vexFileMountSD: *const fn() callconv(.c) types.FRESULT = file.vexFileM
 ///
 /// **Jumptable Offset:** 0x07d4 (_0x037fc7d4_)
 ///
-/// _defined in file.zig. from public_signatures.h:392._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileDirectoryGet%28&type=code)
+/// _defined in file.zig. from public_signatures.h:392._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileDirectoryGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4135,7 +4134,7 @@ pub const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]types.c
 ///
 /// **Jumptable Offset:** 0x07d8 (_0x037fc7d8_)
 ///
-/// _defined in file.zig. from public_signatures.h:393._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpen%28&type=code)
+/// _defined in file.zig. from public_signatures.h:393._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpen%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4150,7 +4149,7 @@ pub const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const u8) ca
 ///
 /// **Jumptable Offset:** 0x07dc (_0x037fc7dc_)
 ///
-/// _defined in file.zig. from public_signatures.h:394._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpenWrite%28&type=code)
+/// _defined in file.zig. from public_signatures.h:394._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpenWrite%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4165,7 +4164,7 @@ pub const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.c) [*c]
 ///
 /// **Jumptable Offset:** 0x07e0 (_0x037fc7e0_)
 ///
-/// _defined in file.zig. from public_signatures.h:395._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpenCreate%28&type=code)
+/// _defined in file.zig. from public_signatures.h:395._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileOpenCreate%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4180,7 +4179,7 @@ pub const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(.c) [*c
 ///
 /// **Jumptable Offset:** 0x07e4 (_0x037fc7e4_)
 ///
-/// _defined in file.zig. from public_signatures.h:396._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileClose%28&type=code)
+/// _defined in file.zig. from public_signatures.h:396._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileClose%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4195,7 +4194,7 @@ pub const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.v
 ///
 /// **Jumptable Offset:** 0x07f8 (_0x037fc7f8_)
 ///
-/// _defined in file.zig. from public_signatures.h:397._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileRead%28&type=code)
+/// _defined in file.zig. from public_signatures.h:397._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileRead%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4210,7 +4209,7 @@ pub const vexFileRead: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp: 
 ///
 /// **Jumptable Offset:** 0x07ec (_0x037fc7ec_)
 ///
-/// _defined in file.zig. from public_signatures.h:398._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileWrite%28&type=code)
+/// _defined in file.zig. from public_signatures.h:398._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileWrite%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4225,7 +4224,7 @@ pub const vexFileWrite: *const fn(buf: [*c]types.char,size: u32,nItems: u32,fdp:
 ///
 /// **Jumptable Offset:** 0x07f0 (_0x037fc7f0_)
 ///
-/// _defined in file.zig. from public_signatures.h:399._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSize%28&type=code)
+/// _defined in file.zig. from public_signatures.h:399._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSize%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4240,7 +4239,7 @@ pub const vexFileSize: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vex
 ///
 /// **Jumptable Offset:** 0x07f4 (_0x037fc7f4_)
 ///
-/// _defined in file.zig. from public_signatures.h:400._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSeek%28&type=code)
+/// _defined in file.zig. from public_signatures.h:400._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSeek%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4255,7 +4254,7 @@ pub const vexFileSeek: *const fn(fdp: [*c]types.FIL,offset: u32,whence: i32) cal
 ///
 /// **Jumptable Offset:** 0x07fc (_0x037fc7fc_)
 ///
-/// _defined in file.zig. from public_signatures.h:401._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileDriveStatus%28&type=code)
+/// _defined in file.zig. from public_signatures.h:401._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileDriveStatus%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4270,7 +4269,7 @@ pub const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) types.int = fil
 ///
 /// **Jumptable Offset:** 0x0800 (_0x037fc800_)
 ///
-/// _defined in file.zig. from public_signatures.h:402._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileTell%28&type=code)
+/// _defined in file.zig. from public_signatures.h:402._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileTell%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4285,7 +4284,7 @@ pub const vexFileTell: *const fn(fdp: [*c]types.FIL) callconv(.c) i32 = file.vex
 ///
 /// **Jumptable Offset:** 0x0804 (_0x037fc804_)
 ///
-/// _defined in file.zig. from public_signatures.h:403._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSync%28&type=code)
+/// _defined in file.zig. from public_signatures.h:403._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileSync%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4300,7 +4299,7 @@ pub const vexFileSync: *const fn(fdp: [*c]types.FIL) callconv(.c) void = file.ve
 ///
 /// **Jumptable Offset:** 0x0808 (_0x037fc808_)
 ///
-/// _defined in file.zig. from public_signatures.h:404._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileStatus%28&type=code)
+/// _defined in file.zig. from public_signatures.h:404._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexFileStatus%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4315,7 +4314,7 @@ pub const vexFileStatus: *const fn(filename: [*:0]const u8) callconv(.c) u32 = f
 ///
 /// **Jumptable Offset:** 0x0898 (_0x037fc898_)
 ///
-/// _defined in serial.zig. from public_signatures.h:407._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteChar%28&type=code)
+/// _defined in serial.zig. from public_signatures.h:407._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4330,7 +4329,7 @@ pub const vexSerialWriteChar: *const fn(channel: u32,c: u8) callconv(.c) i32 = s
 ///
 /// **Jumptable Offset:** 0x089c (_0x037fc89c_)
 ///
-/// _defined in serial.zig. from public_signatures.h:408._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteBuffer%28&type=code)
+/// _defined in serial.zig. from public_signatures.h:408._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteBuffer%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4345,7 +4344,7 @@ pub const vexSerialWriteBuffer: *const fn(channel: u32,data: [*c]u8,data_len: u3
 ///
 /// **Jumptable Offset:** 0x08a0 (_0x037fc8a0_)
 ///
-/// _defined in serial.zig. from public_signatures.h:410._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialReadChar%28&type=code)
+/// _defined in serial.zig. from public_signatures.h:410._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialReadChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4360,7 +4359,7 @@ pub const vexSerialReadChar: *const fn(channel: u32) callconv(.c) i32 = serial.v
 ///
 /// **Jumptable Offset:** 0x08a4 (_0x037fc8a4_)
 ///
-/// _defined in serial.zig. from public_signatures.h:411._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialPeekChar%28&type=code)
+/// _defined in serial.zig. from public_signatures.h:411._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialPeekChar%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4375,7 +4374,7 @@ pub const vexSerialPeekChar: *const fn(channel: u32) callconv(.c) i32 = serial.v
 ///
 /// **Jumptable Offset:** 0x08ac (_0x037fc8ac_)
 ///
-/// _defined in serial.zig. from public_signatures.h:412._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteFree%28&type=code)
+/// _defined in serial.zig. from public_signatures.h:412._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSerialWriteFree%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4390,7 +4389,7 @@ pub const vexSerialWriteFree: *const fn(channel: u32) callconv(.c) i32 = serial.
 ///
 /// **Jumptable Offset:** 0x08c0 (_0x037fc8c0_)
 ///
-/// _defined in system.zig. from public_signatures.h:415._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerStop%28&type=code)
+/// _defined in system.zig. from public_signatures.h:415._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerStop%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4405,7 +4404,7 @@ pub const vexSystemTimerStop: *const fn() callconv(.c) void = system.vexSystemTi
 ///
 /// **Jumptable Offset:** 0x08c4 (_0x037fc8c4_)
 ///
-/// _defined in system.zig. from public_signatures.h:416._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerClearInterrupt%28&type=code)
+/// _defined in system.zig. from public_signatures.h:416._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerClearInterrupt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4420,7 +4419,7 @@ pub const vexSystemTimerClearInterrupt: *const fn() callconv(.c) void = system.v
 ///
 /// **Jumptable Offset:** 0x08c8 (_0x037fc8c8_)
 ///
-/// _defined in system.zig. from public_signatures.h:417._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerReinitForRtos%28&type=code)
+/// _defined in system.zig. from public_signatures.h:417._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemTimerReinitForRtos%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4435,7 +4434,7 @@ pub const vexSystemTimerReinitForRtos: *const fn(priority: u32,handler: [*c]fn()
 ///
 /// **Jumptable Offset:** 0x08cc (_0x037fc8cc_)
 ///
-/// _defined in system.zig. from public_signatures.h:419._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemApplicationIRQHandler%28&type=code)
+/// _defined in system.zig. from public_signatures.h:419._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemApplicationIRQHandler%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4450,7 +4449,7 @@ pub const vexSystemApplicationIRQHandler: *const fn(ulICCIAR: u32) callconv(.c) 
 ///
 /// **Jumptable Offset:** 0x08d0 (_0x037fc8d0_)
 ///
-/// _defined in system.zig. from public_signatures.h:420._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemWatchdogReinitRtos%28&type=code)
+/// _defined in system.zig. from public_signatures.h:420._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemWatchdogReinitRtos%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4465,7 +4464,7 @@ pub const vexSystemWatchdogReinitRtos: *const fn() callconv(.c) i32 = system.vex
 ///
 /// **Jumptable Offset:** 0x08d4 (_0x037fc8d4_)
 ///
-/// _defined in system.zig. from public_signatures.h:421._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemWatchdogGet%28&type=code)
+/// _defined in system.zig. from public_signatures.h:421._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemWatchdogGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4480,7 +4479,7 @@ pub const vexSystemWatchdogGet: *const fn() callconv(.c) u32 = system.vexSystemW
 ///
 /// **Jumptable Offset:** 0x0910 (_0x037fc910_)
 ///
-/// _defined in system.zig. from public_signatures.h:425._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemBoot%28&type=code)
+/// _defined in system.zig. from public_signatures.h:425._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemBoot%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4495,7 +4494,7 @@ pub const vexSystemBoot: *const fn() callconv(.c) void = system.vexSystemBoot;
 ///
 /// **Jumptable Offset:** 0x0914 (_0x037fc914_)
 ///
-/// _defined in system.zig. from public_signatures.h:426._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemUndefinedException%28&type=code)
+/// _defined in system.zig. from public_signatures.h:426._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemUndefinedException%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4510,7 +4509,7 @@ pub const vexSystemUndefinedException: *const fn() callconv(.c) void = system.ve
 ///
 /// **Jumptable Offset:** 0x0918 (_0x037fc918_)
 ///
-/// _defined in system.zig. from public_signatures.h:427._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemFIQInterrupt%28&type=code)
+/// _defined in system.zig. from public_signatures.h:427._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemFIQInterrupt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4525,7 +4524,7 @@ pub const vexSystemFIQInterrupt: *const fn() callconv(.c) void = system.vexSyste
 ///
 /// 
 ///
-/// _defined in system.zig. from public_signatures.h:428._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemIQRQnterrupt%28&type=code)
+/// _defined in system.zig. from public_signatures.h:428._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemIQRQnterrupt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4540,7 +4539,7 @@ pub const vexSystemIQRQnterrupt: *const fn() callconv(.c) void = system.vexSyste
 ///
 /// **Jumptable Offset:** 0x0920 (_0x037fc920_)
 ///
-/// _defined in system.zig. from public_signatures.h:429._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemSWInterrupt%28&type=code)
+/// _defined in system.zig. from public_signatures.h:429._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemSWInterrupt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4555,7 +4554,7 @@ pub const vexSystemSWInterrupt: *const fn() callconv(.c) void = system.vexSystem
 ///
 /// **Jumptable Offset:** 0x0924 (_0x037fc924_)
 ///
-/// _defined in system.zig. from public_signatures.h:430._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemDataAbortInterrupt%28&type=code)
+/// _defined in system.zig. from public_signatures.h:430._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemDataAbortInterrupt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4570,7 +4569,7 @@ pub const vexSystemDataAbortInterrupt: *const fn() callconv(.c) void = system.ve
 ///
 /// **Jumptable Offset:** 0x0928 (_0x037fc928_)
 ///
-/// _defined in system.zig. from public_signatures.h:431._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemPrefetchAbortInterrupt%28&type=code)
+/// _defined in system.zig. from public_signatures.h:431._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemPrefetchAbortInterrupt%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4585,7 +4584,7 @@ pub const vexSystemPrefetchAbortInterrupt: *const fn() callconv(.c) void = syste
 ///
 /// **Jumptable Offset:** 0x0960 (_0x037fc960_)
 ///
-/// _defined in touch.zig. from public_signatures.h:434._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTouchUserCallbackSet%28&type=code)
+/// _defined in touch.zig. from public_signatures.h:434._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTouchUserCallbackSet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4600,7 +4599,7 @@ pub const vexTouchUserCallbackSet: *const fn(callback: [*c]fn(types.V5_TouchEven
 ///
 /// **Jumptable Offset:** 0x0964 (_0x037fc964_)
 ///
-/// _defined in touch.zig. from public_signatures.h:435._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTouchDataGet%28&type=code)
+/// _defined in touch.zig. from public_signatures.h:435._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTouchDataGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4615,7 +4614,7 @@ pub const vexTouchDataGet: *const fn(status: [*c]types.V5_TouchStatus) callconv(
 ///
 /// **Jumptable Offset:** 0x1004 (_0x037fd004_)
 ///
-/// _defined in version.zig. from public_signatures.h:438._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersion%28&type=code)
+/// _defined in version.zig. from public_signatures.h:438._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersion%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4630,7 +4629,7 @@ pub const vexStdlibVersion: *const fn() callconv(.c) u32 = version.vexStdlibVers
 ///
 /// 
 ///
-/// _defined in version.zig. from public_signatures.h:440._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSdkVersion%28&type=code)
+/// _defined in version.zig. from public_signatures.h:440._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSdkVersion%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4645,7 +4644,7 @@ pub const vexSdkVersion: *const fn() callconv(.c) u32 = version.vexSdkVersion;
 ///
 /// 
 ///
-/// _defined in version.zig. from public_signatures.h:443._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersionLinked%28&type=code)
+/// _defined in version.zig. from public_signatures.h:443._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersionLinked%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4660,7 +4659,7 @@ pub const vexStdlibVersionLinked: *const fn() callconv(.c) u32 = version.vexStdl
 ///
 /// 
 ///
-/// _defined in version.zig. from public_signatures.h:444._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersionVerify%28&type=code)
+/// _defined in version.zig. from public_signatures.h:444._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStdlibVersionVerify%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4675,7 +4674,7 @@ pub const vexStdlibVersionVerify: *const fn() callconv(.c) types.int = version.v
 ///
 /// **Jumptable Offset:** 0x09d8 (_0x037fc9d8_)
 ///
-/// _defined in competition.zig. from public_signatures.h:447._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCompetitionStatus%28&type=code)
+/// _defined in competition.zig. from public_signatures.h:447._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCompetitionStatus%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4690,7 +4689,7 @@ pub const vexCompetitionStatus: *const fn() callconv(.c) u32 = competition.vexCo
 ///
 /// **Jumptable Offset:** 0x09dc (_0x037fc9dc_)
 ///
-/// _defined in competition.zig. from public_signatures.h:448._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCompetitionControl%28&type=code)
+/// _defined in competition.zig. from public_signatures.h:448._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCompetitionControl%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4705,7 +4704,7 @@ pub const vexCompetitionControl: *const fn(data: u32) callconv(.c) void = compet
 ///
 /// **Jumptable Offset:** 0x0a00 (_0x037fca00_)
 ///
-/// _defined in battery.zig. from public_signatures.h:451._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryVoltageGet%28&type=code)
+/// _defined in battery.zig. from public_signatures.h:451._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryVoltageGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4720,7 +4719,7 @@ pub const vexBatteryVoltageGet: *const fn() callconv(.c) i32 = battery.vexBatter
 ///
 /// **Jumptable Offset:** 0x0a04 (_0x037fca04_)
 ///
-/// _defined in battery.zig. from public_signatures.h:452._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryCurrentGet%28&type=code)
+/// _defined in battery.zig. from public_signatures.h:452._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryCurrentGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4735,7 +4734,7 @@ pub const vexBatteryCurrentGet: *const fn() callconv(.c) i32 = battery.vexBatter
 ///
 /// **Jumptable Offset:** 0x0a08 (_0x037fca08_)
 ///
-/// _defined in battery.zig. from public_signatures.h:453._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryTemperatureGet%28&type=code)
+/// _defined in battery.zig. from public_signatures.h:453._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryTemperatureGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4750,7 +4749,7 @@ pub const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double = batt
 ///
 /// **Jumptable Offset:** 0x0a0c (_0x037fca0c_)
 ///
-/// _defined in battery.zig. from public_signatures.h:454._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryCapacityGet%28&type=code)
+/// _defined in battery.zig. from public_signatures.h:454._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexBatteryCapacityGet%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4759,215 +4758,245 @@ pub const vexBatteryTemperatureGet: *const fn() callconv(.c) types.double = batt
 /// ```
 pub const vexBatteryCapacityGet: *const fn() callconv(.c) types.double = battery.vexBatteryCapacityGet;
 
-/// # vexDisplayOffscreenBufferGet
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:4._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferGet%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// uint32_t * vexDisplayOffscreenBufferGet(uint32_t width, uint32_t height, uint32_t pixelSize);
-/// ```
-pub const vexDisplayOffscreenBufferGet: *const fn(width: u32,height: u32,pixelSize: u32) callconv(.c) [*c]u32 = display.vexDisplayOffscreenBufferGet;
-
-/// # vexDisplayOffscreenBufferDestroy
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:6._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferDestroy%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexDisplayOffscreenBufferDestroy(uint32_t * buffer);
-/// ```
-pub const vexDisplayOffscreenBufferDestroy: *const fn(buffer: [*c]u32) callconv(.c) void = display.vexDisplayOffscreenBufferDestroy;
-
-/// # vexDisplayOffscreenBufferPixelSet
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:7._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferPixelSet%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexDisplayOffscreenBufferPixelSet(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t color);
-/// ```
-pub const vexDisplayOffscreenBufferPixelSet: *const fn(buffer: [*c]u32,x: u32,y: u32,color: u32) callconv(.c) void = display.vexDisplayOffscreenBufferPixelSet;
-
-/// # vexDisplayOffscreenBufferPixelGet
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:9._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferPixelGet%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// uint32_t vexDisplayOffscreenBufferPixelGet(uint32_t * buffer, uint32_t x, uint32_t y);
-/// ```
-pub const vexDisplayOffscreenBufferPixelGet: *const fn(buffer: [*c]u32,x: u32,y: u32) callconv(.c) u32 = display.vexDisplayOffscreenBufferPixelGet;
-
-/// # vexDisplayOffscreenBufferRectDraw
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:11._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferRectDraw%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexDisplayOffscreenBufferRectDraw(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
-/// ```
-pub const vexDisplayOffscreenBufferRectDraw: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectDraw;
-
-/// # vexDisplayOffscreenBufferRectFill
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:13._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferRectFill%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexDisplayOffscreenBufferRectFill(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
-/// ```
-pub const vexDisplayOffscreenBufferRectFill: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferRectFill;
-
-/// # vexDisplayOffscreenBufferScrollH
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:15._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferScrollH%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexDisplayOffscreenBufferScrollH(uint32_t * buffer, uint32_t pixels);
-/// ```
-pub const vexDisplayOffscreenBufferScrollH: *const fn(buffer: [*c]u32,pixels: u32) callconv(.c) void = display.vexDisplayOffscreenBufferScrollH;
-
-/// # vexDisplayOffscreenBufferBlit
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in display.zig. from private_signatures.h:16._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayOffscreenBufferBlit%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexDisplayOffscreenBufferBlit(uint32_t * buffer, uint32_t x, uint32_t y, uint32_t width, uint32_t height);
-/// ```
-pub const vexDisplayOffscreenBufferBlit: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void = display.vexDisplayOffscreenBufferBlit;
-
-/// # vexMain
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in core.zig. from private_signatures.h:19._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexMain%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexMain();
-/// ```
-pub const vexMain: *const fn() callconv(.c) void = core.vexMain;
-
-/// # vexStartup
-///
-/// **Private API**
-///
-/// 
-///
-/// _defined in core.zig. from private_signatures.h:20._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexStartup%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// void vexStartup();
-/// ```
-pub const vexStartup: *const fn() callconv(.c) void = core.vexStartup;
-
-/// # vexSystemVersion
-///
-/// **Private API**
-///
-/// **Jumptable Offset:** 0x1000 (_0x037fd000_)
-///
-/// _defined in system.zig. from private_signatures.h:27._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexSystemVersion%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// uint32_t vexSystemVersion();
-/// ```
-pub const vexSystemVersion: *const fn() callconv(.c) u32 = system.vexSystemVersion;
-
-/// # vexVexosVersion
-///
-/// **Private API**
-///
-/// **Jumptable Offset:** 0x1008 (_0x037fd008_)
-///
-/// _defined in vexos.zig. from private_signatures.h:30._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexVexosVersion%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// uint32_t vexVexosVersion();
-/// ```
-pub const vexVexosVersion: *const fn() callconv(.c) u32 = vexos.vexVexosVersion;
-
-/// # vexCpu0Version
-///
-/// **Private API**
-///
-/// **Jumptable Offset:** 0x100c (_0x037fd00c_)
-///
-/// _defined in version.zig. from private_signatures.h:31._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexCpu0Version%28&type=code)
-///
-/// **Original signature:**
-///
-/// ```c
-/// uint32_t vexCpu0Version();
-/// ```
-pub const vexCpu0Version: *const fn() callconv(.c) u32 = version.vexCpu0Version;
-
 /// # vexTaskAdd
 ///
 /// **Private API**
 ///
 /// **Jumptable Offset:** 0x0028 (_0x037fc028_)
 ///
-/// _defined in task.zig. from private_signatures.h:82._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAdd%28&type=code)
+/// _defined in task.zig. from private_signatures.h:18._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAdd%28&type=code)
 ///
 /// **Original signature:**
 ///
 /// ```c
-/// void vexTaskAdd(int (*)(void) callback, int interval, const char * label);
+/// uint32_t vexTaskAdd(int32_t (*)(void) callback, int32_t interval, const char * label);
 /// ```
-pub const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) types.int,interval: types.int,label: [*:0]const u8) callconv(.c) void = task.vexTaskAdd;
+pub const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,label: [*:0]const u8) callconv(.c) u32 = task.vexTaskAdd;
+
+/// # vexTaskAddWithArg
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f50 (_0x037fcf50_)
+///
+/// _defined in task.zig. from private_signatures.h:36._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithArg%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskAddWithArg(int32_t (*)(void) callback, int32_t interval, void * arg, const char * label);
+/// ```
+pub const vexTaskAddWithArg: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,arg: [*c]void,label: [*:0]const u8) callconv(.c) u32 = task.vexTaskAddWithArg;
+
+/// # vexTaskAddWithPriority
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x002c (_0x037fc02c_)
+///
+/// _defined in task.zig. from private_signatures.h:49._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithPriority%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskAddWithPriority(int32_t (*)(void) callback, int32_t interval, const char * label, int32_t priority);
+/// ```
+pub const vexTaskAddWithPriority: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,label: [*:0]const u8,priority: i32) callconv(.c) u32 = task.vexTaskAddWithPriority;
+
+/// # vexTaskAddWithPriorityWithArg
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f54 (_0x037fcf54_)
+///
+/// _defined in task.zig. from private_signatures.h:63._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskAddWithPriorityWithArg%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskAddWithPriorityWithArg(int32_t (*)(void) callback, int32_t interval, void * arg, const char * label, int32_t priority);
+/// ```
+pub const vexTaskAddWithPriorityWithArg: *const fn(callback: [*c]fn() callconv(.c) i32,interval: i32,arg: [*c]void,label: [*:0]const u8,priority: i32) callconv(.c) u32 = task.vexTaskAddWithPriorityWithArg;
+
+/// # vexTaskCheckTimeslice
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0064 (_0x037fc064_)
+///
+/// _defined in task.zig. from private_signatures.h:73._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskCheckTimeslice%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskCheckTimeslice();
+/// ```
+pub const vexTaskCheckTimeslice: *const fn() callconv(.c) void = task.vexTaskCheckTimeslice;
+
+/// # vexTaskGetCallbackAndId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0084 (_0x037fc084_)
+///
+/// _defined in task.zig. from private_signatures.h:92._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetCallbackAndId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void * vexTaskGetCallbackAndId(uint32_t index, int32_t * callback_id);
+/// ```
+pub const vexTaskGetCallbackAndId: *const fn(index: u32,callback_id: [*c]i32) callconv(.c) [*c]void = task.vexTaskGetCallbackAndId;
+
+/// # vexTaskGetIndex
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0068 (_0x037fc068_)
+///
+/// _defined in task.zig. from private_signatures.h:97._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetIndex%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskGetIndex();
+/// ```
+pub const vexTaskGetIndex: *const fn() callconv(.c) u32 = task.vexTaskGetIndex;
+
+/// # vexTaskGetTaskIndex
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0090 (_0x037fc090_)
+///
+/// _defined in task.zig. from private_signatures.h:104._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetTaskIndex%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskGetTaskIndex(void * task);
+/// ```
+pub const vexTaskGetTaskIndex: *const fn(task: [*c]void) callconv(.c) u32 = task.vexTaskGetTaskIndex;
+
+/// # vexTaskHardwareConcurrency
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0140 (_0x037fc140_)
+///
+/// _defined in task.zig. from private_signatures.h:113._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskHardwareConcurrency%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskHardwareConcurrency();
+/// ```
+pub const vexTaskHardwareConcurrency: *const fn() callconv(.c) u32 = task.vexTaskHardwareConcurrency;
+
+/// # vexTaskPriorityGetWithId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f64 (_0x037fcf64_)
+///
+/// _defined in task.zig. from private_signatures.h:123._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPriorityGetWithId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexTaskPriorityGetWithId(void * callback, int32_t ID);
+/// ```
+pub const vexTaskPriorityGetWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c) i32 = task.vexTaskPriorityGetWithId;
+
+/// # vexTaskPrioritySetWithId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f68 (_0x037fcf68_)
+///
+/// _defined in task.zig. from private_signatures.h:133._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskPrioritySetWithId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTaskPrioritySetWithId(void * callback, int32_t ID, uint32_t priority);
+/// ```
+pub const vexTaskPrioritySetWithId: *const fn(callback: [*c]void,ID: i32,priority: u32) callconv(.c) types.undefined = task.vexTaskPrioritySetWithId;
+
+/// # vexTaskRemoveAllUser
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x009c (_0x037fc09c_)
+///
+/// _defined in task.zig. from private_signatures.h:146._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRemoveAllUser%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTaskRemoveAllUser(int32_t * main);
+/// ```
+pub const vexTaskRemoveAllUser: *const fn(main: [*c]i32) callconv(.c) types.undefined = task.vexTaskRemoveAllUser;
+
+/// # vexTaskResumeWithId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f60 (_0x037fcf60_)
+///
+/// _defined in task.zig. from private_signatures.h:158._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskResumeWithId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTaskResumeWithId(void * callback, int32_t ID);
+/// ```
+pub const vexTaskResumeWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c) types.undefined = task.vexTaskResumeWithId;
+
+/// # vexTaskRegister
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in task.zig. from private_signatures.h:160._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRegister%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskRegister(char * name);
+/// ```
+pub const vexTaskRegister: *const fn(name: [*c]types.char) callconv(.c) void = task.vexTaskRegister;
+
+/// # vexTaskRegisterPersistant
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in task.zig. from private_signatures.h:161._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskRegisterPersistant%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexTaskRegisterPersistant(char * name, int p);
+/// ```
+pub const vexTaskRegisterPersistant: *const fn(name: [*c]types.char,p: types.int) callconv(.c) void = task.vexTaskRegisterPersistant;
+
+/// # vexTasksDump
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0080 (_0x037fc080_)
+///
+/// _defined in task.zig. from private_signatures.h:169._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTasksDump%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTasksDump();
+/// ```
+pub const vexTasksDump: *const fn() callconv(.c) types.undefined = task.vexTasksDump;
 
 /// # vexTaskSleep
 ///
@@ -4975,7 +5004,7 @@ pub const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) types.int,interv
 ///
 /// **Jumptable Offset:** 0x006c (_0x037fc06c_)
 ///
-/// _defined in task.zig. from private_signatures.h:83._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskSleep%28&type=code)
+/// _defined in task.zig. from private_signatures.h:177._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskSleep%28&type=code)
 ///
 /// **Original signature:**
 ///
@@ -4984,17 +5013,152 @@ pub const vexTaskAdd: *const fn(callback: [*c]fn() callconv(.c) types.int,interv
 /// ```
 pub const vexTaskSleep: *const fn(time: u32) callconv(.c) void = task.vexTaskSleep;
 
-/// # vexTaskGetCallbackAndId
+/// # vexTasksRun
 ///
 /// **Private API**
 ///
-/// **Jumptable Offset:** 0x0084 (_0x037fc084_)
+/// **Jumptable Offset:** 0x005c (_0x037fc05c_)
 ///
-/// _defined in task.zig. from private_signatures.h:84._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskGetCallbackAndId%28&type=code)
+/// _defined in task.zig. from private_signatures.h:184._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTasksRun%28&type=code)
 ///
 /// **Original signature:**
 ///
 /// ```c
-/// void * vexTaskGetCallbackAndId(uint32_t index, int * callback_id);
+/// uint32_t vexTasksRun();
 /// ```
-pub const vexTaskGetCallbackAndId: *const fn(index: u32,callback_id: [*c]types.int) callconv(.c) [*c]void = task.vexTaskGetCallbackAndId;
+pub const vexTasksRun: *const fn() callconv(.c) u32 = task.vexTasksRun;
+
+/// # vexTaskStateGetWithId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f6c (_0x037fcf6c_)
+///
+/// _defined in task.zig. from private_signatures.h:204._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskStateGetWithId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// uint32_t vexTaskStateGetWithId(void * callback, int32_t ID);
+/// ```
+pub const vexTaskStateGetWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c) u32 = task.vexTaskStateGetWithId;
+
+/// # vexTaskStopWithId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f58 (_0x037fcf58_)
+///
+/// _defined in task.zig. from private_signatures.h:217._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskStopWithId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTaskStopWithId(void * callback, int32_t ID);
+/// ```
+pub const vexTaskStopWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c) types.undefined = task.vexTaskStopWithId;
+
+/// # vexTaskSuspendWithId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0f5c (_0x037fcf5c_)
+///
+/// _defined in task.zig. from private_signatures.h:229._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskSuspendWithId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTaskSuspendWithId(void * callback, int32_t ID);
+/// ```
+pub const vexTaskSuspendWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c) types.undefined = task.vexTaskSuspendWithId;
+
+/// # vexTaskWaitForExitWithId
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0088 (_0x037fc088_)
+///
+/// _defined in task.zig. from private_signatures.h:238._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskWaitForExitWithId%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTaskWaitForExitWithId(void * callback, int32_t ID);
+/// ```
+pub const vexTaskWaitForExitWithId: *const fn(callback: [*c]void,ID: i32) callconv(.c) types.undefined = task.vexTaskWaitForExitWithId;
+
+/// # vexTaskYield
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0060 (_0x037fc060_)
+///
+/// _defined in task.zig. from private_signatures.h:244._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexTaskYield%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// undefined vexTaskYield();
+/// ```
+pub const vexTaskYield: *const fn() callconv(.c) types.undefined = task.vexTaskYield;
+
+/// # vexDisplayThemeIdGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x079c (_0x037fc79c_)
+///
+/// _defined in display.zig. from private_signatures.h:251._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayThemeIdGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDisplayThemeIdGet();
+/// ```
+pub const vexDisplayThemeIdGet: *const fn() callconv(.c) types.int = display.vexDisplayThemeIdGet;
+
+/// # vexDisplayRotateFlagGet
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x0798 (_0x037fc798_)
+///
+/// _defined in display.zig. from private_signatures.h:256._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayRotateFlagGet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int vexDisplayRotateFlagGet();
+/// ```
+pub const vexDisplayRotateFlagGet: *const fn() callconv(.c) types.int = display.vexDisplayRotateFlagGet;
+
+/// # vexDisplayClipRegionSetWithIndex
+///
+/// **Private API**
+///
+/// **Jumptable Offset:** 0x07a8 (_0x037fc7a8_)
+///
+/// _defined in display.zig. from private_signatures.h:258._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexDisplayClipRegionSetWithIndex%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// void vexDisplayClipRegionSetWithIndex(int32_t index, int32_t x1, int32_t y1, int32_t x2, int32_t y2);
+/// ```
+pub const vexDisplayClipRegionSetWithIndex: *const fn(index: i32,x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void = display.vexDisplayClipRegionSetWithIndex;
+
+/// # vexAdiAddrLedSet
+///
+/// **Private API**
+///
+/// 
+///
+/// _defined in core.zig. from private_signatures.h:262._ [Find Usages](https://github.com/search?q=org%3Apurduesigbots%20OR%20org%3Avexide%20OR%20repo%3Acetio/VEXAPI%20OR%20repo%3Asy1vi3/sylib%20OR%20user%3Askzidev%20OR%20user%3Ajpearman%20OR%20org%3Avex-robotics%20OR%20repo%3AMobMasher21/evAPI%20OR%20repo%3ACWood-sdf/lib46f%20OR%20tubaplayerdis/Gold4Team3CompProj%20OR%20repo%3AGavin-Niederman/student-centered-arcade-drive%20vexAdiAddrLedSet%28&type=code)
+///
+/// **Original signature:**
+///
+/// ```c
+/// int32_t vexAdiAddrLedSet(uint32_t index, uint32_t port, uint32_t * pData, uint32_t nOffset, uint32_t nLength, uint32_t options);
+/// ```
+pub const vexAdiAddrLedSet: *const fn(index: u32,port: u32,pData: [*c]u32,nOffset: u32,nLength: u32,options: u32) callconv(.c) i32 = core.vexAdiAddrLedSet;

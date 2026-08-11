@@ -41,11 +41,6 @@ pub extern const vexDisplayRender: *const fn(bVsyncWait: types.int,bRunScheduler
 pub extern const vexDisplayDoubleBufferDisable: *const fn() callconv(.c) void;
 pub extern const vexDisplayClipRegionSet: *const fn(x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void;
 pub extern const vexDisplayClipRegionClear: *const fn() callconv(.c) void;
-pub extern const vexDisplayOffscreenBufferGet: *const fn(width: u32,height: u32,pixelSize: u32) callconv(.c) [*c]u32;
-pub extern const vexDisplayOffscreenBufferDestroy: *const fn(buffer: [*c]u32) callconv(.c) void;
-pub extern const vexDisplayOffscreenBufferPixelSet: *const fn(buffer: [*c]u32,x: u32,y: u32,color: u32) callconv(.c) void;
-pub extern const vexDisplayOffscreenBufferPixelGet: *const fn(buffer: [*c]u32,x: u32,y: u32) callconv(.c) u32;
-pub extern const vexDisplayOffscreenBufferRectDraw: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void;
-pub extern const vexDisplayOffscreenBufferRectFill: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void;
-pub extern const vexDisplayOffscreenBufferScrollH: *const fn(buffer: [*c]u32,pixels: u32) callconv(.c) void;
-pub extern const vexDisplayOffscreenBufferBlit: *const fn(buffer: [*c]u32,x: u32,y: u32,width: u32,height: u32) callconv(.c) void;
+pub extern const vexDisplayThemeIdGet: *const fn() callconv(.c) types.int;
+pub extern const vexDisplayRotateFlagGet: *const fn() callconv(.c) types.int;
+pub extern const vexDisplayClipRegionSetWithIndex: *const fn(index: i32,x1: i32,y1: i32,x2: i32,y2: i32) callconv(.c) void;
