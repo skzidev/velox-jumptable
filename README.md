@@ -12,11 +12,11 @@ zig fetch --save "git+https://github.com/skzidev/velox-jumptable"
 
 ## Using Bindings
 
-These bindings are automatically generated from symbol names. They do not have official documentation for each function. As such, the most useful resources in learning how they are used is **other projects which use them**. Doc comments automatically create links which search github for useful results in this regard.
+These bindings are automatically generated from symbol names. They do not have official documentation for each function. As such, the most useful resources in learning how they are used is **other projects which use them**. Doc comments automatically create links which search github for useful results in this regard. You can click "Find usages" and it will open a GitHub search in repositories which seem to be useful.
 
 ## Sources
 
-The jumptable data is derived **directly from the VEX firmware and SDK**. No prior reverse-engineering data (e.g. `offsets.txt`) is consulted. This means that even if VEX changed the order of the jumptable functions, this repository could be updated to the correct version in a couple of minutes.
+The jumptable data is derived **directly from the VEX firmware and SDK**. This means that even if VEX changed the order of the jumptable functions, this repository could be updated to the correct version in a couple of minutes. The only exception is the private API definitions. They are sourced from [tubaplayerdis/Gold4Team3CompProj](https://github.com/tubaplayerdis/Gold4Team3CompProj/blob/9542218b0b9bafb2bc11c6ffc98c8cc54a9b6711/include/api/vexPrivateRebuild.h)
 
 The firmware is the source of the jumptable itself: a static partition in the boot image at load address `0x037FC000`, holding 1040 word-sized slots which map offsets to implementation addresses. The SDK's `libv5rt.a` provides the authoritative symbol to offset mapping: each wrapper stub loads `0x037FC000` into a register and dispatches through the table (`ldr rX,[rB,#off]; bx rX`). The firmware table is used to validate that every wrapper-derived offset points at a real slot.
 

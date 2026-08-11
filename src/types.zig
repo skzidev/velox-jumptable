@@ -43,4 +43,3 @@ pub const FRESULT = opaque {};
 pub const FIL = opaque {};
 pub const V5_TouchEvent = opaque {};
 pub const V5_TouchStatus = opaque {};
-pub const undefined = opaque {};
