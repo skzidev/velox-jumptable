@@ -10,3 +10,4 @@ data/libv5rt.*
 !data/libv5rt.a
 *__pycache__
 lib64
+zig-out/

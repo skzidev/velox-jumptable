@@ -16,7 +16,7 @@ These bindings are automatically generated from symbol names. They do not have o
 
 ## Sources
 
-The jumptable data is derived **directly from the VEX firmware and SDK**. This means that even if VEX changed the order of the jumptable functions, this repository could be updated to the correct version in a couple of minutes. The only exception is the private API definitions. They are sourced from [tubaplayerdis/Gold4Team3CompProj](https://github.com/tubaplayerdis/Gold4Team3CompProj/blob/9542218b0b9bafb2bc11c6ffc98c8cc54a9b6711/include/api/vexPrivateRebuild.h)
+The jumptable data is derived **directly from the VEX firmware and SDK**. This means that even if VEX changed the order of the jumptable functions, this repository could be updated to the correct version in a couple of minutes. The only exception is the private API definitions. They are sourced from [tubaplayerdis/Gold4Team3CompProj](https://github.com/tubaplayerdis/Gold4Team3CompProj/blob/9542218b0b9bafb2bc11c6ffc98c8cc54a9b6711/include/api/vexPrivateRebuild.h) and Ghidra p-code.
 
 The firmware is the source of the jumptable itself: a static partition in the boot image at load address `0x037FC000`, holding 1040 word-sized slots which map offsets to implementation addresses. The SDK's `libv5rt.a` provides the authoritative symbol to offset mapping: each wrapper stub loads `0x037FC000` into a register and dispatches through the table (`ldr rX,[rB,#off]; bx rX`). The firmware table is used to validate that every wrapper-derived offset points at a real slot.
 

@@ -155,6 +155,25 @@ files: dict[str, TextIOWrapper] = {}
 
 def write_func_def(f: TextIOWrapper, function: Symbol):
     f.write(
+        textwrap.dedent(
+            f"""
+    /// # {function.name}
+    ///
+    /// **{"Public API" if function.isPublic else "Private API"}**
+    ///
+    /// {f"**Jumptable Offset:** {offset_data["functions"][function.name]["offset"]} (_{offset_data["functions"][function.name]["address"]}_)" if type == "defd" else ""}
+    ///
+    /// _defined in {f.name}. from {function.source}:{function.line}._ [Find Usages](https://github.com/search?q={urllib.parse.quote(f"org:purduesigbots OR org:vexide OR repo:cetio/VEXAPI OR repo:sy1vi3/sylib OR user:skzidev OR user:jpearman OR org:vex-robotics OR repo:MobMasher21/evAPI OR repo:CWood-sdf/lib46f OR tubaplayerdis/Gold4Team3CompProj OR repo:Gavin-Niederman/student-centered-arcade-drive {function.name}(")}&type=code)
+    ///
+    /// **Original signature:**
+    ///
+    /// ```c
+    /// {function.returns} {function.name}({", ".join([f"{param.type}{" " + param.name if param.name else ""}" for param in function.params])});
+    /// ```
+    """
+        )
+    )
+    f.write(
         f"pub extern const {function.name}: *const fn({','.join([f'{param.name if param.name else "_"}: {c_to_zig(param.type)}' for param in function.params])}) callconv(.c) {c_to_zig(function.returns)};\n"
     )
 
@@ -187,46 +206,10 @@ defd_funcs = []
 with open(join(".", "src", "root.zig"), "w") as f:
     f.writelines(
         [
-            f'const {basename(file).removesuffix(".zig")} = @import("{relpath(file, join(".", "src"))}");\n'
+            f'pub const {basename(file).removesuffix(".zig")} = @import("{relpath(file, join(".", "src"))}");\n'
             for file in files
         ]
     )
-    f.write('const types = @import("types.zig");')
-    for func in decls:
-        if func.name in defd_funcs:
-            continue
-        file = get_source_file(func.name)
-        mod_name = basename(file).removesuffix(".zig")
-
-        type = (
-            "defd"
-            if func.name in offset_data["functions"]
-            else ("glue" if func.name in offset_data["glue"] else None)
-        )
-
-        f.write(  # type:ignore
-            textwrap.dedent(
-                f"""
-            /// # {func.name}
-            ///
-            /// **{"Public API" if func.isPublic else "Private API"}**
-            ///
-            /// {f"**Jumptable Offset:** {offset_data["functions"][func.name]["offset"]} (_{offset_data["functions"][func.name]["address"]}_)" if type == "defd" else ""}
-            ///
-            /// _defined in {file}. from {func.source}:{func.line}._ [Find Usages](https://github.com/search?q={urllib.parse.quote(f"org:purduesigbots OR org:vexide OR repo:cetio/VEXAPI OR repo:sy1vi3/sylib OR user:skzidev OR user:jpearman OR org:vex-robotics OR repo:MobMasher21/evAPI OR repo:CWood-sdf/lib46f OR tubaplayerdis/Gold4Team3CompProj OR repo:Gavin-Niederman/student-centered-arcade-drive {func.name}(")}&type=code)
-            ///
-            /// **Original signature:**
-            ///
-            /// ```c
-            /// {func.returns} {func.name}({", ".join([f"{param.type}{" " + param.name if param.name else ""}" for param in func.params])});
-            /// ```
-            """
-            )
-        )
-        f.write(
-            f"pub const {func.name}: *const fn({','.join([f'{param.name if param.name else "_"}: {c_to_zig(param.type)}' for param in func.params])}) callconv(.c) {c_to_zig(func.returns)} = {mod_name}.{func.name};\n"
-        )
-        defd_funcs.append(func.name)
 
 for file in files.values():
     file.close()
