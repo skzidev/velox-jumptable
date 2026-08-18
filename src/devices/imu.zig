@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceImuReset
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceImuReset(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceImuReset: *const fn(device: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceImuHeadingGet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceImuReset: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// double vexDeviceImuHeadingGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceImuHeadingGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceImuDegreesGet
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceImuHeadingGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceImuDegreesGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceImuDegreesGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceImuQuaternionGet
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceImuDegreesGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// void vexDeviceImuQuaternionGet(V5_DeviceT device, V5_DeviceImuQuaternion * data);
 /// ```
-pub extern const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuQuaternion) callconv(.c) void;
+pub extern const vexDeviceImuQuaternionGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceImuAttitudeGet
 ///
@@ -73,7 +72,7 @@ pub extern const vexDeviceImuQuaternionGet: *const fn(device: types.V5_DeviceT,d
 /// ```c
 /// void vexDeviceImuAttitudeGet(V5_DeviceT device, V5_DeviceImuAttitude * data);
 /// ```
-pub extern const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuAttitude) callconv(.c) void;
+pub extern const vexDeviceImuAttitudeGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceImuRawGyroGet
 ///
@@ -88,7 +87,7 @@ pub extern const vexDeviceImuAttitudeGet: *const fn(device: types.V5_DeviceT,dat
 /// ```c
 /// void vexDeviceImuRawGyroGet(V5_DeviceT device, V5_DeviceImuRaw * data);
 /// ```
-pub extern const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void;
+pub extern const vexDeviceImuRawGyroGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceImuRawAccelGet
 ///
@@ -103,7 +102,7 @@ pub extern const vexDeviceImuRawGyroGet: *const fn(device: types.V5_DeviceT,data
 /// ```c
 /// void vexDeviceImuRawAccelGet(V5_DeviceT device, V5_DeviceImuRaw * data);
 /// ```
-pub extern const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceImuRaw) callconv(.c) void;
+pub extern const vexDeviceImuRawAccelGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceImuStatusGet
 ///
@@ -118,7 +117,7 @@ pub extern const vexDeviceImuRawAccelGet: *const fn(device: types.V5_DeviceT,dat
 /// ```c
 /// uint32_t vexDeviceImuStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceImuStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceImuModeSet
 ///
@@ -133,7 +132,7 @@ pub extern const vexDeviceImuStatusGet: *const fn(device: types.V5_DeviceT) call
 /// ```c
 /// void vexDeviceImuModeSet(V5_DeviceT device, uint32_t mode);
 /// ```
-pub extern const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void;
+pub extern const vexDeviceImuModeSet: *const fn(device: ?*anyopaque,mode: u32) callconv(.c) void;
 
 /// # vexDeviceImuModeGet
 ///
@@ -148,7 +147,7 @@ pub extern const vexDeviceImuModeSet: *const fn(device: types.V5_DeviceT,mode: u
 /// ```c
 /// uint32_t vexDeviceImuModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceImuModeGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceImuDataRateSet
 ///
@@ -163,4 +162,4 @@ pub extern const vexDeviceImuModeGet: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// void vexDeviceImuDataRateSet(V5_DeviceT device, uint32_t rate);
 /// ```
-pub extern const vexDeviceImuDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void;
+pub extern const vexDeviceImuDataRateSet: *const fn(device: ?*anyopaque,rate: u32) callconv(.c) void;

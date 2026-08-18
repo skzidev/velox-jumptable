@@ -43,7 +43,7 @@ pub extern const vexFileDirectoryGet: *const fn(path: [*:0]const u8,buffer: [*c]
 /// ```c
 /// FIL * vexFileOpen(const char * filename, const char * mode);
 /// ```
-pub extern const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const u8) callconv(.c) [*c]types.FIL;
+pub extern const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const u8) callconv(.c) ?*anyopaque;
 
 /// # vexFileOpenWrite
 ///
@@ -58,7 +58,7 @@ pub extern const vexFileOpen: *const fn(filename: [*:0]const u8,mode: [*:0]const
 /// ```c
 /// FIL * vexFileOpenWrite(const char * filename);
 /// ```
-pub extern const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL;
+pub extern const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.c) ?*anyopaque;
 
 /// # vexFileOpenCreate
 ///
@@ -73,7 +73,7 @@ pub extern const vexFileOpenWrite: *const fn(filename: [*:0]const u8) callconv(.
 /// ```c
 /// FIL * vexFileOpenCreate(const char * filename);
 /// ```
-pub extern const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(.c) [*c]types.FIL;
+pub extern const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(.c) ?*anyopaque;
 
 /// # vexFileClose
 ///
@@ -88,7 +88,7 @@ pub extern const vexFileOpenCreate: *const fn(filename: [*:0]const u8) callconv(
 /// ```c
 /// void vexFileClose(FIL * fdp);
 /// ```
-pub extern const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void;
+pub extern const vexFileClose: *const fn(fdp: ?*anyopaque) callconv(.c) void;
 
 /// # vexFileRead
 ///
@@ -103,7 +103,7 @@ pub extern const vexFileClose: *const fn(fdp: [*c]types.FIL) callconv(.c) void;
 /// ```c
 /// int32_t vexFileRead(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
 /// ```
-pub extern const vexFileRead: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32;
+pub extern const vexFileRead: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: ?*anyopaque) callconv(.c) i32;
 
 /// # vexFileWrite
 ///
@@ -118,7 +118,7 @@ pub extern const vexFileRead: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: [
 /// ```c
 /// int32_t vexFileWrite(char * buf, uint32_t size, uint32_t nItems, FIL * fdp);
 /// ```
-pub extern const vexFileWrite: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: [*c]types.FIL) callconv(.c) i32;
+pub extern const vexFileWrite: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: ?*anyopaque) callconv(.c) i32;
 
 /// # vexFileSize
 ///
@@ -133,7 +133,7 @@ pub extern const vexFileWrite: *const fn(buf: [*c]u8,size: u32,nItems: u32,fdp: 
 /// ```c
 /// int32_t vexFileSize(FIL * fdp);
 /// ```
-pub extern const vexFileSize: *const fn(fdp: [*c]types.FIL) callconv(.c) i32;
+pub extern const vexFileSize: *const fn(fdp: ?*anyopaque) callconv(.c) i32;
 
 /// # vexFileSeek
 ///
@@ -148,7 +148,7 @@ pub extern const vexFileSize: *const fn(fdp: [*c]types.FIL) callconv(.c) i32;
 /// ```c
 /// FRESULT vexFileSeek(FIL * fdp, uint32_t offset, int32_t whence);
 /// ```
-pub extern const vexFileSeek: *const fn(fdp: [*c]types.FIL,offset: u32,whence: i32) callconv(.c) types.FRESULT;
+pub extern const vexFileSeek: *const fn(fdp: ?*anyopaque,offset: u32,whence: i32) callconv(.c) types.FRESULT;
 
 /// # vexFileDriveStatus
 ///
@@ -178,7 +178,7 @@ pub extern const vexFileDriveStatus: *const fn(drive: u32) callconv(.c) i32;
 /// ```c
 /// int32_t vexFileTell(FIL * fdp);
 /// ```
-pub extern const vexFileTell: *const fn(fdp: [*c]types.FIL) callconv(.c) i32;
+pub extern const vexFileTell: *const fn(fdp: ?*anyopaque) callconv(.c) i32;
 
 /// # vexFileSync
 ///
@@ -193,7 +193,7 @@ pub extern const vexFileTell: *const fn(fdp: [*c]types.FIL) callconv(.c) i32;
 /// ```c
 /// void vexFileSync(FIL * fdp);
 /// ```
-pub extern const vexFileSync: *const fn(fdp: [*c]types.FIL) callconv(.c) void;
+pub extern const vexFileSync: *const fn(fdp: ?*anyopaque) callconv(.c) void;
 
 /// # vexFileStatus
 ///

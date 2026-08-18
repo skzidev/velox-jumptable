@@ -13,7 +13,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceLedSet(V5_DeviceT device, V5_DeviceLedColor value);
 /// ```
-pub extern const vexDeviceLedSet: *const fn(device: types.V5_DeviceT,value: types.V5_DeviceLedColor) callconv(.c) void;
+pub extern const vexDeviceLedSet: *const fn(device: ?*anyopaque,value: types.V5_DeviceLedColor) callconv(.c) void;
 
 /// # vexDeviceLedRgbSet
 ///
@@ -28,7 +28,7 @@ pub extern const vexDeviceLedSet: *const fn(device: types.V5_DeviceT,value: type
 /// ```c
 /// void vexDeviceLedRgbSet(V5_DeviceT device, uint32_t color);
 /// ```
-pub extern const vexDeviceLedRgbSet: *const fn(device: types.V5_DeviceT,color: u32) callconv(.c) void;
+pub extern const vexDeviceLedRgbSet: *const fn(device: ?*anyopaque,color: u32) callconv(.c) void;
 
 /// # vexDeviceLedGet
 ///
@@ -43,7 +43,7 @@ pub extern const vexDeviceLedRgbSet: *const fn(device: types.V5_DeviceT,color: u
 /// ```c
 /// V5_DeviceLedColor vexDeviceLedGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceLedGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceLedColor;
+pub extern const vexDeviceLedGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5_DeviceLedColor;
 
 /// # vexDeviceLedRgbGet
 ///
@@ -58,4 +58,4 @@ pub extern const vexDeviceLedGet: *const fn(device: types.V5_DeviceT) callconv(.
 /// ```c
 /// uint32_t vexDeviceLedRgbGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceLedRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceLedRgbGet: *const fn(device: ?*anyopaque) callconv(.c) u32;

@@ -43,7 +43,7 @@ pub extern const vexDevicesGetNumberByType: *const fn(type: types.V5_DeviceType)
 /// ```c
 /// V5_DeviceT vexDevicesGet();
 /// ```
-pub extern const vexDevicesGet: *const fn() callconv(.c) types.V5_DeviceT;
+pub extern const vexDevicesGet: *const fn() callconv(.c) ?*anyopaque;
 
 /// # vexDeviceGetByIndex
 ///
@@ -58,7 +58,7 @@ pub extern const vexDevicesGet: *const fn() callconv(.c) types.V5_DeviceT;
 /// ```c
 /// V5_DeviceT vexDeviceGetByIndex(uint32_t index);
 /// ```
-pub extern const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) types.V5_DeviceT;
+pub extern const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) ?*anyopaque;
 
 /// # vexDeviceGetStatus
 ///
@@ -73,7 +73,7 @@ pub extern const vexDeviceGetByIndex: *const fn(index: u32) callconv(.c) types.V
 /// ```c
 /// int32_t vexDeviceGetStatus(V5_DeviceType * buffer);
 /// ```
-pub extern const vexDeviceGetStatus: *const fn(buffer: [*c]types.V5_DeviceType) callconv(.c) i32;
+pub extern const vexDeviceGetStatus: *const fn(buffer: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGetTimestamp
 ///
@@ -88,7 +88,7 @@ pub extern const vexDeviceGetStatus: *const fn(buffer: [*c]types.V5_DeviceType) 
 /// ```c
 /// int32_t vexDeviceGetTimestamp(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGetTimestamp: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGetTimestamp: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGetTimestampByIndex
 ///

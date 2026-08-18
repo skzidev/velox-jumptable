@@ -36,6 +36,7 @@ import argparse
 import json
 import struct
 from pathlib import Path
+from typing import Any
 
 HERE = Path(__file__).resolve().parent
 BOOT = HERE / "data" / "firmware" / "BOOT.bin"
@@ -59,7 +60,7 @@ STT_FUNC = 2
 STB_GLOBAL = 1
 
 
-def parse_partitions(boot: bytes) -> list[dict]:
+def parse_partitions(boot: bytes) -> list[dict[Any, Any]]:
     table = struct.unpack_from("<I", boot, TBL_OFFSET_FIELD)[0]
     parts = []
     off = table
@@ -141,16 +142,39 @@ def build_elf(
     # ELF header
     ident = b"\x7fELF" + bytes([1, 1, 1, 0]) + b"\x00" * 8
     struct.pack_into(
-        "<16sHHIIIIIHHHHHH", out, 0,
-        ident, ET_EXEC, EM_ARM, 1, 0,
-        52, shdr_off, 0, 52, 32, nph, 40, 4, 3,
+        "<16sHHIIIIIHHHHHH",
+        out,
+        0,
+        ident,
+        ET_EXEC,
+        EM_ARM,
+        1,
+        0,
+        52,
+        shdr_off,
+        0,
+        52,
+        32,
+        nph,
+        40,
+        4,
+        3,
     )
 
     # Program headers
     for i, (p_off, vaddr, size, flags) in enumerate(placed):
         struct.pack_into(
-            "<IIIIIIII", out, 52 + 32 * i,
-            PT_LOAD, p_off, vaddr, vaddr, size, size, flags, ALIGN,
+            "<IIIIIIII",
+            out,
+            52 + 32 * i,
+            PT_LOAD,
+            p_off,
+            vaddr,
+            vaddr,
+            size,
+            size,
+            flags,
+            ALIGN,
         )
 
     # Segment data
@@ -178,10 +202,17 @@ def build_elf(
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("-o", "--out", default=str(DEFAULT_OUT),
-                    help="output ELF path (default: %(default)s)")
-    ap.add_argument("--no-symbols", action="store_true",
-                    help="do not add SDK API symbols from jumptable_offsets.json")
+    ap.add_argument(
+        "-o",
+        "--out",
+        default=str(DEFAULT_OUT),
+        help="output ELF path (default: %(default)s)",
+    )
+    ap.add_argument(
+        "--no-symbols",
+        action="store_true",
+        help="do not add SDK API symbols from jumptable_offsets.json",
+    )
     args = ap.parse_args()
 
     boot = BOOT.read_bytes()
@@ -189,18 +220,24 @@ def main() -> None:
     segments = []
     for p in parts:
         if len(p["data"]) >= 16 and p["data"][:16] == b"\xff" * 16:
-            print(f"  skip p{p['index']}: FPGA bitstream @0x{p['offset']:x} ({p['size']:#x} bytes)")
+            print(
+                f"  skip p{p['index']}: FPGA bitstream @0x{p['offset']:x} ({p['size']:#x} bytes)"
+            )
             continue
         flags = PF_R
         if len(p["data"]) >= 4 and p["data"][3] == 0xEA:
             flags |= PF_X
-        print(f"  p{p['index']}: load 0x{p['load']:08x} size {p['size']:#x} flags {flags:#x}")
+        print(
+            f"  p{p['index']}: load 0x{p['load']:08x} size {p['size']:#x} flags {flags:#x}"
+        )
         segments.append((p["load"], p["data"], flags))
 
     symbols = [] if args.no_symbols else load_symbols(OFFSETS)
     elf = build_elf(segments, symbols)
     Path(args.out).write_bytes(elf)
-    print(f"wrote {args.out}: {len(segments)} segments, {len(symbols)} symbols, {len(elf)} bytes")
+    print(
+        f"wrote {args.out}: {len(segments)} segments, {len(symbols)} symbols, {len(elf)} bytes"
+    )
 
 
 if __name__ == "__main__":

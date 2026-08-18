@@ -5,12 +5,13 @@ import urllib.parse
 from io import TextIOWrapper
 from os import mkdir
 from os.path import basename, dirname, join, relpath
+from typing import Any
 
 from tools.clangutil import Symbol, read_header
 
 DATA_PATH = join(".", "data")
 
-offset_data: dict
+offset_data: dict[str, Any] = {}
 
 with open(join(DATA_PATH, "jumptable_offsets.json")) as f:
     offset_data = json.load(f)
@@ -91,7 +92,210 @@ def get_source_file(name):
 
 NUMERIC_PATTERN = r"(int|uint)\d+_t"
 
-defd_structs = []
+# ---------------------------------------------------------------------------
+# Type overrides: maps C type spelling → correct Zig type.
+# Applied at the top of c_to_zig() before any other logic.
+# ---------------------------------------------------------------------------
+TYPE_ALIASES: dict[str, str] = {
+    # Bare C scalars (libclang sometimes canonicalises, sometimes doesn't)
+    "int": "i32",
+    "char": "u8",
+    "double": "f64",
+    "bool": "bool",
+    # Pointer typedef (typedef struct _V5_Device * V5_DeviceT)
+    "V5_DeviceT": "?*anyopaque",
+}
+
+# ---------------------------------------------------------------------------
+# Enum definitions: each C enum type gets a named Zig enum(c_int).
+# Variants are listed with explicit values (auto-increment pre-computed).
+# Aliases and duplicate values are omitted (Zig enums require unique values).
+# The trailing `_` tag allows any integer not explicitly listed.
+# ---------------------------------------------------------------------------
+ENUM_VARIANTS: dict[str, list[str]] = {
+    "FRESULT": [
+        "FR_OK = 0",
+        "FR_DISK_ERR",
+        "FR_INT_ERR",
+        "FR_NOT_READY",
+        "FR_NO_FILE",
+        "FR_NO_PATH",
+        "FR_INVALID_NAME",
+        "FR_DENIED",
+        "FR_EXIST",
+        "FR_INVALID_OBJECT",
+        "FR_WRITE_PROTECTED",
+        "FR_INVALID_DRIVE",
+        "FR_NOT_ENABLED",
+        "FR_NO_FILESYSTEM",
+        "FR_MKFS_ABORTED",
+        "FR_TIMEOUT",
+        "FR_LOCKED",
+        "FR_NOT_ENOUGH_CORE",
+        "FR_TOO_MANY_OPEN_FILES",
+        "FR_INVALID_PARAMETER",
+    ],
+    "V5_DeviceType": [
+        "kDeviceTypeNoSensor = 0",
+        "kDeviceTypeMotorSensor = 2",
+        "kDeviceTypeLedSensor",
+        "kDeviceTypeAbsEncSensor",
+        "kDeviceTypeCrMotorSensor",
+        "kDeviceTypeImuSensor",
+        "kDeviceTypeDistanceSensor = 7",
+        "kDeviceTypeRadioSensor = 8",
+        "kDeviceTypeTetherSensor",
+        "kDeviceTypeBrainSensor",
+        "kDeviceTypeVisionSensor",
+        "kDeviceTypeAdiSensor",
+        "kDeviceTypeRes1Sensor",
+        "kDeviceTypeRes2Sensor",
+        "kDeviceTypeRes3Sensor",
+        "kDeviceTypeOpticalSensor",
+        "kDeviceTypeMagnetSensor",
+        "kDeviceTypeGpsSensor = 20",
+        "kDeviceTypeAicameraSensor = 26",
+        "kDeviceTypeLightTowerSensor",
+        "kDeviceTypeArmDevice",
+        "kDeviceTypeAiVisionSensor",
+        "kDeviceTypePneumaticSensor",
+        "kDeviceTypeMC55MotorSensor",
+        "kDeviceTypeBumperSensor = 0x40",
+        "kDeviceTypeGyroSensor = 0x46",
+        "kDeviceTypeSonarSensor",
+        "kDeviceTypeGenericSensor = 128",
+        "kDeviceTypeGenericSerial",
+        "kDeviceTypeUndefinedSensor = 255",
+    ],
+    "V5_ControllerIndex": [
+        "AnaLeftX = 0",
+        "AnaLeftY",
+        "AnaRightX",
+        "AnaRightY",
+        "AnaSpare1",
+        "AnaSpare2",
+        "Button5U",
+        "Button5D",
+        "Button6U",
+        "Button6D",
+        "Button7U",
+        "Button7D",
+        "Button7L",
+        "Button7R",
+        "Button8U",
+        "Button8D",
+        "Button8L",
+        "Button8R",
+        "ButtonSEL",
+        "BatteryLevel",
+        "ButtonAll",
+        "Flags",
+        "BatteryCapacity",
+    ],
+    "V5_ControllerStatus": [
+        "kV5ControllerOffline = 0",
+        "kV5ControllerTethered",
+        "kV5ControllerVexnet",
+    ],
+    "V5_ControllerId": [
+        "kControllerMaster = 0",
+        "kControllerPartner",
+    ],
+    "V5_DeviceLedColor": [
+        "kLedColorBlack = 0",
+        "kLedColorRed = 0xFF0000",
+        "kLedColorGreen = 0x00FF00",
+        "kLedColorBlue = 0x0000FF",
+        "kLedColorYellow = 0xFFFF00",
+        "kLedColorCyan = 0x00FFFF",
+        "kLedColorMagenta = 0xFF00FF",
+        "kLedColorWhite = 0xFFFFFF",
+    ],
+    "V5_AdiPortConfiguration": [
+        "kAdiPortTypeAnalogIn = 0",
+        "kAdiPortTypeAnalogOut",
+        "kAdiPortTypeDigitalIn",
+        "kAdiPortTypeDigitalOut",
+        "kAdiPortTypeSmartButton",
+        "kAdiPortTypeSmartPot",
+        "kAdiPortTypeLegacyButton",
+        "kAdiPortTypeLegacyPotentiometer",
+        "kAdiPortTypeLegacyLineSensor",
+        "kAdiPortTypeLegacyLightSensor",
+        "kAdiPortTypeLegacyGyro",
+        "kAdiPortTypeLegacyAccelerometer",
+        "kAdiPortTypeLegacyServo",
+        "kAdiPortTypeLegacyPwm",
+        "kAdiPortTypeQuadEncoder",
+        "kAdiPortTypeSonar",
+        "kAdiPortTypeLegacyPwmSlew",
+        "kAdiPortTypeUndefined = 255",
+    ],
+    "V5_DeviceBumperState": [
+        "kBumperReleased = 0",
+        "kBumperPressed",
+    ],
+    "V5MotorControlMode": [
+        "kMotorControlModeOFF = 0",
+        "kMotorControlModeBRAKE",
+        "kMotorControlModeHOLD",
+        "kMotorControlModeSERVO",
+        "kMotorControlModePROFILE",
+        "kMotorControlModeVELOCITY",
+        "kMotorControlModeUNDEFINED",
+    ],
+    "V5MotorEncoderUnits": [
+        "kMotorEncoderDegrees = 0",
+        "kMotorEncoderRotations",
+        "kMotorEncoderCounts",
+    ],
+    "V5MotorBrakeMode": [
+        "kV5MotorBrakeModeCoast = 0",
+        "kV5MotorBrakeModeBrake",
+        "kV5MotorBrakeModeHold",
+    ],
+    "V5MotorGearset": [
+        "kMotorGearSet_36 = 0",
+        "kMotorGearSet_18",
+        "kMotorGearSet_06",
+    ],
+    "V5VisionMode": [
+        "kVisionModeNormal = 0",
+        "kVisionModeMixed",
+        "kVisionModeLineDetect",
+        "kVisionTypeTest",
+    ],
+    "V5VisionWBMode": [
+        "kVisionWBNormal = 0",
+        "kVisionWBStart",
+        "kVisionWBManual",
+    ],
+    "V5VisionLedMode": [
+        "kVisionLedModeAuto = 0",
+        "kVisionLedModeManual",
+    ],
+    "V5VisionWifiMode": [
+        "kVisionWifiModeOff = 0",
+        "kVisionWifiModeOn",
+    ],
+    "V5_DeviceMagnetDuration": [
+        "kMagnetDurationShort = 0",
+        "kMagnetDurationMedium",
+        "kMagnetDurationLong",
+        "kMagnetDurationExtraLong",
+    ],
+    "V5_TouchEvent": [
+        "kTouchEventRelease = 0",
+        "kTouchEventPress",
+        "kTouchEventPressAuto",
+    ],
+}
+
+# Register enum types so they resolve to types.X in function signatures.
+for _enum_name in ENUM_VARIANTS:
+    TYPE_ALIASES.setdefault(_enum_name, f"types.{_enum_name}")
+
+defd_structs: list[str] = []
 
 
 def c_int_to_zig(type_name):
@@ -108,6 +312,10 @@ FUNCTION_TYPE_PATTERN = re.compile(r"^(?P<return>.+?)\s*\(\s*\)\s*\((?P<params>.
 
 def c_to_zig(hc_type: str) -> str:
     hc_type = hc_type.strip()
+
+    # Named type overrides (enums, pointer typedefs, bare scalars)
+    if hc_type in TYPE_ALIASES:
+        return TYPE_ALIASES[hc_type]
 
     if hc_type == "...":
         return "..."
@@ -152,7 +360,11 @@ def c_to_zig(hc_type: str) -> str:
         return "*const " + c_to_zig(hc_type.replace("*", "").strip())
 
     if "*" in hc_type:
-        return "[*c]" + c_to_zig(hc_type.replace("*", "")).strip()
+        inner = c_to_zig(hc_type.replace("*", "").strip())
+        # Pointer to an opaque type (types.X) → ?*anyopaque (Zig 0.16: [*c]types.X is illegal)
+        if inner.startswith("types."):
+            return "?*anyopaque"
+        return "[*c]" + inner
 
     if "struct " in hc_type:
         return c_to_zig(hc_type.replace("struct ", ""))
@@ -179,7 +391,7 @@ def write_func_def(f: TextIOWrapper, function: Symbol):
     if function.variadic:
         params_doc += ", ..."
 
-    f.write(
+    _ = f.write(
         textwrap.dedent(
             f"""
     /// # {function.name}
@@ -207,7 +419,7 @@ def write_func_def(f: TextIOWrapper, function: Symbol):
     if function.variadic:
         params_zig += ",..."
 
-    f.write(
+    _ = f.write(
         f"pub extern const {function.name}: *const fn({params_zig}) callconv(.c) {c_to_zig(function.returns)};\n"
     )
 
@@ -217,13 +429,13 @@ try:
 except FileExistsError:
     pass
 
-defd_funcs = []
+defd_funcs: list[str] = []
 
 for function in decls:
     fname = join(".", "src", get_source_file(function.name))
     if not fname in files:
         files[fname] = open(fname, "w")  # noqa: SIM115
-        files[fname].write(
+        _ = files[fname].write(
             f'const types = @import("{relpath(join(".", "src", "types.zig"), dirname(fname))}");\n'
         )
     if function.name in defd_funcs:
@@ -232,8 +444,15 @@ for function in decls:
     defd_funcs.append(function.name)
 
 with open(join(".", "src", "types.zig"), "w") as f:
-    f.write("//! typedefs for VEX SDK struct defs\n")
-    f.writelines([f"pub const {x} = opaque {{}};\n" for x in defd_structs])
+    _ = f.write("//! VEX SDK type definitions\n")
+    for enum_name, variants in ENUM_VARIANTS.items():
+        _ = f.write(f"pub const {enum_name} = enum(c_int) {{\n")
+        for v in variants:
+            _ = f.write(f"    {v},\n")
+        _ = f.write("    _,\n};\n")
+    for x in defd_structs:
+        if x not in ENUM_VARIANTS:
+            _ = f.write(f"pub const {x} = opaque {{}};\n")
 
 defd_funcs = []
 
@@ -247,6 +466,20 @@ with open(join(".", "src", "root.zig"), "w") as f:
 
 for file in files.values():
     file.close()
+
+# Remove unused types imports
+for fname in list(files.keys()):
+    with open(fname, "r") as f:
+        content = f.read()
+    lines = content.split("\n")
+    has_types_ref = any(
+        "types." in line and not line.startswith("const types")
+        for line in lines
+    )
+    if not has_types_ref:
+        lines = [l for l in lines if not l.startswith("const types = @import")]
+        with open(fname, "w") as f:
+            _ = f.write("\n".join(lines))
 
 with open(join(".", "addrs.ld"), "w") as f:
     f.writelines(

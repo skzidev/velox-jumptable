@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceOpticalHueGet
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// double vexDeviceOpticalHueGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceOpticalHueGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceOpticalSatGet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceOpticalHueGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceOpticalSatGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceOpticalSatGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceOpticalBrightnessGet
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceOpticalSatGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceOpticalBrightnessGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceOpticalBrightnessGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceOpticalProximityGet
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceOpticalBrightnessGet: *const fn(device: types.V5_Devic
 /// ```c
 /// int32_t vexDeviceOpticalProximityGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalProximityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceOpticalProximityGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceOpticalRgbGet
 ///
@@ -73,7 +72,7 @@ pub extern const vexDeviceOpticalProximityGet: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceOpticalRgbGet(V5_DeviceT device, V5_DeviceOpticalRgb * data);
 /// ```
-pub extern const vexDeviceOpticalRgbGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRgb) callconv(.c) void;
+pub extern const vexDeviceOpticalRgbGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceOpticalLedPwmSet
 ///
@@ -88,7 +87,7 @@ pub extern const vexDeviceOpticalRgbGet: *const fn(device: types.V5_DeviceT,data
 /// ```c
 /// void vexDeviceOpticalLedPwmSet(V5_DeviceT device, int32_t value);
 /// ```
-pub extern const vexDeviceOpticalLedPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
+pub extern const vexDeviceOpticalLedPwmSet: *const fn(device: ?*anyopaque,value: i32) callconv(.c) void;
 
 /// # vexDeviceOpticalLedPwmGet
 ///
@@ -103,7 +102,7 @@ pub extern const vexDeviceOpticalLedPwmSet: *const fn(device: types.V5_DeviceT,v
 /// ```c
 /// int32_t vexDeviceOpticalLedPwmGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalLedPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceOpticalLedPwmGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceOpticalStatusGet
 ///
@@ -118,7 +117,7 @@ pub extern const vexDeviceOpticalLedPwmGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// uint32_t vexDeviceOpticalStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceOpticalStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceOpticalRawGet
 ///
@@ -133,7 +132,7 @@ pub extern const vexDeviceOpticalStatusGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// void vexDeviceOpticalRawGet(V5_DeviceT device, V5_DeviceOpticalRaw * data);
 /// ```
-pub extern const vexDeviceOpticalRawGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceOpticalRaw) callconv(.c) void;
+pub extern const vexDeviceOpticalRawGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceOpticalModeSet
 ///
@@ -148,7 +147,7 @@ pub extern const vexDeviceOpticalRawGet: *const fn(device: types.V5_DeviceT,data
 /// ```c
 /// void vexDeviceOpticalModeSet(V5_DeviceT device, uint32_t mode);
 /// ```
-pub extern const vexDeviceOpticalModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void;
+pub extern const vexDeviceOpticalModeSet: *const fn(device: ?*anyopaque,mode: u32) callconv(.c) void;
 
 /// # vexDeviceOpticalModeGet
 ///
@@ -163,7 +162,7 @@ pub extern const vexDeviceOpticalModeSet: *const fn(device: types.V5_DeviceT,mod
 /// ```c
 /// uint32_t vexDeviceOpticalModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceOpticalModeGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceOpticalGestureGet
 ///
@@ -178,7 +177,7 @@ pub extern const vexDeviceOpticalModeGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// uint32_t vexDeviceOpticalGestureGet(V5_DeviceT, V5_DeviceOpticalGesture * pData);
 /// ```
-pub extern const vexDeviceOpticalGestureGet: *const fn(_: types.V5_DeviceT,pData: [*c]types.V5_DeviceOpticalGesture) callconv(.c) u32;
+pub extern const vexDeviceOpticalGestureGet: *const fn(_: ?*anyopaque,pData: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceOpticalGestureEnable
 ///
@@ -193,7 +192,7 @@ pub extern const vexDeviceOpticalGestureGet: *const fn(_: types.V5_DeviceT,pData
 /// ```c
 /// void vexDeviceOpticalGestureEnable(V5_DeviceT);
 /// ```
-pub extern const vexDeviceOpticalGestureEnable: *const fn(_: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceOpticalGestureEnable: *const fn(_: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceOpticalGestureDisable
 ///
@@ -208,7 +207,7 @@ pub extern const vexDeviceOpticalGestureEnable: *const fn(_: types.V5_DeviceT) c
 /// ```c
 /// void vexDeviceOpticalGestureDisable(V5_DeviceT);
 /// ```
-pub extern const vexDeviceOpticalGestureDisable: *const fn(_: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceOpticalGestureDisable: *const fn(_: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceOpticalProximityThreshold
 ///
@@ -223,7 +222,7 @@ pub extern const vexDeviceOpticalGestureDisable: *const fn(_: types.V5_DeviceT) 
 /// ```c
 /// int32_t vexDeviceOpticalProximityThreshold(V5_DeviceT device, int32_t value);
 /// ```
-pub extern const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) i32;
+pub extern const vexDeviceOpticalProximityThreshold: *const fn(device: ?*anyopaque,value: i32) callconv(.c) i32;
 
 /// # vexDeviceOpticalIntegrationTimeSet
 ///
@@ -238,7 +237,7 @@ pub extern const vexDeviceOpticalProximityThreshold: *const fn(device: types.V5_
 /// ```c
 /// void vexDeviceOpticalIntegrationTimeSet(V5_DeviceT device, double timeMs);
 /// ```
-pub extern const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_DeviceT,timeMs: f64) callconv(.c) void;
+pub extern const vexDeviceOpticalIntegrationTimeSet: *const fn(device: ?*anyopaque,timeMs: f64) callconv(.c) void;
 
 /// # vexDeviceOpticalIntegrationTimeGet
 ///
@@ -253,4 +252,4 @@ pub extern const vexDeviceOpticalIntegrationTimeSet: *const fn(device: types.V5_
 /// ```c
 /// double vexDeviceOpticalIntegrationTimeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceOpticalIntegrationTimeGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceOpticalIntegrationTimeGet: *const fn(device: ?*anyopaque) callconv(.c) f64;

@@ -28,4 +28,4 @@ pub extern const vexTouchUserCallbackSet: *const fn(callback: *const fn(types.V5
 /// ```c
 /// int vexTouchDataGet(V5_TouchStatus * status);
 /// ```
-pub extern const vexTouchDataGet: *const fn(status: [*c]types.V5_TouchStatus) callconv(.c) i32;
+pub extern const vexTouchDataGet: *const fn(status: ?*anyopaque) callconv(.c) i32;

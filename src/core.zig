@@ -1,4 +1,3 @@
-const types = @import("types.zig");
 
 /// # vexDebug
 ///
@@ -103,7 +102,7 @@ pub extern const vex_vsnprintf: *const fn(out: [*c]u8,max_len: u32,format: [*:0]
 /// ```c
 /// void vexGettime(struct time * pTime);
 /// ```
-pub extern const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void;
+pub extern const vexGettime: *const fn(pTime: ?*anyopaque) callconv(.c) void;
 
 /// # vexGetdate
 ///
@@ -118,7 +117,7 @@ pub extern const vexGettime: *const fn(pTime: [*c]types.time) callconv(.c) void;
 /// ```c
 /// void vexGetdate(struct date * pDate);
 /// ```
-pub extern const vexGetdate: *const fn(pDate: [*c]types.date) callconv(.c) void;
+pub extern const vexGetdate: *const fn(pDate: ?*anyopaque) callconv(.c) void;
 
 /// # vexAdiAddrLedSet
 ///

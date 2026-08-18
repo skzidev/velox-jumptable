@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceAbsEncReset
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceAbsEncReset(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAbsEncReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceAbsEncReset: *const fn(device: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceAbsEncPositionSet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceAbsEncReset: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// void vexDeviceAbsEncPositionSet(V5_DeviceT device, int32_t position);
 /// ```
-pub extern const vexDeviceAbsEncPositionSet: *const fn(device: types.V5_DeviceT,position: i32) callconv(.c) void;
+pub extern const vexDeviceAbsEncPositionSet: *const fn(device: ?*anyopaque,position: i32) callconv(.c) void;
 
 /// # vexDeviceAbsEncPositionGet
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceAbsEncPositionSet: *const fn(device: types.V5_DeviceT,
 /// ```c
 /// int32_t vexDeviceAbsEncPositionGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAbsEncPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceAbsEncPositionGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceAbsEncVelocityGet
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceAbsEncPositionGet: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// int32_t vexDeviceAbsEncVelocityGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAbsEncVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceAbsEncVelocityGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceAbsEncAngleGet
 ///
@@ -73,7 +72,7 @@ pub extern const vexDeviceAbsEncVelocityGet: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// int32_t vexDeviceAbsEncAngleGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceAbsEncAngleGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceAbsEncReverseFlagSet
 ///
@@ -88,7 +87,7 @@ pub extern const vexDeviceAbsEncAngleGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// void vexDeviceAbsEncReverseFlagSet(V5_DeviceT device, int value);
 /// ```
-pub extern const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
+pub extern const vexDeviceAbsEncReverseFlagSet: *const fn(device: ?*anyopaque,value: i32) callconv(.c) void;
 
 /// # vexDeviceAbsEncReverseFlagGet
 ///
@@ -103,7 +102,7 @@ pub extern const vexDeviceAbsEncReverseFlagSet: *const fn(device: types.V5_Devic
 /// ```c
 /// int vexDeviceAbsEncReverseFlagGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceAbsEncReverseFlagGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceAbsEncStatusGet
 ///
@@ -118,7 +117,7 @@ pub extern const vexDeviceAbsEncReverseFlagGet: *const fn(device: types.V5_Devic
 /// ```c
 /// uint32_t vexDeviceAbsEncStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceAbsEncStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceAbsEncStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceAbsEncDataRateSet
 ///
@@ -133,4 +132,4 @@ pub extern const vexDeviceAbsEncStatusGet: *const fn(device: types.V5_DeviceT) c
 /// ```c
 /// void vexDeviceAbsEncDataRateSet(V5_DeviceT device, uint32_t rate);
 /// ```
-pub extern const vexDeviceAbsEncDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void;
+pub extern const vexDeviceAbsEncDataRateSet: *const fn(device: ?*anyopaque,rate: u32) callconv(.c) void;

@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceGenericRadioConnection
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceGenericRadioConnection(V5_DeviceT device, char * pName, int bMaster, int bAllowRadioOverride);
 /// ```
-pub extern const vexDeviceGenericRadioConnection: *const fn(device: types.V5_DeviceT,pName: [*c]u8,bMaster: i32,bAllowRadioOverride: i32) callconv(.c) void;
+pub extern const vexDeviceGenericRadioConnection: *const fn(device: ?*anyopaque,pName: [*c]u8,bMaster: i32,bAllowRadioOverride: i32) callconv(.c) void;
 
 /// # vexDeviceGenericRadioWriteChar
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceGenericRadioConnection: *const fn(device: types.V5_Dev
 /// ```c
 /// int32_t vexDeviceGenericRadioWriteChar(V5_DeviceT device, uint8_t c);
 /// ```
-pub extern const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioWriteChar: *const fn(device: ?*anyopaque,c: u8) callconv(.c) i32;
 
 /// # vexDeviceGenericRadioWriteFree
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceGenericRadioWriteChar: *const fn(device: types.V5_Devi
 /// ```c
 /// int32_t vexDeviceGenericRadioWriteFree(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioWriteFree: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericRadioTransmit
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceGenericRadioWriteFree: *const fn(device: types.V5_Devi
 /// ```c
 /// int32_t vexDeviceGenericRadioTransmit(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-pub extern const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioTransmit: *const fn(device: ?*anyopaque,buffer: [*c]u8,length: i32) callconv(.c) i32;
 
 /// # vexDeviceGenericRadioReadChar
 ///
@@ -73,7 +72,7 @@ pub extern const vexDeviceGenericRadioTransmit: *const fn(device: types.V5_Devic
 /// ```c
 /// int32_t vexDeviceGenericRadioReadChar(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioReadChar: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericRadioPeekChar
 ///
@@ -88,7 +87,7 @@ pub extern const vexDeviceGenericRadioReadChar: *const fn(device: types.V5_Devic
 /// ```c
 /// int32_t vexDeviceGenericRadioPeekChar(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioPeekChar: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericRadioReceiveAvail
 ///
@@ -103,7 +102,7 @@ pub extern const vexDeviceGenericRadioPeekChar: *const fn(device: types.V5_Devic
 /// ```c
 /// int32_t vexDeviceGenericRadioReceiveAvail(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioReceiveAvail: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericRadioReceive
 ///
@@ -118,7 +117,7 @@ pub extern const vexDeviceGenericRadioReceiveAvail: *const fn(device: types.V5_D
 /// ```c
 /// int32_t vexDeviceGenericRadioReceive(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-pub extern const vexDeviceGenericRadioReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioReceive: *const fn(device: ?*anyopaque,buffer: [*c]u8,length: i32) callconv(.c) i32;
 
 /// # vexDeviceGenericRadioFlush
 ///
@@ -133,7 +132,7 @@ pub extern const vexDeviceGenericRadioReceive: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceGenericRadioFlush(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceGenericRadioFlush: *const fn(device: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceGenericRadioLinkStatus
 ///
@@ -148,4 +147,4 @@ pub extern const vexDeviceGenericRadioFlush: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// int vexDeviceGenericRadioLinkStatus(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericRadioLinkStatus: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericRadioLinkStatus: *const fn(device: ?*anyopaque) callconv(.c) i32;

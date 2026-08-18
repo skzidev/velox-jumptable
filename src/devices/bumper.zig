@@ -13,4 +13,4 @@ const types = @import("../types.zig");
 /// ```c
 /// V5_DeviceBumperState vexDeviceBumperGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceBumperGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceBumperState;
+pub extern const vexDeviceBumperGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5_DeviceBumperState;

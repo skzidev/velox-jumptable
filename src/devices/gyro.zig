@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceGyroReset
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceGyroReset(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceGyroReset: *const fn(device: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceGyroHeadingGet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceGyroReset: *const fn(device: types.V5_DeviceT) callcon
 /// ```c
 /// double vexDeviceGyroHeadingGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceGyroHeadingGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceGyroDegreesGet
 ///
@@ -43,4 +42,4 @@ pub extern const vexDeviceGyroHeadingGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// double vexDeviceGyroDegreesGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGyroDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceGyroDegreesGet: *const fn(device: ?*anyopaque) callconv(.c) f64;

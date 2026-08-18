@@ -1,4 +1,3 @@
-const types = @import("types.zig");
 
 /// # vexSerialWriteChar
 ///

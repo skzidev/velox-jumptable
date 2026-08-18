@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceLightTowerRgbSet
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceLightTowerRgbSet(V5_DeviceT device, uint32_t rgb_value, uint32_t xyw_value);
 /// ```
-pub extern const vexDeviceLightTowerRgbSet: *const fn(device: types.V5_DeviceT,rgb_value: u32,xyw_value: u32) callconv(.c) void;
+pub extern const vexDeviceLightTowerRgbSet: *const fn(device: ?*anyopaque,rgb_value: u32,xyw_value: u32) callconv(.c) void;
 
 /// # vexDeviceLightTowerColorSet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceLightTowerRgbSet: *const fn(device: types.V5_DeviceT,r
 /// ```c
 /// void vexDeviceLightTowerColorSet(V5_DeviceT device, uint32_t color_id, uint32_t value);
 /// ```
-pub extern const vexDeviceLightTowerColorSet: *const fn(device: types.V5_DeviceT,color_id: u32,value: u32) callconv(.c) void;
+pub extern const vexDeviceLightTowerColorSet: *const fn(device: ?*anyopaque,color_id: u32,value: u32) callconv(.c) void;
 
 /// # vexDeviceLightTowerRgbGet
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceLightTowerColorSet: *const fn(device: types.V5_DeviceT
 /// ```c
 /// uint32_t vexDeviceLightTowerRgbGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceLightTowerRgbGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceLightTowerRgbGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceLightTowerXywGet
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceLightTowerRgbGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// uint32_t vexDeviceLightTowerXywGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceLightTowerXywGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceLightTowerXywGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceLightTowerStatusGet
 ///
@@ -73,7 +72,7 @@ pub extern const vexDeviceLightTowerXywGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// uint32_t vexDeviceLightTowerStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceLightTowerStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceLightTowerStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceLightTowerBlinkSet
 ///
@@ -88,4 +87,4 @@ pub extern const vexDeviceLightTowerStatusGet: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceLightTowerBlinkSet(V5_DeviceT device, uint8_t select, uint8_t mask, int32_t onTime, int32_t offTime);
 /// ```
-pub extern const vexDeviceLightTowerBlinkSet: *const fn(device: types.V5_DeviceT,select: u8,mask: u8,onTime: i32,offTime: i32) callconv(.c) void;
+pub extern const vexDeviceLightTowerBlinkSet: *const fn(device: ?*anyopaque,select: u8,mask: u8,onTime: i32,offTime: i32) callconv(.c) void;

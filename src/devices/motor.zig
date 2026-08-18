@@ -13,7 +13,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceMotorVelocitySet(V5_DeviceT device, int32_t velocity);
 /// ```
-pub extern const vexDeviceMotorVelocitySet: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void;
+pub extern const vexDeviceMotorVelocitySet: *const fn(device: ?*anyopaque,velocity: i32) callconv(.c) void;
 
 /// # vexDeviceMotorVelocityUpdate
 ///
@@ -28,7 +28,7 @@ pub extern const vexDeviceMotorVelocitySet: *const fn(device: types.V5_DeviceT,v
 /// ```c
 /// void vexDeviceMotorVelocityUpdate(V5_DeviceT device, int32_t velocity);
 /// ```
-pub extern const vexDeviceMotorVelocityUpdate: *const fn(device: types.V5_DeviceT,velocity: i32) callconv(.c) void;
+pub extern const vexDeviceMotorVelocityUpdate: *const fn(device: ?*anyopaque,velocity: i32) callconv(.c) void;
 
 /// # vexDeviceMotorVoltageSet
 ///
@@ -43,7 +43,7 @@ pub extern const vexDeviceMotorVelocityUpdate: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceMotorVoltageSet(V5_DeviceT device, int32_t value);
 /// ```
-pub extern const vexDeviceMotorVoltageSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
+pub extern const vexDeviceMotorVoltageSet: *const fn(device: ?*anyopaque,value: i32) callconv(.c) void;
 
 /// # vexDeviceMotorVelocityGet
 ///
@@ -58,7 +58,7 @@ pub extern const vexDeviceMotorVoltageSet: *const fn(device: types.V5_DeviceT,va
 /// ```c
 /// int32_t vexDeviceMotorVelocityGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorVelocityGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorActualVelocityGet
 ///
@@ -73,7 +73,7 @@ pub extern const vexDeviceMotorVelocityGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// double vexDeviceMotorActualVelocityGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorActualVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMotorActualVelocityGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMotorDirectionGet
 ///
@@ -88,7 +88,7 @@ pub extern const vexDeviceMotorActualVelocityGet: *const fn(device: types.V5_Dev
 /// ```c
 /// int32_t vexDeviceMotorDirectionGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorDirectionGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorDirectionGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorModeSet
 ///
@@ -103,7 +103,7 @@ pub extern const vexDeviceMotorDirectionGet: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// void vexDeviceMotorModeSet(V5_DeviceT device, V5MotorControlMode mode);
 /// ```
-pub extern const vexDeviceMotorModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorControlMode) callconv(.c) void;
+pub extern const vexDeviceMotorModeSet: *const fn(device: ?*anyopaque,mode: types.V5MotorControlMode) callconv(.c) void;
 
 /// # vexDeviceMotorModeGet
 ///
@@ -118,7 +118,7 @@ pub extern const vexDeviceMotorModeSet: *const fn(device: types.V5_DeviceT,mode:
 /// ```c
 /// V5MotorControlMode vexDeviceMotorModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorControlMode;
+pub extern const vexDeviceMotorModeGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5MotorControlMode;
 
 /// # vexDeviceMotorPwmSet
 ///
@@ -133,7 +133,7 @@ pub extern const vexDeviceMotorModeGet: *const fn(device: types.V5_DeviceT) call
 /// ```c
 /// void vexDeviceMotorPwmSet(V5_DeviceT device, int32_t value);
 /// ```
-pub extern const vexDeviceMotorPwmSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
+pub extern const vexDeviceMotorPwmSet: *const fn(device: ?*anyopaque,value: i32) callconv(.c) void;
 
 /// # vexDeviceMotorPwmGet
 ///
@@ -148,7 +148,7 @@ pub extern const vexDeviceMotorPwmSet: *const fn(device: types.V5_DeviceT,value:
 /// ```c
 /// int32_t vexDeviceMotorPwmGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorPwmGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorCurrentLimitSet
 ///
@@ -163,7 +163,7 @@ pub extern const vexDeviceMotorPwmGet: *const fn(device: types.V5_DeviceT) callc
 /// ```c
 /// void vexDeviceMotorCurrentLimitSet(V5_DeviceT device, int32_t value);
 /// ```
-pub extern const vexDeviceMotorCurrentLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
+pub extern const vexDeviceMotorCurrentLimitSet: *const fn(device: ?*anyopaque,value: i32) callconv(.c) void;
 
 /// # vexDeviceMotorCurrentLimitGet
 ///
@@ -178,7 +178,7 @@ pub extern const vexDeviceMotorCurrentLimitSet: *const fn(device: types.V5_Devic
 /// ```c
 /// int32_t vexDeviceMotorCurrentLimitGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorCurrentLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorCurrentLimitGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorVoltageLimitSet
 ///
@@ -193,7 +193,7 @@ pub extern const vexDeviceMotorCurrentLimitGet: *const fn(device: types.V5_Devic
 /// ```c
 /// void vexDeviceMotorVoltageLimitSet(V5_DeviceT device, int32_t value);
 /// ```
-pub extern const vexDeviceMotorVoltageLimitSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
+pub extern const vexDeviceMotorVoltageLimitSet: *const fn(device: ?*anyopaque,value: i32) callconv(.c) void;
 
 /// # vexDeviceMotorVoltageLimitGet
 ///
@@ -208,7 +208,7 @@ pub extern const vexDeviceMotorVoltageLimitSet: *const fn(device: types.V5_Devic
 /// ```c
 /// int32_t vexDeviceMotorVoltageLimitGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorVoltageLimitGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorVoltageLimitGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorPositionPidSet
 ///
@@ -223,7 +223,7 @@ pub extern const vexDeviceMotorVoltageLimitGet: *const fn(device: types.V5_Devic
 /// ```c
 /// void vexDeviceMotorPositionPidSet(V5_DeviceT device, V5_DeviceMotorPid * pid);
 /// ```
-pub extern const vexDeviceMotorPositionPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void;
+pub extern const vexDeviceMotorPositionPidSet: *const fn(device: ?*anyopaque,pid: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceMotorVelocityPidSet
 ///
@@ -238,7 +238,7 @@ pub extern const vexDeviceMotorPositionPidSet: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceMotorVelocityPidSet(V5_DeviceT device, V5_DeviceMotorPid * pid);
 /// ```
-pub extern const vexDeviceMotorVelocityPidSet: *const fn(device: types.V5_DeviceT,pid: [*c]types.V5_DeviceMotorPid) callconv(.c) void;
+pub extern const vexDeviceMotorVelocityPidSet: *const fn(device: ?*anyopaque,pid: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceMotorCurrentGet
 ///
@@ -253,7 +253,7 @@ pub extern const vexDeviceMotorVelocityPidSet: *const fn(device: types.V5_Device
 /// ```c
 /// int32_t vexDeviceMotorCurrentGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorCurrentGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorVoltageGet
 ///
@@ -268,7 +268,7 @@ pub extern const vexDeviceMotorCurrentGet: *const fn(device: types.V5_DeviceT) c
 /// ```c
 /// int32_t vexDeviceMotorVoltageGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorVoltageGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorVoltageGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorPowerGet
 ///
@@ -283,7 +283,7 @@ pub extern const vexDeviceMotorVoltageGet: *const fn(device: types.V5_DeviceT) c
 /// ```c
 /// double vexDeviceMotorPowerGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMotorPowerGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMotorTorqueGet
 ///
@@ -298,7 +298,7 @@ pub extern const vexDeviceMotorPowerGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceMotorTorqueGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorTorqueGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMotorTorqueGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMotorEfficiencyGet
 ///
@@ -313,7 +313,7 @@ pub extern const vexDeviceMotorTorqueGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// double vexDeviceMotorEfficiencyGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorEfficiencyGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMotorEfficiencyGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMotorTemperatureGet
 ///
@@ -328,7 +328,7 @@ pub extern const vexDeviceMotorEfficiencyGet: *const fn(device: types.V5_DeviceT
 /// ```c
 /// double vexDeviceMotorTemperatureGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMotorTemperatureGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMotorOverTempFlagGet
 ///
@@ -343,7 +343,7 @@ pub extern const vexDeviceMotorTemperatureGet: *const fn(device: types.V5_Device
 /// ```c
 /// int vexDeviceMotorOverTempFlagGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorOverTempFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorOverTempFlagGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorCurrentLimitFlagGet
 ///
@@ -358,7 +358,7 @@ pub extern const vexDeviceMotorOverTempFlagGet: *const fn(device: types.V5_Devic
 /// ```c
 /// int vexDeviceMotorCurrentLimitFlagGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorFaultsGet
 ///
@@ -373,7 +373,7 @@ pub extern const vexDeviceMotorCurrentLimitFlagGet: *const fn(device: types.V5_D
 /// ```c
 /// uint32_t vexDeviceMotorFaultsGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorFaultsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceMotorFaultsGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceMotorZeroVelocityFlagGet
 ///
@@ -388,7 +388,7 @@ pub extern const vexDeviceMotorFaultsGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// int vexDeviceMotorZeroVelocityFlagGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorZeroPositionFlagGet
 ///
@@ -403,7 +403,7 @@ pub extern const vexDeviceMotorZeroVelocityFlagGet: *const fn(device: types.V5_D
 /// ```c
 /// int vexDeviceMotorZeroPositionFlagGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorZeroPositionFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorZeroPositionFlagGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorFlagsGet
 ///
@@ -418,7 +418,7 @@ pub extern const vexDeviceMotorZeroPositionFlagGet: *const fn(device: types.V5_D
 /// ```c
 /// uint32_t vexDeviceMotorFlagsGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorFlagsGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceMotorFlagsGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceMotorReverseFlagSet
 ///
@@ -433,7 +433,7 @@ pub extern const vexDeviceMotorFlagsGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// void vexDeviceMotorReverseFlagSet(V5_DeviceT device, int value);
 /// ```
-pub extern const vexDeviceMotorReverseFlagSet: *const fn(device: types.V5_DeviceT,value: i32) callconv(.c) void;
+pub extern const vexDeviceMotorReverseFlagSet: *const fn(device: ?*anyopaque,value: i32) callconv(.c) void;
 
 /// # vexDeviceMotorReverseFlagGet
 ///
@@ -448,7 +448,7 @@ pub extern const vexDeviceMotorReverseFlagSet: *const fn(device: types.V5_Device
 /// ```c
 /// int vexDeviceMotorReverseFlagGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorReverseFlagGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorReverseFlagGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMotorEncoderUnitsSet
 ///
@@ -463,7 +463,7 @@ pub extern const vexDeviceMotorReverseFlagGet: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceMotorEncoderUnitsSet(V5_DeviceT device, V5MotorEncoderUnits units);
 /// ```
-pub extern const vexDeviceMotorEncoderUnitsSet: *const fn(device: types.V5_DeviceT,units: types.V5MotorEncoderUnits) callconv(.c) void;
+pub extern const vexDeviceMotorEncoderUnitsSet: *const fn(device: ?*anyopaque,units: types.V5MotorEncoderUnits) callconv(.c) void;
 
 /// # vexDeviceMotorEncoderUnitsGet
 ///
@@ -478,7 +478,7 @@ pub extern const vexDeviceMotorEncoderUnitsSet: *const fn(device: types.V5_Devic
 /// ```c
 /// V5MotorEncoderUnits vexDeviceMotorEncoderUnitsGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorEncoderUnitsGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorEncoderUnits;
+pub extern const vexDeviceMotorEncoderUnitsGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5MotorEncoderUnits;
 
 /// # vexDeviceMotorBrakeModeSet
 ///
@@ -493,7 +493,7 @@ pub extern const vexDeviceMotorEncoderUnitsGet: *const fn(device: types.V5_Devic
 /// ```c
 /// void vexDeviceMotorBrakeModeSet(V5_DeviceT device, V5MotorBrakeMode mode);
 /// ```
-pub extern const vexDeviceMotorBrakeModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5MotorBrakeMode) callconv(.c) void;
+pub extern const vexDeviceMotorBrakeModeSet: *const fn(device: ?*anyopaque,mode: types.V5MotorBrakeMode) callconv(.c) void;
 
 /// # vexDeviceMotorBrakeModeGet
 ///
@@ -508,7 +508,7 @@ pub extern const vexDeviceMotorBrakeModeSet: *const fn(device: types.V5_DeviceT,
 /// ```c
 /// V5MotorBrakeMode vexDeviceMotorBrakeModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorBrakeModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorBrakeMode;
+pub extern const vexDeviceMotorBrakeModeGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5MotorBrakeMode;
 
 /// # vexDeviceMotorPositionSet
 ///
@@ -523,7 +523,7 @@ pub extern const vexDeviceMotorBrakeModeGet: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// void vexDeviceMotorPositionSet(V5_DeviceT device, double position);
 /// ```
-pub extern const vexDeviceMotorPositionSet: *const fn(device: types.V5_DeviceT,position: f64) callconv(.c) void;
+pub extern const vexDeviceMotorPositionSet: *const fn(device: ?*anyopaque,position: f64) callconv(.c) void;
 
 /// # vexDeviceMotorPositionGet
 ///
@@ -538,7 +538,7 @@ pub extern const vexDeviceMotorPositionSet: *const fn(device: types.V5_DeviceT,p
 /// ```c
 /// double vexDeviceMotorPositionGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorPositionGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMotorPositionGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMotorPositionRawGet
 ///
@@ -553,7 +553,7 @@ pub extern const vexDeviceMotorPositionGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// int32_t vexDeviceMotorPositionRawGet(V5_DeviceT device, uint32_t * timestamp);
 /// ```
-pub extern const vexDeviceMotorPositionRawGet: *const fn(device: types.V5_DeviceT,timestamp: [*c]u32) callconv(.c) i32;
+pub extern const vexDeviceMotorPositionRawGet: *const fn(device: ?*anyopaque,timestamp: [*c]u32) callconv(.c) i32;
 
 /// # vexDeviceMotorPositionReset
 ///
@@ -568,7 +568,7 @@ pub extern const vexDeviceMotorPositionRawGet: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceMotorPositionReset(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorPositionReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceMotorPositionReset: *const fn(device: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceMotorTargetGet
 ///
@@ -583,7 +583,7 @@ pub extern const vexDeviceMotorPositionReset: *const fn(device: types.V5_DeviceT
 /// ```c
 /// double vexDeviceMotorTargetGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorTargetGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMotorTargetGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMotorServoTargetSet
 ///
@@ -598,7 +598,7 @@ pub extern const vexDeviceMotorTargetGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// void vexDeviceMotorServoTargetSet(V5_DeviceT device, double position);
 /// ```
-pub extern const vexDeviceMotorServoTargetSet: *const fn(device: types.V5_DeviceT,position: f64) callconv(.c) void;
+pub extern const vexDeviceMotorServoTargetSet: *const fn(device: ?*anyopaque,position: f64) callconv(.c) void;
 
 /// # vexDeviceMotorAbsoluteTargetSet
 ///
@@ -613,7 +613,7 @@ pub extern const vexDeviceMotorServoTargetSet: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceMotorAbsoluteTargetSet(V5_DeviceT device, double position, int32_t velocity);
 /// ```
-pub extern const vexDeviceMotorAbsoluteTargetSet: *const fn(device: types.V5_DeviceT,position: f64,velocity: i32) callconv(.c) void;
+pub extern const vexDeviceMotorAbsoluteTargetSet: *const fn(device: ?*anyopaque,position: f64,velocity: i32) callconv(.c) void;
 
 /// # vexDeviceMotorRelativeTargetSet
 ///
@@ -628,7 +628,7 @@ pub extern const vexDeviceMotorAbsoluteTargetSet: *const fn(device: types.V5_Dev
 /// ```c
 /// void vexDeviceMotorRelativeTargetSet(V5_DeviceT device, double position, int32_t velocity);
 /// ```
-pub extern const vexDeviceMotorRelativeTargetSet: *const fn(device: types.V5_DeviceT,position: f64,velocity: i32) callconv(.c) void;
+pub extern const vexDeviceMotorRelativeTargetSet: *const fn(device: ?*anyopaque,position: f64,velocity: i32) callconv(.c) void;
 
 /// # vexDeviceMotorGearingSet
 ///
@@ -643,7 +643,7 @@ pub extern const vexDeviceMotorRelativeTargetSet: *const fn(device: types.V5_Dev
 /// ```c
 /// void vexDeviceMotorGearingSet(V5_DeviceT device, V5MotorGearset value);
 /// ```
-pub extern const vexDeviceMotorGearingSet: *const fn(device: types.V5_DeviceT,value: types.V5MotorGearset) callconv(.c) void;
+pub extern const vexDeviceMotorGearingSet: *const fn(device: ?*anyopaque,value: types.V5MotorGearset) callconv(.c) void;
 
 /// # vexDeviceMotorGearingGet
 ///
@@ -658,7 +658,7 @@ pub extern const vexDeviceMotorGearingSet: *const fn(device: types.V5_DeviceT,va
 /// ```c
 /// V5MotorGearset vexDeviceMotorGearingGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorGearingGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5MotorGearset;
+pub extern const vexDeviceMotorGearingGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5MotorGearset;
 
 /// # vexDeviceMotorExternalProfileSet
 ///
@@ -673,7 +673,7 @@ pub extern const vexDeviceMotorGearingGet: *const fn(device: types.V5_DeviceT) c
 /// ```c
 /// void vexDeviceMotorExternalProfileSet(V5_DeviceT device, double position, int32_t velocity);
 /// ```
-pub extern const vexDeviceMotorExternalProfileSet: *const fn(device: types.V5_DeviceT,position: f64,velocity: i32) callconv(.c) void;
+pub extern const vexDeviceMotorExternalProfileSet: *const fn(device: ?*anyopaque,position: f64,velocity: i32) callconv(.c) void;
 
 /// # vexDeviceMotorTypeGet
 ///
@@ -688,4 +688,4 @@ pub extern const vexDeviceMotorExternalProfileSet: *const fn(device: types.V5_De
 /// ```c
 /// int32_t vexDeviceMotorTypeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMotorTypeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMotorTypeGet: *const fn(device: ?*anyopaque) callconv(.c) i32;

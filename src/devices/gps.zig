@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceGpsReset
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceGpsReset(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceGpsReset: *const fn(device: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceGpsHeadingGet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceGpsReset: *const fn(device: types.V5_DeviceT) callconv
 /// ```c
 /// double vexDeviceGpsHeadingGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceGpsHeadingGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceGpsDegreesGet
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceGpsHeadingGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// double vexDeviceGpsDegreesGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceGpsDegreesGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceGpsQuaternionGet
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceGpsDegreesGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// void vexDeviceGpsQuaternionGet(V5_DeviceT device, V5_DeviceGpsQuaternion * data);
 /// ```
-pub extern const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsQuaternion) callconv(.c) void;
+pub extern const vexDeviceGpsQuaternionGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceGpsAttitudeGet
 ///
@@ -73,7 +72,7 @@ pub extern const vexDeviceGpsQuaternionGet: *const fn(device: types.V5_DeviceT,d
 /// ```c
 /// void vexDeviceGpsAttitudeGet(V5_DeviceT device, V5_DeviceGpsAttitude * data, int bRaw);
 /// ```
-pub extern const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsAttitude,bRaw: i32) callconv(.c) void;
+pub extern const vexDeviceGpsAttitudeGet: *const fn(device: ?*anyopaque,data: ?*anyopaque,bRaw: i32) callconv(.c) void;
 
 /// # vexDeviceGpsRawGyroGet
 ///
@@ -88,7 +87,7 @@ pub extern const vexDeviceGpsAttitudeGet: *const fn(device: types.V5_DeviceT,dat
 /// ```c
 /// void vexDeviceGpsRawGyroGet(V5_DeviceT device, V5_DeviceGpsRaw * data);
 /// ```
-pub extern const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void;
+pub extern const vexDeviceGpsRawGyroGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceGpsRawAccelGet
 ///
@@ -103,7 +102,7 @@ pub extern const vexDeviceGpsRawGyroGet: *const fn(device: types.V5_DeviceT,data
 /// ```c
 /// void vexDeviceGpsRawAccelGet(V5_DeviceT device, V5_DeviceGpsRaw * data);
 /// ```
-pub extern const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,data: [*c]types.V5_DeviceGpsRaw) callconv(.c) void;
+pub extern const vexDeviceGpsRawAccelGet: *const fn(device: ?*anyopaque,data: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceGpsStatusGet
 ///
@@ -118,7 +117,7 @@ pub extern const vexDeviceGpsRawAccelGet: *const fn(device: types.V5_DeviceT,dat
 /// ```c
 /// uint32_t vexDeviceGpsStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceGpsStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceGpsModeSet
 ///
@@ -133,7 +132,7 @@ pub extern const vexDeviceGpsStatusGet: *const fn(device: types.V5_DeviceT) call
 /// ```c
 /// void vexDeviceGpsModeSet(V5_DeviceT device, uint32_t mode);
 /// ```
-pub extern const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u32) callconv(.c) void;
+pub extern const vexDeviceGpsModeSet: *const fn(device: ?*anyopaque,mode: u32) callconv(.c) void;
 
 /// # vexDeviceGpsModeGet
 ///
@@ -148,7 +147,7 @@ pub extern const vexDeviceGpsModeSet: *const fn(device: types.V5_DeviceT,mode: u
 /// ```c
 /// uint32_t vexDeviceGpsModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceGpsModeGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceGpsDataRateSet
 ///
@@ -163,7 +162,7 @@ pub extern const vexDeviceGpsModeGet: *const fn(device: types.V5_DeviceT) callco
 /// ```c
 /// void vexDeviceGpsDataRateSet(V5_DeviceT device, uint32_t rate);
 /// ```
-pub extern const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rate: u32) callconv(.c) void;
+pub extern const vexDeviceGpsDataRateSet: *const fn(device: ?*anyopaque,rate: u32) callconv(.c) void;
 
 /// # vexDeviceGpsOriginSet
 ///
@@ -178,7 +177,7 @@ pub extern const vexDeviceGpsDataRateSet: *const fn(device: types.V5_DeviceT,rat
 /// ```c
 /// void vexDeviceGpsOriginSet(V5_DeviceT device, double ox, double oy);
 /// ```
-pub extern const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: f64,oy: f64) callconv(.c) void;
+pub extern const vexDeviceGpsOriginSet: *const fn(device: ?*anyopaque,ox: f64,oy: f64) callconv(.c) void;
 
 /// # vexDeviceGpsOriginGet
 ///
@@ -193,7 +192,7 @@ pub extern const vexDeviceGpsOriginSet: *const fn(device: types.V5_DeviceT,ox: f
 /// ```c
 /// void vexDeviceGpsOriginGet(V5_DeviceT device, double * ox, double * oy);
 /// ```
-pub extern const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [*c]f64,oy: [*c]f64) callconv(.c) void;
+pub extern const vexDeviceGpsOriginGet: *const fn(device: ?*anyopaque,ox: [*c]f64,oy: [*c]f64) callconv(.c) void;
 
 /// # vexDeviceGpsRotationSet
 ///
@@ -208,7 +207,7 @@ pub extern const vexDeviceGpsOriginGet: *const fn(device: types.V5_DeviceT,ox: [
 /// ```c
 /// void vexDeviceGpsRotationSet(V5_DeviceT device, double value);
 /// ```
-pub extern const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,value: f64) callconv(.c) void;
+pub extern const vexDeviceGpsRotationSet: *const fn(device: ?*anyopaque,value: f64) callconv(.c) void;
 
 /// # vexDeviceGpsRotationGet
 ///
@@ -223,7 +222,7 @@ pub extern const vexDeviceGpsRotationSet: *const fn(device: types.V5_DeviceT,val
 /// ```c
 /// double vexDeviceGpsRotationGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceGpsRotationGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceGpsInitialPositionSet
 ///
@@ -238,7 +237,7 @@ pub extern const vexDeviceGpsRotationGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// void vexDeviceGpsInitialPositionSet(V5_DeviceT device, double initial_x, double initial_y, double initial_rotation);
 /// ```
-pub extern const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_DeviceT,initial_x: f64,initial_y: f64,initial_rotation: f64) callconv(.c) void;
+pub extern const vexDeviceGpsInitialPositionSet: *const fn(device: ?*anyopaque,initial_x: f64,initial_y: f64,initial_rotation: f64) callconv(.c) void;
 
 /// # vexDeviceGpsErrorGet
 ///
@@ -253,4 +252,4 @@ pub extern const vexDeviceGpsInitialPositionSet: *const fn(device: types.V5_Devi
 /// ```c
 /// double vexDeviceGpsErrorGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGpsErrorGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceGpsErrorGet: *const fn(device: ?*anyopaque) callconv(.c) f64;

@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDevicePneumaticCompressorSet
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDevicePneumaticCompressorSet(V5_DeviceT device, int bState);
 /// ```
-pub extern const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_DeviceT,bState: i32) callconv(.c) void;
+pub extern const vexDevicePneumaticCompressorSet: *const fn(device: ?*anyopaque,bState: i32) callconv(.c) void;
 
 /// # vexDevicePneumaticCylinderSet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDevicePneumaticCompressorSet: *const fn(device: types.V5_Dev
 /// ```c
 /// void vexDevicePneumaticCylinderSet(V5_DeviceT device, uint32_t id, int bState);
 /// ```
-pub extern const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_DeviceT,id: u32,bState: i32) callconv(.c) void;
+pub extern const vexDevicePneumaticCylinderSet: *const fn(device: ?*anyopaque,id: u32,bState: i32) callconv(.c) void;
 
 /// # vexDevicePneumaticCtrlSet
 ///
@@ -43,7 +42,7 @@ pub extern const vexDevicePneumaticCylinderSet: *const fn(device: types.V5_Devic
 /// ```c
 /// void vexDevicePneumaticCtrlSet(V5_DeviceT device, V5_DevicePneumaticCtrl * pCtrl);
 /// ```
-pub extern const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,pCtrl: [*c]types.V5_DevicePneumaticCtrl) callconv(.c) void;
+pub extern const vexDevicePneumaticCtrlSet: *const fn(device: ?*anyopaque,pCtrl: ?*anyopaque) callconv(.c) void;
 
 /// # vexDevicePneumaticStatusGet
 ///
@@ -58,7 +57,7 @@ pub extern const vexDevicePneumaticCtrlSet: *const fn(device: types.V5_DeviceT,p
 /// ```c
 /// uint32_t vexDevicePneumaticStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDevicePneumaticStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDevicePneumaticStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDevicePneumaticPwmSet
 ///
@@ -73,7 +72,7 @@ pub extern const vexDevicePneumaticStatusGet: *const fn(device: types.V5_DeviceT
 /// ```c
 /// void vexDevicePneumaticPwmSet(V5_DeviceT device, uint8_t pwm);
 /// ```
-pub extern const vexDevicePneumaticPwmSet: *const fn(device: types.V5_DeviceT,pwm: u8) callconv(.c) void;
+pub extern const vexDevicePneumaticPwmSet: *const fn(device: ?*anyopaque,pwm: u8) callconv(.c) void;
 
 /// # vexDevicePneumaticPwmGet
 ///
@@ -88,7 +87,7 @@ pub extern const vexDevicePneumaticPwmSet: *const fn(device: types.V5_DeviceT,pw
 /// ```c
 /// uint32_t vexDevicePneumaticPwmGet(V5_DeviceT device);
 /// ```
-pub extern const vexDevicePneumaticPwmGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDevicePneumaticPwmGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDevicePneumaticCylinderPwmSet
 ///
@@ -103,7 +102,7 @@ pub extern const vexDevicePneumaticPwmGet: *const fn(device: types.V5_DeviceT) c
 /// ```c
 /// void vexDevicePneumaticCylinderPwmSet(V5_DeviceT device, uint32_t id, int bState, uint8_t pwm);
 /// ```
-pub extern const vexDevicePneumaticCylinderPwmSet: *const fn(device: types.V5_DeviceT,id: u32,bState: i32,pwm: u8) callconv(.c) void;
+pub extern const vexDevicePneumaticCylinderPwmSet: *const fn(device: ?*anyopaque,id: u32,bState: i32,pwm: u8) callconv(.c) void;
 
 /// # vexDevicePneumaticActuationStatusGet
 ///
@@ -118,4 +117,4 @@ pub extern const vexDevicePneumaticCylinderPwmSet: *const fn(device: types.V5_De
 /// ```c
 /// uint32_t vexDevicePneumaticActuationStatusGet(V5_DeviceT device, uint16_t * ac1, uint16_t * ac2, uint16_t * ac3, uint16_t * ac4);
 /// ```
-pub extern const vexDevicePneumaticActuationStatusGet: *const fn(device: types.V5_DeviceT,ac1: [*c]u16,ac2: [*c]u16,ac3: [*c]u16,ac4: [*c]u16) callconv(.c) u32;
+pub extern const vexDevicePneumaticActuationStatusGet: *const fn(device: ?*anyopaque,ac1: [*c]u16,ac2: [*c]u16,ac3: [*c]u16,ac4: [*c]u16) callconv(.c) u32;

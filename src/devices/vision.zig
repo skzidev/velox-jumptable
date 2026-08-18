@@ -13,7 +13,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceVisionModeSet(V5_DeviceT device, V5VisionMode mode);
 /// ```
-pub extern const vexDeviceVisionModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionMode) callconv(.c) void;
+pub extern const vexDeviceVisionModeSet: *const fn(device: ?*anyopaque,mode: types.V5VisionMode) callconv(.c) void;
 
 /// # vexDeviceVisionModeGet
 ///
@@ -28,7 +28,7 @@ pub extern const vexDeviceVisionModeSet: *const fn(device: types.V5_DeviceT,mode
 /// ```c
 /// V5VisionMode vexDeviceVisionModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionMode;
+pub extern const vexDeviceVisionModeGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5VisionMode;
 
 /// # vexDeviceVisionObjectCountGet
 ///
@@ -43,7 +43,7 @@ pub extern const vexDeviceVisionModeGet: *const fn(device: types.V5_DeviceT) cal
 /// ```c
 /// int32_t vexDeviceVisionObjectCountGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionObjectCountGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceVisionObjectCountGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceVisionObjectGet
 ///
@@ -58,7 +58,7 @@ pub extern const vexDeviceVisionObjectCountGet: *const fn(device: types.V5_Devic
 /// ```c
 /// int32_t vexDeviceVisionObjectGet(V5_DeviceT device, uint32_t indexObj, V5_DeviceVisionObject * pObject);
 /// ```
-pub extern const vexDeviceVisionObjectGet: *const fn(device: types.V5_DeviceT,indexObj: u32,pObject: [*c]types.V5_DeviceVisionObject) callconv(.c) i32;
+pub extern const vexDeviceVisionObjectGet: *const fn(device: ?*anyopaque,indexObj: u32,pObject: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceVisionSignatureSet
 ///
@@ -73,7 +73,7 @@ pub extern const vexDeviceVisionObjectGet: *const fn(device: types.V5_DeviceT,in
 /// ```c
 /// void vexDeviceVisionSignatureSet(V5_DeviceT device, V5_DeviceVisionSignature * pSignature);
 /// ```
-pub extern const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) void;
+pub extern const vexDeviceVisionSignatureSet: *const fn(device: ?*anyopaque,pSignature: ?*anyopaque) callconv(.c) void;
 
 /// # vexDeviceVisionSignatureGet
 ///
@@ -88,7 +88,7 @@ pub extern const vexDeviceVisionSignatureSet: *const fn(device: types.V5_DeviceT
 /// ```c
 /// int vexDeviceVisionSignatureGet(V5_DeviceT device, uint32_t id, V5_DeviceVisionSignature * pSignature);
 /// ```
-pub extern const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT,id: u32,pSignature: [*c]types.V5_DeviceVisionSignature) callconv(.c) i32;
+pub extern const vexDeviceVisionSignatureGet: *const fn(device: ?*anyopaque,id: u32,pSignature: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceVisionBrightnessSet
 ///
@@ -103,7 +103,7 @@ pub extern const vexDeviceVisionSignatureGet: *const fn(device: types.V5_DeviceT
 /// ```c
 /// void vexDeviceVisionBrightnessSet(V5_DeviceT device, uint8_t percent);
 /// ```
-pub extern const vexDeviceVisionBrightnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void;
+pub extern const vexDeviceVisionBrightnessSet: *const fn(device: ?*anyopaque,percent: u8) callconv(.c) void;
 
 /// # vexDeviceVisionBrightnessGet
 ///
@@ -118,7 +118,7 @@ pub extern const vexDeviceVisionBrightnessSet: *const fn(device: types.V5_Device
 /// ```c
 /// uint8_t vexDeviceVisionBrightnessGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionBrightnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8;
+pub extern const vexDeviceVisionBrightnessGet: *const fn(device: ?*anyopaque) callconv(.c) u8;
 
 /// # vexDeviceVisionWhiteBalanceModeSet
 ///
@@ -133,7 +133,7 @@ pub extern const vexDeviceVisionBrightnessGet: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceVisionWhiteBalanceModeSet(V5_DeviceT device, V5VisionWBMode mode);
 /// ```
-pub extern const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWBMode) callconv(.c) void;
+pub extern const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: ?*anyopaque,mode: types.V5VisionWBMode) callconv(.c) void;
 
 /// # vexDeviceVisionWhiteBalanceModeGet
 ///
@@ -148,7 +148,7 @@ pub extern const vexDeviceVisionWhiteBalanceModeSet: *const fn(device: types.V5_
 /// ```c
 /// V5VisionWBMode vexDeviceVisionWhiteBalanceModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWBMode;
+pub extern const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5VisionWBMode;
 
 /// # vexDeviceVisionWhiteBalanceSet
 ///
@@ -163,7 +163,7 @@ pub extern const vexDeviceVisionWhiteBalanceModeGet: *const fn(device: types.V5_
 /// ```c
 /// void vexDeviceVisionWhiteBalanceSet(V5_DeviceT device, V5_DeviceVisionRgb color);
 /// ```
-pub extern const vexDeviceVisionWhiteBalanceSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void;
+pub extern const vexDeviceVisionWhiteBalanceSet: *const fn(device: ?*anyopaque,color: types.V5_DeviceVisionRgb) callconv(.c) void;
 
 /// # vexDeviceVisionWhiteBalanceGet
 ///
@@ -178,7 +178,7 @@ pub extern const vexDeviceVisionWhiteBalanceSet: *const fn(device: types.V5_Devi
 /// ```c
 /// V5_DeviceVisionRgb vexDeviceVisionWhiteBalanceGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionWhiteBalanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb;
+pub extern const vexDeviceVisionWhiteBalanceGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5_DeviceVisionRgb;
 
 /// # vexDeviceVisionLedModeSet
 ///
@@ -193,7 +193,7 @@ pub extern const vexDeviceVisionWhiteBalanceGet: *const fn(device: types.V5_Devi
 /// ```c
 /// void vexDeviceVisionLedModeSet(V5_DeviceT device, V5VisionLedMode mode);
 /// ```
-pub extern const vexDeviceVisionLedModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionLedMode) callconv(.c) void;
+pub extern const vexDeviceVisionLedModeSet: *const fn(device: ?*anyopaque,mode: types.V5VisionLedMode) callconv(.c) void;
 
 /// # vexDeviceVisionLedModeGet
 ///
@@ -208,7 +208,7 @@ pub extern const vexDeviceVisionLedModeSet: *const fn(device: types.V5_DeviceT,m
 /// ```c
 /// V5VisionLedMode vexDeviceVisionLedModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionLedModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionLedMode;
+pub extern const vexDeviceVisionLedModeGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5VisionLedMode;
 
 /// # vexDeviceVisionLedBrigntnessSet
 ///
@@ -223,7 +223,7 @@ pub extern const vexDeviceVisionLedModeGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// void vexDeviceVisionLedBrigntnessSet(V5_DeviceT device, uint8_t percent);
 /// ```
-pub extern const vexDeviceVisionLedBrigntnessSet: *const fn(device: types.V5_DeviceT,percent: u8) callconv(.c) void;
+pub extern const vexDeviceVisionLedBrigntnessSet: *const fn(device: ?*anyopaque,percent: u8) callconv(.c) void;
 
 /// # vexDeviceVisionLedBrigntnessGet
 ///
@@ -238,7 +238,7 @@ pub extern const vexDeviceVisionLedBrigntnessSet: *const fn(device: types.V5_Dev
 /// ```c
 /// uint8_t vexDeviceVisionLedBrigntnessGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionLedBrigntnessGet: *const fn(device: types.V5_DeviceT) callconv(.c) u8;
+pub extern const vexDeviceVisionLedBrigntnessGet: *const fn(device: ?*anyopaque) callconv(.c) u8;
 
 /// # vexDeviceVisionLedColorSet
 ///
@@ -253,7 +253,7 @@ pub extern const vexDeviceVisionLedBrigntnessGet: *const fn(device: types.V5_Dev
 /// ```c
 /// void vexDeviceVisionLedColorSet(V5_DeviceT device, V5_DeviceVisionRgb color);
 /// ```
-pub extern const vexDeviceVisionLedColorSet: *const fn(device: types.V5_DeviceT,color: types.V5_DeviceVisionRgb) callconv(.c) void;
+pub extern const vexDeviceVisionLedColorSet: *const fn(device: ?*anyopaque,color: types.V5_DeviceVisionRgb) callconv(.c) void;
 
 /// # vexDeviceVisionLedColorGet
 ///
@@ -268,7 +268,7 @@ pub extern const vexDeviceVisionLedColorSet: *const fn(device: types.V5_DeviceT,
 /// ```c
 /// V5_DeviceVisionRgb vexDeviceVisionLedColorGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionLedColorGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5_DeviceVisionRgb;
+pub extern const vexDeviceVisionLedColorGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5_DeviceVisionRgb;
 
 /// # vexDeviceVisionWifiModeSet
 ///
@@ -283,7 +283,7 @@ pub extern const vexDeviceVisionLedColorGet: *const fn(device: types.V5_DeviceT)
 /// ```c
 /// void vexDeviceVisionWifiModeSet(V5_DeviceT device, V5VisionWifiMode mode);
 /// ```
-pub extern const vexDeviceVisionWifiModeSet: *const fn(device: types.V5_DeviceT,mode: types.V5VisionWifiMode) callconv(.c) void;
+pub extern const vexDeviceVisionWifiModeSet: *const fn(device: ?*anyopaque,mode: types.V5VisionWifiMode) callconv(.c) void;
 
 /// # vexDeviceVisionWifiModeGet
 ///
@@ -298,4 +298,4 @@ pub extern const vexDeviceVisionWifiModeSet: *const fn(device: types.V5_DeviceT,
 /// ```c
 /// V5VisionWifiMode vexDeviceVisionWifiModeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceVisionWifiModeGet: *const fn(device: types.V5_DeviceT) callconv(.c) types.V5VisionWifiMode;
+pub extern const vexDeviceVisionWifiModeGet: *const fn(device: ?*anyopaque) callconv(.c) types.V5VisionWifiMode;

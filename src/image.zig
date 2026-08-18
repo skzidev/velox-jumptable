@@ -1,4 +1,3 @@
-const types = @import("types.zig");
 
 /// # vexImageBmpRead
 ///
@@ -13,7 +12,7 @@ const types = @import("types.zig");
 /// ```c
 /// uint32_t vexImageBmpRead(const uint8_t * ibuf, v5_image * oBuf, uint32_t maxw, uint32_t maxh);
 /// ```
-pub extern const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32) callconv(.c) u32;
+pub extern const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: ?*anyopaque,maxw: u32,maxh: u32) callconv(.c) u32;
 
 /// # vexImagePngRead
 ///
@@ -28,4 +27,4 @@ pub extern const vexImageBmpRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_imag
 /// ```c
 /// uint32_t vexImagePngRead(const uint8_t * ibuf, v5_image * oBuf, uint32_t maxw, uint32_t maxh, uint32_t ibuflen);
 /// ```
-pub extern const vexImagePngRead: *const fn(ibuf: [*c]u8,oBuf: [*c]types.v5_image,maxw: u32,maxh: u32,ibuflen: u32) callconv(.c) u32;
+pub extern const vexImagePngRead: *const fn(ibuf: [*c]u8,oBuf: ?*anyopaque,maxw: u32,maxh: u32,ibuflen: u32) callconv(.c) u32;

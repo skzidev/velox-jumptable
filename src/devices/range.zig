@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceRangeValueGet
 ///
@@ -13,4 +12,4 @@ const types = @import("../types.zig");
 /// ```c
 /// int32_t vexDeviceRangeValueGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceRangeValueGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceRangeValueGet: *const fn(device: ?*anyopaque) callconv(.c) i32;

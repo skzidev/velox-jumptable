@@ -13,7 +13,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceMagnetPowerSet(V5_DeviceT device, int32_t value, int32_t time);
 /// ```
-pub extern const vexDeviceMagnetPowerSet: *const fn(device: types.V5_DeviceT,value: i32,time: i32) callconv(.c) void;
+pub extern const vexDeviceMagnetPowerSet: *const fn(device: ?*anyopaque,value: i32,time: i32) callconv(.c) void;
 
 /// # vexDeviceMagnetPowerGet
 ///
@@ -28,7 +28,7 @@ pub extern const vexDeviceMagnetPowerSet: *const fn(device: types.V5_DeviceT,val
 /// ```c
 /// int32_t vexDeviceMagnetPowerGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMagnetPowerGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceMagnetPowerGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceMagnetPickup
 ///
@@ -43,7 +43,7 @@ pub extern const vexDeviceMagnetPowerGet: *const fn(device: types.V5_DeviceT) ca
 /// ```c
 /// void vexDeviceMagnetPickup(V5_DeviceT device, V5_DeviceMagnetDuration duration);
 /// ```
-pub extern const vexDeviceMagnetPickup: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void;
+pub extern const vexDeviceMagnetPickup: *const fn(device: ?*anyopaque,duration: types.V5_DeviceMagnetDuration) callconv(.c) void;
 
 /// # vexDeviceMagnetDrop
 ///
@@ -58,7 +58,7 @@ pub extern const vexDeviceMagnetPickup: *const fn(device: types.V5_DeviceT,durat
 /// ```c
 /// void vexDeviceMagnetDrop(V5_DeviceT device, V5_DeviceMagnetDuration duration);
 /// ```
-pub extern const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duration: types.V5_DeviceMagnetDuration) callconv(.c) void;
+pub extern const vexDeviceMagnetDrop: *const fn(device: ?*anyopaque,duration: types.V5_DeviceMagnetDuration) callconv(.c) void;
 
 /// # vexDeviceMagnetTemperatureGet
 ///
@@ -73,7 +73,7 @@ pub extern const vexDeviceMagnetDrop: *const fn(device: types.V5_DeviceT,duratio
 /// ```c
 /// double vexDeviceMagnetTemperatureGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMagnetTemperatureGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMagnetCurrentGet
 ///
@@ -88,7 +88,7 @@ pub extern const vexDeviceMagnetTemperatureGet: *const fn(device: types.V5_Devic
 /// ```c
 /// double vexDeviceMagnetCurrentGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceMagnetCurrentGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceMagnetStatusGet
 ///
@@ -103,4 +103,4 @@ pub extern const vexDeviceMagnetCurrentGet: *const fn(device: types.V5_DeviceT) 
 /// ```c
 /// uint32_t vexDeviceMagnetStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceMagnetStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceMagnetStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;

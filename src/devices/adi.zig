@@ -13,7 +13,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceAdiPortConfigSet(V5_DeviceT device, uint32_t port, V5_AdiPortConfiguration type);
 /// ```
-pub extern const vexDeviceAdiPortConfigSet: *const fn(device: types.V5_DeviceT,port: u32,type: types.V5_AdiPortConfiguration) callconv(.c) void;
+pub extern const vexDeviceAdiPortConfigSet: *const fn(device: ?*anyopaque,port: u32,type: types.V5_AdiPortConfiguration) callconv(.c) void;
 
 /// # vexDeviceAdiPortConfigGet
 ///
@@ -28,7 +28,7 @@ pub extern const vexDeviceAdiPortConfigSet: *const fn(device: types.V5_DeviceT,p
 /// ```c
 /// V5_AdiPortConfiguration vexDeviceAdiPortConfigGet(V5_DeviceT device, uint32_t port);
 /// ```
-pub extern const vexDeviceAdiPortConfigGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) types.V5_AdiPortConfiguration;
+pub extern const vexDeviceAdiPortConfigGet: *const fn(device: ?*anyopaque,port: u32) callconv(.c) types.V5_AdiPortConfiguration;
 
 /// # vexDeviceAdiValueSet
 ///
@@ -43,7 +43,7 @@ pub extern const vexDeviceAdiPortConfigGet: *const fn(device: types.V5_DeviceT,p
 /// ```c
 /// void vexDeviceAdiValueSet(V5_DeviceT device, uint32_t port, int32_t value);
 /// ```
-pub extern const vexDeviceAdiValueSet: *const fn(device: types.V5_DeviceT,port: u32,value: i32) callconv(.c) void;
+pub extern const vexDeviceAdiValueSet: *const fn(device: ?*anyopaque,port: u32,value: i32) callconv(.c) void;
 
 /// # vexDeviceAdiValueGet
 ///
@@ -58,4 +58,4 @@ pub extern const vexDeviceAdiValueSet: *const fn(device: types.V5_DeviceT,port: 
 /// ```c
 /// int32_t vexDeviceAdiValueGet(V5_DeviceT device, uint32_t port);
 /// ```
-pub extern const vexDeviceAdiValueGet: *const fn(device: types.V5_DeviceT,port: u32) callconv(.c) i32;
+pub extern const vexDeviceAdiValueGet: *const fn(device: ?*anyopaque,port: u32) callconv(.c) i32;

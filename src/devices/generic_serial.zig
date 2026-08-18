@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceGenericSerialEnable
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// void vexDeviceGenericSerialEnable(V5_DeviceT device, int32_t options);
 /// ```
-pub extern const vexDeviceGenericSerialEnable: *const fn(device: types.V5_DeviceT,options: i32) callconv(.c) void;
+pub extern const vexDeviceGenericSerialEnable: *const fn(device: ?*anyopaque,options: i32) callconv(.c) void;
 
 /// # vexDeviceGenericSerialBaudrate
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceGenericSerialEnable: *const fn(device: types.V5_Device
 /// ```c
 /// void vexDeviceGenericSerialBaudrate(V5_DeviceT device, int32_t baudrate);
 /// ```
-pub extern const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_DeviceT,baudrate: i32) callconv(.c) void;
+pub extern const vexDeviceGenericSerialBaudrate: *const fn(device: ?*anyopaque,baudrate: i32) callconv(.c) void;
 
 /// # vexDeviceGenericSerialWriteChar
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceGenericSerialBaudrate: *const fn(device: types.V5_Devi
 /// ```c
 /// int32_t vexDeviceGenericSerialWriteChar(V5_DeviceT device, uint8_t c);
 /// ```
-pub extern const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_DeviceT,c: u8) callconv(.c) i32;
+pub extern const vexDeviceGenericSerialWriteChar: *const fn(device: ?*anyopaque,c: u8) callconv(.c) i32;
 
 /// # vexDeviceGenericSerialWriteFree
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceGenericSerialWriteChar: *const fn(device: types.V5_Dev
 /// ```c
 /// int32_t vexDeviceGenericSerialWriteFree(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericSerialWriteFree: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericSerialWriteFree: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericSerialTransmit
 ///
@@ -73,7 +72,7 @@ pub extern const vexDeviceGenericSerialWriteFree: *const fn(device: types.V5_Dev
 /// ```c
 /// int32_t vexDeviceGenericSerialTransmit(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-pub extern const vexDeviceGenericSerialTransmit: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32;
+pub extern const vexDeviceGenericSerialTransmit: *const fn(device: ?*anyopaque,buffer: [*c]u8,length: i32) callconv(.c) i32;
 
 /// # vexDeviceGenericSerialReadChar
 ///
@@ -88,7 +87,7 @@ pub extern const vexDeviceGenericSerialTransmit: *const fn(device: types.V5_Devi
 /// ```c
 /// int32_t vexDeviceGenericSerialReadChar(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericSerialReadChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericSerialReadChar: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericSerialPeekChar
 ///
@@ -103,7 +102,7 @@ pub extern const vexDeviceGenericSerialReadChar: *const fn(device: types.V5_Devi
 /// ```c
 /// int32_t vexDeviceGenericSerialPeekChar(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericSerialPeekChar: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericSerialPeekChar: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericSerialReceiveAvail
 ///
@@ -118,7 +117,7 @@ pub extern const vexDeviceGenericSerialPeekChar: *const fn(device: types.V5_Devi
 /// ```c
 /// int32_t vexDeviceGenericSerialReceiveAvail(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericSerialReceiveAvail: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceGenericSerialReceiveAvail: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceGenericSerialReceive
 ///
@@ -133,7 +132,7 @@ pub extern const vexDeviceGenericSerialReceiveAvail: *const fn(device: types.V5_
 /// ```c
 /// int32_t vexDeviceGenericSerialReceive(V5_DeviceT device, uint8_t * buffer, int32_t length);
 /// ```
-pub extern const vexDeviceGenericSerialReceive: *const fn(device: types.V5_DeviceT,buffer: [*c]u8,length: i32) callconv(.c) i32;
+pub extern const vexDeviceGenericSerialReceive: *const fn(device: ?*anyopaque,buffer: [*c]u8,length: i32) callconv(.c) i32;
 
 /// # vexDeviceGenericSerialFlush
 ///
@@ -148,4 +147,4 @@ pub extern const vexDeviceGenericSerialReceive: *const fn(device: types.V5_Devic
 /// ```c
 /// void vexDeviceGenericSerialFlush(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceGenericSerialFlush: *const fn(device: types.V5_DeviceT) callconv(.c) void;
+pub extern const vexDeviceGenericSerialFlush: *const fn(device: ?*anyopaque) callconv(.c) void;

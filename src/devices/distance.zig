@@ -1,4 +1,3 @@
-const types = @import("../types.zig");
 
 /// # vexDeviceDistanceDistanceGet
 ///
@@ -13,7 +12,7 @@ const types = @import("../types.zig");
 /// ```c
 /// uint32_t vexDeviceDistanceDistanceGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceDistanceDistanceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceDistanceDistanceGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceDistanceConfidenceGet
 ///
@@ -28,7 +27,7 @@ pub extern const vexDeviceDistanceDistanceGet: *const fn(device: types.V5_Device
 /// ```c
 /// uint32_t vexDeviceDistanceConfidenceGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceDistanceConfidenceGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceDistanceConfidenceGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
 
 /// # vexDeviceDistanceObjectSizeGet
 ///
@@ -43,7 +42,7 @@ pub extern const vexDeviceDistanceConfidenceGet: *const fn(device: types.V5_Devi
 /// ```c
 /// int32_t vexDeviceDistanceObjectSizeGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_DeviceT) callconv(.c) i32;
+pub extern const vexDeviceDistanceObjectSizeGet: *const fn(device: ?*anyopaque) callconv(.c) i32;
 
 /// # vexDeviceDistanceObjectVelocityGet
 ///
@@ -58,7 +57,7 @@ pub extern const vexDeviceDistanceObjectSizeGet: *const fn(device: types.V5_Devi
 /// ```c
 /// double vexDeviceDistanceObjectVelocityGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_DeviceT) callconv(.c) f64;
+pub extern const vexDeviceDistanceObjectVelocityGet: *const fn(device: ?*anyopaque) callconv(.c) f64;
 
 /// # vexDeviceDistanceStatusGet
 ///
@@ -73,4 +72,4 @@ pub extern const vexDeviceDistanceObjectVelocityGet: *const fn(device: types.V5_
 /// ```c
 /// uint32_t vexDeviceDistanceStatusGet(V5_DeviceT device);
 /// ```
-pub extern const vexDeviceDistanceStatusGet: *const fn(device: types.V5_DeviceT) callconv(.c) u32;
+pub extern const vexDeviceDistanceStatusGet: *const fn(device: ?*anyopaque) callconv(.c) u32;
